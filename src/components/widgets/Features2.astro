@@ -18,8 +18,8 @@ const {
   bg = await Astro.slots.render("bg"),
 } = Astro.props as Features;
 ---
-
-<WidgetWrapper
+<div data-aos="flip-left">
+  <WidgetWrapper
   id={id}
   isDark={isDark}
   containerClass={`max-w-7xl mx-auto ${classes?.container ?? ''}`}
@@ -46,6 +46,8 @@ const {
     }}
   />
 </WidgetWrapper>
+
+</div>
 
 <style>
 .text-black {

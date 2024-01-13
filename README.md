@@ -32,17 +32,22 @@
 <details open>
 <summary>Table of Contents</summary>
 
-- [Demo](#demo)
-- [Getting started](#getting-started)
-  - [Project structure](#project-structure)
-  - [Commands](#commands)
-  - [Configuration](#configuration)
-  - [Deploy](#deploy)
-- [Frequently Asked Questions](#frequently-asked-questions)
-- [Related Projects](#related-projects)
-- [Contributing](#contributing)
-- [Acknowledgements](#acknowledgements)
-- [License](#license)
+- [🚀 AstroWind](#-astrowind)
+  - [Demo](#demo)
+  - [Getting started](#getting-started)
+    - [Project structure](#project-structure)
+    - [Commands](#commands)
+    - [Configuration](#configuration)
+    - [Deploy](#deploy)
+      - [Deploy to production (manual)](#deploy-to-production-manual)
+      - [Deploy to Netlify](#deploy-to-netlify)
+      - [Deploy to Vercel](#deploy-to-vercel)
+  - [Frequently Asked Questions](#frequently-asked-questions)
+  - [Related projects](#related-projects)
+  - [Contributing](#contributing)
+  - [Acknowledgements](#acknowledgements)
+  - [License](#license)
+- [astro-construction](#astro-construction)
 
 </details>
 
@@ -274,3 +279,7 @@ Initially created by [onWidget](https://onwidget.com) and maintained by a commun
 
 **AstroWind** is licensed under the MIT license — see the [LICENSE](./LICENSE.md) file for details.
 # astro-construction
+
+
+AOS animation library
+https://michalsnik.github.io/aos/
