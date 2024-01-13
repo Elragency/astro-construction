@@ -13,7 +13,7 @@ html {
 body {
     --heading-font: 'Oswald', sans-serif;
     --heading-font-weight: 700;
-    --heading-color: #000000;
+    --heading-color: #ffffff;
     --accent-color: #F6452D;
     --background-color: #000000;
 
@@ -27,8 +27,8 @@ body {
     --bs-body-color: #000000;
     --bs-body-color-rgb: 143, 143, 143;
 
-    --bs-primary: #000000;
-    --bs-secondary: #020202;
+    --bs-primary: #ffffff;
+    --bs-secondary: #ffffff;
     --bs-black: #1F1F1F;
     --bs-light: #ffffff;
     --bs-light2: #ff3c00;
