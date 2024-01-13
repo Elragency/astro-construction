@@ -12,6 +12,7 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import PortfolioA from '~/components/widgets/PortfolioA.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import { otherprojects } from '~/components/ui/otherprojects.json';
 
 const metadata = {
   title: 'K-Construction - La Compagnie de Construction Pour Vous',
@@ -41,11 +42,11 @@ const metadata = {
     <div class="overflow-hidden">
       <div class="container mx-auto px-4 py-6 border-b" data-aos="zoom-out">
         <div class="flex flex-wrap -mx-4">
-          <div class="w-full md:w-1/2 px-4 py-6 mb-4 md:mb-0 border-r padding-body">
+          <div class="w-full md:w-1/2 px-4 py-6 mb-4 md:mb-0 border-r padding-body" data-aos="fade-up" data-aos-duration="2000">
             <p class="text-xl mb-3" style="color:#ff3c00">POURQUOI NOUS?</p>
             <h2 class="text-3xl font-bold mb-4 test">Débutez votre projet avec les meilleurs entrepreneurs de votre région.</h2>
           </div>
-          <div class="w-full md:w-1/2 px-4 pt-2 padding-body">
+          <div class="w-full md:w-1/2 px-4 pt-2 padding-body" data-aos="fade-up" data-aos-duration="2500">
             <p class="ml-0 md:ml-6 font-body pb-4">
               K-Construction est une entreprise de construction renommée, connue pour son 
               engagement envers l'excellence et la qualité. Fondée sur des principes de durabilité, 
@@ -64,7 +65,7 @@ const metadata = {
     </div>
   </section>
 
-  <section id="process" class="my-5">
+  <section id="process" class="my-5" >
     <div class="overflow-hidden">
         <div class="mx-auto container" data-aos="zoom-out"> <!-- Tailwind container class -->
             <div class="flex flex-wrap -mx-4"> <!-- Flexbox and negative margin for gutters -->
