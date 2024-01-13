@@ -9,11 +9,12 @@ import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
+import PortfolioA from '~/components/widgets/PortfolioA.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'Manic - La Compagnie de Construction Pour Vous',
+  title: 'K-Construction - La Compagnie de Construction Pour Vous',
   ignoreTitleTemplate: true,
 };
 ---
@@ -362,10 +363,10 @@ const metadata = {
 
     <Stats
     stats={[
-      { title: 'Downloads', amount: '132K' },
-      { title: 'Stars', amount: '24.8K' },
-      { title: 'Forks', amount: '10.3K' },
-      { title: 'Users', amount: '48.4K' },
+      { title: '+ Clients', amount: '2325' },
+      { title: '+ Projets', amount: '2100' },
+      { title: "Année d'expérience", amount: '25' },
+      { title: '+ Employés', amount: '15' },
     ]}
   />
 
@@ -374,10 +375,8 @@ const metadata = {
   <!-- HighlightedPosts Widget ******* -->
 
   <BlogLatestPosts
-    title="Find out more content in our Blog"
-    information={`The blog is used to display AstroWind documentation.
-                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
-                        Astro is a very interesting technology. Thanks.
+    title="Voir nos dernières publications"
+    information={`
                 `}
   />
 
@@ -423,7 +422,7 @@ const metadata = {
   />
 
 
-
+  <PortfolioA />
 
   <section id="info">
     <div class="overflow-hidden">

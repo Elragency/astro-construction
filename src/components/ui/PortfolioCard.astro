@@ -1,0 +1,58 @@
+---
+interface Props{
+    src : string,
+    alt : string,
+    title : string,
+    href? : string,
+}
+const {
+  title = await Astro.slots.render('title'),
+  subtitle = await Astro.slots.render('subtitle'),
+  tagline,
+  content = await Astro.slots.render('content'),
+  callToAction,
+  items = [],
+  columns,
+  image = await Astro.slots.render('image'),
+  isReversed = false,
+  isAfterContent = false,
+
+  id,
+  isDark = false,
+  classes = {},
+  bg = await Astro.slots.render('bg'),
+} = Astro.props as Content;
+
+const {src,alt  , href = "#"} = Astro.props;
+import Image from '~/components/common/Image.astro';
+---
+<a class="block relative w-full h-full cursor-pointer group" href={href}>
+    <img class="w-full h-full object-cover" src={src} alt={alt}>
+    <div class="bg-slate-500 bg-opacity-20 absolute inset-0 flex justify-center items-center flex-col gap-1 backdrop-blur-md translate-y-full group-hover:translate-y-0 transition-transform md:gap-2">
+        <h3 class="text-2xl font-medium text-center md:text-3xl lg:text-4xl">
+            {title}
+        </h3>
+        <div aria-hidden="true" class="mt-10 md:mt-0 md:basis-1/2">
+            {
+              image && (
+                <div class="flex items-center gap-1 text-base md:text-lg">
+                  {typeof image === 'string' ? (
+                    <Fragment set:html={image} />
+                  ) : (
+                    <Image
+                      class="w-8 opacity-0"
+                      width={500}
+                      height={500}
+                      widths={[400, 768]}
+                      sizes="(max-width: 768px) 100vw, 432px"
+                      layout="responsive"
+                      {...(image as any)}
+                    />
+                  )}
+                  <span>view more</span>
+                  <img class="w-8" src="svg/arrow.svg" alt="arrow">
+                </div>
+                )
+            }
+    </div>
+</a>
