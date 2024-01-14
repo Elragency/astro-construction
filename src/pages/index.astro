@@ -30,7 +30,7 @@ const metadata = {
 
   <Hero3
   image={{ src: '~/assets/images/hero2.png', alt: 'AstroWind Hero Image' }}
->
+  >
 
   </Hero3>
 
@@ -38,15 +38,15 @@ const metadata = {
 
   <!-- <Note /> -->
 
-  <section id="propos">
+  <section id="propos" class="mx-6" >
     <div class="overflow-hidden">
-      <div class="container mx-auto px-4 py-6 border-b" data-aos="zoom-out">
+      <div class="container mx-auto px-4 py-6 border-b" >
         <div class="flex flex-wrap -mx-4">
-          <div class="w-full md:w-1/2 px-4 py-6 mb-4 md:mb-0 border-r padding-body" data-aos="fade-up" data-aos-duration="2000">
-            <p class="text-xl mb-3" style="color:#ff3c00">POURQUOI NOUS?</p>
+          <div class="w-full md:w-1/2 px-4 py-6 mb-4 md:mb-0 border-r padding-body" data-aos="fade-left" data-aos-duration="2000">
+            <p class="text-xl mb-3" style="color:#ff3c00" >POURQUOI NOUS?</p>
             <h2 class="text-3xl font-bold mb-4 test">Débutez votre projet avec les meilleurs entrepreneurs de votre région.</h2>
           </div>
-          <div class="w-full md:w-1/2 px-4 pt-2 padding-body" data-aos="fade-up" data-aos-duration="2500">
+          <div class="w-full md:w-1/2 px-4 pt-2 padding-body" data-aos="fade-right" data-aos-duration="2000" >
             <p class="ml-0 md:ml-6 font-body pb-4">
               K-Construction est une entreprise de construction renommée, connue pour son 
               engagement envers l'excellence et la qualité. Fondée sur des principes de durabilité, 
@@ -65,9 +65,9 @@ const metadata = {
     </div>
   </section>
 
-  <section id="process" class="my-5" >
+  <section id="process" class="my-5" data-aos="fade-up" data-aos-duration="2000">
     <div class="overflow-hidden">
-        <div class="mx-auto container" data-aos="zoom-out"> <!-- Tailwind container class -->
+        <div class="mx-auto container" > <!-- Tailwind container class -->
             <div class="flex flex-wrap -mx-4"> <!-- Flexbox and negative margin for gutters -->
                 <div class="w-full md:w-1/2 lg:w-1/4 px-6"> <!-- Width classes for different breakpoints -->
                     <div class="py-3 md:py-5 px-3">
@@ -102,7 +102,7 @@ const metadata = {
   
 
   <!-- Features Widget *************** -->
-<section   data-aos="zoom-out">
+<section data-aos="fade-in" data-aos-duration="2000" >
   <Features
   id="features"
 
@@ -430,7 +430,7 @@ const metadata = {
 
   <section id="info">
     <div class="overflow-hidden">
-        <div class="container mx-auto" data-aos="zoom-out">
+        <div class="container mx-auto" >
             <div class="flex flex-wrap items-center">
                 <div class="w-full md:w-1/3 text-center py-3 border-r">
                     <p class="header-top mb-4">Nous rejoindre</p>
@@ -518,5 +518,8 @@ const metadata = {
     font-size: calc(1.475rem + 2.7vw);
     font-weight: 300;
     line-height: 1.2;
+  }
+  .overflow-hidden {
+    overflow: hidden;
   }
 </style>
