@@ -4,12 +4,33 @@ import Layout from '~/layouts/LandingLayout.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
+import Header from '~/components/widgets/Header.astro';
+import { headerData } from '~/navigation';
+
 const metadata = {
   title: 'Sales Landing Page Demo',
 };
 ---
 
 <Layout metadata={metadata}>
+  <Fragment slot="header">
+    <Header
+      {...headerData}
+      actions={[
+        {
+          variant: 'secondary',
+          text: 'Login',
+          href: '#',
+        },
+        {
+          variant: 'primary',
+          text: 'Sign Up',
+          href: '#',
+        },
+      ]}
+      isSticky
+    />
+  </Fragment>
   <!-- Hero2 Widget ******************* -->
 
   <Hero2
