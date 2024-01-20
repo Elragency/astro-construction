@@ -7,7 +7,7 @@ export const headerData = {
       href: getPermalink('/'),
     },
     {
-      text: 'À&nbspPropos',
+      text: 'À Propos',
       href: getPermalink('/homes/propos'),
     },
     // {
