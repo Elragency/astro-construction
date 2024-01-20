@@ -58,7 +58,7 @@ export const headerData = {
         },
         {
           text: 'Rénovations intérieures',
-          href: getPermalink('/services/reno-interieures'),
+          href: getPermalink('/services/sales'),
         },
         {
           text: 'Rénovations Extérieures',
@@ -107,8 +107,8 @@ export const headerData = {
       href: getPermalink('/contact'),
     },
     {
-      text: 'EN',
-      href: getPermalink('/en/home'),
+      text: 'FR',
+      href: getPermalink('/'),
     },
   ],
   actions: [{ text: 'Faisons Affaire!', href: 'contact', target: '' }],
