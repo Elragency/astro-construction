@@ -17,6 +17,7 @@ import About from '~/components/common/about.astro';
 import { otherprojects } from '~/components/ui/otherprojects.json';
 
 import Contact from '~/components/widgets/elr-contact.astro';
+import Image from '~/components/common/Image.astro';
 
 const metadata = {
   title: 'K-Construction - La Compagnie de Construction Pour Vous',
@@ -30,19 +31,64 @@ const metadata = {
       <!-- Link Swiper's CSS -->
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
-
-
-  <Hero3
-  image={{ src: '~/assets/images/hero2.png', alt: 'AstroWind Hero Image' }}
-  >
-
-  </Hero3>
-
-  <!-- Note Widget ******************* -->
+      <section class="relative md:-mt-[76px] not-prose">
+        <div class="absolute inset-0 pointer-events-none" aria-hidden="true"></div>
+        <div class="relative">
+          <div class="pt-0 md:pt-[76px] pointer-events-none"></div>
+      
+          <!-- Image section -->
+          <div class="absolute inset-0 z-0">
+            <img
+              class="w-full h-full object-cover"
+              loading="eager"
+              src="https://raw.githubusercontent.com/Elragency/astro-construction/fbae51d90db6d44bf6cd417c5cf9cfc810d35c1e/src/assets/images/hero2.png"
+              alt="test image"
+            />
+          </div>
+      
+          <!-- Text content section -->
+          <div class="relative z-10">
+            <div class="text-center mx-auto pt-9">
+              <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase">
+                Besoin d'un plombier?
+              </p>
+              <h1 class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200">
+                Trouble de plomberie?
+              </h1>
+              <div class="max-w-3xl mx-auto">
+                <p class="text-xl text-muted mb-6 dark:text-slate-300">
+                  
+                </p>
+                <!-- Actions section -->
+                <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4">
+                  <!-- Add buttons or other elements here as needed -->
+                </div>
+              </div>
+              <!-- Additional content can be added here -->
+            </div>
+            <div class="flex flex-col justify-center items-center h-screen text-center">
+              <div class="p-4">
+                <!-- <p class="header-top text-orange mb-4" data-aos="fade-up" data-aos-duration="2000">
+                  Les Experts de la construction sur la rive-sud de Montréal
+                </p>
+                <h1 class="title mb-4" data-aos="fade-up" data-aos-duration="2500">
+                  K-CONSTRUCTION
+                </h1> -->
+                <a href="#soumission">
+                  <button type="button" class="btn btn-outline-orange inline-block text-white py-3 px-4 rounded mt-1 ml-0 md:ml-6 mb-2">
+                    Contactez-Nous!
+                    <!-- Icon can be added here if needed -->
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
   <!-- <Note /> -->
 
-  <section id="propos" class="mx-6" >
+  <!-- <section id="propos" class="mx-6" >
     <div class="overflow-hidden">
       <div class="container mx-auto px-4 py-6 border-b" >
         <div class="flex flex-wrap -mx-4">
@@ -67,7 +113,7 @@ const metadata = {
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <section id="process" class="my-5" data-aos="fade-up" data-aos-duration="2000">
     <div class="overflow-hidden">
@@ -102,154 +148,93 @@ const metadata = {
     </div>
 </section>
 
-<!-- <section id="propos" class="mx-6" >
+<section id="propos" class="mx-6" >
   <About />
-</section> -->
-
-<section>
-  <h2 class="text-3xl font-bold mb-1 mx-6 mt-4 test">CE QUE NOUS POUVONS FAIRE</h2>
-  <p class="heading-color mx-9 ">NOS SERVICES</p>
-  <PortfolioA />
 </section>
 
 
-
-  
-
-  <!-- Features Widget *************** -->
-<!-- <section data-aos="fade-in" data-aos-duration="2000" >
-  <Features
-  id="features"
-
-  tagline="YEP"
-  title="What you get with AstroWind"
-  subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022."
-  items={[
-    {
-      title: 'Astro + Tailwind CSS Integration',
-      description:
-        'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
-      icon: 'tabler:brand-tailwind',
-    },
-    {
-      title: 'Ready-to-use Components',
-      description:
-        'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-      icon: 'tabler:components',
-    },
-    {
-      title: 'Best Practices',
-      description:
-        'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
-      icon: 'tabler:list-check',
-    },
-    {
-      title: 'Excellent Page Speed',
-      description:
-        'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
-      icon: 'tabler:rocket',
-    },
-    {
-      title: 'Search Engine Optimization (SEO)',
-      description:
-        "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
-      icon: 'tabler:arrows-right-left',
-    },
-    {
-      title: 'Open to new ideas and contributions',
-      description:
-        'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
-      icon: 'tabler:bulb',
-    },
-  ]}
+<Features2
+title="Ce Que Nos Plombiers Peuvent Faire"
+subtitle="De la simple réparation à la mise en place complète de nouveaux projets."
+columns={3}
+items={[
+  {
+    title: 'Educational',
+    description:
+      'By harmonizing instructional design and visual appeal, templates streamline content creation for varied materials, expediting development and cultivating engaging educational spaces.',
+    icon: 'tabler:school',
+  },
+  {
+    title: 'Interior Design',
+    description:
+      'Crafting functional, visually appealing spaces for residential and commercial use. Templates emphasize layout, colors, and furniture setups, offering a versatile toolkit for your design vision.',
+    icon: 'tabler:home-star',
+  },
+  {
+    title: 'Photography',
+    description: `Empowering photographers, our templates facilitate captivating storytelling. With a keen focus on layout, galleries, and typography, they cater to both professionals and enthusiasts.`,
+    icon: 'tabler:photo',
+  },
+  {
+    title: 'E-commerce',
+    description:
+      'Developing engaging online stores, our E-commerce templates ensure a dynamic presence to effectively showcase products. Ideal for startups or revamps.',
+    icon: 'tabler:shopping-cart',
+  },
+  {
+    title: 'Blog',
+    description:
+      'With attention to typography, these templates empower effective content presentation for writers at any stage, ensuring visually engaging and user-friendly blogs.',
+    icon: 'tabler:article',
+  },
+  {
+    title: 'Business',
+    description:
+      'Providing polished options for effective visual communication, these templates empower both startups and established companies for a professional brand presence.',
+    icon: 'tabler:building-store',
+  },
+  {
+    title: 'Branding',
+    description:
+      'Offering pre-designed elements for a consistent brand identity, including logos and marketing materials. Ideal for new ventures or revamps.',
+    icon: 'tabler:arrow-big-up-lines',
+  },
+  {
+    title: 'Medical',
+    description: `From presentations to patient forms, these tools enhance communication effectiveness for healthcare professionals. Ideal for medical practices and research pursuits.`,
+    icon: 'tabler:vaccine',
+  },
+  {
+    title: 'Fashion Design',
+    description:
+      'With attention to detail, customization, and contemporary design, they empower designers to showcase ideas cohesively. Ideal for all levels of designers.',
+    icon: 'tabler:tie',
+  },
+]}
 />
 
-</section> -->
 
-
-  <Features2
-    title="Pourquoi choisir K-constructions?"
-    subtitle="Nos Promesses"
-    tagline="Notre offre"
-    items={[
-      {
-        title: 'Structure',
-        description: "Nous sommes fiers d'offir un service complet et intelligent avec une gestion efficace pour chaque projet.",
-        icon: 'flat-color-icons:template',
-      },
-      {
-        title: 'Rêver',
-        description:
-          "Faites nous part de vos rêves en construction et laissez-nous les rendre réalité avec notre équipe professionelle.",
-        icon: 'flat-color-icons:gallery',
-      },
-      {
-        title: 'En Règles',
-        description:
-          'Nos clients sont notre plus grande priorité, cela inclue leur satisfaction mais également leur sécurité.',
-        icon: 'flat-color-icons:approval',
-      },
-      {
-        title: 'Contrats',
-        description:
-          "Nous respectons nos contrats, autant l'échéancier établit que le prix convenue, pas de mauvaises surprises avec K-Constructions.",
-        icon: 'flat-color-icons:document',
-      },
-      {
-        title: 'Référence',
-        description:
-          "Nous sommes en fonction depuis plus de 25 ans, nos références peuvent témoigner de la qualité de notre travail.",
-        icon: 'flat-color-icons:advertising',
-      },
-      {
-        title: 'Paiements',
-        description: 'Avec notre politique de paiement souple, nous nous assurons que tous vos projets soient réalisés à un prix concurentielle.',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'Témoignages',
-        description: 'Nos clients témoignent de notre succès par eux mêmes, consulter nos avis sur google.',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-      {
-        title: 'Contact',
-        description:
-          "Avec un réseau de contact complet et professionel, vous n'allez pas avoir des problèmes à terminer vos projets en temps.",
-        icon: 'flat-color-icons:business-contact',
-      },
-      {
-        title: 'Expertise',
-        description: "Notre expertise multi-niveau vous permet d'être sur que le projet que vous avez se réalisera sans problèmes.",
-        icon: 'flat-color-icons:database',
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2>
 
     <!-- Stats Widget ****************** -->
 
-    <Stats
+    <!-- <Stats
     stats={[
       { title: '+ Clients', amount: '2325' },
       { title: '+ Projets', amount: '2100' },
       { title: "Année d'expérience", amount: '25' },
       { title: '+ Employés', amount: '15' },
     ]}
-  />
+  /> -->
 
 
-  
 
   <!-- HighlightedPosts Widget ******* -->
 
-  <BlogLatestPosts
+  <!-- <BlogLatestPosts
     title="Voir nos dernières publications"
     information={`
                 `}
-  />
+  /> -->
 
   <!-- FAQs Widget ******************* -->
 
@@ -360,6 +345,8 @@ const metadata = {
       crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+
+  <script src="~/assets/js/shortcodes.js"></script>
 </Layout>
 
 <style>
@@ -393,4 +380,6 @@ const metadata = {
   .overflow-hidden {
     overflow: hidden;
   }
+
+
 </style>

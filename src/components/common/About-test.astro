@@ -1,0 +1,77 @@
+---
+import AboutAcordeon from '~/components/widgets/Aboutacc-plombier.astro';
+
+---
+
+<script>
+	const accordion = document.getElementById("acordeon");
+	if (!accordion) throw new ReferenceError();
+
+	accordion.addEventListener("click", (e) => {
+		const target = e.target as HTMLElement;
+		const dataset = { ...target.dataset };
+
+		const content = target.nextElementSibling as HTMLElement;
+		const arrow = target.querySelector("img") as HTMLElement;
+
+		if (!arrow || !content) throw new ReferenceError();
+
+		switch (dataset.status) {
+			case "disabled":
+				content.style.gridTemplateRows = "1fr";
+				target.dataset.status = "enabled";
+				arrow.style.rotate = "90deg";
+				break;
+			case "enabled":
+				content.style.gridTemplateRows = "0fr";
+				target.dataset.status = "disabled";
+				arrow.style.rotate = "0deg";
+				break;
+			default:
+				break;
+		}
+	});
+</script>
+
+<section class="mb-section">
+    <header class="mb-8 grid gap-4 md:grid-cols-2 md:gap-8">
+        <h2 class="text-title">
+            Nos zones d'expertise
+        </h2>
+        <p class="text-sm opacity-50 md:text-base">
+            Avec plus de 25 ans d'expérience, vous faites affaire avec des professionnels lorsque vous nous engagez.
+        </p>
+    </header>
+    <section class="grid gap-8 md:grid-cols-2">
+        <!-- Static accordion content -->
+        <div>
+            <ul id="acordeon" class="flex items-center flex-col gap-6">
+                <!-- Replace these list items with your actual content -->
+                <li class="border-neutral-600 border-b-[1px]">
+                    <header class="flex justify-between cursor-pointer [&>*]:pointer-events-none opacity-80 hover:opacity-100">
+                        <h3 class="text-lg font-extralight md:text-xl">
+                            Title 1
+                        </h3>
+                        <img
+                            class="w-8 transition-[rotate]"
+                            src="https://raw.githubusercontent.com/Elragency/astro-construction/50297db0e21a5c040b2bb709b01b2063ac13d88f/public/imagesp/svg/arrow.svg"
+                            alt="arrow"
+                        />
+                    </header>
+                    <div class="grid transition-all">
+                        <div class="h-full overflow-hidden">
+                            <p class="mb-4 pt-2 text-sm opacity-50 md:text-base">
+                                Description 1
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <!-- Add more list items as needed -->
+            </ul>
+        </div>
+        <!-- Image section -->
+        <div class="w-full aspect-square rounded-br-[10rem] overflow-hidden">
+            <img class="w-full h-full object-cover" src="https://raw.githubusercontent.com/Elragency/astro-construction/50297db0e21a5c040b2bb709b01b2063ac13d88f/src/assets/images/arch_05.jpg" alt="some building">
+        </div>
+    </section>
+</section>

@@ -1,0 +1,108 @@
+---
+import Image from '~/components/common/Image.astro';
+import Button from '~/components/ui/Button.astro';
+import type { CallToAction } from '~/types';
+
+export interface Props {
+  id?: string;
+  title?: string;
+  subtitle?: string;
+  tagline?: string;
+  content?: string;
+  actions?: string | CallToAction[];
+  image?: string | any; // TODO: find HTMLElementProps
+}
+
+const {
+  id,
+  title = await Astro.slots.render('title'),
+  subtitle = await Astro.slots.render('subtitle'),
+  tagline,
+  content = await Astro.slots.render('content'),
+  actions = await Astro.slots.render('actions'),
+  image = await Astro.slots.render('image'),
+} = Astro.props;
+---
+
+<section class="relative md:-mt-[76px] not-prose" {...id ? { id } : {}}>
+  <div class="absolute inset-0 pointer-events-none" aria-hidden="true"></div>
+  <div class="relative ">
+    <div class="pt-0 md:pt-[76px] pointer-events-none"></div>
+    <div class="">
+      <div class="text-centermx-auto">
+        {
+          tagline && (
+            <p
+              class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase"
+              set:html={tagline}
+            />
+          )
+        }
+        {
+          title && (
+            <h1
+              class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200"
+              set:html={title}
+            />
+          )
+        }
+        <div class="max-w-3xl mx-auto">
+          {subtitle && <p class="text-xl text-muted mb-6 dark:text-slate-300" set:html={subtitle} />}
+          {
+            actions && (
+              <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4">
+                {Array.isArray(actions) ? (
+                  actions.map((action) => (
+                    <div class="flex w-full sm:w-auto">
+                      <Button {...(action || {})} class="w-full sm:mb-0" />
+                    </div>
+                  ))
+                ) : (
+                  <Fragment set:html={actions} />
+                )}
+              </div>
+            )
+          }
+        </div>
+        {content && <Fragment set:html={content} />}
+      </div>
+      <div class="flex flex-col justify-center items-center h-screen relative text-center"> {/* Full viewport height, center content, and relative positioning */}
+        {
+          image && (
+            <div class="absolute inset-0 z-0"> {/* Full-screen background image with lowest z-index */}
+              <Image
+                class="w-full h-full object-cover"
+                loading="eager"
+                layout="fill"
+                src={image.src}
+                alt={image.alt}
+              />
+            </div>
+          )
+        }
+        <div class="z-10 relative p-4">  {/* Centered content with higher z-index */}
+          <p class="header-top text-orange mb-4"data-aos="fade-up" data-aos-duration="2000">Les Experts de la construction sur la rive-sud de Montréal</p>
+          <h1 class="title mb-4" data-aos="fade-up" data-aos-duration="2500" >K-CONSTRUCTION</h1>
+          <a href="#soumission">
+            <button type="button" class="btn btn-outline-orange inline-block text-white py-3 px-4 rounded mt-1 ml-0 md:ml-6 mb-2 "  >
+                Soumission gratuite
+                <iconify-icon icon="tabler:arrow-right" class="arrow-icon"></iconify-icon>
+            </button>
+        </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .title {
+    font-size: calc(1.625rem + 4.5vw);
+    font-weight: bolder;
+    line-height: 1.2;
+    color: white;
+}
+.header-top {
+  color: #ff3c00 !important;
+}
+</style>

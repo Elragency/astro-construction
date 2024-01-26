@@ -1,22 +1,22 @@
 [
 	{
-		"title": "residential",
-		"description": "provide a full engaging experience in building information modelling. we have embraced this technology with the aim of streamlining our production process"
+		"title": "Résidentielle",
+		"description": "Un projet de rénovation pour votre maison? Contactez-nous pour un service sur mesure qui sera adapté à votre vision."
 	},
 	{
-		"title": "bussines",
+		"title": "Commerciale",
 		"description": "provide a full engaging experience in building information modelling. we have embraced this technology with the aim of streamlining our production process"
 	},
     {
-		"title": "hospitality",
+		"title": "Industrielle",
 		"description": "provide a full engaging experience in building information modelling. we have embraced this technology with the aim of streamlining our production process"
 	},
     {
-		"title": "industrial",
-		"description": "provide a full engaging experience in building information modelling. we have embraced this technology with the aim of streamlining our production process"
+		"title": "Services",
+		"description": "Que ce soit un plombier, un électricien ou un couvreur, nous avons les professionelles qu'il vous faut pour compléter votre projet."
 	},
     {
-		"title": "educational",
+		"title": "Condos",
 		"description": "provide a full engaging experience in building information modelling. we have embraced this technology with the aim of streamlining our production process"
 	}
 ]
