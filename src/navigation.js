@@ -106,10 +106,10 @@ export const headerData = {
       text: 'Contact',
       href: getPermalink('/contact'),
     },
-    {
-      text: 'EN',
-      href: getPermalink('/en/home'),
-    },
+    // {
+    //   text: 'EN',
+    //   href: getPermalink('/en/home'),
+    // },
   ],
   actions: [{ text: 'Faisons Affaire!', href: 'contact', target: '' }],
 };

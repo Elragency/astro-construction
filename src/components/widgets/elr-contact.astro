@@ -1,0 +1,116 @@
+---
+import Image from '~/components/common/Image.astro';
+import Button from '~/components/ui/Button.astro';
+import type { CallToAction } from '~/types';
+
+export interface Props {
+  id?: string;
+  title?: string;
+  subtitle?: string;
+  tagline?: string;
+  content?: string;
+  actions?: string | CallToAction[];
+  image?: string | any; // TODO: find HTMLElementProps
+}
+
+const {
+  id,
+  title = await Astro.slots.render('title'),
+  subtitle = await Astro.slots.render('subtitle'),
+  tagline,
+  content = await Astro.slots.render('content'),
+  actions = await Astro.slots.render('actions'),
+  image = await Astro.slots.render('image'),
+} = Astro.props;
+---
+
+<section class="m-6">
+  <section id="soumission">
+    <section class="signup-section relative flex items-center py-5">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap -mx-4">
+                <div class="col-md-10 col-lg-8 mx-auto text-center px-4">
+                    <form id="myForm" data-netlify="true" enctype="multipart/form-data">
+                        <h3 class="text-lg uppercase font-light">Parlez-nous de vos projets!</h3>
+                        <div class="flex flex-wrap -mx-2">
+                            <div class="w-full md:w-1/2 px-2 mb-3">
+                                <label for="firstName" class="block text-sm font-medium text-gray-700">Nom Complet</label>
+                                <input type="text" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-primary-500 focus:border-primary-500" name="firstName" id="firstName" placeholder="Entrer votre Nom..." required>
+                            </div>
+                            <div class="w-full md:w-1/2 px-2 mb-3">
+                                <label for="phone" class="block text-sm font-medium text-gray-700">Numéro de téléphone</label>
+                                <input type="phone" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-primary-500 focus:border-primary-500" name="phone" id="phone" placeholder="Votre numéro de téléphone..." required>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap -mx-2">
+                            <div class="w-full md:w-1/2 px-2 mb-3">
+                                <label for="email" class="block text-sm font-medium text-gray-700">Courriel</label>
+                                <input type="email" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-primary-500 focus:border-primary-500" name="Email" id="email" placeholder="Entrer votre courriel...">
+                            </div>
+                            <div class="w-full md:w-1/2 px-2 mb-3">
+                                <label for="address" class="block text-sm font-medium text-gray-700">Adresse</label>
+                                <input type="textarea" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-primary-500 focus:border-primary-500" name="address" id="address" placeholder="Entrer votre adresse..." required>
+                            </div>
+                        </div>
+                        <div class="mb-3 px-2">
+                            <label for="sujet" class="block text-sm font-medium text-gray-700">Comment pouvons-nous vous aider</label>
+                            <textarea class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-primary-500 focus:border-primary-500" name="sujet" id="sujet" placeholder="Parlez-nous de vos projets" required></textarea>
+                        </div>
+
+                        <h4 class="mb-3 px-2 text-sm font-medium text-gray-700">Joindre un fichier</h4>
+                        <div class="flex flex-wrap -mx-2">
+                            <!-- Repeat this block for each file input -->
+                            <div class="w-1/2 px-2 mb-2">
+                                <input type="file" class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-gray-50 file:text-primary-700 hover:file:bg-primary-100" name="inputGroupFile01" id="inputGroupFile01">
+                            </div>
+                            <!-- ... other file inputs ... -->
+                            <div class="w-1/2 px-2 mb-2">
+                              <input type="file" class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-gray-50 file:text-primary-700 hover:file:bg-primary-100" name="inputGroupFile01" id="inputGroupFile01">
+                          </div>
+                          <div class="w-1/2 px-2 mb-2">
+                            <input type="file" class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-gray-50 file:text-primary-700 hover:file:bg-primary-100" name="inputGroupFile01" id="inputGroupFile01">
+                        </div>
+                        <div class="w-1/2 px-2 mb-2">
+                          <input type="file" class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-gray-50 file:text-primary-700 hover:file:bg-primary-100" name="inputGroupFile01" id="inputGroupFile01">
+                      </div>
+                      <div class="w-1/2 px-2 mb-2">
+                        <input type="file" class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-gray-50 file:text-primary-700 hover:file:bg-primary-100" name="inputGroupFile01" id="inputGroupFile01">
+                    </div>
+                    <div class="w-1/2 px-2 mb-2">
+                      <input type="file" class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-gray-50 file:text-primary-700 hover:file:bg-primary-100" name="inputGroupFile01" id="inputGroupFile01">
+                  </div>
+                        </div>
+
+                        <p class="px-2">
+                            <button class="bg-primary-500 hover:bg-primary-700 text-white font-bold py-2 px-4 rounded" type="submit">ENVOYER</button>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+
+</section>
+</section>
+
+<style>
+
+/* Project detail
+-------------------------------------------------------------- */
+.detail-inner-wrap { width: 100%; }
+.detail-inner-wrap .detail-info { float: left; margin-right: 35.5px; width: 28.7%; }
+.detail-inner-wrap .detail-gallery { overflow: hidden; }
+
+.detail-inner-wrap .list-info { margin: 15px 0px 0px 0px; }
+.detail-inner-wrap .list-info  li { padding: 12.5px 0px; position: relative; border-top: 1px solid #f2f2f2;}
+.detail-inner-wrap .list-info  li:first-child { border-top: 0px; }
+.detail-inner-wrap .list-info span { color: #777; }
+.detail-inner-wrap .list-info span > a { color: #777; font-style :italic; }
+.detail-inner-wrap .list-info span.text { color: #222; }
+.detail-inner-wrap .list-info.has-icon.icon-left .icon{ position: absolute; top: 50%; transform: translateY(-50%); left: 2px; }
+.detail-inner-wrap .list-info.has-icon.icon-left span.text { padding-left: 30px; }
+.detail-inner-wrap .list-info.has-icon.icon-left span.right { position: absolute; left: 169px; }
+
+.detail-inner-wrap .list-info span > a:hover { color: #ff3c00; }
+</style>

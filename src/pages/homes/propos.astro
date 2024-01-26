@@ -2,9 +2,12 @@
 import Features2 from '~/components/widgets/Features2.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import Hero from '~/components/widgets/Hero.astro';
+import Hero4 from '~/components/widgets/Hero4.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
+
+import Contact from '~/components/widgets/elr-contact.astro';
 
 const metadata = {
   title: 'About us',
@@ -14,24 +17,178 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero
-    tagline="About us"
-    image={{
-      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Caos Image',
-    }}
+  <Hero4
+  image={{ src: '~/assets/images/banner1-img1.png', alt: 'AstroWind Hero Image' }}
   >
-    <Fragment slot="title">
-      Elevate your online presence with our <br />
-      <span class="text-accent dark:text-white highlight"> Beautiful Website Templates</span>
-    </Fragment>
 
-    <Fragment slot="subtitle">
-      Donec efficitur, ipsum quis congue luctus, mauris magna convallis mauris, eu auctor nisi lectus non augue. Donec
-      quis lorem non massa vulputate efficitur ac at turpis. Sed tincidunt ex a nunc convallis, et lobortis nisi tempus.
-      Suspendisse vitae nisi eget tortor luctus maximus sed non lectus.
-    </Fragment>
-  </Hero>
+  </Hero4>
+
+
+                          <!-- TABS -->
+                          <div class="row-tabs" data-aos="zoom-out">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="themesflat-spacer clearfix" data-desktop="61" data-mobile="60" data-smobile="60"></div>
+                                    </div><!-- /.col-md-12 -->
+                                </div><!-- /.row -->
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="themesflat-content-box clearfix" data-margin="0 18px 0 0" data-mobilemargin="0 0 0 0">
+                                            <div class="themesflat-headings style-1 clearfix">
+                                                <h2 class="heading">APERÇU</h2>
+                                                <div class="sep has-width w80 accent-bg margin-top-11 clearfix"></div>                                          
+                                            </div>
+                                            <div class="themesflat-spacer clearfix" data-desktop="38" data-mobile="35" data-smobile="35"></div>
+                                            <div class="themesflat-tabs style-1 clearfix">
+                                                <ul class="tab-title clearfix">
+                                                    <li class="item-title active">
+                                                        <span class="inner">Notre focus</span>
+                                                    </li>
+                                                    <li class="item-title">
+                                                        <span class="inner">Dédié</span>
+                                                    </li>
+                                                    <li class="item-title">
+                                                        <span class="inner">Engagé</span>
+                                                    </li>
+                                                </ul>
+
+                                                <div class="tab-content-wrap clearfix">
+                                                    <div class="tab-content">
+                                                        <div class="item-content">                                                            
+                                                            <p>Notre objectif est de dépasser vos objectifs, de respecter vos délais et de gérer avec succès votre budget. 
+                                                                Nous fournissons à nos clients des services d’entreprise générale, de gestion de construction, d’étude de site et de 
+                                                                conception-construction de premier ordre.</p>
+                                                            <div class="themesflat-list has-icon style-1 icon-left ofset-padding-32 clearfix">
+                                                                <div class="inner">
+                                                                    <span class="item">
+                                                                        <span class="icon"><iconify-icon icon="tabler:check" class="arrow-icon"></iconify-icon></span>
+                                                                        <span class="text">Nous avons réalisé avec succès des projets pour un nombre important de clients satisfaits.</span>
+                                                                    </span>
+                                                                </div>
+                                                            </div><!-- /.themeslat-list -->
+                                                            <div class="themesflat-list has-icon style-1 icon-left ofset-padding-32 clearfix">
+                                                                <div class="inner">
+                                                                    <span class="item">
+                                                                        <span class="icon"><iconify-icon icon="tabler:check" class="arrow-icon"></iconify-icon></span>
+                                                                        <span class="text">Nous sommes autorisés à effectuer des travaux d'entreprise générale et avons les électriciens, 
+                                                                            plombiers et autres quarts de métier en règle pour tous vos besoins. </span>
+                                                                    </span>
+                                                                </div>
+                                                            </div><!-- /.themeslat-list -->
+                                                            <div class="themesflat-list has-icon style-1 icon-left ofset-padding-32 clearfix">
+                                                                <div class="inner">
+                                                                    <span class="item">
+                                                                        <span class="icon"><iconify-icon icon="tabler:check" class="arrow-icon"></iconify-icon></span>
+                                                                        <span class="text">Nous serons ouverts à l'obtention de nouvelles licences si une opportunité se présentes</span>
+                                                                    </span>
+                                                                </div>
+                                                            </div><!-- /.themeslat-list -->                                                        
+                                                        </div>
+                                                    </div><!-- /.tab-content -->
+                                                    <div class="tab-content">
+                                                        <div class="item-content">                                                            
+                                                            <p>Chez K Construction, notre engagement envers nos clients est notre priorité. Nous visons non seulement à rencontrer vos attentes, mais à les surpasser, en respectant scrupuleusement vos délais et votre budget. Nos services haut de gamme incluent la gestion de construction, l'étude de site, et la conception-construction, tous dédiés à réaliser votre vision.</p>
+                                                            <div class="themesflat-list has-icon style-1 icon-left ofset-padding-32 clearfix">
+                                                                <div class="inner">
+                                                                    <span class="item">
+                                                                        <span class="icon"><iconify-icon icon="tabler:check" class="arrow-icon"></iconify-icon></span>
+                                                                        <span class="text">Nous avons bâti notre réputation sur la satisfaction de nos clients, en réalisant avec succès une multitude de projets répondant à leurs besoins spécifiques.</span>
+                                                                    </span>
+                                                                </div>
+                                                            </div><!-- /.themeslat-list -->
+                                                            <div class="themesflat-list has-icon style-1 icon-left ofset-padding-32 clearfix">
+                                                                <div class="inner">
+                                                                    <span class="item">
+                                                                        <span class="icon"><iconify-icon icon="tabler:check" class="arrow-icon"></iconify-icon></span>
+                                                                        <span class="text">Notre équipe est hautement qualifiée et autorisée à mener à bien des travaux complexes, garantissant des résultats professionnels dans tous les aspects de votre projet.</span>
+                                                                    </span>
+                                                                </div>
+                                                            </div><!-- /.themeslat-list -->
+                                                            <div class="themesflat-list has-icon style-1 icon-left ofset-padding-32 clearfix">
+                                                                <div class="inner">
+                                                                    <span class="item">
+                                                                        <span class="icon"><iconify-icon icon="tabler:check" class="arrow-icon"></iconify-icon></span>
+                                                                        <span class="text">Nous sommes toujours prêts à élargir nos compétences et obtenir de nouvelles licences pour mieux répondre à vos projets ambitieux.</span>
+                                                                    </span>
+                                                                </div>
+                                                            </div><!-- /.themeslat-list -->                                                                                                     
+                                                        </div>
+                                                    </div><!-- /.tab-content -->
+                                                    <div class="tab-content">
+                                                        <div class="item-content">                                                            
+                                                            <p>Chez K Construction, nous sommes dédiés à fournir à nos clients une expérience exceptionnelle. Notre engagement se traduit par une approche centrée sur le client, garantissant satisfaction et excellence à chaque étape du projet</p>
+                                                            <div class="themesflat-list has-icon style-1 icon-left ofset-padding-32 clearfix">
+                                                                <div class="inner">
+                                                                    <span class="item">
+                                                                        <span class="icon"><iconify-icon icon="tabler:check" class="arrow-icon"></iconify-icon></span>
+                                                                        <span class="text">Écoute Active des Clients : Nous prenons le temps de comprendre vos besoins et vos aspirations pour garantir que chaque projet reflète vos attentes.</span>
+                                                                    </span>
+                                                                </div>
+                                                            </div><!-- /.themeslat-list -->
+                                                            <div class="themesflat-list has-icon style-1 icon-left ofset-padding-32 clearfix">
+                                                                <div class="inner">
+                                                                    <span class="item">
+                                                                        <span class="icon"><iconify-icon icon="tabler:check" class="arrow-icon"></iconify-icon></span>
+                                                                        <span class="text">Transparence Totale : Nous maintenons une communication ouverte et honnête tout au long du processus, assurant une confiance et une clarté sans faille. </span>
+                                                                    </span>
+                                                                </div>
+                                                            </div><!-- /.themeslat-list -->
+                                                            <div class="themesflat-list has-icon style-1 icon-left ofset-padding-32 clearfix">
+                                                                <div class="inner">
+                                                                    <span class="item">
+                                                                        <span class="icon"><iconify-icon icon="tabler:check" class="arrow-icon"></iconify-icon></span>
+                                                                        <span class="text">Service Après-Projet : Notre dévouement envers nos clients continue même après la fin des travaux, assurant un suivi et une assistance pour garantir votre entière satisfaction.</span>
+                                                                    </span>
+                                                                </div>
+                                                            </div><!-- /.themeslat-list -->                                                        
+                                                        </div>
+                                                    </div><!-- /.tab-content -->
+                                                </div><!-- /.tab-content-wrap -->
+                                            </div><!-- /.themesflat-tabs -->
+                                        </div><!-- /.themesflat-content-box -->                                                
+                                    </div><!-- /.col-md-6 -->
+
+                                    <div class="col-md-6">
+                                        <div class="themesflat-spacer clearfix" data-desktop="0" data-mobile="0" data-smobile="35"></div>
+                                        <div class="themesflat-content-box" data-margin="0 0 0 18px" data-mobilemargin="0 0 0 0">
+                                            <div class="themesflat-headings style-1 clearfix">
+                                                <h2 class="heading">FAQ</h2>
+                                                <div class="sep has-width w80 accent-bg margin-top-11 clearfix"></div>                                          
+                                            </div>
+                                            <div class="themesflat-spacer clearfix" data-desktop="38" data-mobile="35" data-smobile="35"></div>
+                                            <div class="themesflat-accordions style-1 has-icon icon-left iconstyle-1 clearfix">
+                                                <div class="accordion-item active">
+                                                    <h3 class="accordion-heading"><span class="inner">Êtes-vous en règle pour faire des travaux dans les condos?</span></h3>
+                                                    <div class="accordion-content">
+                                                        <div>Oui! Nous possédons notre licence RBQ et tous nos professionnels sont accrédités par les instances gouvernementales nécessaires pour effectuer tout type de travaux nécessaires.</div>
+                                                    </div>
+                                                </div>
+                                                <!-- /.accordion-item -->
+                                                <div class="accordion-item">
+                                                    <h3 class="accordion-heading"><span class="inner">Êtes-vous assuré?</span></h3>
+                                                    <div class="accordion-content">
+                                                        <div>Bien sûr! La sécurité des investissements de nos clients est notre priorité. C'est pourquoi nous sommes assurés jusqu'à 2 millions de dollars pour tout type de dommage.</div>
+                                                    </div>
+                                                </div><!-- /.accordion-item -->
+                                                <div class="accordion-item ">
+                                                    <h3 class="accordion-heading"><span class="inner">Quelles sont vos modalités de paiement?</span></h3>
+                                                    <div class="accordion-content">
+                                                        <div>Bien que cela dépend de la grosseur de votre projet ainsi que de l'échéancier, nous sommes assez flexibles afin de nous assurer que le tout vous convienne. Nous acceptons les virements bancaire, le cash, les virements interac, les chèques ou les carte de crédit.</div>
+                                                    </div>
+                                                </div><!-- /.accordion-item -->
+                                            </div><!-- /.themesflat-accordion -->
+                                        </div><!-- /.themesflat-content-box -->                                                
+                                    </div><!-- /.col-md-6 -->
+                                </div><!-- /.row -->
+                                <div class="row"  id="valeur">
+                                    <div class="col-md-12" id="mission">
+                                        <div class="themesflat-spacer clearfix" data-desktop="0" data-mobile="0" data-smobile="0"></div>
+                                    </div><!-- /.col-md-12 -->
+                                </div><!-- /.row -->
+                            </div><!-- /.container -->
+                        </div>
+
 
   <!-- Stats Widget ****************** -->
 
@@ -73,6 +230,8 @@ const metadata = {
       },
     ]}
   />
+
+  
 
   <!-- Features3 Widget ************** -->
 
@@ -225,4 +384,7 @@ const metadata = {
       },
     ]}
   />
+
+<Contact />
+
 </Layout>

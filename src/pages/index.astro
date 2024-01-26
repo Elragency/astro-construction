@@ -13,7 +13,10 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import PortfolioA from '~/components/widgets/PortfolioA.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import About from '~/components/common/about.astro';
 import { otherprojects } from '~/components/ui/otherprojects.json';
+
+import Contact from '~/components/widgets/elr-contact.astro';
 
 const metadata = {
   title: 'K-Construction - La Compagnie de Construction Pour Vous',
@@ -99,11 +102,22 @@ const metadata = {
     </div>
 </section>
 
+<section id="propos" class="mx-6" >
+  <About />
+</section>
+
+<section>
+  <h2 class="text-3xl font-bold mb-1 mx-6 test">CE QUE NOUS POUVONS FAIRE</h2>
+  <p class="heading-color mx-9 ">NOS SERVICES</p>
+  <PortfolioA />
+</section>
+
+
 
   
 
   <!-- Features Widget *************** -->
-<section data-aos="fade-in" data-aos-duration="2000" >
+<!-- <section data-aos="fade-in" data-aos-duration="2000" >
   <Features
   id="features"
 
@@ -150,57 +164,57 @@ const metadata = {
   ]}
 />
 
-</section>
+</section> -->
 
 
   <Features2
-    title="Nos Services Les Plus Demandes"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    tagline="Populaires"
+    title="Pourquoi choisir K-constructions?"
+    subtitle="Nos Promesses"
+    tagline="Notre offre"
     items={[
       {
-        title: 'Headers',
-        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
+        title: 'Structure',
+        description: "Nous sommes fiers d'offir un service complet et intelligent avec une gestion efficace pour chaque projet.",
         icon: 'flat-color-icons:template',
       },
       {
-        title: 'Heros',
+        title: 'Rêver',
         description:
-          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
+          "Faites nous part de vos rêves en construction et laissez-nous les rendre réalité avec notre équipe professionelle.",
         icon: 'flat-color-icons:gallery',
       },
       {
-        title: 'Features',
+        title: 'En Règles',
         description:
-          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
+          'Nos clients sont notre plus grande priorité, cela inclue leur satisfaction mais également leur sécurité.',
         icon: 'flat-color-icons:approval',
       },
       {
-        title: 'Content',
+        title: 'Contrats',
         description:
-          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
+          "Nous respectons nos contrats, autant l'échéancier établit que le prix convenue, pas de mauvaises surprises avec K-Constructions.",
         icon: 'flat-color-icons:document',
       },
       {
-        title: 'Call-to-Action',
+        title: 'Référence',
         description:
-          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
+          "Nous sommes en fonction depuis plus de 25 ans, nos références peuvent témoigner de la qualité de notre travail.",
         icon: 'flat-color-icons:advertising',
       },
       {
-        title: 'Pricing',
-        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
+        title: 'Paiements',
+        description: 'Avec notre politique de paiement souple, nous nous assurons que tous vos projets soient réalisés à un prix concurentielle.',
         icon: 'flat-color-icons:currency-exchange',
       },
       {
-        title: 'Testimonial',
-        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
+        title: 'Témoignages',
+        description: 'Nos clients témoignent de notre succès par eux mêmes, consulter nos avis sur google.',
         icon: 'flat-color-icons:voice-presentation',
       },
       {
         title: 'Contact',
         description:
-          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
+          "Avec un réseau de contact complet et professionel, vous n'allez pas avoir des problèmes à terminer vos projets en temps.",
         icon: 'flat-color-icons:business-contact',
       },
       {
@@ -225,6 +239,7 @@ const metadata = {
       { title: '+ Employés', amount: '15' },
     ]}
   />
+
 
   
 
@@ -278,7 +293,7 @@ const metadata = {
   />
 
 
-  <PortfolioA />
+
 
   <section id="info">
     <div class="overflow-hidden">
@@ -305,9 +320,9 @@ const metadata = {
 </section>
 
 <Allservices
-title="Nos Services Les Plus Demandes"
  />
 
+ <Contact />
 
   <!-- CallToAction Widget *********** -->
 
