@@ -28,6 +28,8 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
+  
+  <!-- BEGINNING SCRIPT NEEDED FOR ACCORDEON -->
   <script>
     const accordion = document.getElementById("acordeon");
     if (!accordion) throw new ReferenceError();
@@ -57,6 +59,7 @@ const metadata = {
       }
     });
   </script>
+    <!-- END SCRIPT NEEDED FOR ACCORDEON -->
   <!-- Hero Widget ******************* -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="~/assets/js/jquery-1.11.0.min.js"></script>
