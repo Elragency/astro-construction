@@ -30,7 +30,8 @@ const {
         <div class="container mx-auto px-4">
             <div class="flex flex-wrap -mx-4">
                 <div class="col-md-10 col-lg-8 mx-auto text-center px-4">
-                    <form id="myForm" data-netlify="true" enctype="multipart/form-data">
+                    <form id="myForm" data-netlify="true" name="contact" enctype="multipart/form-data">
+                        <input type="hidden" name="form-name" value="contact" />
                         <h3 class="text-lg uppercase font-light">Parlez-nous de vos projets!</h3>
                         <div class="flex flex-wrap -mx-2">
                             <div class="w-full md:w-1/2 px-2 mb-3">
@@ -84,9 +85,8 @@ const {
                         <p class="px-2">
                             <button class="bg-primary-500 hover:bg-primary-700 text-white font-bold py-2 px-4 rounded" type="submit">ENVOYER</button>
                         </p>
-                        <div id="response"></div>
-
                     </form>
+                    <div id="response"></div>
                 </div>
             </div>
         </div>
@@ -94,29 +94,38 @@ const {
 </section>
 
 <script>
-    document.getElementById('myForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-    
-        var form = this; // Reference to the form
-        var formData = new FormData(form);
-        var responseDiv = document.getElementById('response'); // Reference to the response div
-    
-        fetch('/', {
-            method: 'POST',
-            body: formData
-        })
-        .then(() => {
-            // Set the thank you message
-            responseDiv.innerHTML = 'Merci pour votre intérêt, nous allons vous contacter dans les prochaines 24h.';
-            // Add a short delay before hiding the form
-            setTimeout(() => {
-                form.style.display = 'none';
-            }, 500); // Adjust the delay here as needed
-        })
-        .catch((error) => {
-            responseDiv.innerHTML = 'Error: ' + error;
-        });
+document.getElementById('myForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    var form = this;
+    var formData = new FormData(form);
+    var responseDiv = document.getElementById('response');
+
+    fetch('/', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/x-www-form-urlencoded;charset=UTF-8',
+          'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+        },
+        body: new URLSearchParams(formData).toString()
+    })
+    .then(response => {
+        if (response.ok) {
+            return response.text();
+        } else {
+            throw new Error('Network response was not ok.');
+        }
+    })
+    .then(() => {
+        responseDiv.innerHTML = 'Merci pour votre intérêt, nous allons vous contacter dans les prochaines 24h.';
+        setTimeout(() => {
+            form.style.display = 'none';
+        }, 500);
+    })
+    .catch((error) => {
+        responseDiv.innerHTML = 'Error: ' + error;
     });
+});
     
     function updateFileLabel(input) {
         var label = input.nextElementSibling;
