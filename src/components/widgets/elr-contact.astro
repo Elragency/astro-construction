@@ -84,6 +84,8 @@ const {
                         <p class="px-2">
                             <button class="bg-primary-500 hover:bg-primary-700 text-white font-bold py-2 px-4 rounded" type="submit">ENVOYER</button>
                         </p>
+                        <div id="response"></div>
+
                     </form>
                 </div>
             </div>
@@ -91,8 +93,46 @@ const {
     </section>
 </section>
 
-</section>
-</section>
+<script>
+    document.getElementById('myForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+    
+        var form = this; // Reference to the form
+        var formData = new FormData(form);
+        var responseDiv = document.getElementById('response'); // Reference to the response div
+    
+        fetch('/', {
+            method: 'POST',
+            body: formData
+        })
+        .then(() => {
+            // Set the thank you message
+            responseDiv.innerHTML = 'Merci pour votre intérêt, nous allons vous contacter dans les prochaines 24h.';
+            // Add a short delay before hiding the form
+            setTimeout(() => {
+                form.style.display = 'none';
+            }, 500); // Adjust the delay here as needed
+        })
+        .catch((error) => {
+            responseDiv.innerHTML = 'Error: ' + error;
+        });
+    });
+    
+    function updateFileLabel(input) {
+        var label = input.nextElementSibling;
+        var fileName = input.files[0] ? input.files[0].name : "Aucun fichier sélectionné";
+    
+        label.innerHTML = fileName;
+    }
+    
+    // Add event listeners to each file input
+    document.querySelectorAll('.custom-file-input').forEach(item => {
+        item.addEventListener('change', function() {
+            updateFileLabel(this);
+        });
+    });
+     </script>
+
 
 <style>
 
