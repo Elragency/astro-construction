@@ -27,11 +27,10 @@ const { language, textDirection } = I18N;
 ---
 
 <!doctype html>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="~/assets/js/jquery-1.11.0.min.js"></script>
-
 <html lang={language} dir={textDirection} class="2xl:text-[20px]">
   <head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="~/assets/js/jquery-1.11.0.min.js"></script>
     <script>
       const accordion = document.getElementById("acordeon");
       if (!accordion) throw new ReferenceError();
