@@ -103,44 +103,37 @@ document.getElementById('myForm').addEventListener('submit', function(e) {
 
     fetch('/', {
         method: 'POST',
-        headers: {
-          'Accept': 'application/x-www-form-urlencoded;charset=UTF-8',
-          'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
-        },
-        body: new URLSearchParams(formData).toString()
+        body: formData
     })
     .then(response => {
         if (response.ok) {
-            return response.text();
+            responseDiv.innerHTML = 'Merci pour votre intérêt, nous allons vous contacter dans les prochaines 24h.';
+            setTimeout(() => {
+                form.style.display = 'none';
+            }, 500);
         } else {
             throw new Error('Network response was not ok.');
         }
-    })
-    .then(() => {
-        responseDiv.innerHTML = 'Merci pour votre intérêt, nous allons vous contacter dans les prochaines 24h.';
-        setTimeout(() => {
-            form.style.display = 'none';
-        }, 500);
     })
     .catch((error) => {
         responseDiv.innerHTML = 'Error: ' + error;
     });
 });
-    
-    function updateFileLabel(input) {
-        var label = input.nextElementSibling;
-        var fileName = input.files[0] ? input.files[0].name : "Aucun fichier sélectionné";
-    
-        label.innerHTML = fileName;
-    }
-    
-    // Add event listeners to each file input
-    document.querySelectorAll('.custom-file-input').forEach(item => {
-        item.addEventListener('change', function() {
-            updateFileLabel(this);
-        });
+
+function updateFileLabel(input) {
+    var label = input.nextElementSibling;
+    var fileName = input.files[0] ? input.files[0].name : "Aucun fichier sélectionné";
+
+    label.innerHTML = fileName;
+}
+
+// Add event listeners to each file input
+document.querySelectorAll('.custom-file-input').forEach(item => {
+    item.addEventListener('change', function() {
+        updateFileLabel(this);
     });
-     </script>
+});
+</script>
 
 
 <style>
