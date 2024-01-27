@@ -32,35 +32,7 @@ const { language, textDirection } = I18N;
     <script is:inline  src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
       <!-- <script is:inline src="~/assets/js/jquery-1.11.0.min.js"></script> -->
 
-    <script>
-      const accordion = document.getElementById("acordeon");
-      if (!accordion) throw new ReferenceError();
-    
-      accordion.addEventListener("click", (e) => {
-        const target = e.target as HTMLElement;
-        const dataset = { ...target.dataset };
-    
-        const content = target.nextElementSibling as HTMLElement;
-        const arrow = target.querySelector("img") as HTMLElement;
-    
-        if (!arrow || !content) throw new ReferenceError();
-    
-        switch (dataset.status) {
-          case "disabled":
-            content.style.gridTemplateRows = "1fr";
-            target.dataset.status = "enabled";
-            arrow.style.rotate = "90deg";
-            break;
-          case "enabled":
-            content.style.gridTemplateRows = "0fr";
-            target.dataset.status = "disabled";
-            arrow.style.rotate = "0deg";
-            break;
-          default:
-            break;
-        }
-      });
-    </script>
+
     <CommonMeta />
     <Favicons />
     <CustomStyles />
