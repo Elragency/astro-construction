@@ -1,7 +1,7 @@
 ---
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content.astro';
-import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3-3.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Testimonials from '~/components/widgets/Testimonials.astro';
 import Layout from '~/layouts/PageLayout.astro';
@@ -23,23 +23,26 @@ const metadata = {
       src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
       alt: 'AstroWind Hero Image',
     }}
+    
   />
 
   <!-- Features2 Widget ************** -->
 
-  <Features2
-    title="Explore our diverse templates"
-    subtitle="Discover our selection below to streamline and elevate your projects."
+  <Features3
+    title="Découvrez nos services"
+    subtitle="Peu importe ce que vous avez besoin, nous pouvons vous l'offrir"
     columns={3}
     items={[
       {
-        title: 'Educational',
+        title: 'Électriciens',
         description:
           'By harmonizing instructional design and visual appeal, templates streamline content creation for varied materials, expediting development and cultivating engaging educational spaces.',
         icon: 'tabler:school',
+        buttonText: 'Voir Plus',
+        buttonLink: 'services/services/plombier'
       },
       {
-        title: 'Interior Design',
+        title: 'Plombiers',
         description:
           'Crafting functional, visually appealing spaces for residential and commercial use. Templates emphasize layout, colors, and furniture setups, offering a versatile toolkit for your design vision.',
         icon: 'tabler:home-star',

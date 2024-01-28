@@ -4,17 +4,17 @@ import AboutAcordeon from '~/components/widgets/Aboutacc-plombier.astro';
 ---
 
 <section class="mb-section">
-    <header class="mb-8 grid gap-4 md:grid-cols-2 md:gap-8">
-        <h2 class="text-title">
+    <header class="mb-8 grid gap-4 md:grid-cols-2 md:gap-8 text-white">
+        <!-- <h2 class="text-title">
             Nos zones d'expertise
         </h2>
         <p class="text-sm opacity-50 md:text-base">
             Avec plus de 25 ans d'expérience, vous faites affaire avec des professionnels lorsque vous nous engagez.
-        </p>
+        </p> -->
     </header>
     <section class="grid gap-8 md:grid-cols-2">
-        <AboutAcordeon open={1}/>
-        <div class="w-full aspect-square rounded-br-[10rem] overflow-hidden">
+        <AboutAcordeon open={0}/>
+        <div class="w-full aspect-square rounded-br-[10rem] overflow-hidden text-white">
             <img class="w-full h-full object-cover" src="https://raw.githubusercontent.com/Elragency/astro-construction/50297db0e21a5c040b2bb709b01b2063ac13d88f/src/assets/images/arch_05.jpg" alt="some building">
         </div>
     </section>

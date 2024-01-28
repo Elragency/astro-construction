@@ -16,7 +16,7 @@ const { open } = Astro.props;
 				return (
 					<li class="border-neutral-600 border-b-[1px]">
 						<header
-							class="flex justify-between cursor-pointer [&>*]:pointer-events-none opacity-80 hover:opacity-100"
+							class="flex justify-between cursor-pointer [&>*]:pointer-events-none opacity-80 hover:opacity-100 "
 							data-status={`${i === open ? "enabled" : "disabled"}`}
 						>
 							<h3 class="text-lg font-extralight md:text-xl">
@@ -34,15 +34,15 @@ const { open } = Astro.props;
 							/>
 						</header>
 						<div
-							class="grid transition-all"
+							class="grid transition-all text-white"
 							style={`${
 								i === open
 									? "grid-template-rows: 1fr;"
 									: "grid-template-rows: 0fr;"
 							}`}
 						>
-							<div class="h-full overflow-hidden">
-								<p class="mb-4 pt-2 text-sm opacity-50 md:text-base">
+							<div class="h-full overflow-hidden text-white">
+								<p class="mb-4 pt-2 text-sm opacity-50 md:text-base text-white ">
 									{e.description}
 								</p>
 							</div>
