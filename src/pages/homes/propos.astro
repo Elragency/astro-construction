@@ -8,133 +8,108 @@ import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 import Contact from '~/components/widgets/elr-contact.astro';
+import Adresse from '~/components/widgets/Adresse.astro';
 
 
 const metadata = {
-  title: 'About us',
+  title: 'À Propos de K-Constructions',
 };
 ---
 
 <Layout metadata={metadata}>
+
+    <!-- END SCRIPT NEEDED FOR ACCORDEON -->
   <!-- Hero Widget ******************* -->
-
-  <Hero4
-  image={{ src: '~/assets/images/banner1-img1.png', alt: 'AstroWind Hero Image' }}
-  >
-
-  </Hero4>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="~/assets/js/jquery-1.11.0.min.js"></script>
+  <!-- <script src="~/assets/js/modernizr.js"></script> -->
 
 
-  <section class="p-8">
-    <!-- Main Content -->
-    <div id="main-content" class="site-main clearfix">
-        <div id="content-wrap" class="container">
-            <div id="site-content" class="site-content clearfix">
-                <div id="inner-content" class="inner-content-wrap">   
-                    <div class="flat-content-wrap style-2 clearfix">
-                        <h3 class="mb-3">Plus que des constructeurs</h3>
-                        <p>Grâce à notre service Conception-Réalisation, nous offrons à nos clients une source unique de responsabilité. 
-                            Nous nous engageons à comprendre et développer vos attentes, en gérant celles-ci avec une équipe de conception sur mesure et hautement qualifiée. 
-                            L'innovation est au cœur de chaque projet. Pour cela, nous concentrons nos efforts sur chaque étape de chaque phase, afin de rendre le processus entier 
-                            fluide et transparent. Notre approche proactive et collaborative est la clé pour dévoiler des idées uniques et saisir les opportunités d'amélioration avant 
-                            le début de la phase suivante. Avec nous, transformez votre cuisine en un espace de rêve, où fonctionnalité et esthétique se rencontrent pour créer un lieu 
-                            de vie unique.</p>
-                    </div>
-                    <div class="themesflat-spacer clearfix" data-desktop="37" data-mobile="35" data-smobile="35"></div>     
-                    <div class="flat-content-wrap style-2 clearfix">
-                        <h5 class="title no-letter-spacing">CONTACTEZ-NOUS POUR DES SERVICES DE CONCEPTION-CONSTRUCTION DE CUISINE AUJOURD'HUI</h5>
-                        <div class="themesflat-spacer clearfix" data-desktop="27" data-mobile="27" data-smobile="27"></div> 
-                        <div class="themesflat-tabs style-2 title-w170 clearfix">
-                            <ul class="tab-title clearfix ">
-                                <li class="item-title active">
-                                    <span class="inner text-black">Expérience</span>
-                                </li>
-                                <li class="item-title">
-                                    <span class="inner text-black">COMPLET</span>
-                                </li>
-                                <li class="item-title">
-                                    <span class="inner text-black">COÛTS</span>
-                                </li>
-                            </ul>
 
-                            <div class="tab-content-wrap clearfix">
-                                <div class="tab-content">
-                                    <div class="item-content">                                                            
-                                        <p>
-                                            K-Construction, forte de ses 25 ans d'expérience dans les services électriques, se distingue par son expertise et sa fiabilité inébranlable. 
-                                            Cette longévité remarquable dans le secteur n'est pas seulement le reflet d'une grande expérience, mais aussi d'une réputation bâtie sur la 
-                                            confiance et la satisfaction des clients. Au fil des années, K-Construction a su s'adapter aux évolutions technologiques et réglementaires du domaine électrique, 
-                                            ce qui témoigne de leur engagement à fournir des services à la fois contemporains et conformes aux normes de sécurité les plus strictes. 
-                                        </p>
-                                        <p>
-                                            Cette expérience de plusieurs 
-                                            décennies leur permet de comprendre et de répondre efficacement aux besoins les plus complexes, qu'il s'agisse de projets résidentiels, commerciaux ou industriels.
-                                        </p>                                                    
-                                    </div>
-                                </div><!-- /.tab-content -->
-                                <div class="tab-content">
-                                    <div class="item-content">                                                            
-                                        <p>
-                                            En plus de leur riche expérience, K-Construction offre un service électrique complet, couvrant un large éventail de besoins. 
-                                            Leur gamme de services s'étend de l'installation électrique de base à des solutions plus complexes comme les systèmes automatisés, 
-                                            la domotique et les installations écoénergétiques. Cette approche globale garantit que les clients bénéficient d'une solution complète, 
-                                            adaptée à leurs exigences spécifiques, sans avoir à faire appel à plusieurs prestataires.
-                                            </p>
-                                        <p> 
-                                            L'expertise de K-Construction, 
-                                            alliée à leur service complet, assure aux clients une tranquillité d'esprit totale, sachant que leur projet est entre les
-                                             mains de professionnels chevronnés capables de gérer tous les aspects des travaux électriques avec compétence et soin.
-                                        </p>                                                    
-                                    </div>
-                                </div><!-- /.tab-content -->
-                                <div class="tab-content">
-                                    <div class="item-content">                                                            
-                                        <p>
-                                            K-Construction s'engage à offrir ses services d'électricien avec un équilibre parfait entre coût et qualité, ce qui en fait 
-                                            un choix privilégié sur le marché. Leur modèle de tarification est conçu pour offrir une valeur exceptionnelle, garantissant 
-                                            que les clients reçoivent un travail de qualité supérieure à un prix compétitif. Cette approche de meilleur coût ne compromet 
-                                            pas la qualité ; au contraire, elle repose sur une optimisation efficace des ressources et une gestion experte des projets. 
-                                            K-Construction utilise des matériaux de haute qualité et les dernières technologies pour assurer la durabilité et l'efficacité 
-                                            de leurs installations électriques, tout en maintenant des tarifs accessibles. Cette stratégie de prix équitable, couplée à une 
-                                            exécution de haute qualité, permet à K-Construction de se démarquer en tant que prestataire de services électriques de premier choix.
-                                        </p>
-                                        <p>
-                                            La qualité est un pilier central de l'offre de K-Construction. Ils s'assurent que chaque projet, qu'il soit grand ou petit, 
-                                            est réalisé avec le plus haut degré de professionnalisme et d'attention aux détails. Leur équipe d'électriciens certifiés et 
-                                            hautement qualifiés est dédiée à fournir un travail impeccable, respectant strictement les normes de sécurité et les réglementations 
-                                            en vigueur. Cette excellence dans l'exécution se traduit par des installations fiables, sécurisées et optimisées pour la performance 
-                                            et la longévité. En choisissant K-Construction, les clients bénéficient d'une assurance de qualité inégalée, où chaque aspect du 
-                                            service est conçu pour surpasser les attentes, tout en restant dans les limites d'un budget raisonnable. Ce parfait équilibre 
-                                            entre coût et qualité fait de K-Construction un partenaire incontournable pour tous les besoins en services électriques.
-                                        </p>                                                    
-                                    </div>
-                                </div><!-- /.tab-content -->
-                            </div><!-- /.tab-content-wrap -->
-                        </div><!-- /.themesflat-tabs -->
-                    </div>
-                    <div class="themesflat-spacer clearfix" data-desktop="80" data-mobile="60" data-smobile="60"></div>
-                </div><!-- /#inner-content -->
-            </div><!-- /#site-content -->
-            <div id="sidebar">
-                <div class="themesflat-spacer clearfix" data-desktop="80" data-mobile="0" data-smobile="0"></div>
-                <div id="inner-sidebar" class="inner-content-wrap">        
-                    <div class="widget widget_help align-center has-shadow no-sep has-border border-solid">
-                        <div class="inner">
-                            <h2 class="widget-title margin-bottom-14"><span>VOUS ÊTES PRÊTS À PASSER À L'ACTION?</span></h2>
-                            <p class="text line-height-26 margin-bottom-23">
-                                Remplissez le formulaire ci-dessous et nous vous contacterons dans les plus brefs délais
-                            </p>
-                            <div class="elm-button">
-                                <a href="#soumission" class="themesflat-button bg-accent pd30">DÉBUTEZ MAINTENANT!</a>
-                            </div>
-                        </div>                                
-                    </div>
-                </div>
-                <div class="themesflat-spacer clearfix" data-desktop="0" data-mobile="60" data-smobile="60"></div>
-            </div><!-- /#sidebar -->
-        </div><!-- /#content-wrap -->
-    </div><!-- /#main-content -->
+
+      <!-- Link Swiper's CSS -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+<section class="testing-w ">
+  <section class="relative md:-mt-[100px] overflow-y-hidden">
+    <div class="flex items-center justify-center h-screen">
+      <!-- Image section -->
+      <div class="absolute inset-0 z-0">
+        <img
+          class="w-full h-full object-cover"
+          loading="eager"
+          src="https://raw.githubusercontent.com/Elragency/astro-construction/50297db0e21a5c040b2bb709b01b2063ac13d88f/src/assets/images/banner1-img1.png"
+          alt="test image"
+        />
+      </div>
+  
+      <!-- Text content section -->
+      <div class="relative z-10 text-center">
+        <p class="text-base text-secondary dark:text-white font-bold tracking-wide uppercase pb-2">
+          LES EXPERTS DE LA CONSTRUCTION
+        </p>
+        <h1 class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200">
+          QUI SOMMES-NOUS?
+        </h1>
+        <a href="#soumission">
+          <button type="button" class="btn btn-outline-orange inline-block text-white py-3 px-4 rounded mt-1 ml-0 md:ml-6 mb-2">
+            Contactez-Nous!
+          </button>
+        </a>
+        <!-- Additional content can be added here -->
+      </div>
+    </div>
+  </section>
+  
+  
 </section>
+      
+
+<section id="main-content" class="py-10 bg-black">
+  <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+          <p class="text-lg font-medium mb-5 text-white">Qui est K Construction</p>
+          <h2 class="text-4xl font-semibold text-white mb-4">Ce que nous faisons</h2>
+          <div class="flex justify-center items-center">
+              <div class="w-32 h-0.5 bg-gray-300"></div>
+          </div>
+          <h4 class="mt-4 text-xl text-gray-300">K Construction a plus de 359 projets réalisés - jumelé avec 25 années d'expérience, nous sommes les meilleurs entrepreneur pour vous servir.</h4>
+      </div>
+
+      <div class="flex flex-wrap -mx-4">
+          <div class="w-full md:w-1/3 px-4 mb-8" >
+              <div class="p-6 bg-white rounded-lg shadow-lg text-center">
+                  <div class="icon text-3xl mb-4">
+                      <iconify-icon icon="tabler:template" class="inline-block text-orange-500"></iconify-icon>
+                  </div>
+                  <h5 class="text-lg text-orange-600 font-semibold mb-3"><a href="#" class="hover:text-orange-600">QUALITÉ</a></h5>
+                  <p class="text-black">K Construction se distingue par une qualité inégalée, garantissant précision, durabilité et excellence dans chaque projet.</p>
+              </div>
+          </div>
+          <div class="w-full md:w-1/3 px-4 mb-8"  data-aos-delay="200">
+              <div class="p-6 bg-white rounded-lg shadow-lg text-center">
+                  <div class="icon text-3xl mb-4">
+                      <iconify-icon icon="tabler:timer" class="inline-block text-orange-500"></iconify-icon>
+                  </div>
+                  <h5 class="text-lg text-orange-600 font-semibold mb-3"><a href="#" class="hover:text-orange-600">PROFESSIONALISME</a></h5>
+                  <p class="text-black">Nous incarnons le professionnalisme, offrant expertise, fiabilité et un service clientèle hors pair à chaque étape.</p>
+              </div>
+          </div>
+          <div class="w-full md:w-1/3 px-4 mb-8"  data-aos-delay="400">
+              <div class="p-6 bg-white rounded-lg shadow-lg text-center">
+                  <div class="icon text-3xl mb-4">
+                      <iconify-icon icon="tabler:currency-dollar" class="inline-block text-orange-500"></iconify-icon>
+                  </div>
+                  <h5 class="text-lg text-orange-600 font-semibold mb-3"><a href="#" class="hover:text-orange-600">ABORDABLE</a></h5>
+                  <p class="text-black">Nous offrons des solutions de qualité au meilleur prix, rendant l'excellence en construction accessible et abordable.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!--  -->
+
 
 
 
@@ -142,39 +117,115 @@ const metadata = {
   <!-- Stats Widget ****************** -->
 
   <Stats
-    title="Statistics about us"
+    title="K-CONSTRUCTIONS EN CHIFFRES"
     stats={[
-      { title: 'Offices', amount: '4' },
-      { title: 'Employees', amount: '248' },
-      { title: 'Templates', amount: '12' },
-      { title: 'Awards', amount: '24' },
+      { title: "ANNÉES D'EXPÉRIENCE", amount: '25' },
+      { title: "PROJETS COMPLÉTÉS", amount: '460' },
+      { title: 'CLIENTS SATISFAITS', amount: '270' },
+      { title: 'EMPLOYÉS MOTIVÉS', amount: '15' },
     ]}
   />
+
+    <!-- Steps2 Widget ****************** -->
+
+    <Steps2
+    title="NOTRE FOCUS"
+    subtitle="Notre objectif est de dépasser vos objectifs, de respecter vos délais et de gérer avec succès votre budget. Nous fournissons à nos clients des services d’entreprise générale, de gestion de construction, d’étude de site et de conception-construction de premier ordre."
+    items={[
+      {
+        title: "De L'Expérience",
+        description:
+          "Nous avons réalisé avec succès des projets pour un nombre important de clients satisfaits.",
+      },
+      {
+        title: 'En Règle',
+        description:
+          "Nous sommes autorisés à effectuer des travaux d'entreprise générale et avons les électriciens, plombiers et autres quarts de métier en règle pour tous vos besoins.",
+      },
+      {
+        title: 'Ouverts À vos besoins',
+        description:
+          "Nous serons ouverts à l'obtention de nouvelles licences si une opportunité se présentes",
+      },
+    ]}
+  />
+
+  <Steps2
+  title="Dédiés"
+  subtitle="Chez K Construction, notre engagement envers nos clients est notre priorité. Nous visons non seulement à rencontrer vos attentes, mais à les surpasser, en respectant scrupuleusement vos délais et votre budget. Nos services haut de gamme incluent la gestion de construction, l'étude de site, et la conception-construction, tous dédiés à réaliser votre vision."
+  isReversed={true}
+  callToAction={{
+    text: 'Faire Affaire',
+    href: '#soumission',
+  }}
+  items={[
+    {
+      title: 'Une Réputation',
+      description: 'Nous avons bâti notre réputation sur la satisfaction de nos clients, en réalisant avec succès une multitude de projets répondant à leurs besoins spécifiques.',
+      icon: 'tabler:globe',
+    },
+    {
+      title: 'Une Équipe',
+      description:
+        'Notre équipe est hautement qualifiée et autorisée à mener à bien des travaux complexes, garantissant des résultats professionnels dans tous les aspects de votre projet.',
+      icon: 'tabler:message-star',
+    },
+    {
+      title: 'Awards and recognition as industry experts',
+      description:
+        "Nous sommes toujours prêts à élargir nos compétences et obtenir de nouvelles licences pour mieux répondre à vos projets ambitieux.",
+      icon: 'tabler:award',
+    },
+  ]}
+/>
+
+<Steps2
+title="ENGAGÉ"
+subtitle="Chez K Construction, nous sommes dédiés à fournir à nos clients une expérience exceptionnelle. Notre engagement se traduit par une approche centrée sur le client, garantissant satisfaction et excellence à chaque étape du projet"
+items={[
+  {
+    title: "À L'écoute",
+    description:
+      "Écoute Active des Clients : Nous prenons le temps de comprendre vos besoins et vos aspirations pour garantir que chaque projet reflète vos attentes.",
+  },
+  {
+    title: 'Transparence Totale',
+    description:
+      "Nous maintenons une communication ouverte et honnête tout au long du processus, assurant une confiance et une clarté sans faille.",
+  },
+  {
+    title: 'Service Après-Projet',
+    description:
+      "Notre dévouement envers nos clients continue même après la fin des travaux, assurant un suivi et une assistance pour garantir votre entière satisfaction.",
+  },
+]}
+/>
+
 
   <!-- Features3 Widget ************** -->
 
   <Features3
-    title="Our templates"
-    subtitle="Etiam scelerisque, enim eget vestibulum luctus, nibh mauris blandit nulla, nec vestibulum risus justo ut enim. Praesent lacinia diam et ante imperdiet euismod."
+    title="QUESTIONS FRÉQUENTES"
+    subtitle="Certaines questions que nous reçevons régulièrement."
     columns={3}
     isBeforeContent={true}
     items={[
       {
-        title: 'Educational',
+        title: 'ÊTES-VOUS EN RÈGLE POUR FAIRE DES TRAVAUX DANS LES CONDOS?',
         description:
-          'Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim a, molestie vel nulla.',
+          'Oui! Nous possédons notre licence RBQ et tous nos professionnels sont accrédités par les instances gouvernementales nécessaires pour effectuer tout type de travaux nécessaires.',
         icon: 'tabler:template',
       },
       {
-        title: 'Interior Design',
+        title: 'ÊTES-VOUS ASSURÉ?',
         description:
-          'Vivamus porttitor, tortor convallis aliquam pretium, turpis enim consectetur elit, vitae egestas purus erat ac nunc nulla.',
+          "Bien sûr! La sécurité des investissements de nos clients est notre priorité. C'est pourquoi nous sommes assurés jusqu'à 2 millions de dollars pour tout type de dommage.",
         icon: 'tabler:template',
       },
       {
-        title: 'Photography',
+        title: 'QUELLES SONT VOS MODALITÉS DE PAIEMENT?',
         description:
-          'Duis sed lectus in nisl vehicula porttitor eget quis odio. Aliquam erat volutpat. Nulla eleifend nulla id sem fermentum.',
+          "Bien que cela dépend de la grosseur de votre projet ainsi que de l'échéancier, nous sommes assez flexibles afin de nous assurer que le tout vous convienne. Nous acceptons les virements bancaire, le cash, les virements interac, les chèques ou les carte de crédit.",
         icon: 'tabler:template',
       },
     ]}
@@ -182,9 +233,11 @@ const metadata = {
 
   
 
+  
+
   <!-- Features3 Widget ************** -->
 
-  <Features3
+  <!-- <Features3
     columns={3}
     isAfterContent={true}
     items={[
@@ -229,110 +282,14 @@ const metadata = {
       src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
       alt: 'Colorful Image',
     }}
-  />
+  /> -->
+
+
 
   <!-- Steps2 Widget ****************** -->
 
-  <Steps2
-    title="Our values"
-    subtitle="Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus. Nulla facilisi. Vestibulum malesuada lacus."
-    items={[
-      {
-        title: 'Customer-centric approach',
-        description:
-          'Donec id nibh neque. Quisque et fermentum tortor. Fusce vitae dolor a mauris dignissim commodo. Ut eleifend luctus condimentum.',
-      },
-      {
-        title: 'Constant Improvement',
-        description:
-          'Phasellus laoreet fermentum venenatis. Vivamus dapibus pulvinar arcu eget mattis. Fusce eget mauris leo.',
-      },
-      {
-        title: 'Ethical Practices',
-        description:
-          'Vestibulum imperdiet libero et lectus molestie, et maximus augue porta. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
-      },
-    ]}
-  />
 
-  <!-- Steps2 Widget ****************** -->
-
-  <Steps2
-    title="Achievements"
-    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla."
-    isReversed={true}
-    callToAction={{
-      text: 'See more',
-      href: '/',
-    }}
-    items={[
-      {
-        title: 'Global reach',
-        description: 'Nam malesuada urna in enim imperdiet tincidunt. Phasellus non tincidunt nisi, at elementum mi.',
-        icon: 'tabler:globe',
-      },
-      {
-        title: 'Positive customer feedback and reviews',
-        description:
-          'Cras semper nulla leo, eget laoreet erat cursus sed. Praesent faucibus massa in purus iaculis dictum.',
-        icon: 'tabler:message-star',
-      },
-      {
-        title: 'Awards and recognition as industry experts',
-        description:
-          'Phasellus lacinia cursus velit, eu malesuada magna pretium eu. Etiam aliquet tellus purus, blandit lobortis ex rhoncus vitae.',
-        icon: 'tabler:award',
-      },
-    ]}
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Our locations"
-    tagline="Find us"
-    columns={4}
-    items={[
-      {
-        title: 'EE.UU',
-        description: '1234 Lorem Ipsum St, 12345, Miami',
-      },
-      {
-        title: 'Spain',
-        description: '5678 Lorem Ipsum St, 56789, Madrid',
-      },
-      {
-        title: 'Australia',
-        description: '9012 Lorem Ipsum St, 90123, Sydney',
-      },
-      {
-        title: 'Brazil',
-        description: '3456 Lorem Ipsum St, 34567, São Paulo',
-      },
-    ]}
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Technical Support"
-    tagline="Contact us"
-    columns={2}
-    items={[
-      {
-        title: 'Chat with us',
-        description:
-          'Integer luctus laoreet libero, auctor varius purus rutrum sit amet. Ut nec molestie nisi, quis eleifend mi.',
-        icon: 'tabler:messages',
-      },
-      {
-        title: 'Call us',
-        description:
-          'Mauris faucibus finibus orci, in posuere elit viverra non. In hac habitasse platea dictumst. Cras lobortis metus a hendrerit congue.',
-        icon: 'tabler:headset',
-      },
-    ]}
-  />
+  <Adresse />
 
 <Contact />
 
@@ -344,14 +301,10 @@ const metadata = {
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <!-- <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script> -->
 <script src="~/assets/js/shortcodes.js"></script>
+<script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
+
 
 <style>
-
-
-
-
-
-
 
 @media only screen and (max-width: 1199px) {
 	.themesflat-icon-box.padding-inner { padding: 15px; }
@@ -375,7 +328,6 @@ const metadata = {
 	.half-background.style-1 { height: 330px; }
 	.half-background.style-2 { margin-top: 35px; }
 }
-
 
 
 @media only screen and (max-width: 1199px){
@@ -623,6 +575,37 @@ const metadata = {
 .why-us .box:hover p {
   color: #fff;
 }
+
+.btn-outline-orange {
+    background: #ff3c00;
+    color: white;
+    /* color: #ff3c00; */
+  }
+
+  .font-body {
+    font-size: 1.2rem;
+    color: white;
+  }
+  .text-grey {
+    color: white !important;
+  }
+  .font-body1 {
+    font-size: 1.5rem;
+  }
+  @media (min-width: 768px) { /* Adjust the min-width value as needed for your definition of 'big screens' */
+  .padding-body {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+  .test {
+    font-size: calc(1.475rem + 2.7vw);
+    font-weight: 300;
+    line-height: 1.2;
+  }
+  .overflow-hidden {
+    overflow: hidden;
+  }
 
 </style>
 </Layout>

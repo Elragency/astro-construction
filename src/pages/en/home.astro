@@ -27,11 +27,35 @@ const metadata = {
 
 
 
-  <Hero3
-  image={{ src: '~/assets/images/hero2.png', alt: 'AstroWind Hero Image' }}
->
-
-  </Hero3>
+      <section class="relative md:-mt-[100px]  not-prose">
+        <div class="flex items-center justify-center min-h-screen">
+          <!-- Image section -->
+          <div class="absolute inset-0 z-0">
+            <img
+              class="w-full h-full object-cover"
+              loading="eager"
+              src="https://raw.githubusercontent.com/Elragency/astro-construction/fbae51d90db6d44bf6cd417c5cf9cfc810d35c1e/src/assets/images/hero2.png"
+              alt="test image"
+            />
+          </div>
+      
+          <!-- Text content section -->
+          <div class="relative z-10 text-center">
+            <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase">
+              Besoin d'un plombier?
+            </p>
+            <h1 class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200">
+              Trouble de plomberie?
+            </h1>
+            <a href="#soumission">
+              <button type="button" class="btn btn-outline-orange inline-block text-white py-3 px-4 rounded mt-1 ml-0 md:ml-6 mb-2">
+                Contactez-Nous!
+              </button>
+            </a>
+            <!-- Additional content can be added here -->
+          </div>
+        </div>
+      </section>
 
   <!-- Note Widget ******************* -->
 
