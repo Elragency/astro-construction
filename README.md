@@ -1,4 +1,4 @@
-# 🚀 AstroWind
+# 🚀 K-Constructions
 
 <img src="https://raw.githubusercontent.com/onwidget/.github/main/resources/astrowind/lighthouse-score.png" align="right"
      alt="AstroWind Lighthouse Score" width="100" height="358">
@@ -32,7 +32,7 @@
 <details open>
 <summary>Table of Contents</summary>
 
-- [🚀 AstroWind](#-astrowind)
+- [🚀 K-Constructions](#-k-constructions)
   - [Demo](#demo)
   - [Getting started](#getting-started)
     - [Project structure](#project-structure)
