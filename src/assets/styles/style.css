@@ -176,9 +176,9 @@ h6,
     --bs-btn-bg: var(--accent-color);
     --bs-btn-border-color: var(--accent-color);
     --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: #ea422b;
+    --bs-btn-hover-bg: red !important;
     --bs-bg: #000000;
-    --bs-btn-hover-border-color: #ea422b;
+    --bs-btn-hover-border-color: #f6f6f6;
     --bs-btn-focus-shadow-rgb: 49, 132, 253;
     --bs-btn-active-color: #fff;
     --bs-btn-active-bg: #e8e8e8;
@@ -187,6 +187,7 @@ h6,
     --bs-btn-disabled-color: #fff;
     --bs-btn-disabled-bg: #ffffff;
     --bs-btn-disabled-border-color: #ffffff;
+    background-color: #ff3c00 !important;
 }
 
 /* button arrow style  */
