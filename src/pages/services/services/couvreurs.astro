@@ -21,6 +21,8 @@ import About from '~/components/common/About.astro';
 import Contact from '~/components/widgets/elr-contact.astro';
 import Image from '~/components/common/Image.astro';
 import Adresse from '~/components/widgets/Adresse.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Content from '~/components/widgets/Content.astro';
 
 const metadata = {
   title: 'K-Construction - La Compagnie de Construction Pour Vous',
@@ -82,7 +84,7 @@ const metadata = {
             <img
               class="w-full h-full object-cover"
               loading="eager"
-              src="https://raw.githubusercontent.com/Elragency/astro-construction/main/src/assets/images/banners/banner-electricien.png"
+              src="https://raw.githubusercontent.com/Elragency/astro-construction/main/src/assets/images/banners/banner-couvreur.png"
               alt="les meilleurs électriciens sur la rive sud"
             />
           </div>
@@ -90,10 +92,10 @@ const metadata = {
           <!-- Text content section -->
           <div class="relative z-10 text-center">
             <p class="text-base text-secondary text-white font-bold tracking-wide uppercase m-1"data-aos="fade-up" data-aos-duration="2000">
-              AVEC NOS SERVICES PROFESSIONNELS, VOS SOUCIS ÉLECTRIQUE VONT ÊTRE CHOSE DU PASSÉE EN UN TEMPS RECORD!
+              COUVREUR PROFESSIONELS À MONTRÉAL ET EN MONTÉRÉGIE
             </p>
             <h1 class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200" data-aos="fade-up" data-aos-duration="2500">
-              UN NOUVEAU PROJET?
+              RÉPARATIONS DE TOITURE RAPIDES ET FIABLES
             </h1>
             <a href="#soumission">
               <button type="button" class="btn btn-outline-orange inline-block text-white py-3 px-4 rounded mt-1 ml-0 md:ml-6 mb-2"data-aos="fade-up" data-aos-duration="2600">
@@ -108,24 +110,23 @@ const metadata = {
 
   <!-- <Note /> -->
 
-  <section id="propos" class="mx-6" >
+  <section id="propos" class="m-6" >
     <div class="overflow-hidden">
       <div class="container mx-auto px-4 py-6 border-b" >
         <div class="flex flex-wrap -mx-4">
           <div class="w-full md:w-1/2 px-4 py-6 mb-4 md:mb-0 border-r padding-body" data-aos="fade-left" data-aos-duration="2000">
             <p class="text-xl mb-3" style="color:#ff3c00" >FAITE AFFAIRE AVEC LE GROUPE K CONSTRUCTION</p>
-            <h2 class="text-2xl font-bold mb-4 test">NOS PROFESSIONNELS PRENNENT SOIN DES INSTALLATIONS ÉLECTRIQUES RAPIDEMENT PARTOUT EN MONTÉRÉGIE.</h2>
+            <h2 class="text-2xl font-bold mb-4 test">CHEZ K-CONSTRUCTION NOUS SOMMES VOS EXPERTS EN COUVERTURE.</h2>
           </div>
           <div class="w-full md:w-1/2 px-4 pt-2 padding-body" data-aos="fade-right" data-aos-duration="2000" >
             <p class="ml-0 md:ml-6 font-body pb-4">
-              Notre équipe chez K-Construction est plus que qualifiée; elle incarne l'excellence et le professionnalisme dans chaque projet qu'elle entreprend. 
-              Chaque membre de notre équipe est scrupuleusement choisi, formé et certifié, garantissant une conformité absolue avec les normes élevées du RBQ 
-              (Régie du Bâtiment du Québec). 
+              Les intempéries et le temps peuvent endommager votre toit. Chez K-Construction, nous comprenons l'urgence de telles situations. 
+              Notre équipe est prête à intervenir rapidement pour effectuer les réparations nécessaires.
               <br><br>
-              Cette rigueur dans notre processus de qualification assure que nos clients reçoivent des services d'électricité réalisés avec une expertise sans faille.
+              Nous nous assurons que chaque réparation est effectuée avec précision et efficacité pour garantir la longévité et la résilience de votre toiture.
             </p>
             <a href="apropos.html" class="btn btn-outline-orange inline-block bg-primary text-white py-3 px-4 rounded mt-1 ml-0 md:ml-6 mb-2">
-              À Propos
+              Demandez une soumission
               <iconify-icon icon="tabler:arrow-right" class="inline-block ml-2"></iconify-icon>
             </a>
           </div>
@@ -134,202 +135,96 @@ const metadata = {
     </div>
   </section>
 
-  <!-- <section id="process" class="my-5" data-aos="fade-up" data-aos-duration="2000">
-    <div class="overflow-hidden">
-        <div class="mx-auto container" >
-            <div class="flex flex-wrap -mx-4"> 
-                <div class="w-full md:w-1/2 lg:w-1/4 px-6">
-                    <div class="py-3 md:py-5 px-3">
-                        <h4 class="mb-3 font-body1"> <span class="heading-color">01.</span> Contact</h4>
-                        <p class="font-body">Utilisez le formulaire ci-dessous pour nous contacter.</p>
-                    </div>
+  <section id="offrea" class="my-10 pt-10">
+    <div class="container mx-auto pt-10">
+      <div class="flex justify-center pb-4">
+        <h2 class="text-3xl font-bold mb-4 test">
+          Notre offre
+      </h2>
+        
+      </div>
+        <div class="flex justify-center pb-4">
+
+        <div class="flex flex-wrap -mx-4">
+            <div class="mt-4 px-4 w-full md:w-1/2 lg:w-1/4">
+                <div class="text-center py-10 px-6 shadow-lg rounded-lg">
+                    <iconify-icon class="text-3xl my-2" icon="mdi:home-roof"></iconify-icon>
+                    <h5 class="text-xl font-semibold mb-3">Remplacement Complet</h5>
+                    <p>Renouvelez votre toit avec expertise et durabilité.</p>
                 </div>
-                <div class="w-full md:w-1/2 lg:w-1/4 px-6">
-                    <div class="py-3 md:py-5 px-3">
-                        <h4 class="mb-3 font-body1"> <span class="heading-color">02.</span> inspection</h4>
-                        <p class="font-body">Nous allons visiter l'adresse des travaux pour nous faire une idée.</p>
-                    </div>
+            </div>
+            <div class="mt-4 px-4 w-full md:w-1/2 lg:w-1/4">
+                <div class="text-center py-10 px-6 shadow-lg rounded-lg">
+                    <iconify-icon class="text-3xl my-2" icon="mdi:weather-lightning"></iconify-icon>
+                    <h5 class="text-xl font-semibold mb-3">Urgences</h5>
+                    <p>Intervention rapide et fiable pour vos urgences.</p>
                 </div>
-                <div class="w-full md:w-1/2 lg:w-1/4 px-6">
-                    <div class="py-3 md:py-5 px-3">
-                        <h4 class="mb-3 font-body1"> <span class="heading-color">03.</span> Soumission</h4>
-                        <p class="font-body">Nous vous faisons parvenir la soumission en 24h.</p>
-                    </div>
+            </div>
+            <div class="mt-4 px-4 w-full md:w-1/2 lg:w-1/4">
+                <div class="text-center py-10 px-6 shadow-lg rounded-lg">
+                    <iconify-icon class="text-3xl my-2" icon="mdi:hammer"></iconify-icon>
+                    <h5 class="text-xl font-semibold mb-3">Réparations</h5>
+                    <p>Des réparations efficaces pour une toiture solide.</p>
                 </div>
-                <div class="w-full md:w-1/2 lg:w-1/4 px-6">
-                    <div class="py-3 md:py-5 px-3">
-                        <h4 class="mb-3 font-body1"> <span class="heading-color">04.</span> Réalisation</h4>
-                        <p class="font-body">Nous effectuons les travaux souhaités.</p>
-                    </div>
+            </div>
+            <div class="mt-4 px-4 w-full md:w-1/2 lg:w-1/4">
+                <div class="text-center py-10 px-6  shadow-lg rounded-lg">
+                    <iconify-icon class="text-3xl my-2" icon="mdi:white-balance-sunny"></iconify-icon>
+                    <h5 class="text-xl font-semibold mb-3">Panneaux Solaires</h5>
+                    <p>Modernisez votre toit avec des solutions solaires.</p>
                 </div>
             </div>
         </div>
     </div>
-</section> -->
-
-
-<!-- <section id="propos" class="m-6" >
-  <div class="flex justify-center">
-    <h2 class="text-3xl font-bold mb-4 test">
-      Notre offre
-  </h2>
-    
-  </div>
-  <About />
-  <a href="apropos.html" class="btn btn-outline-orange inline-block bg-primary text-white py-3 px-4 rounded mt-1 ml-0 md:ml-6 mb-2">
-    À Propos
-    <iconify-icon icon="tabler:arrow-right" class="inline-block ml-2"></iconify-icon>
-  </a>
-</section> -->
-
-<section id="services" class="services m-4">
-  <div class="container mx-auto">
-
-    <div class="flex justify-center pb-4">
-      <h2 class="text-3xl font-bold mb-4 test">
-        Notre offre
-    </h2>
-      
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" >
-      <div class="col-span-1 md:col-span-2 lg:col-span-1">
-        <div class="icon-box">
-          <div class="icon"><iconify-icon icon="pepicons-print:electricity" width="48" height="48"></iconify-icon></div>
-          <h4 class="title"><a href="#">Installations Électriques</a></h4>
-          <p class="description text-m1">Nouvelle construction ou rénovation ? Nous gérons toutes les installations électriques pour assurer une mise en place sûre et sans encombre.</p>
-        </div>
-      </div>
-      <div class="col-span-1">
-        <div class="icon-box">
-          <div class="icon"><iconify-icon icon="game-icons:auto-repair" width="48" height="48"></iconify-icon></div>
-          <h4 class="title"><a>Réparations Électriques</a></h4>
-          <p class="description">Réglez efficacement vos problèmes électriques grâce à nos services de réparation rapides et fiables.</p>
-        </div>
-      </div>
-      <div class="col-span-1">
-        <div class="icon-box">
-          <div class="icon"><iconify-icon icon="game-icons:double-street-lights" width="48" height="48"></iconify-icon></div>
-          <h4 class="title text-white"><a>Solutions d'Éclairage</a></h4>
-          <p class="description">Améliorez votre éclairage pour une meilleure efficacité énergétique et une esthétique améliorée avec notre installation professionnelle.</p>
-        </div>
-      </div>
-      <div class="col-span-1">
-        <div class="icon-box">
-          <div class="icon"><iconify-icon icon="fa6-solid:charging-station" width="48" height="48"></iconify-icon></div>
-          <h4 class="title"><a>Bornes Électrique</a></h4>
-          <p class="description">Vous avez une nouvelle voiture électrique et avez besoin de la recharger ? Nous installons la borne de recharge qu'il vous faut !</p>
-        </div>
-      </div>
-      <div class="col-span-1">
-        <div class="icon-box">
-          <div class="icon"><iconify-icon icon="mdi:security-home" width="48" height="48"></iconify-icon></div>
-          <h4 class="title"><a>Inspections de Sécurité à Domicile</a></h4>
-          <p class="description">Assurez la sécurité électrique de votre domicile avec nos inspections complètes, identifiant tout risque potentiel.</p>
-        </div>
-      </div>
-      <div class="col-span-1">
-        <div class="icon-box">
-          <div class="icon"><iconify-icon icon="material-symbols-light:e911-emergency" width="48" height="48"></iconify-icon></div>
-          <h4 class="title t-w" ><a>Services D'électricien d'Urgence</a></h4>
-          <p class="description">Une urgence électrique ? Nous sommes disponibles 24/7 pour résoudre vos problèmes et rétablir la sécurité.</p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-  <div class="flex justify-center">
-    <a href="#soumission" class="btn px-3 py-2">Soumission Gratuite</a>
-  </div>
-</section>
-<br><br>
-
-
-
-
-
-<!-- <Features2
-title="Ce Que Nos Plombiers Peuvent Faire"
-subtitle="De la simple réparation à la mise en place complète de nouveaux projets."
-columns={3}
-items={[
-  {
-    title: 'Travaux de plomberie',
-    description:
-      'By harmonizing instructional design and visual appeal, templates streamline content creation for varied materials, expediting development and cultivating engaging educational spaces.',
-    icon: 'tabler:school',
-  },
-  {
-    title: 'Projet de rénovations',
-    description:
-      'Crafting functional, visually appealing spaces for residential and commercial use. Templates emphasize layout, colors, and furniture setups, offering a versatile toolkit for your design vision.',
-    icon: 'tabler:home-star',
-  },
-  {
-    title: 'Remplacement de chauffe-eau',
-    description: `Empowering photographers, our templates facilitate captivating storytelling. With a keen focus on layout, galleries, and typography, they cater to both professionals and enthusiasts.`,
-    icon: 'tabler:photo',
-  },
-  {
-    title: 'Recherche de Cause',
-    description:
-      'Developing engaging online stores, our E-commerce templates ensure a dynamic presence to effectively showcase products. Ideal for startups or revamps.',
-    icon: 'tabler:shopping-cart',
-  },
-  {
-    title: 'Remplacement de Toilette',
-    description:
-      'With attention to typography, these templates empower effective content presentation for writers at any stage, ensuring visually engaging and user-friendly blogs.',
-    icon: 'tabler:article',
-  },
-  {
-    title: "Service d'urgence",
-    description:
-      'Providing polished options for effective visual communication, these templates empower both startups and established companies for a professional brand presence.',
-    icon: 'tabler:building-store',
-  }
-  // {
-  //   title: 'Branding',
-  //   description:
-  //     'Offering pre-designed elements for a consistent brand identity, including logos and marketing materials. Ideal for new ventures or revamps.',
-  //   icon: 'tabler:arrow-big-up-lines',
-  // },
-  // {
-  //   title: 'Medical',
-  //   description: `From presentations to patient forms, these tools enhance communication effectiveness for healthcare professionals. Ideal for medical practices and research pursuits.`,
-  //   icon: 'tabler:vaccine',
-  // },
-  // {
-  //   title: 'Fashion Design',
-  //   description:
-  //     'With attention to detail, customization, and contemporary design, they empower designers to showcase ideas cohesively. Ideal for all levels of designers.',
-  //   icon: 'tabler:tie',
-  // },
-]}
-/> -->
-
+  </section>
+  
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Offline Access',
+        description: "Si vous êtes à la recherche d'une réparation de toiture de qualité supérieure, K-Construction est votre solution idéale. Spécialisés dans la réparation de toitures, nous offrons un service rapide et fiable, essentiel pour maintenir l'intégrité et la sécurité de votre habitation. Nos experts en réparation de toiture utilisent des techniques avancées et des matériaux de premier choix pour s'assurer que chaque réparation résiste à l'épreuve du temps.",
+        icon: 'tabler:wifi-off',
+      },
+      {
+        title: 'Secure Cloud Storage',
+        description:
+          'Provide cloud storage for purchased templates, ensuring users can access and back up their templates from anywhere securely.',
+        icon: 'tabler:file-download',
+      },
+      {
+        title: 'Regular Updates',
+        description: 'Continuously add new templates and features to keep the app fresh and engaging for users.',
+        icon: 'tabler:refresh',
+      },
+      {
+        title: 'Wishlist',
+        description: `Allow users to create a wishlist of templates they're interested in, making it easier for them to revisit and potentially purchase later.`,
+        icon: 'tabler:heart',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1453738773917-9c3eff1db985?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Vintage Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Other features</h3>
+    </Fragment>
+  </Content>
 
 
     <!-- Stats Widget ****************** -->
 
-    <!-- <Stats
+    <Stats
     stats={[
       { title: '+ Clients', amount: '2325' },
       { title: '+ Projets', amount: '2100' },
       { title: "Année d'expérience", amount: '25' },
       { title: '+ Employés', amount: '15' },
     ]}
-  /> -->
+  />
 
-
-
-  <!-- HighlightedPosts Widget ******* -->
-
-  <!-- <BlogLatestPosts
-    title="Voir nos dernières publications"
-    information={`
-                `}
-  /> -->
 
   <!-- FAQs Widget ******************* -->
 
@@ -371,6 +266,41 @@ items={[
       },
     ]}
   /> -->
+
+  <Features3
+  id="features"
+  title="Pourquoi Choisir K-Constructions pour votre toiture?"
+  subtitle="Tired of spending hours crafting documents from scratch? Our app offers an innovative solution. With a wide array of professionally designed templates, you can now create stunning documents in minutes. Explore our templates now and experience the difference."
+  tagline="Les Meilleurs Couvreurs"
+  columns={2}
+  items={[
+    {
+      title: 'Réparation',
+      description: "Si vous êtes à la recherche d'une réparation de toiture de qualité supérieure, K-Construction est votre solution idéale. Spécialisés dans la réparation de toitures, nous offrons un service rapide et fiable, essentiel pour maintenir l'intégrité et la sécurité de votre habitation. Nos experts en réparation de toiture utilisent des techniques avancées et des matériaux de premier choix pour s'assurer que chaque réparation résiste à l'épreuve du temps.",
+      icon: 'tabler:square-number-1',
+    },
+    {
+      title: 'Remplacement de toiture',
+      description:
+        "Lorsque le moment est venu pour un remplacement de toiture, K-Construction excelle par son expertise et son professionnalisme. Nous comprenons que remplacer un toit est un investissement important, c'est pourquoi nous nous engageons à fournir un service de remplacement de toiture complet et de haute qualité. Notre approche en remplacement de toiture intègre les dernières innovations en matière de matériaux et de design, garantissant ainsi non seulement l'efficacité énergétique de votre maison, mais aussi une esthétique améliorée. Chaque projet de remplacement de toit est géré avec le plus grand soin, en veillant à ce que chaque détail réponde aux attentes de nos clients. Avec K-Construction, vous investissez dans un toit neuf qui améliore non seulement l'apparence de votre maison, mais augmente également sa valeur à long terme.",
+      icon: 'tabler:square-number-2',
+    },
+    {
+      title: 'Browse templates',
+      description: 'Explore our diverse collection of website templates, categorized for easy navigation.',
+      icon: 'tabler:square-number-3',
+    },
+    {
+      title: 'Preview and select a template',
+      description: `Visualize the potential of each template through previews, then choose the one that aligns best with your project's needs.`,
+      icon: 'tabler:square-number-4',
+    },
+  ]}
+  image={{
+    src: 'https://images.unsplash.com/photo-1521517407911-565264e7d82d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80',
+    alt: 'Colorful Image',
+  }}
+/>
 
 
 
@@ -522,5 +452,23 @@ items={[
 .text-m1 {
   font-size: x-large ;
 }
+.services-components {
+  border: 1px solid var(--accent-color);
+  transition: all 0.5s ease-in;
+}
 
+iconify-icon.services-icon {
+  font-size: 80px;
+  color: var(--accent-color);
+  transition: all 0.5s ease-in;
+}
+
+.services-heading {
+  transition: all 0.5s ease-in;
+}
+
+.service-btn {
+  transition: all 0.5s ease-in;
+
+}
 </style>
