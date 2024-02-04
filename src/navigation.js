@@ -40,14 +40,14 @@ export const headerData = {
           text: 'Nos Services',
           href: getPermalink('/services'),
         },
-        {
-          text: 'Rénovations intérieures',
-          href: getPermalink('/services/reno-interieures'),
-        },
-        {
-          text: 'Rénovations Extérieures',
-          href: getPermalink('/services/click-through'),
-        },
+        // {
+        //   text: 'Rénovations intérieures',
+        //   href: getPermalink('/services/reno-interieures'),
+        // },
+        // {
+        //   text: 'Rénovations Extérieures',
+        //   href: getPermalink('/services/click-through'),
+        // },
         // {
         //   text: 'Product Details (or Services)',
         //   href: getPermalink('/services/product'),
