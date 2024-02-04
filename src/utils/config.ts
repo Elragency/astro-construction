@@ -78,11 +78,11 @@ const config = yaml.load(fs.readFileSync('src/config.yaml', 'utf8')) as {
   analytics?: unknown;
 };
 
-const DEFAULT_SITE_NAME = 'K-Constructions';
+const DEFAULT_SITE_NAME = 'K-CONSTRUCTIONS';
 
 const getSite = () => {
   const _default = {
-    name: "K-Constructions",
+    name: "K-CONSTRUCTIONS",
     site: undefined,
     base: '/',
     trailingSlash: false,

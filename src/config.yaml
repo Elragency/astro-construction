@@ -1,6 +1,6 @@
 site:
-  name: K-Constructions
-  site: 'https://elr-astro.netlify.app/'
+  name: K-CONSTRUCTIONS
+  site: 'https://kconstructions.ca'
   base: '/'
   trailingSlash: false
 
@@ -9,16 +9,16 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: K-Construction
-    template: '%s — K-Constructions'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: K-CONSTRUCTIONS
+    template: '%s — K-CONSTRUCTIONS'
+  description: "Le meilleur entrepreneur général à montréal et en montérégie"
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: K-Constructions
+    site_name: K-CONSTRUCTIONS
     images:
-      - url: '~/assets/images/default.png'
+      - url: '~/assets/images/hero2.png'
         width: 1200
         height: 628
     type: website
@@ -28,7 +28,7 @@ metadata:
     cardType: summary_large_image
 
 i18n:
-  language: en
+  language: fr
   textDirection: ltr
 
 apps:
@@ -63,7 +63,7 @@ apps:
 analytics:
   vendors:
     googleAnalytics:
-      id: null # or "G-XXXXXXXXXX"
+      id: "G-GJ974ZPXH0"
 
 ui:
   theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"

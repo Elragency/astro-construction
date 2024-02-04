@@ -106,7 +106,7 @@ export const footerData = {
     {
       title: 'À Propos',
       links: [
-        { text: 'K-Constructions', href: 'propos' },
+        { text: 'K-CONSTRUCTIONS', href: 'propos' },
         { text: 'Mission', href: '#' },
         { text: 'Team', href: '#' },
         // { text: 'Enterprise', href: '#' },

@@ -246,7 +246,7 @@ iconify-icon.social-icon {
 /* dropdown style  */
 
 .dropdown-menu {
-    --bs-dropdown-bg: var(--bs-black);
+    --bs-dropdown-bg: white;
     --bs-dropdown-border-radius: 0px;
 }
 

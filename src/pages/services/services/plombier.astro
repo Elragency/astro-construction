@@ -13,6 +13,7 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import PortfolioA from '~/components/widgets/PortfolioA.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import Adresse from '~/components/widgets/Adresse.astro';
 
 import { otherprojects } from '~/components/ui/otherprojects.json';
 
@@ -219,36 +220,36 @@ items={[
   {
     title: 'Travaux de plomberie',
     description:
-      'By harmonizing instructional design and visual appeal, templates streamline content creation for varied materials, expediting development and cultivating engaging educational spaces.',
+    "Nos services de plomberie couvrent toutes les réparations et installations, garantissant des systèmes d'eau efficaces et fiables pour votre maison ou votre entreprise.",
     icon: 'tabler:tool',
   },
   {
     title: 'Projet de rénovations',
     description:
-      'Crafting functional, visually appealing spaces for residential and commercial use. Templates emphasize layout, colors, and furniture setups, offering a versatile toolkit for your design vision.',
+    "Transformez vos espaces avec nos projets de rénovation, alliant esthétique moderne et fonctionnalité pour créer des environnements sur mesure qui répondent à vos besoins.",
     icon: 'tabler:bath',
   },
   {
     title: 'Remplacement de chauffe-eau',
-    description: `Empowering photographers, our templates facilitate captivating storytelling. With a keen focus on layout, galleries, and typography, they cater to both professionals and enthusiasts.`,
+    description: "Assurez-vous d'un approvisionnement constant en eau chaude avec nos services de remplacement de chauffe-eau, offrant des solutions écoénergétiques et durables.",
     icon: 'tabler:droplet-half-2-filled',
   },
   {
     title: 'Recherche de Cause',
     description:
-      'Developing engaging online stores, our E-commerce templates ensure a dynamic presence to effectively showcase products. Ideal for startups or revamps.',
+    "Identifiez la source de problèmes complexes avec notre service de recherche de cause, utilisant des techniques avancées pour diagnostiquer et résoudre efficacement les soucis.",
     icon: 'tabler:search',
   },
   {
     title: 'Remplacement de Toilette',
     description:
-      'With attention to typography, these templates empower effective content presentation for writers at any stage, ensuring visually engaging and user-friendly blogs.',
+    "Modernisez votre salle de bain avec notre service de remplacement de toilette, offrant une gamme d'options économiques et écologiques pour améliorer votre confort et votre style.",
     icon: 'tabler:toilet-paper',
   },
   {
     title: "Service d'urgence",
     description:
-      'Providing polished options for effective visual communication, these templates empower both startups and established companies for a professional brand presence.',
+    "Disponibles 24/7 pour toute urgence, nos équipes interviennent rapidement pour résoudre vos problèmes de plomberie, chauffage, et autres, minimisant les dommages et les désagréments.",
     icon: 'tabler:alert-triangle-filled',
   }
   // {
@@ -338,29 +339,7 @@ items={[
 
 
 
-  <section id="info">
-    <div class="overflow-hidden">
-        <div class="container mx-auto" >
-            <div class="flex flex-wrap items-center">
-                <div class="w-full md:w-1/3 text-center py-3 border-r">
-                    <p class="header-top mb-4">Nous rejoindre</p>
-                    <p class="mb-2">+514 777 7777</p>
-                    <p class="mb-2">elragency@gmail.com</p>
-                </div>
-                <div class="w-full md:w-1/3 text-center py-3 border-r">
-                    <p class="header-top mb-4">Nos heures d'ouvertures</p>
-                    <p class="mb-2">Lun - Ven: 6 am - 6 pm</p>
-                    <p class="mb-2">Sam - Dim: Sur Demande</p>
-                </div>
-                <div class="w-full md:w-1/3 text-center py-3">
-                    <p class="header-top mb-4">Notre adresse</p>
-                    <p class="mb-2">2001 Boul. de Rome,</p>
-                    <p class="mb-2">Brossard, QC J4W 2W1</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<Adresse />
 
 <!-- <Allservices
  /> -->
