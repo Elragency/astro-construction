@@ -178,38 +178,60 @@ const metadata = {
     </div>
   </section>
   
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Imabattable en tant que couvreur"
+    subtitle="Nous sommes là pour tous vos besoins de couvreurs, que ce soit pour des réparations urgentes ou un remplacement de toiture complet, contactez K-Constructions!"
+    tagline="À Votre services"
+    columns={1}
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Pourquoi K-Constructions?',
+        description:
+          "Si vous êtes à la recherche d'une réparation de toiture de qualité supérieure, K-Construction est votre solution idéale. Spécialisés dans la réparation de toitures, nous offrons un service rapide et fiable, essentiel pour maintenir l'intégrité et la sécurité de votre habitation. Nos experts en réparation de toiture utilisent des techniques avancées et des matériaux de premier choix pour s'assurer que chaque réparation résiste à l'épreuve du temps.",
+      },
+      {
+        title: 'Remplacement de toiture',
+        description:
+        "Lorsque le moment est venu pour un remplacement de toiture, K-Construction excelle par son expertise et son professionnalisme. Nous comprenons que remplacer un toit est un investissement important, c'est pourquoi nous nous engageons à fournir un service de remplacement de toiture complet et de haute qualité. Notre approche en remplacement de toiture intègre les dernières innovations en matière de matériaux et de design, garantissant ainsi non seulement l'efficacité énergétique de votre maison, mais aussi une esthétique améliorée. Chaque projet de remplacement de toit est géré avec le plus grand soin, en veillant à ce que chaque détail réponde aux attentes de nos clients. Avec K-Construction, vous investissez dans un toit neuf qui améliore non seulement l'apparence de votre maison, mais augmente également sa valeur à long terme.",
+      },
+      {
+        title: 'Services de couvreur',
+        description:
+          "K-Construction se démarque par son offre de service complet et professionnel dans tous les aspects de la construction et de la rénovation. Notre engagement envers l'excellence se reflète dans chaque service que nous proposons, qu'il s'agisse de réparation de toiture, de remplacement, ou d'installations spécialisées comme les panneaux solaires. En optant pour notre service complet et professionnel, vous bénéficiez de l'expertise d'une équipe dévouée et expérimentée, prête à répondre à tous vos besoins en matière de construction et de rénovation. Nous nous assurons que chaque projet est réalisé avec précision, efficacité et dans le respect des normes les plus élevées de l'industrie. Faire confiance à K-Construction, c'est choisir la tranquillité d'esprit, sachant que votre projet est entre les mains de professionnels qui s'engagent à délivrer des résultats exceptionnels et durables. Notre approche intégrée garantit une gestion de projet sans faille, de la consultation initiale à la finalisation, assurant une expérience client inégalée et des résultats qui dépassent vos attentes.",
+      },
+    ]}
+  />]
+
   <Content
     isAfterContent
     items={[
       {
-        title: 'Offline Access',
-        description: "Si vous êtes à la recherche d'une réparation de toiture de qualité supérieure, K-Construction est votre solution idéale. Spécialisés dans la réparation de toitures, nous offrons un service rapide et fiable, essentiel pour maintenir l'intégrité et la sécurité de votre habitation. Nos experts en réparation de toiture utilisent des techniques avancées et des matériaux de premier choix pour s'assurer que chaque réparation résiste à l'épreuve du temps.",
-        icon: 'tabler:wifi-off',
+        title: 'Service rapide et au meilleur prix',
+        description: "Offres compétitives: Nous proposons les meilleurs tarifs du marché, sans compromettre la qualité de nos services.",
+        icon: 'tabler:discount-check-filled',
       },
       {
-        title: 'Secure Cloud Storage',
+        title: 'Une expertise dans notre domaine',
         description:
-          'Provide cloud storage for purchased templates, ensuring users can access and back up their templates from anywhere securely.',
-        icon: 'tabler:file-download',
+          "Expertise technique: Notre équipe d'experts possède les qualifications nécessaires pour assurer une installation et une réparation impeccables.",
+        icon: 'tabler:crane',
       },
       {
-        title: 'Regular Updates',
-        description: 'Continuously add new templates and features to keep the app fresh and engaging for users.',
+        title: 'Garantie Complète',
+        description: "Garantie de satisfaction: Nous nous engageons à offrir un niveau de finition exceptionnel, soutenu par une garantie sur nos travaux de toiture.",
         icon: 'tabler:refresh',
-      },
-      {
-        title: 'Wishlist',
-        description: `Allow users to create a wishlist of templates they're interested in, making it easier for them to revisit and potentially purchase later.`,
-        icon: 'tabler:heart',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1453738773917-9c3eff1db985?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      src: 'https://images.unsplash.com/photo-1503594384566-461fe158e797?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       alt: 'Vintage Image',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Other features</h3>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">D'autres raisons</h3>
     </Fragment>
   </Content>
 
@@ -225,82 +247,6 @@ const metadata = {
     ]}
   />
 
-
-  <!-- FAQs Widget ******************* -->
-
-  <!-- <FAQs
-    title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
-    tagline="FAQs"
-    classes={{ container: 'max-w-6xl' }}
-    items={[
-      {
-        title: 'Why AstroWind?',
-        description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
-      },
-      {
-        title: 'What do I need to start?',
-        description:
-          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
-      },
-      {
-        title: 'How to install the Astro + Tailwind CSS template?',
-        description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
-      },
-      {
-        title: "What's something that you don't understand?",
-        description:
-          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
-      },
-      {
-        title: 'What is something that you would like to try again?',
-        description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
-      },
-      {
-        title: 'If you could only ask one question to each person you meet, what would that question be?',
-        description:
-          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
-      },
-    ]}
-  /> -->
-
-  <Features3
-  id="features"
-  title="Pourquoi Choisir K-Constructions pour votre toiture?"
-  subtitle="Tired of spending hours crafting documents from scratch? Our app offers an innovative solution. With a wide array of professionally designed templates, you can now create stunning documents in minutes. Explore our templates now and experience the difference."
-  tagline="Les Meilleurs Couvreurs"
-  columns={2}
-  items={[
-    {
-      title: 'Réparation',
-      description: "Si vous êtes à la recherche d'une réparation de toiture de qualité supérieure, K-Construction est votre solution idéale. Spécialisés dans la réparation de toitures, nous offrons un service rapide et fiable, essentiel pour maintenir l'intégrité et la sécurité de votre habitation. Nos experts en réparation de toiture utilisent des techniques avancées et des matériaux de premier choix pour s'assurer que chaque réparation résiste à l'épreuve du temps.",
-      icon: 'tabler:square-number-1',
-    },
-    {
-      title: 'Remplacement de toiture',
-      description:
-        "Lorsque le moment est venu pour un remplacement de toiture, K-Construction excelle par son expertise et son professionnalisme. Nous comprenons que remplacer un toit est un investissement important, c'est pourquoi nous nous engageons à fournir un service de remplacement de toiture complet et de haute qualité. Notre approche en remplacement de toiture intègre les dernières innovations en matière de matériaux et de design, garantissant ainsi non seulement l'efficacité énergétique de votre maison, mais aussi une esthétique améliorée. Chaque projet de remplacement de toit est géré avec le plus grand soin, en veillant à ce que chaque détail réponde aux attentes de nos clients. Avec K-Construction, vous investissez dans un toit neuf qui améliore non seulement l'apparence de votre maison, mais augmente également sa valeur à long terme.",
-      icon: 'tabler:square-number-2',
-    },
-    {
-      title: 'Browse templates',
-      description: 'Explore our diverse collection of website templates, categorized for easy navigation.',
-      icon: 'tabler:square-number-3',
-    },
-    {
-      title: 'Preview and select a template',
-      description: `Visualize the potential of each template through previews, then choose the one that aligns best with your project's needs.`,
-      icon: 'tabler:square-number-4',
-    },
-  ]}
-  image={{
-    src: 'https://images.unsplash.com/photo-1521517407911-565264e7d82d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80',
-    alt: 'Colorful Image',
-  }}
-/>
 
 
 
