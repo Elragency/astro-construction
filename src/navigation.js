@@ -8,7 +8,7 @@ export const headerData = {
     },
     {
       text: 'À Propos',
-      href: getPermalink('/homes/propos'),
+      href: getPermalink('/propos'),
     },
     // {
     //   text: 'À Propos',
@@ -106,7 +106,7 @@ export const footerData = {
     {
       title: 'À Propos',
       links: [
-        { text: 'K-Constructions', href: 'homes/propos' },
+        { text: 'K-Constructions', href: 'propos' },
         { text: 'Mission', href: '#' },
         { text: 'Team', href: '#' },
         // { text: 'Enterprise', href: '#' },

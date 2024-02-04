@@ -1,9 +1,9 @@
 ---
 publishDate: 2024-02-01T00:00:00Z
-title: Remplacement de Toiture; Découvrez Nos Services de Couvreurs Experts
+title: Remplacement de Toiture - Découvrez Nos Services de Couvreurs Experts
 excerpt: La toiture est un élément crucial de toute habitation, assurant protection et sécurité contre les éléments extérieurs. Avant de la remplacer, considérez les points cruciaux suivants
-image: https://images.unsplash.com/photo-1516996087931-5ae405802f9f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80
-category: Tutorials
+image: https://images.unsplash.com/photo-1635424709870-cdc6e64f0e20?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+category: Services
 tags:
   - couvreur
   - services
