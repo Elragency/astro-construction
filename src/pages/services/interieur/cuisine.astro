@@ -1,0 +1,420 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero3 from '~/components/widgets/Hero3.astro';
+import Allservices from '~/components/widgets/allservices.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import PortfolioA from '~/components/widgets/PortfolioA.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+import { otherprojects } from '~/components/ui/otherprojects.json';
+
+import About from '~/components/common/About.astro';
+
+import Contact from '~/components/widgets/elr-contact.astro';
+import Image from '~/components/common/Image.astro';
+import Adresse from '~/components/widgets/Adresse.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Content from '~/components/widgets/Content.astro';
+
+const metadata = {
+  title: 'K-Construction - Rénovations de cuisine sur mesure',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  
+  <!-- BEGINNING SCRIPT NEEDED FOR ACCORDEON -->
+  <script>
+    const accordion = document.getElementById("acordeon");
+    if (!accordion) throw new ReferenceError();
+  
+    accordion.addEventListener("click", (e) => {
+      const target = e.target as HTMLElement;
+      const dataset = { ...target.dataset };
+  
+      const content = target.nextElementSibling as HTMLElement;
+      const arrow = target.querySelector("img") as HTMLElement;
+  
+      if (!arrow || !content) throw new ReferenceError();
+  
+      switch (dataset.status) {
+        case "disabled":
+          content.style.gridTemplateRows = "1fr";
+          target.dataset.status = "enabled";
+          arrow.style.rotate = "90deg";
+          break;
+        case "enabled":
+          content.style.gridTemplateRows = "0fr";
+          target.dataset.status = "disabled";
+          arrow.style.rotate = "0deg";
+          break;
+        default:
+          break;
+      }
+    });
+  </script>
+    <!-- END SCRIPT NEEDED FOR ACCORDEON -->
+  <!-- Hero Widget ******************* -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="~/assets/js/jquery-1.11.0.min.js"></script>
+
+
+  <!-- <script src="~/assets/js/modernizr.js"></script> -->
+
+
+
+
+      <!-- Link Swiper's CSS -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+      <link href="~/assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet1">
+
+      <section class="relative md:-mt-[100px]  not-prose">
+        <div class="flex items-center justify-center min-h-screen">
+          <!-- Image section -->
+          <div class="absolute inset-0 z-0">
+            <img
+              class="w-full h-full object-cover"
+              loading="eager"
+              src="https://raw.githubusercontent.com/Elragency/astro-construction/main/src/assets/images/banners/banner-couvreur.png"
+              alt="les meilleurs électriciens sur la rive sud"
+            />
+          </div>
+      
+          <!-- Text content section -->
+          <div class="relative z-10 text-center">
+            <p class="text-base text-secondary text-white font-bold tracking-wide uppercase m-1"data-aos="fade-up" data-aos-duration="2000">
+              COUVREUR PROFESSIONELS À MONTRÉAL ET EN MONTÉRÉGIE
+            </p>
+            <h1 class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200" data-aos="fade-up" data-aos-duration="2500">
+              RÉPARATIONS DE TOITURE RAPIDES ET FIABLES
+            </h1>
+            <a href="#soumission">
+              <button type="button" class="btn btn-outline-orange inline-block text-white py-3 px-4 rounded mt-1 ml-0 md:ml-6 mb-2"data-aos="fade-up" data-aos-duration="2600">
+                SOUMISSION GRATUITE
+              </button>
+            </a>
+            <!-- Additional content can be added here -->
+          </div>
+        </div>
+      </section>
+      
+
+  <!-- <Note /> -->
+
+  <section id="propos" class="m-6" >
+    <div class="overflow-hidden">
+      <div class="container mx-auto px-4 py-6 border-b" >
+        <div class="flex flex-wrap -mx-4">
+          <div class="w-full md:w-1/2 px-4 py-6 mb-4 md:mb-0 border-r padding-body" data-aos="fade-left" data-aos-duration="2000">
+            <p class="text-xl mb-3" style="color:#ff3c00" >FAITE AFFAIRE AVEC LE GROUPE K CONSTRUCTION</p>
+            <h2 class="text-2xl font-bold mb-4 test">CHEZ K-CONSTRUCTION NOUS SOMMES VOS EXPERTS EN COUVERTURE.</h2>
+          </div>
+          <div class="w-full md:w-1/2 px-4 pt-2 padding-body" data-aos="fade-right" data-aos-duration="2000" >
+            <p class="ml-0 md:ml-6 font-body pb-4">
+              Les intempéries et le temps peuvent endommager votre toit. Chez K-Construction, nous comprenons l'urgence de telles situations. 
+              Notre équipe est prête à intervenir rapidement pour effectuer les réparations nécessaires.
+              <br><br>
+              Nous nous assurons que chaque réparation est effectuée avec précision et efficacité pour garantir la longévité et la résilience de votre toiture.
+            </p>
+            <a href="apropos.html" class="btn btn-outline-orange inline-block bg-primary text-white py-3 px-4 rounded mt-1 ml-0 md:ml-6 mb-2">
+              Demandez une soumission
+              <iconify-icon icon="tabler:arrow-right" class="inline-block ml-2"></iconify-icon>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="offrea" class="my-10 pt-10">
+    <div class="container mx-auto pt-10">
+      <div class="flex justify-center pb-4">
+        <h2 class="text-3xl font-bold mb-4 test">
+          Notre offre
+      </h2>
+        
+      </div>
+        <div class="flex justify-center pb-4">
+
+        <div class="flex flex-wrap -mx-4">
+            <div class="mt-4 px-4 w-full md:w-1/2 lg:w-1/4">
+                <div class="text-center py-10 px-6 shadow-lg rounded-lg">
+                    <iconify-icon class="text-3xl my-2" icon="mdi:home-roof"></iconify-icon>
+                    <h5 class="text-xl font-semibold mb-3">Remplacement Complet</h5>
+                    <p>Renouvelez votre toit avec expertise et durabilité.</p>
+                </div>
+            </div>
+            <div class="mt-4 px-4 w-full md:w-1/2 lg:w-1/4">
+                <div class="text-center py-10 px-6 shadow-lg rounded-lg">
+                    <iconify-icon class="text-3xl my-2" icon="mdi:weather-lightning"></iconify-icon>
+                    <h5 class="text-xl font-semibold mb-3">Urgences</h5>
+                    <p>Intervention rapide et fiable pour vos urgences.</p>
+                </div>
+            </div>
+            <div class="mt-4 px-4 w-full md:w-1/2 lg:w-1/4">
+                <div class="text-center py-10 px-6 shadow-lg rounded-lg">
+                    <iconify-icon class="text-3xl my-2" icon="mdi:hammer"></iconify-icon>
+                    <h5 class="text-xl font-semibold mb-3">Réparations</h5>
+                    <p>Des réparations efficaces pour une toiture solide.</p>
+                </div>
+            </div>
+            <div class="mt-4 px-4 w-full md:w-1/2 lg:w-1/4">
+                <div class="text-center py-10 px-6  shadow-lg rounded-lg">
+                    <iconify-icon class="text-3xl my-2" icon="mdi:white-balance-sunny"></iconify-icon>
+                    <h5 class="text-xl font-semibold mb-3">Panneaux Solaires</h5>
+                    <p>Modernisez votre toit avec des solutions solaires.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Imabattable en tant que couvreur"
+    subtitle="Nous sommes là pour tous vos besoins de couvreurs, que ce soit pour des réparations urgentes ou un remplacement de toiture complet, contactez K-Constructions!"
+    tagline="À Votre services"
+    columns={1}
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Pourquoi K-Constructions?',
+        description:
+          "Si vous êtes à la recherche d'une réparation de toiture de qualité supérieure, K-Construction est votre solution idéale. Spécialisés dans la réparation de toitures, nous offrons un service rapide et fiable, essentiel pour maintenir l'intégrité et la sécurité de votre habitation. Nos experts en réparation de toiture utilisent des techniques avancées et des matériaux de premier choix pour s'assurer que chaque réparation résiste à l'épreuve du temps.",
+      },
+      {
+        title: 'Remplacement de toiture',
+        description:
+        "Lorsque le moment est venu pour un remplacement de toiture, K-Construction excelle par son expertise et son professionnalisme. Nous comprenons que remplacer un toit est un investissement important, c'est pourquoi nous nous engageons à fournir un service de remplacement de toiture complet et de haute qualité. Notre approche en remplacement de toiture intègre les dernières innovations en matière de matériaux et de design, garantissant ainsi non seulement l'efficacité énergétique de votre maison, mais aussi une esthétique améliorée. Chaque projet de remplacement de toit est géré avec le plus grand soin, en veillant à ce que chaque détail réponde aux attentes de nos clients. Avec K-Construction, vous investissez dans un toit neuf qui améliore non seulement l'apparence de votre maison, mais augmente également sa valeur à long terme.",
+      },
+      {
+        title: 'Services de couvreur',
+        description:
+          "K-Construction se démarque par son offre de service complet et professionnel dans tous les aspects de la construction et de la rénovation. Notre engagement envers l'excellence se reflète dans chaque service que nous proposons, qu'il s'agisse de réparation de toiture, de remplacement, ou d'installations spécialisées comme les panneaux solaires. En optant pour notre service complet et professionnel, vous bénéficiez de l'expertise d'une équipe dévouée et expérimentée, prête à répondre à tous vos besoins en matière de construction et de rénovation. Nous nous assurons que chaque projet est réalisé avec précision, efficacité et dans le respect des normes les plus élevées de l'industrie. Faire confiance à K-Construction, c'est choisir la tranquillité d'esprit, sachant que votre projet est entre les mains de professionnels qui s'engagent à délivrer des résultats exceptionnels et durables. Notre approche intégrée garantit une gestion de projet sans faille, de la consultation initiale à la finalisation, assurant une expérience client inégalée et des résultats qui dépassent vos attentes.",
+      },
+    ]}
+  />]
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Service rapide et au meilleur prix',
+        description: "Offres compétitives: Nous proposons les meilleurs tarifs du marché, sans compromettre la qualité de nos services.",
+        icon: 'tabler:discount-check-filled',
+      },
+      {
+        title: 'Une expertise dans notre domaine',
+        description:
+          "Expertise technique: Notre équipe d'experts possède les qualifications nécessaires pour assurer une installation et une réparation impeccables.",
+        icon: 'tabler:crane',
+      },
+      {
+        title: 'Garantie Complète',
+        description: "Garantie de satisfaction: Nous nous engageons à offrir un niveau de finition exceptionnel, soutenu par une garantie sur nos travaux de toiture.",
+        icon: 'tabler:refresh',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1503594384566-461fe158e797?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      alt: 'Vintage Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">D'autres raisons</h3>
+    </Fragment>
+  </Content>
+
+
+    <!-- Stats Widget ****************** -->
+
+    <Stats
+    stats={[
+      { title: '+ Clients', amount: '2325' },
+      { title: '+ Projets', amount: '2100' },
+      { title: "Année d'expérience", amount: '25' },
+      { title: '+ Employés', amount: '15' },
+    ]}
+  />
+
+
+
+
+  <Adresse />
+
+<!-- <Allservices
+ /> -->
+
+ <Contact />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'secondary',
+        text: 'APPELEZ-NOUS!',
+        href: 'tel:4388625985',
+        // target: '_blank',
+        icon: 'tabler:phone',
+      },
+    ]}
+  >
+
+
+  
+    <Fragment slot="title">
+      CONTACTEZ-NOUS <br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Immédiatement</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Pour transformer vos rêves en réalités. 
+    </Fragment>
+  </CallToAction>
+
+  
+
+  <!-- <script src="~/assets/js/plugins.js"></script> -->
+  <!-- <script src="~/assets/js/script.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+
+  <!-- <script src="~/assets/js/shortcodes.js"></script> -->
+</Layout>
+
+<style>
+  .btn-outline-orange {
+    background: #ff3c00;
+    color: white;
+    /* color: #ff3c00; */
+  }
+
+  .font-body {
+    font-size: 1.2rem;
+    color: white;
+  }
+  .text-grey {
+    color: white !important;
+  }
+  .font-body1 {
+    font-size: 1.5rem;
+  }
+  @media (min-width: 768px) { /* Adjust the min-width value as needed for your definition of 'big screens' */
+  .padding-body {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+  .test {
+    font-size: calc(1.475rem + 2.7vw);
+    font-weight: 300;
+    line-height: 1.2;
+  }
+  .overflow-hidden {
+    overflow: hidden;
+  }
+
+/*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
+.services .icon-box {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.services .icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+  background: #fff;
+  border-radius: 50%;
+  transition: 0.5s;
+  color: #ff3c00;
+  overflow: hidden;
+  box-shadow: 0px 0 25px rgba(0, 0, 0, 0.15);
+}
+
+.services .icon i {
+  font-size: 36px;
+  line-height: 0;
+}
+
+.services:hover .icon {
+  box-shadow: 0px 0 25px rgba(92, 159, 36, 0.3);
+}
+
+.services .title {
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 18px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.services .title a {
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+.services .title a:hover {
+  color: #ff3c00;
+}
+
+.services .title::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: #ff3c00;
+  bottom: 0;
+  left: calc(50% - 25px);
+}
+
+.services .description {
+  line-height: 24px;
+  font-size: 18px;
+}
+
+.t-w {
+  color: white !important;
+}
+.text-m1 {
+  font-size: x-large ;
+}
+.services-components {
+  border: 1px solid var(--accent-color);
+  transition: all 0.5s ease-in;
+}
+
+iconify-icon.services-icon {
+  font-size: 80px;
+  color: var(--accent-color);
+  transition: all 0.5s ease-in;
+}
+
+.services-heading {
+  transition: all 0.5s ease-in;
+}
+
+.service-btn {
+  transition: all 0.5s ease-in;
+
+}
+</style>

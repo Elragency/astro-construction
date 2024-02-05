@@ -8,7 +8,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import Contact from '~/components/widgets/elr-contact.astro';
 
 const metadata = {
-  title: 'Services',
+  title: 'K-Constructions - Rénovations intérieures',
 };
 ---
 
@@ -16,12 +16,12 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    tagline="Services"
-    title="Nous avons les experts requis pour mener à bien tous vos besoins."
+    tagline="Rénovations intérieures"
+    title="Vous souhsaitez rénover votre domicile?"
     subtitle="En faisant affaire avec l'entrepreneur général K-Constructions, vous avez l'opportunité de vous assurer que peu importe le quart de métier que vous allez avoir besoin, nous allons l'avoir."
     actions={[{ variant:"primary", text: 'SOUMISSION GRATUITE', href: '#soumission' }]}
     image={{
-      src: 'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      src: 'https://raw.githubusercontent.com/Elragency/astro-construction/721841c30c4f94caeeb75b8259e0c2894ce58d5f/src/assets/images/banners/interieurs.webp',
       alt: 'Entrepreneur Général K-Constructions',
     }}
     
@@ -35,75 +35,50 @@ const metadata = {
     columns={3}
     items={[
       {
-        title: 'Électriciens',
+        title: 'Salle De Bain',
         description:
-          'Spécialistes en électricité, nous assurons des installations sûres et modernes. En se concentrant sur la sécurité, les dernières technologies, et une assistance personnalisée, nous répondons à vos exigences.',
-        icon: 'tabler:bolt',
+        "Nos experts en rénovation de salle de bain transforment votre espace avec des designs modernes et fonctionnels. En mettant l'accent sur l'esthétique, la fonctionnalité et l'utilisation de matériaux de qualité, nous créons la salle de bain de vos rêves, assurant confort et valeur ajoutée à votre domicile.",
+        icon: 'tabler:bath',
         buttonText: 'Voir Plus',
-        buttonLink: 'services/services/electricien'
+        buttonLink: 'interieur/toilette'
       },
       {
-        title: 'Plombiers',
-        description:
-          'Experts en plomberie, nous offrons des solutions complètes. Priorisant la fiabilité, les innovations techniques et le service client, nous servons aussi bien les projets résidentiels que commerciaux.',
-        icon: 'tabler:tool',
+        title: 'Cuisine',
+        description: "Spécialistes en rénovation de cuisine, nous concevons des espaces sur mesure qui allient beauté, efficacité et innovation. Priorisant vos besoins et votre style, nous utilisons des matériaux haut de gamme et les dernières tendances pour créer une cuisine qui reflète votre personnalité et améliore votre quotidien.",
+        icon: 'tabler:chef-hat',
         buttonText: 'Voir Plus',
-        buttonLink: 'services/plombier'
+        buttonLink: 'interieur/cuisine'
       },
       {
-        title: 'Couvreurs',
-        description: `Spécialistes de la toiture, nos services garantissent une protection durable. Avec une attention particulière aux matériaux, techniques de pose, et esthétique, nous répondons à vos besoins.`,
-        icon: 'tabler:building-pavilion',
+        title: 'Cloture',
+        description: "Experts en revêtements de sol, nous offrons une vaste gamme d'options, de la pose de parquet traditionnel aux solutions modernes comme le plancher chauffant. En privilégiant la durabilité, le confort sous le pied et l'esthétique, nous sublimons chaque pièce de votre habitat.",
+        icon: 'tabler:tallymarks',
         buttonText: 'Voir Plus',
-        buttonLink: 'services/couvreurs'
+        buttonLink: 'interieur/'
       },
       {
-        title: 'Sinistres',
+        title: 'Peinture',
         description:
-          "Experts en gestion de sinistres, nous restaurons votre espace à son état optimal. En mettant l'accent sur une intervention rapide, des solutions durables et un suivi minutieux, nous accompagnons chaque étape.",
-        icon: 'tabler:hammer',
+        "Notre équipe de peintres professionnels embellit vos espaces intérieurs et extérieurs avec précision et soin. En sélectionnant des peintures de qualité supérieure et en appliquant des techniques éprouvées, nous garantissons un fini impeccable qui transforme et valorise votre propriété.",
+        icon: 'tabler:paint',
         buttonText: 'Voir Plus',
-        buttonLink: 'services/sinistres'
+        buttonLink: 'services/services/sinistres'
       },
       {
-        title: 'HVAC',
+        title: 'Gypse',
         description:
-          "Professionnels HVAC, nous optimisons votre confort thermique toute l'année. Avec un focus sur l'efficacité énergétique et un service client irréprochable, nous couvrons tous vos besoins en climatisation et chauffage.",
+        "Nos spécialistes en pose de gypse mettent en œuvre leur savoir-faire pour vos projets de construction et de rénovation. En se concentrant sur la qualité de finition, l'isolation acoustique et la résistance, nous assurons des installations impeccables pour un intérieur élégant et fonctionnel.",
         icon: 'tabler:wind',
         buttonText: 'Voir Plus',
-        buttonLink: 'services/hvac'
+        buttonLink: 'services/services/hvac'
       },
       {
-        title: 'Briques',
-        description:
-          "Maîtres en briques et maçonnerie, nous façonnons l'excellence de vos constructions. Priorisant la qualité des matériaux, la précision de l'artisanat et l'esthétique, nous réalisons des projets sur mesure pour vous.",
+        title: 'Hommes à tout faire',
+        description: "Nos hommes à tout faire sont des experts polyvalents capables de gérer une multitude de tâches de réparation, de maintenance et d'amélioration de l'habitat. En combinant une large gamme de compétences techniques avec un engagement envers la qualité et l'efficacité, nous répondons à vos besoins les plus variés, garantissant des solutions pratiques pour chaque défi de votre domicile.",
         icon: 'tabler:wall',
         buttonText: 'Voir Plus',
-        buttonLink: 'services/briques'
+        buttonLink: 'services/services/briques'
       },
-      // {
-      //   title: 'Branding',
-      //   description:
-      //     'Offering pre-designed elements for a consistent brand identity, including logos and marketing materials. Ideal for new ventures or revamps.',
-      //   icon: 'tabler:arrow-big-up-lines',
-      //   buttonText: 'Voir Plus',
-      //   buttonLink: 'services/services/plombier'
-      // },
-      // {
-      //   title: 'Medical',
-      //   description: `From presentations to patient forms, these tools enhance communication effectiveness for healthcare professionals. Ideal for medical practices and research pursuits.`,
-      //   icon: 'tabler:vaccine',
-      //   buttonText: 'Voir Plus',
-      //   buttonLink: 'services/services/plombier'
-      // },
-      // {
-      //   title: 'Fashion Design',
-      //   description:
-      //     'With attention to detail, customization, and contemporary design, they empower designers to showcase ideas cohesively. Ideal for all levels of designers.',
-      //   icon: 'tabler:tie',
-      //   buttonText: 'Voir Plus',
-      //   buttonLink: 'services/services/plombier'
-      // },
     ]}
   />
 
