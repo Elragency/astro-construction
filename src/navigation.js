@@ -38,12 +38,12 @@ export const headerData = {
       links: [
         {
           text: 'Nos Services',
-          href: getPermalink('/services'),
+          href: getPermalink('/services/services'),
         },
-        // {
-        //   text: 'Rénovations intérieures',
-        //   href: getPermalink('/services/reno-interieures'),
-        // },
+        {
+          text: 'Rénovations intérieures',
+          href: getPermalink('/services/renos-int'),
+        },
         // {
         //   text: 'Rénovations Extérieures',
         //   href: getPermalink('/services/click-through'),
