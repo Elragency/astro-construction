@@ -8,7 +8,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import Contact from '~/components/widgets/elr-contact.astro';
 
 const metadata = {
-  title: 'K-Constructions - Rénovations intérieures',
+  title: 'K-Constructions - Rénovations extérieures en Montérégie',
 };
 ---
 
@@ -16,7 +16,7 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    tagline="Rénovations intérieures"
+    tagline="Rénovations extérieures"
     title="Vous souhsaitez rénover votre domicile?"
     subtitle="En faisant affaire avec l'entrepreneur général K-Constructions, vous avez l'opportunité de vous assurer que peu importe le quart de métier que vous allez avoir besoin, nous allons l'avoir."
     actions={[{ variant:"primary", text: 'SOUMISSION GRATUITE', href: '#soumission' }]}
@@ -30,57 +30,58 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features3
-    title="Découvrez nos services"
-    subtitle="Peu importe ce que vous avez besoin, nous pouvons vous l'offrir"
-    columns={3}
-    items={[
-      {
-        title: 'Salle De Bain',
-        description:
-        "Nos experts en rénovation de salle de bain transforment votre espace avec des designs modernes et fonctionnels. En mettant l'accent sur l'esthétique, la fonctionnalité et l'utilisation de matériaux de qualité, nous créons la salle de bain de vos rêves, assurant confort et valeur ajoutée à votre domicile.",
-        icon: 'tabler:bath',
-        buttonText: 'Voir Plus',
-        buttonLink: 'interieur/toilette'
-      },
-      {
-        title: 'Cuisine',
-        description: "Spécialistes en rénovation de cuisine, nous concevons des espaces sur mesure qui allient beauté, efficacité et innovation. Priorisant vos besoins et votre style, nous utilisons des matériaux haut de gamme et les dernières tendances pour créer une cuisine qui reflète votre personnalité et améliore votre quotidien.",
-        icon: 'tabler:chef-hat',
-        buttonText: 'Voir Plus',
-        buttonLink: 'interieur/cuisine'
-      },
-      {
-        title: 'Cloture',
-        description: "Experts en revêtements de sol, nous offrons une vaste gamme d'options, de la pose de parquet traditionnel aux solutions modernes comme le plancher chauffant. En privilégiant la durabilité, le confort sous le pied et l'esthétique, nous sublimons chaque pièce de votre habitat.",
-        icon: 'tabler:tallymarks',
-        buttonText: 'Voir Plus',
-        buttonLink: 'interieur/'
-      },
-      {
-        title: 'Peinture',
-        description:
-        "Notre équipe de peintres professionnels embellit vos espaces intérieurs et extérieurs avec précision et soin. En sélectionnant des peintures de qualité supérieure et en appliquant des techniques éprouvées, nous garantissons un fini impeccable qui transforme et valorise votre propriété.",
-        icon: 'tabler:paint',
-        buttonText: 'Voir Plus',
-        buttonLink: 'services/services/sinistres'
-      },
-      {
-        title: 'Gypse',
-        description:
-        "Nos spécialistes en pose de gypse mettent en œuvre leur savoir-faire pour vos projets de construction et de rénovation. En se concentrant sur la qualité de finition, l'isolation acoustique et la résistance, nous assurons des installations impeccables pour un intérieur élégant et fonctionnel.",
-        icon: 'tabler:wind',
-        buttonText: 'Voir Plus',
-        buttonLink: 'services/services/hvac'
-      },
-      {
-        title: 'Hommes à tout faire',
-        description: "Nos hommes à tout faire sont des experts polyvalents capables de gérer une multitude de tâches de réparation, de maintenance et d'amélioration de l'habitat. En combinant une large gamme de compétences techniques avec un engagement envers la qualité et l'efficacité, nous répondons à vos besoins les plus variés, garantissant des solutions pratiques pour chaque défi de votre domicile.",
-        icon: 'tabler:wall',
-        buttonText: 'Voir Plus',
-        buttonLink: 'services/services/briques'
-      },
-    ]}
-  />
+  title="Découvrez nos services"
+  subtitle="Peu importe ce que vous avez besoin, nous pouvons vous l'offrir"
+  columns={3}
+  items={[
+    {
+      title: 'Paysagement',
+      description:
+      "Notre équipe de paysagistes crée des espaces extérieurs harmonieux et fonctionnels. En combinant design innovant et expertise horticole, nous transformons jardins, terrasses et espaces verts en lieux de détente et de beauté, reflétant votre vision et améliorant l'attrait de votre propriété.",
+      icon: 'tabler:fountain',
+      buttonText: 'Voir Plus',
+      buttonLink: 'exterieur/paysagement'
+    },
+    {
+      title: 'Terrassses',
+      description: "Nous concevons et construisons des terrasses sur mesure, alliant esthétique et durabilité. En utilisant des matériaux de qualité adaptés à vos besoins et au climat local, nous créons l'espace extérieur parfait pour vos moments de détente, de loisirs et de convivialité en plein air.",
+      icon: 'tabler:wood',
+      buttonText: 'Voir Plus',
+      buttonLink: 'exterieur/terrasses'
+    },
+    {
+      title: 'Cabanons',
+      description: "Nos constructions de cabanons allient fonctionnalité et design. Que ce soit pour du rangement supplémentaire, un atelier ou un espace de loisirs, nous offrons des solutions personnalisées, robustes et esthétiques, intégrées harmonieusement à votre environnement extérieur.",
+      icon: 'tabler:home-move',
+      buttonText: 'Voir Plus',
+      buttonLink: 'exterieur/cabanons'
+    },
+    {
+      title: 'Balcons',
+      description:
+      "Spécialisés dans la conception, la rénovation et l'aménagement de balcons. Que ce soit pour une rénovation complète, l'ajout de garde-corps ou simplement pour rafraîchir son apparence, nous utilisons des matériaux de qualité et des designs innovants pour créer un balcon sécuritaire, esthétique et fonctionnel.",
+      icon: 'tabler:building-bridge',
+      buttonText: 'Voir Plus',
+      buttonLink: 'exterieur/balcons'
+    },
+    {
+      title: 'Portes & Fenêtres',
+      description:
+      "Experts en installation de portes et fenêtres, nous améliorons l'efficacité énergétique, la sécurité et l'esthétique de votre domicile. Avec une sélection variée de styles et de matériaux, nous assurons une installation précise pour un confort et une performance accrus.",
+      icon: 'tabler:door',
+      buttonText: 'Voir Plus',
+      buttonLink: 'exterieur/portes'
+    },
+    {
+      title: 'Signes',
+      description: "Nous offrons des services de conception, fabrication et installation de signalisation pour entreprises et particuliers. Que ce soit pour des enseignes commerciales, des panneaux directionnels ou des plaques personnalisées, nos solutions sont conçues pour maximiser votre visibilité et refléter votre image de marque.",
+      icon: 'tabler:flag-2',
+      buttonText: 'Voir Plus',
+      buttonLink: 'exterieur/signes'
+    },
+  ]}
+/>
+
 
   <!-- Content Widget **************** -->
 

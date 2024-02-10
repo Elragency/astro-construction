@@ -44,10 +44,10 @@ export const headerData = {
           text: 'Rénovations intérieures',
           href: getPermalink('/services/renos-int'),
         },
-        // {
-        //   text: 'Rénovations Extérieures',
-        //   href: getPermalink('/services/click-through'),
-        // },
+        {
+          text: 'Rénovations Extérieures',
+          href: getPermalink('/services/renos-ext'),
+        },
         // {
         //   text: 'Product Details (or Services)',
         //   href: getPermalink('/services/product'),
