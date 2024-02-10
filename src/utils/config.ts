@@ -175,12 +175,19 @@ const getAppBlog = () => {
 
 const getUI = () => {
   const _default = {
-    theme: 'dark',
+    theme: 'dark', // Ensure dark theme is the default
     classes: {},
     tokens: {},
   };
 
-  return merge({}, _default, config?.ui ?? {});
+  // Assuming `merge` and `config` are defined elsewhere and correctly implemented
+  // This merges the default settings with any provided configurations, with a preference for 'dark' theme
+  const uiConfig = merge({}, _default, config?.ui ?? {});
+
+  // Explicitly set theme to 'dark' to ensure it's always dark regardless of `config.ui`
+  uiConfig.theme = 'dark';
+
+  return uiConfig;
 };
 
 const getAnalytics = () => {
