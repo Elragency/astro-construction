@@ -82,18 +82,18 @@ const metadata = {
             <img
               class="w-full h-full object-cover"
               loading="eager"
-              src="https://raw.githubusercontent.com/Elragency/astro-construction/15988ea989dd3b3084dcf083444a4960c30c8e6f/src/assets/images/banners/banner-signs.webp"
-              alt="plombier de k-constructions"
+              src="https://raw.githubusercontent.com/Elragency/astro-construction/e3d44db4c4fbcd04f505f8fdbe40ba34e16a383c/src/assets/images/banners/banner-sign.webp"
+              alt="pancartes et signes fait par k-constructions"
             />
           </div>
       
           <!-- Text content section -->
           <div class="relative z-10 text-center">
-            <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase">
-              Besoin d'un plombier?
+            <p class="text-base text-secondary dark:text-black font-bold tracking-wide uppercase">
+              Besoin d'un signe?
             </p>
-            <h1 class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200">
-              Trouble de plomberie?
+            <h1 class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-black">
+              Nous faisons des pancartes <br>sur mesure
             </h1>
             <a href="#soumission">
               <button type="button" class="btn btn-outline-orange inline-block text-white py-3 px-4 rounded mt-1 ml-0 md:ml-6 mb-2">
@@ -114,14 +114,17 @@ const metadata = {
         <div class="flex flex-wrap -mx-4">
           <div class="w-full md:w-1/2 px-4 py-6 mb-4 md:mb-0 border-r padding-body" data-aos="fade-left" data-aos-duration="2000">
             <p class="text-xl mb-3" style="color:#ff3c00" >POURQUOI NOUS?</p>
-            <h2 class="text-2xl font-bold mb-4 test">NOUS OFFRONS UN SERVICE DE PLOMBERIE COMPLET, FIABLE ET EFFICACE, RÉPONDANT À TOUS VOS BESOINS, À MONTRÉAL ET SES ENVIRONS.</h2>
+            <h2 class="text-2xl font-bold mb-4 test">NOUS PROPOSONS UN SERVICE COMPLET DE CRÉATION DE PANNEAUX, SIGNES ET TRAÇAGE DE STATIONNEMENT.</h2>
           </div>
           <div class="w-full md:w-1/2 px-4 pt-2 padding-body" data-aos="fade-right" data-aos-duration="2000" >
             <p class="ml-0 md:ml-6 font-body pb-4">
-              Nous comprenons l'importance d'un système de plomberie fonctionnel. C'est pourquoi nos plombiers qualifiés s'engagent à fournir des solutions rapides, 
-              efficaces et durables pour tous vos problèmes de plomberie, grands ou petits. <br><br>
-              Notre équipe de plombiers expérimentés est équipée pour gérer une large gamme de services de plomberie à Montréal. 
-              Qu'il s'agisse de réparations urgentes, d'installations ou de maintenance, nous nous assurons que chaque travail est réalisé avec le plus haut niveau de professionnalisme et de qualité.
+              K-Construction est votre partenaire de confiance pour la création de pancartes, signes et traçages de stationnement, alliant précision et esthétique pour améliorer 
+              la signalisation de votre espace extérieur.
+              <br><br>
+              Nous proposons une gamme complète de services pour optimiser et personnaliser votre stationnement et autres espaces nécessitant une signalisation claire. 
+              Notre équipe expérimentée se spécialise dans la création de pancartes et de signes sur mesure, ainsi que dans le traçage de lignes pour stationnements, 
+              garantissant un travail de qualité et une finition impeccable. Avec une attention particulière portée à la visibilité, à la sécurité et au respect des normes, 
+              nous nous engageons à fournir des solutions qui répondent à vos besoins tout en valorisant l'esthétique de votre propriété.
             </p>
             <a href="#soumission" class="btn btn-outline-orange inline-block bg-primary text-white py-3 px-4 rounded mt-1 ml-0 md:ml-6 mb-2">
               Contactez-nous
@@ -132,23 +135,6 @@ const metadata = {
       </div>
     </div>
   </section>
-
-
-
-<section id="propos" class="m-6" >
-  <div class="flex justify-center">
-    <h2 class="text-3xl font-bold mb-4 test">
-      Notre offre
-  </h2>
-    
-  </div>
-  <About />
-  <a href="apropos.html" class="btn btn-outline-orange inline-block bg-primary text-white py-3 px-4 rounded mt-1 ml-0 md:ml-6 mb-2">
-    À Propos
-    <iconify-icon icon="tabler:arrow-right" class="inline-block ml-2"></iconify-icon>
-  </a>
-</section>
-
 <!-- <section id="services" class="services mt-4">
   <div class="container mx-auto">
 
@@ -218,57 +204,40 @@ subtitle="De la simple réparation à la mise en place complète de nouveaux pro
 columns={3}
 items={[
   {
-    title: 'Travaux de plomberie',
+    title: 'Pancartes sur mesure',
     description:
-    "Nos services de plomberie couvrent toutes les réparations et installations, garantissant des systèmes d'eau efficaces et fiables pour votre maison ou votre entreprise.",
-    icon: 'tabler:tool',
+    "Nos services de pancartes sur mesure offrent des solutions de signalisation uniques, conçues pour améliorer la visibilité et l'impact de votre marque ou de vos informations, adaptées à tous les environnements.",
+    icon: 'tabler:directions',
   },
   {
-    title: 'Projet de rénovations',
+    title: 'Tracage de lignes',
     description:
-    "Transformez vos espaces avec nos projets de rénovation, alliant esthétique moderne et fonctionnalité pour créer des environnements sur mesure qui répondent à vos besoins.",
-    icon: 'tabler:bath',
+    "Optimisez la sécurité et l'organisation de vos espaces de stationnements avec notre service de traçage de lignes pour parkings, terrains de jeux et autres surfaces, utilisant des peintures durables pour une visibilité maximale.",
+    icon: 'tabler:brush',
   },
   {
-    title: 'Remplacement de chauffe-eau',
-    description: "Assurez-vous d'un approvisionnement constant en eau chaude avec nos services de remplacement de chauffe-eau, offrant des solutions écoénergétiques et durables.",
-    icon: 'tabler:droplet-half-2-filled',
-  },
-  {
-    title: 'Recherche de Cause',
-    description:
-    "Identifiez la source de problèmes complexes avec notre service de recherche de cause, utilisant des techniques avancées pour diagnostiquer et résoudre efficacement les soucis.",
-    icon: 'tabler:search',
-  },
-  {
-    title: 'Remplacement de Toilette',
-    description:
-    "Modernisez votre salle de bain avec notre service de remplacement de toilette, offrant une gamme d'options économiques et écologiques pour améliorer votre confort et votre style.",
-    icon: 'tabler:toilet-paper',
-  },
-  {
-    title: "Service d'urgence",
-    description:
-    "Disponibles 24/7 pour toute urgence, nos équipes interviennent rapidement pour résoudre vos problèmes de plomberie, chauffage, et autres, minimisant les dommages et les désagréments.",
+    title: 'Signalisation de sécurité',
+    description: "Renforcez la sécurité de votre espace avec nos solutions de signalisation de sécurité, incluant des panneaux d'avertissement, des marquages au sol et plus, pour un environnement sûr et conforme.",
     icon: 'tabler:alert-triangle-filled',
+  },
+  {
+    title: 'Marquage personnalisé',
+    description:
+    "Créez un environnement unique avec notre service de marquage personnalisé, offrant des solutions créatives pour le marquage de zones spécifiques ou la décoration de sols.",
+    icon: 'tabler:writing-sign',
+  },
+  {
+    title: 'Installation de signalétique',
+    description:
+    "Améliorez la navigation dans votre espace avec notre service d'installation de signalétique, proposant des solutions claires et esthétiques pour guider efficacement visiteurs et employés.",
+    icon: 'tabler:road-sign',
+  },
+  {
+    title: "Maintenance et rénovation",
+    description:
+    "Assurez la longévité et la clarté de votre signalisation avec nos services de maintenance et de rénovation, garantissant que vos marquages et pancartes restent visibles et efficaces.",
+    icon: 'tabler:spray',
   }
-  // {
-  //   title: 'Branding',
-  //   description:
-  //     'Offering pre-designed elements for a consistent brand identity, including logos and marketing materials. Ideal for new ventures or revamps.',
-  //   icon: 'tabler:arrow-big-up-lines',
-  // },
-  // {
-  //   title: 'Medical',
-  //   description: `From presentations to patient forms, these tools enhance communication effectiveness for healthcare professionals. Ideal for medical practices and research pursuits.`,
-  //   icon: 'tabler:vaccine',
-  // },
-  // {
-  //   title: 'Fashion Design',
-  //   description:
-  //     'With attention to detail, customization, and contemporary design, they empower designers to showcase ideas cohesively. Ideal for all levels of designers.',
-  //   icon: 'tabler:tie',
-  // },
 ]}
 />
 
