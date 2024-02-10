@@ -118,9 +118,9 @@ export const footerData = {
     {
       title: 'Services',
       links: [
-        { text: 'Intérieur', href: '#' },
-        { text: 'Extérieur', href: '#' },
-        { text: 'Services', href: 'services' },
+        { text: 'Intérieur', href: 'services/renos-int' },
+        { text: 'Extérieur', href: 'services/renos-ext' },
+        { text: 'Services', href: 'services/services' },
         // { text: 'Electron', href: '#' },
         // { text: 'AstroWind Desktop', href: '#' },
       ],
@@ -138,7 +138,7 @@ export const footerData = {
     {
       title: 'EXPERTISE',
       links: [
-        { text: 'Condos', href: '/homes/propos' },
+        { text: 'Condos', href: '#' },
         { text: 'Résidentielle', href: '#' },
         { text: 'Commerciale', href: '#' }
         // { text: 'Press', href: '#' },
