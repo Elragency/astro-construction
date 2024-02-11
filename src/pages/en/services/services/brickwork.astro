@@ -1,0 +1,329 @@
+---
+import Layout from '~/layouts/En-PageLayout.astro';
+
+import Hero3 from '~/components/widgets/Hero3.astro';
+import Allservices from '~/components/widgets/allservices.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import PortfolioA from '~/components/widgets/PortfolioA.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/En/En-CallToAction.astro';
+
+import { otherprojects } from '~/components/ui/otherprojects.json';
+
+import About from '~/components/common/About.astro';
+
+import Contact from '~/components/widgets/En/En-elr-contact.astro';
+import Image from '~/components/common/Image.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+
+import Adresse from '~/components/widgets/En/En-Adresse.astro';
+
+
+const metadata = {
+  title: "K-Constructions - Need a mason?",
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  
+  <!-- BEGINNING SCRIPT NEEDED FOR ACCORDEON -->
+  <script>
+    const accordion = document.getElementById("acordeon");
+    if (!accordion) throw new ReferenceError();
+  
+    accordion.addEventListener("click", (e) => {
+      const target = e.target as HTMLElement;
+      const dataset = { ...target.dataset };
+  
+      const content = target.nextElementSibling as HTMLElement;
+      const arrow = target.querySelector("img") as HTMLElement;
+  
+      if (!arrow || !content) throw new ReferenceError();
+  
+      switch (dataset.status) {
+        case "disabled":
+          content.style.gridTemplateRows = "1fr";
+          target.dataset.status = "enabled";
+          arrow.style.rotate = "90deg";
+          break;
+        case "enabled":
+          content.style.gridTemplateRows = "0fr";
+          target.dataset.status = "disabled";
+          arrow.style.rotate = "0deg";
+          break;
+        default:
+          break;
+      }
+    });
+  </script>
+    <!-- END SCRIPT NEEDED FOR ACCORDEON -->
+  <!-- Hero Widget ******************* -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="~/assets/js/jquery-1.11.0.min.js"></script>
+
+
+  <!-- <script src="~/assets/js/modernizr.js"></script> -->
+
+
+
+
+      <!-- Link Swiper's CSS -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+      <link href="~/assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet1">
+
+      <section class="relative md:-mt-[100px]  not-prose">
+        <div class="flex items-center justify-center min-h-screen">
+          <!-- Image section -->
+          <div class="absolute inset-0 z-0">
+            <img
+              class="w-full h-full object-cover"
+              loading="eager"
+              src="https://raw.githubusercontent.com/Elragency/astro-construction/main/src/assets/images/banners/banner-briques.png"
+              alt="maçons de de k-constructions"
+            />
+          </div>
+      
+          <!-- Text content section -->
+          <div class="relative z-10 text-center">
+            <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase">
+              EXPERTISE IN MASONRY AND BRIQUETTING FOR YOUR CONSTRUCTION PROJECTS
+            </p>
+            <h1 class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200">
+              THE FOUNDATION OF QUALITY
+            </h1>
+            <a href="#soumission">
+              <button type="button" class="btn btn-outline-orange inline-block text-white py-3 px-4 rounded mt-1 ml-0 md:ml-6 mb-2">
+                CONTACT-US NOW!
+              </button>
+            </a>
+            <!-- Additional content can be added here -->
+          </div>
+        </div>
+      </section>
+      
+
+  <!-- <Note /> -->
+
+  <section id="about" class="mx-6">
+    <div class="overflow-hidden">
+      <div class="container mx-auto px-4 py-6 border-b">
+        <div class="flex flex-wrap -mx-4">
+          <div class="w-full md:w-1/2 px-4 py-6 mb-4 md:mb-0 border-r padding-body" data-aos="fade-left" data-aos-duration="2000">
+            <p class="text-xl mb-3" style="color:#ff3c00">WHY US?</p>
+            <h2 class="text-2xl font-bold mb-4 test">MASONRY: THE FOUNDATION OF QUALITY + BRICKLAYING: THE ART OF SHAPING AESTHETICS</h2>
+          </div>
+          <div class="w-full md:w-1/2 px-4 pt-2 padding-body" data-aos="fade-right" data-aos-duration="2000">
+            <p class="ml-0 md:ml-6 font-body pb-4">
+              At K-Constructions, we are proud to extend our expertise to the field of masonry and bricklaying. Our team of skilled and experienced craftsmen is dedicated to providing exceptional construction and renovation solutions. Whether it's for new work or restoration, our masons and bricklayers bring unmatched expertise to each project. <br><br>
+              Our team of experienced masons is equipped to handle a wide range of project services in Montreal. Whether it's urgent repairs, maintenance, or complete refurbishment, we ensure that every job is performed with the highest level of professionalism and quality.
+            </p>
+            <a href="#quote" class="btn btn-outline-orange inline-block bg-primary text-white py-3 px-4 rounded mt-1 ml-0 md:ml-6 mb-2">
+              Contact Us
+              <iconify-icon icon="tabler:arrow-right" class="inline-block ml-2"></iconify-icon>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- FAQs Widget ******************* -->
+  
+  <FAQs
+    title="Our Services"
+    subtitle="Bricklaying, a key skill of our team, involves more than just laying bricks. It's an artistic expression that brings life and character to your buildings. Our bricklayers master the art of working with a variety of materials, including traditional brick, stone, and modern blocks. Whether it's to beautify the facade of your home, build a sturdy retaining wall, or restore historic structures, our bricklaying experts guarantee impeccable finishes and designs that stand out."
+    tagline="At Your Service"
+    columns={1}
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Residential',
+        description:
+        "At K-Constructions, we redefine commercial restoration, going beyond merely bringing commercial buildings back to their original state. Our specialized services cover a wide range: from meticulous waterproofing, expert masonry and concrete repairs, precise caulking, careful reconstruction of ramps, meticulous replacement and reconstruction of balconies, to complete rehabilitation of garage slabs. Our seasoned team offers these top-notch commercial restoration services throughout the greater Montreal area, ensuring results that not only restore but enhance your commercial property.",
+      },
+      {
+        title: 'Commercial',
+        description:
+        "Residential restoration at K-Constructions is a step beyond the conventional. We are dedicated to bringing your residential dwelling back to its original state, or even improving it. Our services encompass complete waterproofing, expert masonry and concrete repairs, precision caulking, the fine reconstruction of ramps, meticulous replacement and reconstruction of balconies, and professional rehabilitation of garage slabs. Providing these specialized residential restoration services in the greater Montreal area, K-Constructions is committed to revitalizing your living space, guaranteeing restoration that combines aesthetics and functionality.",
+      },
+      {
+        title: 'Repairs',
+        description:
+        "Our repair services at K-Constructions go beyond simply restoring; they transform and reinforce the structure of your building. In terms of architectural repairs, we offer innovative repair and replacement solutions for foundations, load-bearing walls, and columns, ensuring the safety and durability of your building in the greater Montreal area. Furthermore, our expertise in masonry repair includes brick repair, brick replacement, meticulous brick mortar restoration, and professional masonry foundation repair. Trust K-Constructions for masonry repair services in the greater Montreal area, where each intervention is synonymous with perfection and longevity.",
+      },
+    ]}
+  />
+  
+  <Content
+  isAfterContent
+  items={[
+    {
+      title: 'Fast Service and Best Price',
+      description: "Competitive Offers: We offer the best rates in the market, without compromising the quality of our services.",
+      icon: 'tabler:discount-check-filled',
+    },
+    {
+      title: 'Expertise in Our Field',
+      description:
+        "Technical Expertise: Our team of experts has the necessary qualifications to ensure flawless installation and repair.",
+      icon: 'tabler:crane',
+    },
+    {
+      title: 'Complete Guarantee',
+      description: "Satisfaction Guarantee: We commit to delivering an exceptional level of finish, supported by a warranty on our roofing work.",
+      icon: 'tabler:refresh',
+    },
+  ]}
+  image={{
+    src: 'https://images.unsplash.com/photo-1617720356637-6264c1c0b4bb?q=80&w=868&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90oy1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    alt: 'K-constructions masonry service',
+  }}></Content>
+  
+
+
+
+  <Adresse />
+
+   <Contact />
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'secondary',
+        text: 'GET YOUR QUOTE NOW!!',
+        href: '#soumission',
+        // target: '_blank',
+        icon: 'tabler:download',
+      },
+    ]}
+  >
+
+
+  
+    <Fragment slot="title">
+      CONTACT US<br class="block sm:hidden" /><span class="sm:whitespace-nowrap"> immediately</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Transform your dreams into reality
+    </Fragment>
+  </CallToAction>
+
+  
+
+  <!-- <script src="~/assets/js/plugins.js"></script> -->
+  <!-- <script src="~/assets/js/script.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+
+  <!-- <script src="~/assets/js/shortcodes.js"></script> -->
+</Layout>
+
+<style>
+  .btn-outline-orange {
+    background: #ff3c00;
+    color: white;
+    /* color: #ff3c00; */
+  }
+
+  .font-body {
+    font-size: 1.2rem;
+    color: white;
+  }
+  .text-grey {
+    color: white !important;
+  }
+  .font-body1 {
+    font-size: 1.5rem;
+  }
+  @media (min-width: 768px) { /* Adjust the min-width value as needed for your definition of 'big screens' */
+  .padding-body {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+  .test {
+    font-size: calc(1.475rem + 2.7vw);
+    font-weight: 300;
+    line-height: 1.2;
+  }
+  .overflow-hidden {
+    overflow: hidden;
+  }
+
+/*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
+.services .icon-box {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.services .icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+  background: #fff;
+  border-radius: 50%;
+  transition: 0.5s;
+  color: #ff3c00;
+  overflow: hidden;
+  box-shadow: 0px 0 25px rgba(0, 0, 0, 0.15);
+}
+
+.services .icon i {
+  font-size: 36px;
+  line-height: 0;
+}
+
+.services:hover .icon {
+  box-shadow: 0px 0 25px rgba(92, 159, 36, 0.3);
+}
+
+.services .title {
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 18px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.services .title a {
+  color: #444444;
+  transition: 0.3s;
+}
+
+.services .title a:hover {
+  color: #ff3c00;
+}
+
+.services .title::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: #ff3c00;
+  bottom: 0;
+  left: calc(50% - 25px);
+}
+
+.services .description {
+  line-height: 24px;
+  font-size: 14px;
+}
+
+</style>

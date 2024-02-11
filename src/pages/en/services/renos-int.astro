@@ -1,0 +1,267 @@
+---
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3-3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+
+import CallToAction from '~/components/widgets/En/En-CallToAction.astro';
+import Layout from '~/layouts/En-PageLayout.astro';
+import Contact from '~/components/widgets/En/En-elr-contact.astro';
+
+const metadata = {
+  title: 'K-Constructions - Entrepreneur Général en Rénovations intérieures',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+  tagline="Interior Renovations"
+  title="Looking to renovate your home?"
+  subtitle="By doing business with general contractor K-Constructions, you have the opportunity to ensure that no matter what trade you need, we will have it."
+  actions={[{ variant:"primary", text: 'FREE QUOTE', href: '#quote' }]}
+  image={{
+    src: 'https://raw.githubusercontent.com/Elragency/astro-construction/721841c30c4f94caeeb75b8259e0c2894ce58d5f/src/assets/images/banners/interieurs.webp',
+    alt: 'General Contractor K-Constructions',
+  }}
+/>
+
+<!-- Features2 Widget ************** -->
+
+<Features3
+  title="Discover our services"
+  subtitle="Whatever you need, we can provide it"
+  columns={3}
+  items={[
+    {
+      title: 'Bathroom',
+      description:
+      "Our bathroom renovation experts transform your space with modern and functional designs. Focusing on aesthetics, functionality, and the use of quality materials, we create the bathroom of your dreams, ensuring comfort and added value to your home.",
+      icon: 'tabler:bath',
+      buttonText: 'Learn More',
+      buttonLink: 'interior/bathroom'
+    },
+    {
+      title: 'Kitchen',
+      description: "Specialists in kitchen renovation, we design custom spaces that combine beauty, efficiency, and innovation. Prioritizing your needs and style, we use premium materials and the latest trends to create a kitchen that reflects your personality and enhances your daily life.",
+      icon: 'tabler:chef-hat',
+      buttonText: 'Learn More',
+      buttonLink: 'interior/kitchen'
+    },
+    {
+      title: 'Flooring',
+      description: "Experts in flooring, we offer a wide range of options, from traditional hardwood floors to modern solutions like heated floors. Prioritizing durability, foot comfort, and aesthetics, we enhance every room of your home.",
+      icon: 'tabler:axe',
+      buttonText: 'Learn More',
+      buttonLink: 'interior/flooring'
+    },
+    {
+      title: 'Painting',
+      description:
+      "Our team of professional painters beautifies your interior and exterior spaces with precision and care. By selecting superior quality paints and applying proven techniques, we guarantee an impeccable finish that transforms and adds value to your property.",
+      icon: 'tabler:paint',
+      buttonText: 'Learn More',
+      buttonLink: 'interior/painting'
+    },
+    {
+      title: 'Drywall',
+      description:
+      "Our drywall specialists apply their expertise to your construction and renovation projects. Focusing on finish quality, acoustic insulation, and durability, we ensure flawless installations for an elegant and functional interior.",
+      icon: 'tabler:tallymark-4',
+      buttonText: 'Learn More',
+      buttonLink: 'interior/drywall'
+    },
+    {
+      title: 'Handymen',
+      description: "Our handymen are versatile experts capable of handling a multitude of repair, maintenance, and home improvement tasks. Combining a wide range of technical skills with a commitment to quality and efficiency, we meet your varied needs, guaranteeing practical solutions for every challenge in your home.",
+      icon: 'tabler:hand-stop',
+      buttonText: 'Learn More',
+      buttonLink: 'interior/handyman'
+    },
+  ]}
+/>
+
+
+  <!-- Content Widget **************** -->
+
+  <Content
+  isReversed
+  items={[
+    {
+      title: 'Unmatched Quality',
+      description:
+        'We have impeccable work quality, and your satisfaction is our highest priority.',
+      icon: 'tabler:wand',
+    },
+    {
+      title: 'Personalized Service',
+      description:
+        "Your needs are unique, so it's only natural to have services tailored to your desires.",
+      icon: 'tabler:settings',
+    },
+    {
+      title: 'Best Price',
+      description:
+        'We guarantee the best possible price-quality ratio on the market to enable you to carry out your projects according to your budget.',
+      icon: 'tabler:coin',
+    },
+    // Uncomment the following section if needed
+    // {
+    //   title: 'Preview and Mockup Views',
+    //   description:
+    //     'Visualize the final outcome before making any changes using our preview and mockup views, ensuring your projects meet your expectations.',
+    //   icon: 'tabler:carousel-horizontal',
+    // },
+  ]}
+  image={{
+    src: 'https://plus.unsplash.com/premium_photo-1677522805495-20700faf5802?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    alt: 'Professional Services by K-Constructions',
+  }}
+>
+  <Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Our Offer</h3>
+  </Fragment>
+</Content>
+
+
+  <!-- Content Widget **************** -->
+
+  <!-- <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Time Savings',
+        description:
+          'Streamline your workflow, enabling you to create stunning materials efficiently and allocate more time to your core tasks.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Professional Appearance',
+        description:
+          'Elevate your projects with the polished and sophisticated look that our templates provide, making a lasting impression on your audience.',
+        icon: 'tabler:school',
+      },
+      {
+        title: 'Cost-Efficiency',
+        description:
+          'Benefit from cost savings by avoiding the need for custom design work, as our templates offer professional-grade designs at a fraction of the cost.',
+        icon: 'tabler:coin',
+      },
+      {
+        title: 'Instant Download',
+        description:
+          'Enjoy immediate access to your chosen templates upon purchase, enabling you to begin working on your projects without delay.',
+        icon: 'tabler:file-download',
+      },
+    ]}
+    image={{
+      src: 'https://plus.unsplash.com/premium_photo-1677522805495-20700faf5802?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      alt: 'Benefits Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Benefits</h3>
+    </Fragment>
+  </Content> -->
+
+  <!-- Testimonials Widget *********** -->
+
+  <Testimonials
+    title="Des commantaires de nos clients"
+    testimonials={[
+      {
+        testimonial: `Le travail effectué sur notre toiture dépasse toutes nos attentes. Non seulement l'aspect est visuellement impressionnant, mais la qualité et la durabilité des matériaux utilisés nous assurent une tranquillité d'esprit pour les années à venir.`,
+        name: 'Emilie Pateneaude',
+        job: 'Mont-Royal, QC',
+        image: {
+          src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80',
+          alt: "Avis d'un client de K-constructions satisfaits",
+        },
+      },
+      {
+        testimonial: "Les solutions de plomberie proposées par K-Constructions ont transformé notre expérience quotidienne. Leur intervention rapide et l'efficacité de leur service client ont résolu des problèmes récurrents, améliorant considérablement le confort de notre foyer.",
+        name: 'Sarah Tremblay',
+        job: 'Rosement, QC',
+        image: {
+          src: 'https://images.unsplash.com/photo-1561406636-b80293969660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: 'Sarah Hansen Image',
+        },
+      },
+      {
+        testimonial: "L'expertise des électriciens de K-Constructions a apporté une valeur inestimable à notre projet. Leur approche axée sur la sécurité et l'innovation technologique a non seulement modernisé notre installation électrique mais aussi optimisé notre consommation énergétique.",
+        name: 'Marc_Andre Gauthier',
+        job: 'Brossard, QC',
+        image: {
+          src: 'https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80',
+          alt: 'Mark Wilkinson Image',
+        },
+      },
+    ]}
+
+  />
+
+  <CallToAction
+    actions={[{
+      variant: "primary",
+      text: 'CALL US NOW!',
+      class : 'custom-btn btn-14',
+      href: 'tel:4388625985',
+    }]}
+    title="Your Project is Urgent?"
+    subtitle="Don't waste a minute and call us now!"
+  />
+
+
+  <Contact />
+
+  <!-- <button class="custom-btn btn-14">Read More</button> -->
+
+
+
+
+</Layout>
+
+<style>
+/* 14 */
+.btn-14 {
+  position: relative;
+  color: #00aced;
+  border: none;
+  z-index: 2;
+}
+.btn-14:before,
+.btn-14:after {
+  position: absolute;
+  content: "";
+  width: 20%;
+  height: 20%;
+  border: 1px solid;
+  
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+.btn-14:before{
+   top: 0;
+   left: 0;
+   border-bottom-color: transparent;
+   border-right-color: transparent;
+   border-top-color: #00aced;
+   border-left-color: #00aced;
+}
+.btn-14:after{
+   bottom: 0;
+   right: 0;
+   border-top-color: transparent;
+   border-left-color: transparent;
+   border-bottom-color: #00aced;
+   border-right-color: #00aced;
+}
+.btn-14:hover:before,
+.btn-14:hover:after {
+  border-color: #00aced;
+  height: 100%;
+  width: 100%;
+  box-shadow: 0 0 5px #00aced, 0 0 5px #00aced inset;
+}
+</style>

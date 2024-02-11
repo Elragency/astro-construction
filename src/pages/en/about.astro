@@ -1,0 +1,623 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Hero4 from '~/components/widgets/Hero4.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+import Contact from '~/components/widgets/elr-contact.astro';
+import Adresse from '~/components/widgets/Adresse.astro';
+
+
+const metadata = {
+  title: 'About K-Constructions',
+};
+---
+
+<Layout metadata={metadata}>
+
+    <!-- END SCRIPT NEEDED FOR ACCORDEON -->
+  <!-- Hero Widget ******************* -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="~/assets/js/jquery-1.11.0.min.js"></script>
+  <!-- <script src="~/assets/js/modernizr.js"></script> -->
+
+
+
+
+      <!-- Link Swiper's CSS -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+<section class="testing-w ">
+  <section class="relative md:-mt-[100px] overflow-y-hidden">
+    <div class="flex items-center justify-center h-screen">
+      <!-- Image section -->
+      <div class="absolute inset-0 z-0">
+        <img
+          class="w-full h-full object-cover"
+          loading="eager"
+          src="https://raw.githubusercontent.com/Elragency/astro-construction/50297db0e21a5c040b2bb709b01b2063ac13d88f/src/assets/images/banner1-img1.png"
+          alt="L'équipe de K-Constructions"
+        />
+      </div>
+  
+      <!-- Text content section -->
+      <div class="relative z-10 text-center">
+        <p class="text-base text-secondary dark:text-white font-bold tracking-wide uppercase pb-2">
+          YOUR CONSTRUCTION EXPERTS
+        </p>
+        <h1 class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200">
+          WHO IS K-CONSTRUCTIONS
+        </h1>
+        <a href="#soumission">
+          <button type="button" class="btn btn-outline-orange inline-block text-white py-3 px-4 rounded mt-1 ml-0 md:ml-6 mb-2">
+            CONTACT US NOW!
+          </button>
+        </a>
+        <!-- Additional content can be added here -->
+      </div>
+    </div>
+  </section>
+  
+  
+</section>
+      
+
+<section id="main-content" class="py-10 bg-black">
+  <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+          <p class="text-lg font-medium mb-5 text-white">Who is K Construction</p>
+          <h2 class="text-4xl font-semibold text-white mb-4">What We Do</h2>
+          <div class="flex justify-center items-center">
+              <div class="w-32 h-0.5 bg-gray-300"></div>
+          </div>
+          <h4 class="mt-4 text-xl text-gray-300">K Construction has completed over 359 projects - paired with 25 years of experience, we are the best contractors to serve you.</h4>
+      </div>
+
+      <div class="flex flex-wrap -mx-4">
+          <div class="w-full md:w-1/3 px-4 mb-8">
+              <div class="p-6 bg-white rounded-lg shadow-lg text-center">
+                  <div class="icon text-3xl mb-4">
+                      <iconify-icon icon="tabler:template" class="inline-block text-orange-500"></iconify-icon>
+                  </div>
+                  <h5 class="text-lg text-orange-600 font-semibold mb-3"><a href="#" class="hover:text-orange-600">QUALITY</a></h5>
+                  <p class="text-black">K Construction stands out with unmatched quality, ensuring precision, durability, and excellence in every project.</p>
+              </div>
+          </div>
+          <div class="w-full md:w-1/3 px-4 mb-8" data-aos-delay="200">
+              <div class="p-6 bg-white rounded-lg shadow-lg text-center">
+                  <div class="icon text-3xl mb-4">
+                      <iconify-icon icon="tabler:timer" class="inline-block text-orange-500"></iconify-icon>
+                  </div>
+                  <h5 class="text-lg text-orange-600 font-semibold mb-3"><a href="#" class="hover:text-orange-600">PROFESSIONALISM</a></h5>
+                  <p class="text-black">We embody professionalism, offering expertise, reliability, and outstanding customer service at every stage.</p>
+              </div>
+          </div>
+          <div class="w-full md:w-1/3 px-4 mb-8" data-aos-delay="400">
+              <div class="p-6 bg-white rounded-lg shadow-lg text-center">
+                  <div class="icon text-3xl mb-4">
+                      <iconify-icon icon="tabler:currency-dollar" class="inline-block text-orange-500"></iconify-icon>
+                  </div>
+                  <h5 class="text-lg text-orange-600 font-semibold mb-3"><a href="#" class="hover:text-orange-600">AFFORDABLE</a></h5>
+                  <p class="text-black">We offer quality solutions at the best prices, making construction excellence accessible and affordable for everyone.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<!--  -->
+
+
+
+
+<section>
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="K-Constructions EN CHIFFRES"
+    stats={[
+      { title: "ANNÉES D'EXPÉRIENCE", amount: '25' },
+      { title: "PROJETS COMPLÉTÉS", amount: '460' },
+      { title: 'CLIENTS SATISFAITS', amount: '270' },
+      { title: 'EMPLOYÉS MOTIVÉS', amount: '15' },
+    ]}
+  />
+
+    <!-- Steps2 Widget ****************** -->
+    <section class="max-width : 99%" data-aos="fade-up" >
+      <Steps2
+      title="NOTRE FOCUS"
+      subtitle="Notre objectif est de dépasser vos objectifs, de respecter vos délais et de gérer avec succès votre budget. Nous fournissons à nos clients des services d’entreprise générale, de gestion de construction, d’étude de site et de conception-construction de premier ordre."
+      items={[
+        {
+          title: "De L'Expérience",
+          description:
+            "Nous avons réalisé avec succès des projets pour un nombre important de clients satisfaits.",
+        },
+        {
+          title: 'En Règle',
+          description:
+            "Nous sommes autorisés à effectuer des travaux d'entreprise générale et avons les électriciens, plombiers et autres quarts de métier en règle pour tous vos besoins.",
+        },
+        {
+          title: 'Ouverts À vos besoins',
+          description:
+            "Nous serons ouverts à l'obtention de nouvelles licences si une opportunité se présentes",
+        },
+      ]}
+    />
+    </section>
+
+    <section data-aos="fade-up" >
+      <Steps2
+      title="Dédiés"
+      subtitle="Chez K Construction, notre engagement envers nos clients est notre priorité. Nous visons non seulement à rencontrer vos attentes, mais à les surpasser, en respectant scrupuleusement vos délais et votre budget. Nos services haut de gamme incluent la gestion de construction, l'étude de site, et la conception-construction, tous dédiés à réaliser votre vision."
+      isReversed={true}
+      callToAction={{
+        text: 'Faire Affaire',
+        href: '#soumission',
+      }}
+      items={[
+        {
+          title: 'Une Réputation',
+          description: 'Nous avons bâti notre réputation sur la satisfaction de nos clients, en réalisant avec succès une multitude de projets répondant à leurs besoins spécifiques.',
+          icon: 'tabler:globe',
+        },
+        {
+          title: 'Une Équipe',
+          description:
+            'Notre équipe est hautement qualifiée et autorisée à mener à bien des travaux complexes, garantissant des résultats professionnels dans tous les aspects de votre projet.',
+          icon: 'tabler:message-star',
+        },
+        {
+          title: 'Awards and recognition as industry experts',
+          description:
+            "Nous sommes toujours prêts à élargir nos compétences et obtenir de nouvelles licences pour mieux répondre à vos projets ambitieux.",
+          icon: 'tabler:award',
+        },
+      ]}
+    />
+    
+    </section>
+
+    <section data-aos="fade-up" >
+      <Steps2
+title="ENGAGÉ"
+subtitle="Chez K Construction, nous sommes dédiés à fournir à nos clients une expérience exceptionnelle. Notre engagement se traduit par une approche centrée sur le client, garantissant satisfaction et excellence à chaque étape du projet"
+items={[
+  {
+    title: "À L'écoute",
+    description:
+      "Écoute Active des Clients : Nous prenons le temps de comprendre vos besoins et vos aspirations pour garantir que chaque projet reflète vos attentes.",
+  },
+  {
+    title: 'Transparence Totale',
+    description:
+      "Nous maintenons une communication ouverte et honnête tout au long du processus, assurant une confiance et une clarté sans faille.",
+  },
+  {
+    title: 'Service Après-Projet',
+    description:
+      "Notre dévouement envers nos clients continue même après la fin des travaux, assurant un suivi et une assistance pour garantir votre entière satisfaction.",
+  },
+]}
+/>
+    </section>
+
+
+
+
+
+
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="QUESTIONS FRÉQUENTES"
+    subtitle="Certaines questions que nous reçevons régulièrement."
+    columns={3}
+    isBeforeContent={true}
+    items={[
+      {
+        title: 'ÊTES-VOUS EN RÈGLE POUR FAIRE DES TRAVAUX DANS LES CONDOS?',
+        description:
+          'Oui! Nous possédons notre licence RBQ et tous nos professionnels sont accrédités par les instances gouvernementales nécessaires pour effectuer tout type de travaux nécessaires.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'ÊTES-VOUS ASSURÉ?',
+        description:
+          "Bien sûr! La sécurité des investissements de nos clients est notre priorité. C'est pourquoi nous sommes assurés jusqu'à 2 millions de dollars pour tout type de dommage.",
+        icon: 'tabler:template',
+      },
+      {
+        title: 'QUELLES SONT VOS MODALITÉS DE PAIEMENT?',
+        description:
+          "Bien que cela dépend de la grosseur de votre projet ainsi que de l'échéancier, nous sommes assez flexibles afin de nous assurer que le tout vous convienne. Nous acceptons les virements bancaire, le cash, les virements interac, les chèques ou les carte de crédit.",
+        icon: 'tabler:template',
+      },
+    ]}
+  />
+
+  
+
+  
+
+  <!-- Features3 Widget ************** -->
+
+  <!-- <Features3
+    columns={3}
+    isAfterContent={true}
+    items={[
+      {
+        title: 'E-commerce',
+        description:
+          'Rutrum non odio at vehicula. Proin ipsum justo, dignissim in vehicula sit amet, dignissim id quam. Sed ac tincidunt sapien.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Blog',
+        description:
+          'Nullam efficitur volutpat sem sed fringilla. Suspendisse et enim eu orci volutpat laoreet ac vitae libero.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Business',
+        description:
+          'Morbi et elit finibus, facilisis justo ut, pharetra ipsum. Donec efficitur, ipsum quis congue luctus, mauris magna.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Branding',
+        description:
+          'Suspendisse vitae nisi eget tortor luctus maximus sed non lectus. Cras malesuada pretium placerat. Nullam venenatis dolor a ante rhoncus.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Medical',
+        description:
+          'Vestibulum malesuada lacus id nibh posuere feugiat. Nam volutpat nulla a felis ultrices, id suscipit mauris congue. In hac habitasse platea dictumst.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Fashion Design',
+        description:
+          'Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus.',
+        icon: 'tabler:template',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+      alt: 'Colorful Image',
+    }}
+  /> -->
+
+
+
+  <!-- Steps2 Widget ****************** -->
+
+
+  <Adresse />
+
+<Contact />
+
+<!-- <script src="~/assets/js/plugins.js"></script>
+<script src="~/assets/js/script.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script> -->
+<script src="~/assets/js/shortcodes.js"></script>
+<script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
+
+
+<style>
+
+@media only screen and (max-width: 1199px) {
+	.themesflat-icon-box.padding-inner { padding: 15px; }
+  .themesflat-icon-box.padding-inner.pd33 { padding: 10px; }
+  .themesflat-icon-box.icon-left .text-wrap { padding-left: 62px; }
+  .themesflat-icon-box.style-2 .heading { font-size: 14px; }
+}
+
+@media only screen and (max-width: 991px) {
+  .themesflat-icon-box.style-3 .heading { font-size: 15px;  }
+}
+
+
+
+
+@media only screen and (max-width: 991px) {
+	.half-background.style-2 { height: 330px; }
+}
+
+@media only screen and (max-width: 767px) {
+	.half-background.style-1 { height: 330px; }
+	.half-background.style-2 { margin-top: 35px; }
+}
+
+
+@media only screen and (max-width: 1199px){
+  .themesflat-image-box.style-2 .text-wrap { padding: 15px 0px; }
+}
+
+@media only screen and (max-width: 1199px) {
+	.has-arrows.arrow-center.offset-v-82 .owl-theme .owl-nav [class*='owl-'] { margin-top: -150px; }
+}
+
+@media only screen and (max-width: 767px) {
+	.has-arrows .owl-theme .owl-nav, .has-bullets .owl-theme .owl-dots { display: none ; }
+}
+/* Carousel thumb
+-------------------------------------------------------------- */
+.owl-theme .owl-thumbs { display: none; }
+.has-thumb .owl-theme .owl-thumbs { display: block; }
+.has-thumb .owl-thumbs .owl-thumb-item { display: inline-block; background-color: transparent; padding: 0px; margin: 20px 0px 0px 20px; }
+.has-thumb .owl-thumbs .owl-thumb-item:first-child { margin-left: 0px; }
+
+.has-thumb.w185 .owl-thumbs .owl-thumb-item { width: 184px; height: 106px; border: 1px solid transparent; }
+.has-thumb.w185 .owl-thumbs .owl-thumb-item.active { border-color: #ff3c00; }
+
+@media only screen and (max-width: 1199px) {
+	.has-thumb .owl-thumbs .owl-thumb-item:last-child { margin: 20px 0px 0px 0px; }
+}
+
+@media only screen and (max-width: 479px) {
+	.has-thumb .owl-thumbs .owl-thumb-item { margin: 20px 0px 0px 0px; }
+}
+
+/
+@media only screen and (max-width: 1199px) {
+	.themesflat-project.style-1 .heading { font-size: 12px; }
+	.themesflat-project.has-margin.mg15.w25 .project-item { width: 33.33%; }
+  .themesflat-project.style-2 .text-wrap{ padding: 15px 5px; }
+}
+
+@media only screen and (max-width: 767px) {
+	.themesflat-project.style-1 .heading { font-size: 14px; }
+	.themesflat-project.has-margin.mg15.w25 .project-item ,
+	.themesflat-project.has-margin.mg15 .project-item { width: 50%; }
+}
+
+@media only screen and (max-width: 479px) {
+	.themesflat-project.has-margin.mg15.w25 .project-item,
+	.themesflat-project.has-margin.mg15 .project-item { width: 100%; }
+}
+
+
+/* Tabs
+-------------------------------------------------------------- */
+.themesflat-tabs .tab-title { margin: 0 ; }
+.themesflat-tabs .tab-title .item-title { font-family: "Montserrat", sans-serif;   padding: 0; list-style: none; display: inline-block; letter-spacing: 0.5px;  }
+.themesflat-tabs .tab-title .item-title.active { position: relative;  }
+.themesflat-tabs .tab-title .item-title > span { cursor: pointer;  transition: none;  display: inline-block; text-transform: uppercase; }
+
+.themesflat-tabs.title-w170 .tab-title { width: 170px; }
+/* Style 1 */
+.themesflat-tabs.style-1 .tab-title  { margin:0 0 5px 0; background-color: transparent; }
+.themesflat-tabs.style-1 .tab-title .item-title  { font-size: 14px; font-weight: 600; color: #777; margin: 0px 5px 0px 0px; border: 1px solid #f2f2f2; }
+.themesflat-tabs.style-1 .tab-title .item-title > span { padding: 10px 36px 10px 39px; }
+.themesflat-tabs.style-1 .tab-title .item-title.active > span { padding: 13px 36px 10px 39px; }
+.themesflat-tabs.style-1 .tab-title .item-title.active { background-color: #fafafb; color: #2b323a;  }
+.themesflat-tabs.style-1 .tab-content .item-content { padding: 19px 0px 19px 21px; background-color: #fafafb;  }
+.themesflat-tabs.style-1 .tab-content .item-content p { margin: 0px 0px 8px 0px; line-height: 26px; color: #777; letter-spacing: -0.13px; }
+
+.themesflat-tabs.style-1 .tab-content ul { margin: 0px; }
+.themesflat-tabs.style-1 .tab-content ul li { padding: 5.5px 7px; }
+.themesflat-tabs.style-1 .tab-content ul span { display: block; }
+.themesflat-tabs.style-1 .tab-content ul span.fa { text-align: center; width: 30px; height: 30px; background-color: #ff3c00; color: #fff; font-size: 16px; float: left; margin-right: 11px; line-height: 30px; }
+.themesflat-tabs.style-1 .tab-content ul span.text { overflow: hidden; }
+
+/* Style 2 */
+.themesflat-tabs.style-2 { display: table; width: 100%; }
+.themesflat-tabs.style-2 .tab-content-wrap ,
+.themesflat-tabs.style-2 .tab-title { display: table-cell; vertical-align: top; }
+.themesflat-tabs.style-2 .tab-title .item-title  { font-size: 14px; font-weight: 500; color: #777; margin: 0px 0px 5px 0px; background-color: #f1f1f1; display: block;}
+.themesflat-tabs.style-2 .tab-title .item-title > span { padding: 13px 0px; display: block; text-align: center;}
+.themesflat-tabs.style-2 .tab-content{ margin-left: 9px; }
+.themesflat-tabs.style-2 .tab-content .item-content { padding: 20px 0px 19px 26px; background-color: transparent; border: 1px solid #f2f2f2;  }
+.themesflat-tabs.style-2 .tab-content .item-content p { margin-top: 10px; letter-spacing: 0.07px; }
+.themesflat-tabs.style-2 .tab-content .item-content p:first-child { margin: 0px; letter-spacing: 0px; }
+.themesflat-tabs.style-2 .tab-title .item-title.active { background-color: #ff3c00; color: #222; }
+
+/* Has padding */
+.themesflat-tabs.w168 .tab-title .item-title { width: 168px; text-align: center;  }
+.themesflat-tabs.w168 .tab-title .item-title > span { padding: 10px 0px; }
+.themesflat-tabs.w168 .tab-title .item-title.active > span { padding: 13px 0px 10px 0px; }
+
+
+.themesflat-tabs.style-1 .tab-title .item-title:hover > span { color: #2b323a; }
+
+@media only screen and (max-width: 1199px) {
+	.themesflat-tabs.w168 .tab-title .item-title { width: 140px; }
+	.themesflat-tabs.style-1 .tab-title .item-title.active > span,
+	.themesflat-tabs.style-1 .tab-title .item-title > span { padding: 10px; }
+}
+
+@media only screen and (max-width: 991px) {
+	.themesflat-tabs.w168 .tab-title .item-title { width: 100%; }
+	.themesflat-tabs.style-1 .tab-title { margin: 0px; }
+	.themesflat-tabs.style-1 .tab-title .item-title { margin: 0px 0px 5px 0px; display: block; }
+	.themesflat-tabs.style-1 .tab-title .item-title { text-align: center; }
+	.themesflat-tabs.style-1 .tab-title .item-title.active > span { padding: 10px 0px;  width: 100%; }
+  .themesflat-tabs.style-2 .tab-content .item-content { padding: 15px; }
+}
+
+@media only screen and (max-width: 479px) {
+	.themesflat-tabs.style-2 .tab-content-wrap, 
+	.themesflat-tabs.style-2 .tab-title { display: block; text-align: left; }
+	.themesflat-tabs.title-w170 .tab-title { width: 100%; }
+	.themesflat-tabs.style-2 .tab-content { margin: 0px; }
+}
+
+
+/* Style 4 */
+.themesflat-accordions.style-4 .accordion-item .accordion-heading { font-size: 16px; color: #777; font-weight: 500; border: 1px solid #f2f2f2; background-color: #fafafb; text-transform: uppercase;  padding: 13px 23px;}
+.themesflat-accordions.style-4 .accordion-item.active  .accordion-heading { background-color: #ff3c00; border-color: #ff3c00; color: #fff; }
+.themesflat-accordions.style-4 .accordion-content { border: 1px solid #f2f2f2; padding: 22px 5px 22px 24px;  }
+.themesflat-accordions.style-4.has-icon.icon-right .accordion-item .accordion-heading > .inner:before { color: #999; font-size: 30px; right: 0px; }
+.themesflat-accordions.style-4.has-icon.icon-right .accordion-item.active .accordion-heading > .inner:before { color: #fff; }
+
+.themesflat-accordions.style-4 .accordion-content .name { font-size: 14px; line-height: 24px; color: #555; margin-bottom: 10px; }
+.themesflat-accordions.style-4 .accordion-content p { margin: 0px; }
+
+.themesflat-accordions .accordion-item .accordion-heading:hover { color: #222;  }
+
+@media only screen and (max-width: 991px) {
+  .themesflat-accordions.style-2 .accordion-item .accordion-heading { font-size: 13px; padding: 6px 0px; }
+}
+
+@media only screen and (max-width: 767px) {
+  .themesflat-accordions.style-2 .accordion-item .accordion-heading { padding: 15px 0px; }
+}
+
+@media only screen and (max-width: 479px) {
+  .themesflat-accordions.style-2 .accordion-item .accordion-heading { padding: 6px 0px; }
+}
+
+/*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
+.services .icon-box {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.services .icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+  background: #fff;
+  border-radius: 50%;
+  transition: 0.5s;
+  color: #ff3c00;
+  overflow: hidden;
+  box-shadow: 0px 0 25px rgba(0, 0, 0, 0.15);
+}
+
+.services .icon i {
+  font-size: 36px;
+  line-height: 0;
+}
+
+.services:hover .icon {
+  box-shadow: 0px 0 25px rgba(92, 159, 36, 0.3);
+}
+
+.services .title {
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 18px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.services .title a {
+  color: #444444;
+  transition: 0.3s;
+}
+
+.services .title a:hover {
+  color: #ff3c00;
+}
+
+.services .title::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: #ff3c00;
+  bottom: 0;
+  left: calc(50% - 25px);
+}
+
+.services .description {
+  line-height: 24px;
+  font-size: 14px;
+}
+
+/*--------------------------------------------------------------
+# Why Us
+--------------------------------------------------------------*/
+.why-us .box {
+  padding: 50px 30px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  transition: all ease-in-out 0.3s;
+}
+
+.why-us .box span {
+  display: block;
+  font-size: 28px;
+  font-weight: 700;
+  color: #8ed851;
+}
+
+.why-us .box h4 {
+  font-size: 24px;
+  font-weight: 600;
+  padding: 0;
+  margin: 20px 0;
+  color: #2a2a2a;
+}
+
+.why-us .box p {
+  color: #aaaaaa;
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.why-us .box:hover {
+  background: #ebb110;
+  padding: 30px 30px 70px 30px;
+  box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
+}
+
+.why-us .box:hover span,
+.why-us .box:hover h4,
+.why-us .box:hover p {
+  color: #fff;
+}
+
+.btn-outline-orange {
+    background: #ff3c00;
+    color: white;
+    /* color: #ff3c00; */
+  }
+
+  .font-body {
+    font-size: 1.2rem;
+    color: white;
+  }
+  .text-grey {
+    color: white !important;
+  }
+  .font-body1 {
+    font-size: 1.5rem;
+  }
+  @media (min-width: 768px) { /* Adjust the min-width value as needed for your definition of 'big screens' */
+  .padding-body {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+  .test {
+    font-size: calc(1.475rem + 2.7vw);
+    font-weight: 300;
+    line-height: 1.2;
+  }
+  .overflow-hidden {
+    overflow: hidden;
+  }
+
+</style>
+</Layout>

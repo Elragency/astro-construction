@@ -1,0 +1,67 @@
+---
+import Layout from '~/layouts/En-PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Contact from '~/components/widgets/En/En-elr-contact.astro';
+
+const metadata = {
+  title: 'Contact',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText tagline="Contact" title="Let's work together!" />
+
+  <!-- <ContactUs
+    title="Drop us a message today!"
+    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
+    inputs={[
+      {
+        type: 'text',
+        name: 'name',
+        label: 'Name',
+      },
+      {
+        type: 'email',
+        name: 'email',
+        label: 'Email',
+      },
+    ]}
+    textarea={{
+      label: 'Message',
+    }}
+    disclaimer={{
+      label:
+        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
+    }}
+    description="Our support team typically responds within 24 business hours."
+  /> -->
+
+  <Contact />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="We Are There For You!"
+    items={[
+      {
+        title: 'Phone',
+        description: '+438 862 5985 ',
+        icon: 'tabler:headset',
+      },
+      {
+        title: 'Email',
+        description: 'kconstructionsinfo@gmail.com',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Address',
+        description: '4815 Av. Van Horne, Montreal QC H3W 1J2',
+        icon: 'tabler:map-pin',
+      },
+    ]}
+  />
+</Layout>

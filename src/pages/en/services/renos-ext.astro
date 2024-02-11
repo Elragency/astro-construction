@@ -1,0 +1,264 @@
+---
+
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3-3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+
+
+
+import CallToAction from '~/components/widgets/En/En-CallToAction.astro';
+import Layout from '~/layouts/En-PageLayout.astro';
+import Contact from '~/components/widgets/En/En-elr-contact.astro';
+
+const metadata = {
+  title: 'K-Constructions - Rénovations extérieures en Montérégie',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+  tagline="Exterior Renovations"
+  title="Looking to renovate your home?"
+  subtitle="By doing business with general contractor K-Constructions, you have the opportunity to ensure that no matter what trade you need, we will have it."
+  actions={[{ variant:"primary", text: 'FREE QUOTE', href: '#soumission' }]}
+  image={{
+    src: 'https://raw.githubusercontent.com/Elragency/astro-construction/721841c30c4f94caeeb75b8259e0c2894ce58d5f/src/assets/images/banners/exterior.webp',
+    alt: 'General Contractor K-Constructions',
+  }}
+/>
+
+<!-- Features2 Widget ************** -->
+
+<Features3
+  title="Discover our services"
+  subtitle="Whatever you need, we can provide it"
+  columns={3}
+  items={[
+    {
+      title: 'Landscaping',
+      description:
+      "Our team of landscapers creates harmonious and functional outdoor spaces. Combining innovative design and horticultural expertise, we transform gardens, terraces, and green spaces into places of relaxation and beauty, reflecting your vision and enhancing your property's appeal.",
+      icon: 'tabler:fountain',
+      buttonText: 'Learn More',
+      buttonLink: 'exterior/landscaping'
+    },
+    {
+      title: 'Decks',
+      description: "We design and build custom decks, combining aesthetics and durability. Using quality materials suited to your needs and the local climate, we create the perfect outdoor space for your moments of relaxation, leisure, and outdoor gatherings.",
+      icon: 'tabler:wood',
+      buttonText: 'Learn More',
+      buttonLink: 'exterior/decks'
+    },
+    {
+      title: 'Sheds',
+      description: "Our shed constructions combine functionality and design. Whether it's for additional storage, a workshop, or a leisure space, we offer customized, sturdy, and aesthetic solutions, seamlessly integrated into your outdoor environment.",
+      icon: 'tabler:home-move',
+      buttonText: 'Learn More',
+      buttonLink: 'exterior/sheds'
+    },
+    {
+      title: 'Balconies',
+      description:
+      "Specialized in the design, renovation, and layout of balconies. Whether it's for a complete renovation, the addition of railings, or simply to refresh its appearance, we use quality materials and innovative designs to create a safe, aesthetic, and functional balcony.",
+      icon: 'tabler:building-bridge',
+      buttonText: 'Learn More',
+      buttonLink: 'exterior/balconies'
+    },
+    {
+      title: 'Doors & Windows',
+      description:
+      "Experts in the installation of doors and windows, we enhance your home's energy efficiency, security, and aesthetics. With a varied selection of styles and materials, we ensure precise installation for increased comfort and performance.",
+      icon: 'tabler:door',
+      buttonText: 'Learn More',
+      buttonLink: 'exterior/doors'
+    },
+    {
+      title: 'Signage',
+      description: "We offer design, manufacturing, and installation services for signs for businesses and individuals. Whether it's for commercial signs, directional panels, or custom plaques, our solutions are designed to maximize your visibility and reflect your brand image.",
+      icon: 'tabler:flag-2',
+      buttonText: 'Learn More',
+      buttonLink: 'exterior/signs'
+    },
+  ]}
+/>
+
+
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    items={[
+      {
+      title: 'Unmatched Quality',
+      description:
+        'We have impeccable work quality, and your satisfaction is our highest priority.',
+      icon: 'tabler:wand',
+    },
+    {
+      title: 'Personalized Service',
+      description:
+        "Your needs are unique, so it's only natural to have services tailored to your desires.",
+      icon: 'tabler:settings',
+    },
+    {
+      title: 'Best Price',
+      description:
+        'We guarantee the best possible price-quality ratio on the market to enable you to carry out your projects according to your budget.',
+      icon: 'tabler:coin',
+    },
+  ]}
+  image={{
+    src: 'https://plus.unsplash.com/premium_photo-1677522805495-20700faf5802?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    alt: 'Exterior Renovations by K-Constructions',
+  }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Our Offer</h3>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <!-- <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Time Savings',
+        description:
+          'Streamline your workflow, enabling you to create stunning materials efficiently and allocate more time to your core tasks.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Professional Appearance',
+        description:
+          'Elevate your projects with the polished and sophisticated look that our templates provide, making a lasting impression on your audience.',
+        icon: 'tabler:school',
+      },
+      {
+        title: 'Cost-Efficiency',
+        description:
+          'Benefit from cost savings by avoiding the need for custom design work, as our templates offer professional-grade designs at a fraction of the cost.',
+        icon: 'tabler:coin',
+      },
+      {
+        title: 'Instant Download',
+        description:
+          'Enjoy immediate access to your chosen templates upon purchase, enabling you to begin working on your projects without delay.',
+        icon: 'tabler:file-download',
+      },
+    ]}
+    image={{
+      src: 'https://plus.unsplash.com/premium_photo-1677522805495-20700faf5802?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      alt: 'Benefits Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Benefits</h3>
+    </Fragment>
+  </Content> -->
+
+  <!-- Testimonials Widget *********** -->
+
+  <Testimonials
+  title="Client Feedback"
+  testimonials={[
+    {
+      testimonial: `The work done on our roof exceeded all our expectations. Not only does it look visually impressive, but the quality and durability of the materials used give us peace of mind for the years to come.`,
+      name: 'Emilie Pateneaude',
+      job: 'Mont-Royal, QC',
+      image: {
+        src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80',
+        alt: "Review from a satisfied K-constructions client",
+      },
+    },
+    {
+      testimonial: "The plumbing solutions proposed by K-Constructions have transformed our daily experience. Their rapid intervention and the efficiency of their customer service solved recurring problems, significantly improving the comfort of our home.",
+      name: 'Sarah Tremblay',
+      job: 'Rosemont, QC',
+      image: {
+        src: 'https://images.unsplash.com/photo-1561406636-b80293969660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+        alt: 'Image of Sarah Tremblay',
+      },
+    },
+    {
+      testimonial: "The expertise of K-Constructions' electricians added invaluable value to our project. Their focus on safety and technological innovation not only modernized our electrical installation but also optimized our energy consumption.",
+      name: 'Marc-Andre Gauthier',
+      job: 'Brossard, QC',
+      image: {
+        src: 'https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80',
+        alt: 'Image of Marc-Andre Gauthier',
+      },
+    },
+  ]}
+/>
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[{
+      variant: "primary",
+      text: 'CALL US NOW!',
+      class : 'custom-btn btn-14',
+      href: 'tel:4388625985',
+    }]}
+    title="Your Project is Urgent?"
+    subtitle="Don't waste a minute and call us now!"
+  />
+
+
+  <Contact />
+
+  <!-- <button class="custom-btn btn-14">Read More</button> -->
+
+
+
+
+</Layout>
+
+<style>
+/* 14 */
+.btn-14 {
+  position: relative;
+  color: #00aced;
+  border: none;
+  z-index: 2;
+}
+.btn-14:before,
+.btn-14:after {
+  position: absolute;
+  content: "";
+  width: 20%;
+  height: 20%;
+  border: 1px solid;
+  
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+.btn-14:before{
+   top: 0;
+   left: 0;
+   border-bottom-color: transparent;
+   border-right-color: transparent;
+   border-top-color: #00aced;
+   border-left-color: #00aced;
+}
+.btn-14:after{
+   bottom: 0;
+   right: 0;
+   border-top-color: transparent;
+   border-left-color: transparent;
+   border-bottom-color: #00aced;
+   border-right-color: #00aced;
+}
+.btn-14:hover:before,
+.btn-14:hover:after {
+  border-color: #00aced;
+  height: 100%;
+  width: 100%;
+  box-shadow: 0 0 5px #00aced, 0 0 5px #00aced inset;
+}
+</style>

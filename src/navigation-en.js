@@ -3,12 +3,12 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'Accueil',
-      href: getPermalink('/'),
+      text: 'Home',
+      href: getPermalink('/en/home'),
     },
     {
-      text: 'test',
-      href: getPermalink('/homes/propos'),
+      text: 'About',
+      href: getPermalink('/en/about'),
     },
     // {
     //   text: 'À Propos',
@@ -34,19 +34,19 @@ export const headerData = {
     // {
     {
       text: 'Services',
-      href: getPermalink('/services'),
+      href: getPermalink('/en/services'),
       links: [
         {
-          text: 'Nos Services',
-          href: getPermalink('/services'),
+          text: 'Our Services',
+          href: getPermalink('/en/services/services'),
         },
         {
-          text: 'Rénovations intérieures',
-          href: getPermalink('/services/reno-interieures'),
+          text: 'Interior Renovations',
+          href: getPermalink('/en/services/renos-int'),
         },
         {
-          text: 'Rénovations Extérieures',
-          href: getPermalink('/services/click-through'),
+          text: 'Exterior Renovations',
+          href: getPermalink('/en/services/renos-ext'),
         },
         // {
         //   text: 'Product Details (or Services)',
@@ -91,12 +91,12 @@ export const headerData = {
     },
     {
       text: 'Contact',
-      href: getPermalink('/contact'),
+      href: getPermalink('/en/contact'),
     },
-    // {
-    //   text: 'EN',
-    //   href: getPermalink('/en/home'),
-    // },
+    {
+      text: 'FR',
+      href: getPermalink('/'),
+    },
   ],
   actions: [{ text: 'Faisons Affaire!', href: 'contact', target: '' }],
 };
@@ -104,53 +104,53 @@ export const headerData = {
 export const footerData = {
   links: [
     {
-      title: 'Product',
+      title: 'À Propos',
       links: [
-        { text: 'Features', href: '#' },
-        { text: 'Security', href: '#' },
+        { text: 'K-CONSTRUCTIONS', href: 'propos' },
+        { text: 'Mission', href: '#' },
         { text: 'Team', href: '#' },
-        { text: 'Enterprise', href: '#' },
-        { text: 'Customer stories', href: '#' },
-        { text: 'Pricing', href: '#' },
-        { text: 'Resources', href: '#' },
+        // { text: 'Enterprise', href: '#' },
+        // { text: 'Customer stories', href: '#' },
+        // { text: 'Pricing', href: '#' },
+        // { text: 'Resources', href: '#' },
       ],
     },
     {
-      title: 'Platform',
+      title: 'Services',
       links: [
-        { text: 'Developer API', href: '#' },
-        { text: 'Partners', href: '#' },
-        { text: 'Atom', href: '#' },
-        { text: 'Electron', href: '#' },
-        { text: 'K-Constructions Desktop', href: '#' },
+        { text: 'Interior', href: 'en/services/renos-int' },
+        { text: 'Exterior', href: 'en/services/renos-ext' },
+        { text: 'Services', href: 'en/services/services' },
+        // { text: 'Electron', href: '#' },
+        // { text: 'AstroWind Desktop', href: '#' },
       ],
     },
     {
-      title: 'Support',
+      title: 'RÉGIONS',
       links: [
-        { text: 'Docs', href: '#' },
-        { text: 'Community Forum', href: '#' },
-        { text: 'Professional Services', href: '#' },
-        { text: 'Skills', href: '#' },
-        { text: 'Status', href: '#' },
+        { text: 'Montreal', href: '#' },
+        { text: 'Rive-sud', href: '#' },
+        { text: 'Rive-Nord', href: '#' },
+        { text: 'Monteregie', href: '#' }
+        // { text: 'Status', href: '#' },
       ],
     },
     {
-      title: 'Company',
+      title: 'EXPERTISE',
       links: [
-        { text: 'À Propos', href: '/homes/propos' },
-        { text: 'Blog', href: '#' },
-        { text: 'Careers', href: '#' },
-        { text: 'Press', href: '#' },
-        { text: 'Inclusion', href: '#' },
-        { text: 'Social Impact', href: '#' },
-        { text: 'Shop', href: '#' },
+        { text: 'Condos', href: '#' },
+        { text: 'Residential', href: '#' },
+        { text: 'Commercial', href: '#' }
+        // { text: 'Press', href: '#' },
+        // { text: 'Inclusion', href: '#' },
+        // { text: 'Social Impact', href: '#' },
+        // { text: 'Shop', href: '#' },
       ],
     },
   ],
   secondaryLinks: [
     { text: 'Terms', href: getPermalink('/terms') },
-    { text: 'Privacy Policy', href: getPermalink('/privacy') },
+    { text: 'Privacy', href: getPermalink('/privacy') },
   ],
   socialLinks: [
     { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
@@ -161,6 +161,7 @@ export const footerData = {
   ],
   footNote: `
     <span class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 rtl:mr-0 rtl:ml-1.5 float-left rtl:float-right rounded-sm"></span>
-    Réalisé par <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://elragency.com/"> Agence ELR</a> · Tous droits réservés.
+    Réalisé par <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://elragency.com/"> ELR Agency</a> · All Rights Reserved.
   `,
 };
+

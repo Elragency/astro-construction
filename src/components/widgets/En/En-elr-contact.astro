@@ -30,35 +30,35 @@ const {
         <div class="container mx-auto px-4">
             <div class="flex flex-wrap -mx-4">
                 <div class="col-md-10 col-lg-8 mx-auto text-center px-4">
-                    <form id="myForm" data-netlify="true" name="contact" enctype="multipart/form-data">
+                    <form id="myForm-en" data-netlify="true" name="contact" enctype="multipart/form-data">
                         <input type="hidden" name="form-name" value="contact" />
-                        <h3 class="text-lg uppercase font-light">Parlez-nous de vos projets!</h3>
+                        <h3 class="text-lg uppercase font-light">Let us Know About Your Projects!</h3>
                         <div class="flex flex-wrap -mx-2">
                             <div class="w-full md:w-1/2 px-2 mb-3">
-                                <label for="firstName" class="block text-sm font-medium text-gray-700">Nom Complet</label>
-                                <input type="text" class="text-black mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-primary-500 focus:border-primary-500" name="firstName" id="firstName" placeholder="Entrer votre Nom..." required>
+                                <label for="firstName" class="block text-sm font-medium text-gray-700">Full Name</label>
+                                <input type="text" class="text-black mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-primary-500 focus:border-primary-500" name="firstName" id="firstName" placeholder="Enter your Full Name..." required>
                             </div>
                             <div class="w-full md:w-1/2 px-2 mb-3">
-                                <label for="phone" class="block text-sm font-medium text-gray-700">Numéro de téléphone</label>
-                                <input type="phone" class="text-black mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-primary-500 focus:border-primary-500" name="phone" id="phone" placeholder="Votre numéro de téléphone..." required>
+                                <label for="phone" class="block text-sm font-medium text-gray-700">Phone</label>
+                                <input type="phone" class="text-black mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-primary-500 focus:border-primary-500" name="phone" id="phone" placeholder="Enter your phone number..." required>
                             </div>
                         </div>
                         <div class="flex flex-wrap -mx-2">
                             <div class="w-full md:w-1/2 px-2 mb-3">
-                                <label for="email" class="block text-sm font-medium text-gray-700">Courriel</label>
-                                <input type="email" class="text-black mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-primary-500 focus:border-primary-500" name="Email" id="email" placeholder="Entrer votre courriel...">
+                                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                                <input type="email" class="text-black mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-primary-500 focus:border-primary-500" name="Email" id="email" placeholder="Enter your email...">
                             </div>
                             <div class="w-full md:w-1/2 px-2 mb-3">
-                                <label for="address" class="block text-sm font-medium text-gray-700">Adresse</label>
-                                <input type="textarea" class="text-black mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-primary-500 focus:border-primary-500" name="address" id="address" placeholder="Entrer votre adresse..." required>
+                                <label for="address" class="block text-sm font-medium text-gray-700">Address</label>
+                                <input type="textarea" class="text-black mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-primary-500 focus:border-primary-500" name="address" id="address" placeholder="Enter your address..." required>
                             </div>
                         </div>
                         <div class="mb-3 px-2">
-                            <label for="sujet" class="block text-sm font-medium text-gray-700">Comment pouvons-nous vous aider</label>
-                            <textarea class="text-black mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-primary-500 focus:border-primary-500" name="sujet" id="sujet" placeholder="Parlez-nous de vos projets" required></textarea>
+                            <label for="sujet" class="block text-sm font-medium text-gray-700">How Can We Help You?</label>
+                            <textarea class="text-black mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-primary-500 focus:border-primary-500" name="sujet" id="sujet" placeholder="Talk to us about your projects and your dreams..." required></textarea>
                         </div>
 
-                        <h4 class="mb-3 px-2 text-sm font-medium text-gray-700">Joindre un fichier</h4>
+                        <h4 class="mb-3 px-2 text-sm font-medium text-gray-700">Attach Pictures</h4>
                         <div class="flex flex-wrap -mx-2">
                             <!-- Repeat this block for each file input -->
                             <div class="w-1/2 px-2 mb-2">
@@ -83,7 +83,7 @@ const {
                         </div>
 
                         <p class="pt-6">
-                            <button class="bg-orange-600 hover:bg-primary-700 text-white font-bold py-2 px-4 rounded" type="submit">ENVOYER</button>
+                            <button class="bg-orange-600 hover:bg-primary-700 text-white font-bold py-2 px-4 rounded" type="submit">SUBMIT</button>
                         </p>
                     </form>
                     <div id="response"></div>
@@ -94,7 +94,7 @@ const {
 </section>
 
 <script>
-document.getElementById('myForm').addEventListener('submit', function(e) {
+document.getElementById('myForm-en').addEventListener('submit', function(e) {
     e.preventDefault();
 
     var form = this;
@@ -107,7 +107,7 @@ document.getElementById('myForm').addEventListener('submit', function(e) {
     })
     .then(response => {
         if (response.ok) {
-            responseDiv.innerHTML = 'Merci pour votre intérêt, nous allons vous contacter dans les prochaines 24h.';
+            responseDiv.innerHTML = 'Thank You For Your Interest, We Will Get Back To You Shortly.';
             setTimeout(() => {
                 form.style.display = 'none';
             }, 500);

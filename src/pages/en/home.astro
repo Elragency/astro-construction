@@ -2,6 +2,7 @@
 import Layout from '~/layouts/En-PageLayout.astro';
 
 import Hero3 from '~/components/widgets/Hero3.astro';
+import Allservices from '~/components/widgets/allservices.astro';
 import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
@@ -11,74 +12,87 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import PortfolioA from '~/components/widgets/PortfolioA.astro';
 import Stats from '~/components/widgets/Stats.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
+import CallToAction from '~/components/widgets/En/En-CallToAction.astro';
+
+
+import { otherprojects } from '~/components/ui/otherprojects.json';
+
+import Contact from '~/components/widgets/En/En-elr-contact.astro';
+import Adresse from '~/components/widgets/En/En-Adresse.astro';
 
 const metadata = {
-  title: 'K-Construction - La Compagnie de Construction Pour Vous',
+  title: 'K-Construction - The best construction company for you!',
   ignoreTitleTemplate: true,
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
-  <script src="~/assets/js/modernizr.js"></script>
+  <!-- <script src="~/assets/js/modernizr.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="~/assets/js/jquery-1.11.0.min.js"></script> -->
       <!-- Link Swiper's CSS -->
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" /> -->
 
 
 
-      <section class="relative md:-mt-[100px]  not-prose">
-        <div class="flex items-center justify-center min-h-screen">
-          <!-- Image section -->
-          <div class="absolute inset-0 z-0">
-            <img
-              class="w-full h-full object-cover"
-              loading="eager"
-              src="https://raw.githubusercontent.com/Elragency/astro-construction/fbae51d90db6d44bf6cd417c5cf9cfc810d35c1e/src/assets/images/hero2.png"
-              alt="test image"
-            />
-          </div>
-      
-          <!-- Text content section -->
-          <div class="relative z-10 text-center">
-            <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase">
-              Besoin d'un plombier?
-            </p>
-            <h1 class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200">
-              Trouble de plomberie?
-            </h1>
-            <a href="#soumission">
-              <button type="button" class="btn btn-outline-orange inline-block text-white py-3 px-4 rounded mt-1 ml-0 md:ml-6 mb-2">
-                Contactez-Nous!
-              </button>
-            </a>
-            <!-- Additional content can be added here -->
-          </div>
-        </div>
-      </section>
+  <!-- <Hero3
+  image={{ src: '~/assets/images/hero2.png', alt: 'K-Constructions Image' }}
+  >
+
+  </Hero3> -->
+
+  <section class="relative md:-mt-[100px]  not-prose">
+    <div class="flex items-center justify-center min-h-screen">
+      <!-- Image section -->
+      <div class="absolute inset-0 z-0">
+        <img
+          class="w-full h-full object-cover"
+          loading="eager"
+          src="https://raw.githubusercontent.com/Elragency/astro-construction/eaaec3f8ba3bd0560bacbd1461daca76bebf758c/src/assets/images/hero2.webp"
+          alt="best construction experts in montreal"
+        />
+      </div>
+  
+      <!-- Text content section -->
+      <div class="relative z-10 text-center">
+        <p class="text-base text-secondary text-white font-bold tracking-wide uppercase m-1" data-aos="fade-up" data-aos-duration="2000">
+          The Construction Experts in Montreal And Around
+        </p>
+        <h1 class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200" data-aos="fade-up" data-aos-duration="2500">
+          K-CONSTRUCTIONS
+        </h1>
+        <a href="#soumission">
+          <button type="button" class="btn btn-outline-orange inline-block text-white py-3 px-4 rounded mt-1 ml-0 md:ml-6 mb-2"data-aos="fade-up" data-aos-duration="2600">
+            FREE QUOTE
+            <iconify-icon icon="tabler:arrow-right" class="inline-block ml-2"></iconify-icon>
+          </button>
+        </a>
+        <!-- Additional content can be added here -->
+      </div>
+    </div>
+  </section>
 
   <!-- Note Widget ******************* -->
 
   <!-- <Note /> -->
 
-  <section id="propos">
+  <section id="propos" class="mx-6" >
     <div class="overflow-hidden">
-      <div class="container mx-auto px-4 py-6 border-b" data-aos="zoom-out">
+      <div class="container mx-auto px-4 py-6 border-b" >
         <div class="flex flex-wrap -mx-4">
-          <div class="w-full md:w-1/2 px-4 py-6 mb-4 md:mb-0 border-r padding-body">
-            <p class="text-xl mb-3" style="color:#ff3c00">POURQUOI NOUS?</p>
+          <div class="w-full md:w-1/2 px-4 py-6 mb-4 md:mb-0 border-r padding-body" data-aos="fade-left" data-aos-duration="2000">
+            <p class="text-xl mb-3" style="color:#ff3c00" >POURQUOI NOUS?</p>
             <h2 class="text-3xl font-bold mb-4 test">Débutez votre projet avec les meilleurs entrepreneurs de votre région.</h2>
           </div>
-          <div class="w-full md:w-1/2 px-4 pt-2 padding-body">
+          <div class="w-full md:w-1/2 px-4 pt-2 padding-body" data-aos="fade-right" data-aos-duration="2000" >
             <p class="ml-0 md:ml-6 font-body pb-4">
-              K-Construction est une entreprise de construction renommée, connue pour son 
-              engagement envers l'excellence et la qualité. Fondée sur des principes de durabilité, 
-              d'innovation et de fiabilité, notre société s'est forgée une réputation solide dans le domaine 
-              de la construction résidentielle, commerciale et industrielle.<br><br> Avec une équipe d'experts hautement 
-              qualifiés, K-Construction offre une gamme complète de services, allant de la conception 
-              architecturale à la réalisation de projets clés en main.
+              K-Constructions is a renowned construction company, known for its commitment to excellence and quality. Founded on principles of sustainability, 
+              innovation, and reliability, our company has built a solid reputation in the field of residential, commercial, and industrial construction.
+              <br><br> 
+              With a team of highly skilled experts, K-Constructions offers a comprehensive range of services, from architectural design to the completion of turnkey projects.
             </p>
-            <a href="apropos.html" class="btn btn-outline-orange inline-block bg-primary text-white py-3 px-4 rounded mt-1 ml-0 md:ml-6 mb-2">
+            <a href="homes/propos" class="btn btn-outline-orange inline-block bg-primary text-white py-3 px-4 rounded mt-1 ml-0 md:ml-6 mb-2">
               À Propos
               <iconify-icon icon="tabler:arrow-right" class="inline-block ml-2"></iconify-icon>
             </a>
@@ -88,32 +102,32 @@ const metadata = {
     </div>
   </section>
 
-  <section id="process" class="my-5">
+  <section id="process" class="my-5" data-aos="fade-up" data-aos-duration="2000">
     <div class="overflow-hidden">
-        <div class="mx-auto container" data-aos="zoom-out"> <!-- Tailwind container class -->
+        <div class="mx-auto container" > <!-- Tailwind container class -->
             <div class="flex flex-wrap -mx-4"> <!-- Flexbox and negative margin for gutters -->
                 <div class="w-full md:w-1/2 lg:w-1/4 px-6"> <!-- Width classes for different breakpoints -->
+                  <div class="py-3 md:py-5 px-3">
+                    <h4 class="mb-3 font-body1"> <span class="heading-color">01.</span> Contact</h4>
+                    <p class="font-body">Use the form below to contact us.</p>
+                </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/4 px-6">
                     <div class="py-3 md:py-5 px-3">
-                        <h4 class="mb-3 font-body1"> <span class="heading-color">01.</span> Contact</h4>
-                        <p class="font-body">Utilisez le formulaire ci-dessous pour nous contacter.</p>
+                        <h4 class="mb-3 font-body1"> <span class="heading-color">02.</span> Inspection</h4>
+                        <p class="font-body">We will visit the address</p>
                     </div>
                 </div>
                 <div class="w-full md:w-1/2 lg:w-1/4 px-6">
                     <div class="py-3 md:py-5 px-3">
-                        <h4 class="mb-3 font-body1"> <span class="heading-color">02.</span> inspection</h4>
-                        <p class="font-body">Nous allons visiter l'adresse des travaux pour nous faire une idée.</p>
+                        <h4 class="mb-3 font-body1"> <span class="heading-color">03.</span> Quote</h4>
+                        <p class="font-body">We will send you the quote within 24 hours.</p>
                     </div>
                 </div>
                 <div class="w-full md:w-1/2 lg:w-1/4 px-6">
                     <div class="py-3 md:py-5 px-3">
-                        <h4 class="mb-3 font-body1"> <span class="heading-color">03.</span> Soumission</h4>
-                        <p class="font-body">Nous vous faisons parvenir la soumission en 24h.</p>
-                    </div>
-                </div>
-                <div class="w-full md:w-1/2 lg:w-1/4 px-6">
-                    <div class="py-3 md:py-5 px-3">
-                        <h4 class="mb-3 font-body1"> <span class="heading-color">04.</span> Réalisation</h4>
-                        <p class="font-body">Nous effectuons les travaux souhaités.</p>
+                        <h4 class="mb-3 font-body1"> <span class="heading-color">04.</span> Realization</h4>
+                        <p class="font-body">We perform the desired work.</p>
                     </div>
                 </div>
             </div>
@@ -122,262 +136,72 @@ const metadata = {
 </section>
 
 
-  
+<section>
+  <h2 class="text-3xl font-bold mb-1 mx-6 mt-4 test">What We Can Do</h2>
+  <p class="heading-color mx-9 ">OUR FAVORITE SERVICES</p>
+  <PortfolioA />
+</section>
 
-  <!-- Features Widget *************** -->
 
-  <Features
-    id="features"
-    data-aos="zoom-out"
-    tagline="Features"
-    title="What you get with AstroWind"
-    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022."
-    items={[
-      {
-        title: 'Astro + Tailwind CSS Integration',
-        description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
-        icon: 'tabler:brand-tailwind',
-      },
-      {
-        title: 'Ready-to-use Components',
-        description:
-          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-        icon: 'tabler:components',
-      },
-      {
-        title: 'Best Practices',
-        description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
-        icon: 'tabler:list-check',
-      },
-      {
-        title: 'Excellent Page Speed',
-        description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
-        icon: 'tabler:rocket',
-      },
-      {
-        title: 'Search Engine Optimization (SEO)',
-        description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
-        icon: 'tabler:arrows-right-left',
-      },
-      {
-        title: 'Open to new ideas and contributions',
-        description:
-          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
-        icon: 'tabler:bulb',
-      },
-    ]}
-  />
 
-  <!-- Content Widget **************** -->
+<Features2
+  title="Why choose K-constructions?"
+  subtitle="Our Promises"
+  tagline="Our Offer"
+  items={[
+    {
+      title: 'Structure',
+      description: "We are proud to offer a complete and intelligent service with efficient management for each project.",
+      icon: 'flat-color-icons:template',
+    },
+    {
+      title: 'Dream',
+      description:
+        "Share your construction dreams with us and let us make them a reality with our professional team.",
+      icon: 'flat-color-icons:gallery',
+    },
+    {
+      title: 'Regulations',
+      description:
+        'Our clients are our top priority, this includes their satisfaction as well as their safety.',
+      icon: 'flat-color-icons:approval',
+    },
+    {
+      title: 'Contracts',
+      description:
+        "We respect our contracts, both the established schedule and the agreed price, no bad surprises with K-Constructions.",
+      icon: 'flat-color-icons:document',
+    },
+    {
+      title: 'References',
+      description:
+        "We have been operating for over 25 years, our references can testify to the quality of our work.",
+      icon: 'flat-color-icons:advertising',
+    },
+    {
+      title: 'Payments',
+      description: 'With our flexible payment policy, we ensure that all your projects are carried out at a competitive price.',
+      icon: 'flat-color-icons:currency-exchange',
+    },
+    {
+      title: 'Testimonials',
+      description: 'Our customers attest to our success themselves, check out our reviews on Google.',
+      icon: 'flat-color-icons:voice-presentation',
+    },
+    {
+      title: 'Contact',
+      description:
+        "With a complete and professional contact network, you won't have problems finishing your projects on time.",
+      icon: 'flat-color-icons:business-contact',
+    },
+    {
+      title: 'Expertise',
+      description: "Our multi-level expertise ensures that the project you have will be carried out without problems.",
+      icon: 'flat-color-icons:database',
+    },
+  ]}
+>
 
-  <!-- <Content
-    isReversed
-    tagline="Inside template"
-    title="AstroWind's Blueprint: Fun Meets Functionality!"
-    items={[
-      {
-        title: 'Built on top of Astro 4.0',
-        description:
-          'Benefiting from the performance and developer-friendly features of this modern static site generator.',
-      },
-      {
-        title: 'Styled using Tailwind CSS',
-        description:
-          'Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.',
-      },
-      {
-        title: 'Cross-browser compatibility',
-        description:
-          'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Colorful Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building on modern foundations</h3>
-       Gain a competitive advantage by incorporating industry leading practices
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content> -->
-
-  <!-- Content Widget **************** -->
-
-  <!-- <Content
-    isAfterContent
-    items={[
-      {
-        title: 'High level of customization',
-        description: `Tailor the template effortlessly to match your brand's identity and requirements, making your website distinct and saving you time.`,
-      },
-      {
-        title: 'Multiple layout possibilities',
-        description:
-          'Explore various layout options to find the structure that best presents your content, enhancing user engagement and navigation.',
-      },
-      {
-        title: 'Fully responsive design',
-        description:
-          "Ensure your website's optimal performance on various devices and screen sizes, providing a consistent and enjoyable user experience.",
-      },
-      {
-        title: 'Integration of media',
-        description:
-          'Seamlessly incorporate images, videos, and multimedia elements that enhance your content and engage visitors effectively.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
-      alt: 'Blueprint Image',
-    }}
-  >
-    <Fragment slot="content">Ensure your online presence truly represents you.</Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content> -->
-
-  <!-- Content Widget **************** -->
-
-  <!-- <Content
-    isReversed
-    isAfterContent
-    items={[
-      {
-        title: 'Enhanced user engagement',
-        description:
-          'Captivate your audience with interactive elements, intuitive navigation, and visually appealing layouts, encouraging longer visits.',
-      },
-      {
-        title: 'Continuous improvement',
-        description:
-          'Ensure your website stays aligned with the latest trends and technologies through regular updates and enhancements.',
-      },
-      {
-        title: 'Time and resource efficiency',
-        description:
-          'Skip the time-consuming process of building a website from scratch and launch your online presence sooner with AstroWind.',
-      },
-      {
-        title: 'Community support',
-        description: `Join the growing AstroWind community for insights, resources, and assistance, ensuring you're never alone on your web development journey.`,
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Astronauts Image',
-    }}
-  >
-    <Fragment slot="content">Designed to foster growth and success.</Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content> -->
-
-  <!-- Steps Widget ****************** -->
-
-  <!-- <Steps
-    title="Get your dream website up and running in no time with AstroWind."
-    items={[
-      {
-        title: 'Step 1: <span class="font-medium">Download</span>',
-        description:
-          "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
-        icon: 'tabler:package',
-      },
-      {
-        title: 'Step 2: <span class="font-medium">Add content</em>',
-        description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
-        icon: 'tabler:letter-case',
-      },
-      {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
-        description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
-        icon: 'tabler:paint',
-      },
-      {
-        title: 'Ready!',
-        icon: 'tabler:check',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
-    }}
-  /> -->
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Nos Services Les Plus Demandes"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    tagline="Populaires"
-    items={[
-      {
-        title: 'Headers',
-        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
-        icon: 'flat-color-icons:template',
-      },
-      {
-        title: 'Heros',
-        description:
-          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
-        icon: 'flat-color-icons:gallery',
-      },
-      {
-        title: 'Features',
-        description:
-          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
-        icon: 'flat-color-icons:approval',
-      },
-      {
-        title: 'Content',
-        description:
-          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
-        icon: 'flat-color-icons:document',
-      },
-      {
-        title: 'Call-to-Action',
-        description:
-          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
-        icon: 'flat-color-icons:advertising',
-      },
-      {
-        title: 'Pricing',
-        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'Testimonial',
-        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-      {
-        title: 'Contact',
-        description:
-          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
-        icon: 'flat-color-icons:business-contact',
-      },
-      {
-        title: 'Footers',
-        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
-        icon: 'flat-color-icons:database',
-      },
-    ]}
-  >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
@@ -388,18 +212,19 @@ const metadata = {
     <Stats
     stats={[
       { title: '+ Clients', amount: '2325' },
-      { title: '+ Projets', amount: '2100' },
-      { title: "Année d'expérience", amount: '25' },
-      { title: '+ Employés', amount: '15' },
+      { title: '+ Projects', amount: '2100' },
+      { title: "Years of Experience", amount: '25' },
+      { title: '+ Employees', amount: '15' },
     ]}
   />
+
 
   
 
   <!-- HighlightedPosts Widget ******* -->
 
   <BlogLatestPosts
-    title="Voir nos dernières publications"
+    title="See our latests posts"
     information={`
                 `}
   />
@@ -407,71 +232,52 @@ const metadata = {
   <!-- FAQs Widget ******************* -->
 
   <FAQs
-    title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
-    tagline="FAQs"
+    title="Do You have questions?"
+    subtitle="The General Contractor For You"
+    tagline="FAQ"
     classes={{ container: 'max-w-6xl' }}
     items={[
       {
-        title: 'Why AstroWind?',
+        title: "What is your company's experience as a general contractor in Montreal?",
         description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
+          "With over a decade of experience, our company has established itself as a leader in the construction sector in Montreal. We have successfully managed a multitude of projects, ranging from residential renovations to complex commercial constructions, always focusing on quality, adherence to deadlines, and customer satisfaction. Our diverse portfolio showcases our ability to meet any construction challenge.",
       },
       {
-        title: 'What do I need to start?',
+        title: "How do you guarantee the quality and compliance of the work performed?",
         description:
-          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
+          "We strictly adhere to industry standards and the building codes in force in Montreal. Each project is overseen by a dedicated team of experts, including qualified project managers and specialized workers, ensuring that all work meets our high standards of quality. Additionally, we use only high-quality materials from reputable suppliers and conduct regular inspections to ensure compliance and safety.",
       },
       {
-        title: 'How to install the Astro + Tailwind CSS template?',
+        title: "Can you provide references or examples of similar projects you have completed?",
         description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
+          "Absolutely. We take pride in our accomplishments and would be delighted to share case studies and testimonials from previous projects with you. These references are available on our website or can be provided upon request. They reflect our commitment to excellence and customer satisfaction, allowing you to assess our expertise and reliability.",
       },
       {
-        title: "What's something that you don't understand?",
+        title: "What is the communication process during the project?",
         description:
-          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
+          "Transparent and regular communication is at the heart of our approach. From the start of the project, we establish a clear communication plan, including regular updates and defined points of contact. You will have access to a dedicated project manager, available to answer all your questions and keep you informed of the progress of the work. Our goal is to ensure a stress-free experience, where your expectations are not only understood but exceeded.",
       },
       {
-        title: 'What is something that you would like to try again?',
+        title: "How do you handle unforeseen issues and changes during the project?",
         description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
+          "In the construction field, flexibility is key. We have implemented robust procedures to effectively manage unforeseen issues and change requests, thus minimizing delays and additional costs. Any changes or unforeseen events are immediately communicated to the client, and options are proposed to find the best solution. Our experience allows us to anticipate and quickly resolve problems, ensuring the continuity of the project.",
       },
       {
-        title: 'If you could only ask one question to each person you meet, what would that question be?',
+        title: "What guarantees do you offer at the end of the work?",
         description:
-          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
+          "We offer a comprehensive warranty on all our work, covering labor and materials used. This warranty is detailed in your contract and varies depending on the type of project, providing you with peace of mind long after the work is completed. In case of any issues, our team is ready to intervene quickly to perform the necessary repairs. Your satisfaction is our top priority.",
       },
     ]}
-  />
+    />
+    
 
 
-  <PortfolioA />
 
-  <section id="info">
-    <div class="overflow-hidden">
-        <div class="container mx-auto" data-aos="zoom-out">
-            <div class="flex flex-wrap items-center">
-                <div class="w-full md:w-1/3 text-center py-3 border-r">
-                    <p class="header-top mb-4">Nous rejoindre</p>
-                    <p class="mb-2">+514 777 7777</p>
-                    <p class="mb-2">elragency@gmail.com</p>
-                </div>
-                <div class="w-full md:w-1/3 text-center py-3 border-r">
-                    <p class="header-top mb-4">Nos heures d'ouvertures</p>
-                    <p class="mb-2">Lun - Ven: 6 am - 6 pm</p>
-                    <p class="mb-2">Sam - Dim: Sur Demande</p>
-                </div>
-                <div class="w-full md:w-1/3 text-center py-3">
-                    <p class="header-top mb-4">Notre adresse</p>
-                    <p class="mb-2">2001 Boul. de Rome,</p>
-                    <p class="mb-2">Brossard, QC J4W 2W1</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<Adresse />
 
+
+
+ <Contact />
 
   <!-- CallToAction Widget *********** -->
 
@@ -479,10 +285,9 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Soumission!',
-        href: 'https://elragency.com',
-        target: '_blank',
-        icon: 'tabler:download',
+        text: 'CALL US NOW!',
+        href: 'tel:4388625985',
+        icon: 'tabler:phone',
       },
     ]}
   >
@@ -490,25 +295,38 @@ const metadata = {
 
   
     <Fragment slot="title">
-      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
+      You have a projects in mind?<br class="block sm:hidden" /><span class="sm:whitespace-nowrap"></span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
+      Call us immediately to transform your dreams to reality<br class="hidden md:inline" />
     </Fragment>
   </CallToAction>
 
-  
+  <!-- NEW SCRIPTS -->
+    <!-- <script src="~/assets/js/plugins.js"></script> -->
+  <!-- <script src="~/assets/js/script.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
 
-  <script src="~/assets/js/jquery-1.11.0.min.js"></script>
+  <!-- <script src="~/assets/js/shortcodes.js"></script> -->
+
+
+  <!-- INITIAL SCRIPTS -->
+  <!-- <script src="~/assets/js/jquery-1.11.0.min.js"></script>
   <script src="~/assets/js/plugins.js"></script>
   <script src="~/assets/js/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script> -->
+  <!-- <script src="~/assets/js/contact.js"></script> -->
+
+
 </Layout>
 
 <style>
@@ -538,5 +356,8 @@ const metadata = {
     font-size: calc(1.475rem + 2.7vw);
     font-weight: 300;
     line-height: 1.2;
+  }
+  .overflow-hidden {
+    overflow: hidden;
   }
 </style>
