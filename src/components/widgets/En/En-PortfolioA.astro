@@ -1,0 +1,23 @@
+---
+
+import CheapButton from "~/components/ui/CheapButton.astro"
+import PortfolioCard from "~/components/ui/En-PortfolioCard.astro"
+import Image from '~/components/common/Image.astro';
+---
+<section class="mb-section p-10">
+    </div>
+    <div class="h-[40rem] grid gap-4 md:h-[30rem] md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2 [&>*]:overflow-hidden">
+        <div class="w-full h-full lg:col-span-2">
+            <PortfolioCard src="https://images.unsplash.com/photo-1605152276897-4f618f831968?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="All K-Constructions services as a general contractor" title="Services" href="services/services">
+        </div>
+        <div class="w-full h-full lg:row-span-2">
+            <PortfolioCard src="https://images.unsplash.com/photo-1643225523483-e2c434191bba?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="the best roofers in montreal" title="Roofers"href="services/services/roofers">
+        </div>
+        <div class="w-full h-full lg:row-span-2">
+            <PortfolioCard src="https://plus.unsplash.com/premium_photo-1663013675008-bd5a7898ac4f?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="the best plumbers of montreal" title="Plumbers" href="services/services/plumber">
+        </div>
+        <div class="w-full h-full lg:col-span-2">
+            <PortfolioCard src="https://plus.unsplash.com/premium_photo-1661515203486-ab9c1770f486?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="The electricians of K-constructions" title="Electricians" href="services/services/electrician">
+        </div>
+    </div>
+</section>

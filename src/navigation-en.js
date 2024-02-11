@@ -118,9 +118,9 @@ export const footerData = {
     {
       title: 'Services',
       links: [
-        { text: 'Interior', href: 'en/services/renos-int' },
-        { text: 'Exterior', href: 'en/services/renos-ext' },
-        { text: 'Services', href: 'en/services/services' },
+        { text: 'Interior', href: 'services/renos-int' },
+        { text: 'Exterior', href: 'services/renos-ext' },
+        { text: 'Services', href: 'services/services' },
         // { text: 'Electron', href: '#' },
         // { text: 'AstroWind Desktop', href: '#' },
       ],
@@ -149,13 +149,13 @@ export const footerData = {
     },
   ],
   secondaryLinks: [
-    { text: 'Terms', href: getPermalink('/terms') },
-    { text: 'Privacy', href: getPermalink('/privacy') },
+    { text: 'Terms', href: getPermalink('#') },
+    { text: 'Privacy', href: getPermalink('#') },
   ],
   socialLinks: [
-    { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/agence.elr' },
-    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://www.facebook.com/agenceelr' },
+    // { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
+    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/kconstructionsinfo'  },
+    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://www.facebook.com/kconstructionsinfo' },
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
     // { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
   ],

@@ -5,10 +5,10 @@ import Hero from '~/components/widgets/Hero.astro';
 import Hero4 from '~/components/widgets/Hero4.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
-import Layout from '~/layouts/PageLayout.astro';
+import Layout from '~/layouts/En-PageLayout.astro';
 
-import Contact from '~/components/widgets/elr-contact.astro';
-import Adresse from '~/components/widgets/Adresse.astro';
+import Contact from '~/components/widgets/En/En-elr-contact.astro';
+import Adresse from '~/components/widgets/En/En-Adresse.astro';
 
 
 const metadata = {
@@ -38,7 +38,7 @@ const metadata = {
         <img
           class="w-full h-full object-cover"
           loading="eager"
-          src="https://raw.githubusercontent.com/Elragency/astro-construction/50297db0e21a5c040b2bb709b01b2063ac13d88f/src/assets/images/banner1-img1.png"
+          src="https://raw.githubusercontent.com/Elragency/astro-construction/8b0df05e9c3187c1bd9e436446b3a2385fb53222/src/assets/images/banners/banner1-img1.webp"
           alt="L'équipe de K-Constructions"
         />
       </div>
@@ -49,7 +49,7 @@ const metadata = {
           YOUR CONSTRUCTION EXPERTS
         </p>
         <h1 class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200">
-          WHO IS K-CONSTRUCTIONS
+          WHO IS K-Constructions
         </h1>
         <a href="#soumission">
           <button type="button" class="btn btn-outline-orange inline-block text-white py-3 px-4 rounded mt-1 ml-0 md:ml-6 mb-2">
@@ -68,12 +68,12 @@ const metadata = {
 <section id="main-content" class="py-10 bg-black">
   <div class="container mx-auto px-4">
       <div class="text-center mb-12">
-          <p class="text-lg font-medium mb-5 text-white">Who is K Construction</p>
+          <p class="text-lg font-medium mb-5 text-white">Who is K-Constructions</p>
           <h2 class="text-4xl font-semibold text-white mb-4">What We Do</h2>
           <div class="flex justify-center items-center">
               <div class="w-32 h-0.5 bg-gray-300"></div>
           </div>
-          <h4 class="mt-4 text-xl text-gray-300">K Construction has completed over 359 projects - paired with 25 years of experience, we are the best contractors to serve you.</h4>
+          <h4 class="mt-4 text-xl text-gray-300">K-Constructions has completed over 460 projects - paired with 25 years of experience, we are the best contractors to serve you.</h4>
       </div>
 
       <div class="flex flex-wrap -mx-4">
@@ -83,7 +83,7 @@ const metadata = {
                       <iconify-icon icon="tabler:template" class="inline-block text-orange-500"></iconify-icon>
                   </div>
                   <h5 class="text-lg text-orange-600 font-semibold mb-3"><a href="#" class="hover:text-orange-600">QUALITY</a></h5>
-                  <p class="text-black">K Construction stands out with unmatched quality, ensuring precision, durability, and excellence in every project.</p>
+                  <p class="text-black">K-Constructions stands out with unmatched quality, ensuring precision, durability, and excellence in every project.</p>
               </div>
           </div>
           <div class="w-full md:w-1/3 px-4 mb-8" data-aos-delay="200">
@@ -118,91 +118,89 @@ const metadata = {
   <!-- Stats Widget ****************** -->
 
   <Stats
-    title="K-Constructions EN CHIFFRES"
+    title="K-Constructions IN FIGURES"
     stats={[
-      { title: "ANNÉES D'EXPÉRIENCE", amount: '25' },
-      { title: "PROJETS COMPLÉTÉS", amount: '460' },
-      { title: 'CLIENTS SATISFAITS', amount: '270' },
-      { title: 'EMPLOYÉS MOTIVÉS', amount: '15' },
+      { title: "YEARS OF EXPERIENCE", amount: '25' },
+      { title: "COMPLETED PROJECTS", amount: '460' },
+      { title: 'SATISFIED CLIENTS', amount: '270' },
+      { title: 'MOTIVATED EMPLOYEES', amount: '15' },
     ]}
   />
 
     <!-- Steps2 Widget ****************** -->
-    <section class="max-width : 99%" data-aos="fade-up" >
+    <section class="max-width:99%" data-aos="fade-up">
       <Steps2
-      title="NOTRE FOCUS"
-      subtitle="Notre objectif est de dépasser vos objectifs, de respecter vos délais et de gérer avec succès votre budget. Nous fournissons à nos clients des services d’entreprise générale, de gestion de construction, d’étude de site et de conception-construction de premier ordre."
-      items={[
-        {
-          title: "De L'Expérience",
-          description:
-            "Nous avons réalisé avec succès des projets pour un nombre important de clients satisfaits.",
-        },
-        {
-          title: 'En Règle',
-          description:
-            "Nous sommes autorisés à effectuer des travaux d'entreprise générale et avons les électriciens, plombiers et autres quarts de métier en règle pour tous vos besoins.",
-        },
-        {
-          title: 'Ouverts À vos besoins',
-          description:
-            "Nous serons ouverts à l'obtention de nouvelles licences si une opportunité se présentes",
-        },
-      ]}
-    />
+        title="OUR FOCUS"
+        subtitle="Our goal is to exceed your objectives, meet your deadlines, and successfully manage your budget. We provide our clients with top-tier general contracting, construction management, site survey, and design-build services."
+        items={[
+          {
+            title: "Experienced",
+            description: "We have successfully completed projects for a significant number of satisfied clients.",
+          },
+          {
+            title: "Licensed",
+            description: "We are licensed to perform general contracting work and have licensed electricians, plumbers, and other tradespeople for all your needs.",
+          },
+          {
+            title: "Open to Your Needs",
+            description: "We are open to obtaining new licenses if an opportunity arises.",
+          },
+        ]}
+      />
     </section>
-
-    <section data-aos="fade-up" >
-      <Steps2
-      title="Dédiés"
-      subtitle="Chez K Construction, notre engagement envers nos clients est notre priorité. Nous visons non seulement à rencontrer vos attentes, mais à les surpasser, en respectant scrupuleusement vos délais et votre budget. Nos services haut de gamme incluent la gestion de construction, l'étude de site, et la conception-construction, tous dédiés à réaliser votre vision."
-      isReversed={true}
-      callToAction={{
-        text: 'Faire Affaire',
-        href: '#soumission',
-      }}
-      items={[
-        {
-          title: 'Une Réputation',
-          description: 'Nous avons bâti notre réputation sur la satisfaction de nos clients, en réalisant avec succès une multitude de projets répondant à leurs besoins spécifiques.',
-          icon: 'tabler:globe',
-        },
-        {
-          title: 'Une Équipe',
-          description:
-            'Notre équipe est hautement qualifiée et autorisée à mener à bien des travaux complexes, garantissant des résultats professionnels dans tous les aspects de votre projet.',
-          icon: 'tabler:message-star',
-        },
-        {
-          title: 'Awards and recognition as industry experts',
-          description:
-            "Nous sommes toujours prêts à élargir nos compétences et obtenir de nouvelles licences pour mieux répondre à vos projets ambitieux.",
-          icon: 'tabler:award',
-        },
-      ]}
-    />
     
+
+    <section data-aos="fade-up">
+      <Steps2
+        title="Dedicated"
+        subtitle="At K-Constructions, our commitment to our clients is our priority. We aim not only to meet your expectations but to exceed them, while meticulously adhering to your deadlines and budget. Our premium services include construction management, site survey, and design-build, all dedicated to bringing your vision to life."
+        isReversed={true}
+        callToAction={{
+          text: 'Do Business',
+          href: '#soumission',
+        }}
+        items={[
+          {
+            title: 'A Reputation',
+            description: 'We have built our reputation on satisfying our clients, successfully completing a multitude of projects that meet their specific needs.',
+            icon: 'tabler:globe',
+          },
+          {
+            title: 'A Team',
+            description:
+              'Our team is highly qualified and authorized to carry out complex work, ensuring professional results in all aspects of your project.',
+            icon: 'tabler:message-star',
+          },
+          {
+            title: 'Awards and Recognition as Industry Experts',
+            description:
+              "We are always ready to expand our skills and obtain new licenses to better serve your ambitious projects.",
+            icon: 'tabler:award',
+          },
+        ]}
+      />
     </section>
+    
 
     <section data-aos="fade-up" >
       <Steps2
-title="ENGAGÉ"
-subtitle="Chez K Construction, nous sommes dédiés à fournir à nos clients une expérience exceptionnelle. Notre engagement se traduit par une approche centrée sur le client, garantissant satisfaction et excellence à chaque étape du projet"
-items={[
-  {
-    title: "À L'écoute",
-    description:
-      "Écoute Active des Clients : Nous prenons le temps de comprendre vos besoins et vos aspirations pour garantir que chaque projet reflète vos attentes.",
+      title="COMMITTED"
+      subtitle="At K-Constructions, we are dedicated to providing our clients with an exceptional experience. Our commitment translates into a customer-centric approach, ensuring satisfaction and excellence at every stage of the project."
+      items={[
+        {
+          title: "Listening",
+          description:
+      "Active Customer Listening: We take the time to understand your needs and aspirations to ensure that each project reflects your expectations.",
   },
   {
-    title: 'Transparence Totale',
+    title: 'Total Transparency',
     description:
-      "Nous maintenons une communication ouverte et honnête tout au long du processus, assurant une confiance et une clarté sans faille.",
+      "We maintain open and honest communication throughout the process, ensuring seamless trust and clarity.",
   },
   {
-    title: 'Service Après-Projet',
+    title: 'Post-Project Service',
     description:
-      "Notre dévouement envers nos clients continue même après la fin des travaux, assurant un suivi et une assistance pour garantir votre entière satisfaction.",
+      "Our dedication to our clients continues even after the completion of the work, providing follow-up and assistance to ensure your complete satisfaction",
   },
 ]}
 />
@@ -217,31 +215,29 @@ items={[
   <!-- Features3 Widget ************** -->
 
   <Features3
-    title="QUESTIONS FRÉQUENTES"
-    subtitle="Certaines questions que nous reçevons régulièrement."
-    columns={3}
-    isBeforeContent={true}
-    items={[
-      {
-        title: 'ÊTES-VOUS EN RÈGLE POUR FAIRE DES TRAVAUX DANS LES CONDOS?',
-        description:
-          'Oui! Nous possédons notre licence RBQ et tous nos professionnels sont accrédités par les instances gouvernementales nécessaires pour effectuer tout type de travaux nécessaires.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'ÊTES-VOUS ASSURÉ?',
-        description:
-          "Bien sûr! La sécurité des investissements de nos clients est notre priorité. C'est pourquoi nous sommes assurés jusqu'à 2 millions de dollars pour tout type de dommage.",
-        icon: 'tabler:template',
-      },
-      {
-        title: 'QUELLES SONT VOS MODALITÉS DE PAIEMENT?',
-        description:
-          "Bien que cela dépend de la grosseur de votre projet ainsi que de l'échéancier, nous sommes assez flexibles afin de nous assurer que le tout vous convienne. Nous acceptons les virements bancaire, le cash, les virements interac, les chèques ou les carte de crédit.",
-        icon: 'tabler:template',
-      },
-    ]}
-  />
+  title="FREQUENTLY ASKED QUESTIONS"
+  subtitle="Some questions we frequently receive."
+  columns={3}
+  isBeforeContent={true}
+  items={[
+    {
+      title: 'ARE YOU LICENSED TO WORK IN CONDOS?',
+      description: 'Yes! We hold our RBQ license and all our professionals are accredited by necessary governmental bodies to perform any type of necessary work.',
+      icon: 'tabler:template',
+    },
+    {
+      title: 'ARE YOU INSURED?',
+      description: "Certainly! The safety of our clients' investments is our priority. That's why we are insured for up to 2 million dollars for any type of damage.",
+      icon: 'tabler:template',
+    },
+    {
+      title: 'WHAT ARE YOUR PAYMENT TERMS?',
+      description: "While it depends on the size of your project as well as the timeline, we are quite flexible to ensure it suits you. We accept bank transfers, cash, Interac e-transfers, checks, or credit cards.",
+      icon: 'tabler:template',
+    },
+  ]}
+/>
+
 
   
 
