@@ -50,7 +50,7 @@ export const headerData = {
         },
         // {
         //   text: 'Product Details (or Services)',
-        //   href: getPermalink('/services/product'),
+        //   href: getPermalink('/legal/privacy'),
         // },
         // {
         //   text: 'Coming Soon or Pre-Launch',
@@ -150,7 +150,7 @@ export const footerData = {
   ],
   secondaryLinks: [
     { text: 'Termes', href: getPermalink('/terms') },
-    { text: 'Politique de confidentialité', href: getPermalink('/privacy') },
+    { text: 'Politique de confidentialité', href: getPermalink('legal/privacy') },
   ],
   socialLinks: [
     { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
