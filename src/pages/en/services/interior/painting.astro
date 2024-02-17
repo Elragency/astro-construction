@@ -1,0 +1,411 @@
+---
+import Layout from '~/layouts/En-PageLayout.astro';
+
+import Hero3 from '~/components/widgets/Hero3.astro';
+import Allservices from '~/components/widgets/allservices.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import PortfolioA from '~/components/widgets/PortfolioA.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+import { otherprojects } from '~/components/ui/otherprojects.json';
+
+import About from '~/components/common/About.astro';
+
+import Contact from '~/components/widgets/En/En-elr-contact.astro';
+import Image from '~/components/common/Image.astro';
+import Adresse from '~/components/widgets/En/En-Adresse.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Content from '~/components/widgets/Content.astro';
+
+const metadata = {
+  title: "K-Constructions - Do you need a professional painter, fast and at the best price?",
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  
+  <!-- BEGINNING SCRIPT NEEDED FOR ACCORDEON -->
+  <script>
+    const accordion = document.getElementById("acordeon");
+    if (!accordion) throw new ReferenceError();
+  
+    accordion.addEventListener("click", (e) => {
+      const target = e.target as HTMLElement;
+      const dataset = { ...target.dataset };
+  
+      const content = target.nextElementSibling as HTMLElement;
+      const arrow = target.querySelector("img") as HTMLElement;
+  
+      if (!arrow || !content) throw new ReferenceError();
+  
+      switch (dataset.status) {
+        case "disabled":
+          content.style.gridTemplateRows = "1fr";
+          target.dataset.status = "enabled";
+          arrow.style.rotate = "90deg";
+          break;
+        case "enabled":
+          content.style.gridTemplateRows = "0fr";
+          target.dataset.status = "disabled";
+          arrow.style.rotate = "0deg";
+          break;
+        default:
+          break;
+      }
+    });
+  </script>
+    <!-- END SCRIPT NEEDED FOR ACCORDEON -->
+  <!-- Hero Widget ******************* -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="~/assets/js/jquery-1.11.0.min.js"></script>
+
+
+  <!-- <script src="~/assets/js/modernizr.js"></script> -->
+
+
+
+
+      <!-- Link Swiper's CSS -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+      <link href="~/assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet1">
+
+      <section class="relative md:-mt-[100px]  not-prose">
+        <div class="flex items-center justify-center min-h-screen">
+          <!-- Image section -->
+          <div class="absolute inset-0 z-0">
+            <img
+              class="w-full h-full object-cover"
+              loading="eager"
+              src="https://raw.githubusercontent.com/Elragency/astro-construction/bf53092496a74b21a5586f297a4ecd81ee3b0464/src/assets/images/banners/banner-paint.webp"
+              alt="les meilleurs peintres à montréal et ses environs"
+            />
+          </div>
+      
+          <!-- Text content section -->
+          <div class="relative z-10 text-center">
+            <p class="text-base text-secondary text-white font-bold tracking-wide uppercase m-1"data-aos="fade-up" data-aos-duration="2000">
+              PROFESSIONAL PAINTER in Montreal and surrounding areas
+            </p>
+            <h1 class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200" data-aos="fade-up" data-aos-duration="2500">
+              A BIG CHANGE IN SIGHT?
+            </h1>
+            <a href="#soumission">
+              <button type="button" class="btn btn-outline-orange inline-block text-white py-3 px-4 rounded mt-1 ml-0 md:ml-6 mb-2"data-aos="fade-up" data-aos-duration="2600">
+                FREE QUOTE
+              </button>
+            </a>
+            <!-- Additional content can be added here -->
+          </div>
+        </div>
+      </section>
+      
+
+  <!-- <Note /> -->
+
+  <section id="propos" class="m-6">
+    <div class="overflow-hidden">
+      <div class="container mx-auto px-4 py-6 border-b">
+        <div class="flex flex-wrap -mx-4">
+          <div class="w-full md:w-1/2 px-4 py-6 mb-4 md:mb-0 border-r padding-body" data-aos="fade-left" data-aos-duration="2000">
+            <p class="text-xl mb-3" style="color:#ff3c00">DO BUSINESS WITH K-CONSTRUCTIONS GROUP</p>
+            <h2 class="text-2xl font-bold mb-4 test">THE COMPANY TO CONTACT FOR YOUR DRYWALL AND PAINTING NEEDS</h2>
+          </div>
+          <div class="w-full md:w-1/2 px-4 pt-2 padding-body" data-aos="fade-right" data-aos-duration="2000">
+            <p class="ml-0 md:ml-6 font-body pb-4">
+              K-Construction, your trusted partner in construction and renovation services, offers professional expertise 
+              in drywall installation and painting services. Our qualified team, including joint tapers and drywall installers, is committed to 
+              providing high-quality finishes for all your interior renovation projects.
+            <br><br>
+            From drywall installation to joint taping, and painting, we manage your entire project, offering you a complete and hassle-free solution.
+            Our team is meticulous in their work and offers various services such as drywall installation, joint taping, and painting. Our expertise ensures 
+            a turnkey service.
+          </p>
+            <a href="apropos.html" class="btn btn-outline-orange inline-block bg-primary text-white py-3 px-4 rounded mt-1 ml-0 md:ml-6 mb-2">
+              Request a quote
+              <iconify-icon icon="tabler:arrow-right" class="inline-block ml-2"></iconify-icon>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- <section id="offrea" class="my-10 pt-10">
+    <div class="container mx-auto pt-10">
+      <div class="flex justify-center pb-4">
+        <h2 class="text-3xl font-bold mb-4 test">
+          Notre offre
+      </h2>
+        
+      </div>
+        <div class="flex justify-center pb-4">
+
+        <div class="flex flex-wrap -mx-4">
+            <div class="mt-4 px-4 w-full md:w-1/2 lg:w-1/4">
+                <div class="text-center py-10 px-6 shadow-lg rounded-lg">
+                  <iconify-icon icon="mdi:kitchen-counter-outline" width="48" height="48"></iconify-icon>
+                    <h5 class="text-xl font-semibold mb-3">Installation de Plancher Flottant :</h5>
+                    <p>Renouvelez votre espace de cuisine avec expertise et fonctionnalité.</p>
+                </div>
+            </div>
+            <div class="mt-4 px-4 w-full md:w-1/2 lg:w-1/4">
+                <div class="text-center py-10 px-6 shadow-lg rounded-lg">
+                  <iconify-icon icon="game-icons:bulldozer" width="48" height="48"></iconify-icon>
+                    <h5 class="text-xl font-semibold mb-3">Démolition</h5>
+                    <p>Avant de pouvoir rendre cet espace à votre gout, la démolition s'impose.</p>
+                </div>
+            </div>
+            <div class="mt-4 px-4 w-full md:w-1/2 lg:w-1/4">
+                <div class="text-center py-10 px-6 shadow-lg rounded-lg">
+                  <iconify-icon icon="clarity:design-line" width="48" height="48"></iconify-icon>
+                    <h5 class="text-xl font-semibold mb-3">Services Connexes</h5>
+                    <p>Cela inclu le design, l'éclairage, la plomberie, les comptoirs et plus encore!</p>
+                </div>
+            </div>
+            <div class="mt-4 px-4 w-full md:w-1/2 lg:w-1/4">
+                <div class="text-center py-10 px-6  shadow-lg rounded-lg">
+                  <iconify-icon icon="mdi:construction-outline" width="48" height="48"></iconify-icon>
+                    <h5 class="text-xl font-semibold mb-3">Construction</h5>
+                    <p>Vous débutez un nouveau projet? Faites affaires avec K-Constructions!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section> -->
+  
+  <!-- FAQs Widget ******************* -->
+
+  <!-- <FAQs
+    title="Imabattable en tant qu'entrepreneur général"
+    subtitle="Nous sommes là pour tous vos besoins en construction, que ce soit pour des rénovations ou une construction neuve, contactez K-Constructions!"
+    tagline="À Votre services"
+    columns={1}
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Processus',
+        description:
+          "Si vous êtes à la recherche d'une réparation de toiture de qualité supérieure, K-Construction est votre solution idéale. Spécialisés dans la réparation de toitures, nous offrons un service rapide et fiable, essentiel pour maintenir l'intégrité et la sécurité de votre habitation. Nos experts en réparation de toiture utilisent des techniques avancées et des matériaux de premier choix pour s'assurer que chaque réparation résiste à l'épreuve du temps.",
+      },
+      {
+        title: 'Remplacement de toiture',
+        description:
+        "Lorsque le moment est venu pour un remplacement de toiture, K-Construction excelle par son expertise et son professionnalisme. Nous comprenons que remplacer un toit est un investissement important, c'est pourquoi nous nous engageons à fournir un service de remplacement de toiture complet et de haute qualité. Notre approche en remplacement de toiture intègre les dernières innovations en matière de matériaux et de design, garantissant ainsi non seulement l'efficacité énergétique de votre maison, mais aussi une esthétique améliorée. Chaque projet de remplacement de toit est géré avec le plus grand soin, en veillant à ce que chaque détail réponde aux attentes de nos clients. Avec K-Construction, vous investissez dans un toit neuf qui améliore non seulement l'apparence de votre maison, mais augmente également sa valeur à long terme.",
+      },
+      {
+        title: 'Services de couvreur',
+        description:
+          "K-Construction se démarque par son offre de service complet et professionnel dans tous les aspects de la construction et de la rénovation. Notre engagement envers l'excellence se reflète dans chaque service que nous proposons, qu'il s'agisse de réparation de toiture, de remplacement, ou d'installations spécialisées comme les panneaux solaires. En optant pour notre service complet et professionnel, vous bénéficiez de l'expertise d'une équipe dévouée et expérimentée, prête à répondre à tous vos besoins en matière de construction et de rénovation. Nous nous assurons que chaque projet est réalisé avec précision, efficacité et dans le respect des normes les plus élevées de l'industrie. Faire confiance à K-Construction, c'est choisir la tranquillité d'esprit, sachant que votre projet est entre les mains de professionnels qui s'engagent à délivrer des résultats exceptionnels et durables. Notre approche intégrée garantit une gestion de projet sans faille, de la consultation initiale à la finalisation, assurant une expérience client inégalée et des résultats qui dépassent vos attentes.",
+      },
+    ]}
+  /> -->
+
+  
+
+  <Content
+  isAfterContent
+  items={[
+    {
+      title: 'Joint Taping',
+      description: "Joint taping is a crucial step to ensure a smooth and even finish of your walls and ceilings. Our experienced joint tapers master the art of making gypsum board joints invisible, guaranteeing a flawless surface for painting.",
+      icon: 'tabler:discount-check-filled',
+    },
+    {
+      title: 'Floor Sanding',
+      description:
+        "After drywall installation and treatment, our team of professional painters takes over. We use high-quality paints and proven techniques to give your spaces a fresh and renewed look.",
+      icon: 'tabler:crane',
+    },
+    {
+      title: 'Interior Painting',
+      description: "At K-Construction, we understand that each project is unique. Therefore, we offer customized services to meet your specific needs for drywall installation and painting, whether for residential or commercial renovations.",
+      icon: 'tabler:refresh',
+    },
+  ]}
+  image={{
+    src: 'https://raw.githubusercontent.com/Elragency/astro-construction/bf53092496a74b21a5586f297a4ecd81ee3b0464/src/assets/images/banners/pro-paint.webp',
+    alt: 'Professional painters of K-constructions',
+  }}
+>
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">THE PROCESS</h3>
+    </Fragment>
+  </Content>
+
+  <Adresse />
+
+<!-- <Allservices
+ /> -->
+
+ <Contact />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'secondary',
+        text: 'CALL US NOW',
+        href: 'tel:4388625985',
+        // target: '_blank',
+        icon: 'tabler:phone',
+      },
+    ]}
+  >
+
+
+  
+    <Fragment slot="title">
+      CONTACT US <br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Immediately</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      To turn your dreams into realities. 
+    </Fragment>
+  </CallToAction>
+
+  
+
+  <!-- <script src="~/assets/js/plugins.js"></script> -->
+  <!-- <script src="~/assets/js/script.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+
+  <!-- <script src="~/assets/js/shortcodes.js"></script> -->
+</Layout>
+
+<style>
+  .btn-outline-orange {
+    background: #ff3c00;
+    color: white;
+    /* color: #ff3c00; */
+  }
+
+  .font-body {
+    font-size: 1.2rem;
+    color: white;
+  }
+  .text-grey {
+    color: white !important;
+  }
+  .font-body1 {
+    font-size: 1.5rem;
+  }
+  @media (min-width: 768px) { /* Adjust the min-width value as needed for your definition of 'big screens' */
+  .padding-body {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+  .test {
+    font-size: calc(1.475rem + 2.7vw);
+    font-weight: 300;
+    line-height: 1.2;
+  }
+  .overflow-hidden {
+    overflow: hidden;
+  }
+
+/*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
+.services .icon-box {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.services .icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+  background: #fff;
+  border-radius: 50%;
+  transition: 0.5s;
+  color: #ff3c00;
+  overflow: hidden;
+  box-shadow: 0px 0 25px rgba(0, 0, 0, 0.15);
+}
+
+.services .icon i {
+  font-size: 36px;
+  line-height: 0;
+}
+
+.services:hover .icon {
+  box-shadow: 0px 0 25px rgba(92, 159, 36, 0.3);
+}
+
+.services .title {
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 18px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.services .title a {
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+.services .title a:hover {
+  color: #ff3c00;
+}
+
+.services .title::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: #ff3c00;
+  bottom: 0;
+  left: calc(50% - 25px);
+}
+
+.services .description {
+  line-height: 24px;
+  font-size: 18px;
+}
+
+.t-w {
+  color: white !important;
+}
+.text-m1 {
+  font-size: x-large ;
+}
+.services-components {
+  border: 1px solid var(--accent-color);
+  transition: all 0.5s ease-in;
+}
+
+iconify-icon.services-icon {
+  font-size: 80px;
+  color: var(--accent-color);
+  transition: all 0.5s ease-in;
+}
+
+.services-heading {
+  transition: all 0.5s ease-in;
+}
+
+.service-btn {
+  transition: all 0.5s ease-in;
+
+}
+</style>

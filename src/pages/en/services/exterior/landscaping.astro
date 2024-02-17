@@ -1,5 +1,5 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
+import Layout from '~/layouts/En-PageLayout.astro';
 
 import Hero3 from '~/components/widgets/Hero3.astro';
 import Allservices from '~/components/widgets/allservices.astro';
@@ -18,12 +18,12 @@ import { otherprojects } from '~/components/ui/otherprojects.json';
 
 import About from '~/components/common/About.astro';
 
-import Contact from '~/components/widgets/elr-contact.astro';
+import Contact from '~/components/widgets/En/En-elr-contact.astro';
 import Image from '~/components/common/Image.astro';
-import Adresse from '~/components/widgets/Adresse.astro';
+import Adresse from '~/components/widgets/En/En-Adresse.astro';
 
 const metadata = {
-  title: "K-Constructions - Le meilleur service d'aménagement paysager Pour Vous",
+  title: "K-Construction - The Best Landscaping Service For You",
   ignoreTitleTemplate: true,
 };
 ---
@@ -75,7 +75,7 @@ const metadata = {
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
       <link href="~/assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet1">
 
-      <section class="relative md:-mt-[100px]  not-prose">
+      <section class="relative md:-mt-[100px] not-prose">
         <div class="flex items-center justify-center min-h-screen">
           <!-- Image section -->
           <div class="absolute inset-0 z-0">
@@ -83,21 +83,21 @@ const metadata = {
               class="w-full h-full object-cover"
               loading="eager"
               src="https://raw.githubusercontent.com/Elragency/astro-construction/721841c30c4f94caeeb75b8259e0c2894ce58d5f/src/assets/images/banners/banner-paysagement.webp"
-              alt="les meilleurs paysagiste à montréal et ses environs"
+              alt="the best landscapers in Montreal and its surroundings"
             />
           </div>
       
           <!-- Text content section -->
           <div class="relative z-10 text-center">
-            <p class="text-base text-secondary text-white font-bold tracking-wide uppercase m-1"data-aos="fade-up" data-aos-duration="2000">
-              LES PROS DE L'AMÉNAGEMENT PAYSAGER À MONTRÉAL
+            <p class="text-base text-secondary text-white font-bold tracking-wide uppercase m-1" data-aos="fade-up" data-aos-duration="2000">
+              MONTREAL'S LANDSCAPING PROS
             </p>
             <h1 class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200" data-aos="fade-up" data-aos-duration="2500">
-              CHANGER DE PAYSAGE
+              CHANGE YOUR LANDSCAPE
             </h1>
             <a href="#soumission">
-              <button type="button" class="btn btn-outline-orange inline-block text-white py-3 px-4 rounded mt-1 ml-0 md:ml-6 mb-2"data-aos="fade-up" data-aos-duration="2600">
-                SOUMISSION GRATUITE
+              <button type="button" class="btn btn-outline-orange inline-block text-white py-3 px-4 rounded mt-1 ml-0 md:ml-6 mb-2" data-aos="fade-up" data-aos-duration="2600">
+                FREE QUOTE
               </button>
             </a>
             <!-- Additional content can be added here -->
@@ -105,146 +105,98 @@ const metadata = {
         </div>
       </section>
       
-
-  <!-- <Note /> -->
-
-  <section id="propos" class="mx-6" >
-    <div class="overflow-hidden">
-      <div class="container mx-auto px-4 py-6 border-b" >
-        <div class="flex flex-wrap -mx-4">
-          <div class="w-full md:w-1/2 px-4 py-6 mb-4 md:mb-0 border-r padding-body" data-aos="fade-left" data-aos-duration="2000">
-            <p class="text-xl mb-3" style="color:#ff3c00" >FAITE AFFAIRE AVEC LE GROUPE K CONSTRUCTION</p>
-            <h2 class="text-2xl font-bold mb-4 test">PASSEZ DU RÊVE À LA RÉALITÉ AVEC NOS SERVICES D'AMÉNAGEMENT PAYSAGER</h2>
-          </div>
-          <div class="w-full md:w-1/2 px-4 pt-2 padding-body" data-aos="fade-right" data-aos-duration="2000" >
-            <p class="ml-0 md:ml-6 font-body pb-4">
-              K-Constructions, située au cœur de Montréal, est votre expert en aménagement paysager. Nous offrons une gamme complète de services d'aménagement paysager, 
-              adaptés pour embellir et valoriser votre espace extérieur. Notre équipe qualifiée est spécialisée dans la création de paysages uniques et personnalisés 
-              qui reflètent vos préférences et s'adaptent à l'environnement local de Montréal.
-              <br><br>
-              K-Constructions ne se limite pas seulement à la création de paysages esthétiques; nous nous engageons également dans la durabilité et l'écologie de vos espaces verts. 
-              En utilisant des matériaux respectueux de l'environnement et des techniques d'aménagement innovantes, nous visons à promouvoir la biodiversité et à réduire 
-              l'empreinte écologique de chaque projet. Notre approche holistique assure que votre jardin ou espace extérieur soit non seulement beau, mais également 
-              bénéfique pour l'écosystème local, contribuant ainsi à un avenir plus vert et durable pour Montréal.
-            </p>
-            <a href="#soumission" class="btn btn-outline-orange inline-block bg-primary text-white py-3 px-4 rounded mt-1 ml-0 md:ml-6 mb-2">
-              À Propos
-              <iconify-icon icon="tabler:arrow-right" class="inline-block ml-2"></iconify-icon>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- <section id="process" class="my-5" data-aos="fade-up" data-aos-duration="2000">
-    <div class="overflow-hidden">
-        <div class="mx-auto container" >
-            <div class="flex flex-wrap -mx-4"> 
-                <div class="w-full md:w-1/2 lg:w-1/4 px-6">
-                    <div class="py-3 md:py-5 px-3">
-                        <h4 class="mb-3 font-body1"> <span class="heading-color">01.</span> Contact</h4>
-                        <p class="font-body">Utilisez le formulaire ci-dessous pour nous contacter.</p>
-                    </div>
-                </div>
-                <div class="w-full md:w-1/2 lg:w-1/4 px-6">
-                    <div class="py-3 md:py-5 px-3">
-                        <h4 class="mb-3 font-body1"> <span class="heading-color">02.</span> inspection</h4>
-                        <p class="font-body">Nous allons visiter l'adresse des travaux pour nous faire une idée.</p>
-                    </div>
-                </div>
-                <div class="w-full md:w-1/2 lg:w-1/4 px-6">
-                    <div class="py-3 md:py-5 px-3">
-                        <h4 class="mb-3 font-body1"> <span class="heading-color">03.</span> Soumission</h4>
-                        <p class="font-body">Nous vous faisons parvenir la soumission en 24h.</p>
-                    </div>
-                </div>
-                <div class="w-full md:w-1/2 lg:w-1/4 px-6">
-                    <div class="py-3 md:py-5 px-3">
-                        <h4 class="mb-3 font-body1"> <span class="heading-color">04.</span> Réalisation</h4>
-                        <p class="font-body">Nous effectuons les travaux souhaités.</p>
-                    </div>
-                </div>
+      <section id="propos" class="mx-6">
+        <div class="overflow-hidden">
+          <div class="container mx-auto px-4 py-6 border-b">
+            <div class="flex flex-wrap -mx-4">
+              <div class="w-full md:w-1/2 px-4 py-6 mb-4 md:mb-0 border-r padding-body" data-aos="fade-left" data-aos-duration="2000">
+                <p class="text-xl mb-3" style="color:#ff3c00">DO BUSINESS WITH K CONSTRUCTIONS GROUP</p>
+                <h2 class="text-2xl font-bold mb-4 test">TURN YOUR DREAM INTO REALITY WITH OUR LANDSCAPING SERVICES</h2>
+              </div>
+              <div class="w-full md:w-1/2 px-4 pt-2 padding-body" data-aos="fade-right" data-aos-duration="2000">
+                <p class="ml-0 md:ml-6 font-body pb-4">
+                  K-Constructions, located in the heart of Montreal, is your landscaping expert. We offer a full range of landscaping services,
+                  tailored to beautify and enhance your outdoor space. Our skilled team specializes in creating unique and personalized landscapes
+                  that reflect your preferences and adapt to Montreal's local environment.
+                  <br><br>
+                  K-Constructions does not just focus on creating aesthetic landscapes; we also commit to the sustainability and ecology of your green spaces.
+                  By using environmentally friendly materials and innovative landscaping techniques, we aim to promote biodiversity and reduce
+                  the ecological footprint of each project. Our holistic approach ensures that your garden or outdoor space is not only beautiful but also
+                  beneficial for the local ecosystem, thus contributing to a greener and more sustainable future for Montreal.
+                </p>
+                <a href="#soumission" class="btn btn-outline-orange inline-block bg-primary text-white py-3 px-4 rounded mt-1 ml-0 md:ml-6 mb-2">
+                  About Us
+                  <iconify-icon icon="tabler:arrow-right" class="inline-block ml-2"></iconify-icon>
+                </a>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-</section> -->
-
-
-<!-- <section id="propos" class="m-6" >
-  <div class="flex justify-center">
-    <h2 class="text-3xl font-bold mb-4 test">
-      Notre offre
-  </h2>
-    
-  </div>
-  <About />
-  <a href="apropos.html" class="btn btn-outline-orange inline-block bg-primary text-white py-3 px-4 rounded mt-1 ml-0 md:ml-6 mb-2">
-    À Propos
-    <iconify-icon icon="tabler:arrow-right" class="inline-block ml-2"></iconify-icon>
-  </a>
-</section> -->
-
-<section id="services" class="services m-4">
-  <div class="container mx-auto">
-
-    <div class="flex justify-center pb-4">
-      <h2 class="text-3xl font-bold mb-4 test">
-        Notre offre
-    </h2>
+      </section>
       
-    </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" >
-      <div class="col-span-1 md:col-span-2 lg:col-span-1">
-        <div class="icon-box">
-          <div class="icon"><iconify-icon icon="guidance:garden" width="48" height="48"></iconify-icon></div>
-          <h4 class="title"><a href="#">Conception de jardins sur mesure</a></h4>
-          <p class="description text-m1">Nous élaborons des plans d'aménagement paysager sur mesure, intégrant vos idées avec notre expertise pour créer des espaces extérieurs esthétiques et fonctionnels.</p>
-        </div>
-      </div>
-      <div class="col-span-1">
-        <div class="icon-box">
-          <div class="icon"><iconify-icon icon="material-symbols:water-pump-outline" width="48" height="48"></iconify-icon></div>
-          <h4 class="title"><a>Installation de systèmes d'irrigation écologiques</a></h4>
-          <p class="description">Nos systèmes d'irrigation innovants assurent une gestion efficace de l'eau, réduisant le gaspillage et favorisant la santé de vos plantes, tout en étant respectueux de l'environnement.</p>
-        </div>
-      </div>
-      <div class="col-span-1">
-        <div class="icon-box">
-          <div class="icon"><iconify-icon icon="carbon:map-boundary-vegetation" width="48" height="48"></iconify-icon></div>
-          <h4 class="title text-white"><a>Aménagement de murs et toits végétalisés</a></h4>
-          <p class="description">Nous créons des murs et toits végétalisés qui non seulement embellissent vos espaces mais contribuent également à l'isolation thermique et à la biodiversité urbaine.</p>
-        </div>
-      </div>
-      <div class="col-span-1">
-        <div class="icon-box">
-          <div class="icon"><iconify-icon icon="arcticons:bricksbreakerballscrush" width="48" height="48"></iconify-icon></div>
-          <h4 class="title"><a>Pose de pavés et dallages</a></h4>
-          <p class="description">Notre expertise en pose de pavés et dallages offre une touche d'élégance et de durabilité à vos allées, patios et terrasses, avec une variété de matériaux adaptés au climat de Montréal.</p>
-        </div>
-      </div>
-      <div class="col-span-1">
-        <div class="icon-box">
-          <div class="icon"><iconify-icon icon="material-symbols:garden-cart-outline" width="48" height="48"></iconify-icon></div>
-          <h4 class="title"><a>Entretien écologique des espaces verts</a></h4>
-          <p class="description">Nous proposons des services d'entretien paysager respectueux de l'environnement, incluant la tonte, la taille, et le soin des plantes, utilisant des méthodes et produits écologiques.</p>
-        </div>
-      </div>
-      <div class="col-span-1">
-        <div class="icon-box">
-          <div class="icon"><iconify-icon icon="material-symbols-light:light-mode" width="48" height="48"></iconify-icon></div>
-          <h4 class="title t-w" ><a>Éclairage paysager</a></h4>
-          <p class="description">Notre éclairage paysager transforme votre jardin en un espace enchanteur à la tombée de la nuit, mettant en valeur les éléments architecturaux et les plantations grâce à des solutions d'éclairage esthétiques.</p>
-        </div>
-      </div>
-    </div>
 
-  </div>
-  <div class="flex justify-center">
-    <a href="#soumission" class="btn px-3 py-2">Soumission Gratuite</a>
-  </div>
-</section>
+
+      <section id="services" class="services m-4">
+        <div class="container mx-auto">
+      
+          <div class="flex justify-center pb-4">
+            <h2 class="text-3xl font-bold mb-4">
+              Our Services
+            </h2>
+          </div>
+      
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="col-span-1 md:col-span-2 lg:col-span-1">
+              <div class="icon-box">
+                <div class="icon"><iconify-icon icon="guidance:garden" width="48" height="48"></iconify-icon></div>
+                <h4 class="title"><a href="#">Custom Garden Design</a></h4>
+                <p class="description">We develop tailor-made landscaping plans, integrating your ideas with our expertise to create aesthetic and functional outdoor spaces.</p>
+              </div>
+            </div>
+            <div class="col-span-1">
+              <div class="icon-box">
+                <div class="icon"><iconify-icon icon="material-symbols:water-pump-outline" width="48" height="48"></iconify-icon></div>
+                <h4 class="title"><a>Installation of Eco-Friendly Irrigation Systems</a></h4>
+                <p class="description">Our innovative irrigation systems ensure efficient water management, reducing waste and promoting the health of your plants, while being environmentally friendly.</p>
+              </div>
+            </div>
+            <div class="col-span-1">
+              <div class="icon-box">
+                <div class="icon"><iconify-icon icon="carbon:map-boundary-vegetation" width="48" height="48"></iconify-icon></div>
+                <h4 class="title"><a>Green Walls and Roof Gardens</a></h4>
+                <p class="description">We create green walls and roof gardens that not only beautify your spaces but also contribute to thermal insulation and urban biodiversity.</p>
+              </div>
+            </div>
+            <div class="col-span-1">
+              <div class="icon-box">
+                <div class="icon"><iconify-icon icon="arcticons:bricksbreakerballscrush" width="48" height="48"></iconify-icon></div>
+                <h4 class="title"><a>Paving and Stone Laying</a></h4>
+                <p class="description">Our expertise in paving and stone laying adds a touch of elegance and durability to your walkways, patios, and terraces, with a variety of materials suited to Montreal's climate.</p>
+              </div>
+            </div>
+            <div class="col-span-1">
+              <div class="icon-box">
+                <div class="icon"><iconify-icon icon="material-symbols:garden-cart-outline" width="48" height="48"></iconify-icon></div>
+                <h4 class="title"><a>Eco-Friendly Green Space Maintenance</a></h4>
+                <p class="description">We offer environmentally friendly landscaping maintenance services, including mowing, pruning, and plant care, using ecological methods and products.</p>
+              </div>
+            </div>
+            <div class="col-span-1">
+              <div class="icon-box">
+                <div class="icon"><iconify-icon icon="material-symbols-light:light-mode" width="48" height="48"></iconify-icon></div>
+                <h4 class="title"><a>Landscape Lighting</a></h4>
+                <p class="description">Our landscape lighting transforms your garden into an enchanting space at nightfall, highlighting architectural elements and plantings with aesthetic lighting solutions.</p>
+              </div>
+            </div>
+          </div>
+      
+        </div>
+        <div class="flex justify-center">
+          <a href="#soumission" class="btn px-3 py-2">Free Quote</a>
+        </div>
+      </section>
+      
 <br><br>
 
 
@@ -390,7 +342,7 @@ items={[
     actions={[
       {
         variant: 'secondary',
-        text: 'APPELEZ-NOUS!',
+        text: 'CALL US NOW',
         href: 'tel:4388625985',
         // target: '_blank',
         icon: 'tabler:phone',
@@ -401,11 +353,11 @@ items={[
 
   
     <Fragment slot="title">
-      CONTACTEZ-NOUS <br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Immédiatement</span>
+      CONTACT US <br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Immediately</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Pour transformer vos rêves en réalités. 
+      To turn your dreams into realities. 
     </Fragment>
   </CallToAction>
 
