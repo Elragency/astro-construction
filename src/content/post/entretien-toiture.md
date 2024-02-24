@@ -2,7 +2,7 @@
 publishDate: 2024-02-24T00:00:00Z
 title: Entretien De La Toiture - Nécesaire pour un syndicat de copropriété au québec?
 excerpt: L'importance cruciale de l'entretien et de l'inspection régulière de la toiture pour les syndicats de copropriétés au québec vous sera donné dans ce court article remplis d'information.
-image: https://images.unsplash.com/photo-1635424709870-cdc6e64f0e20?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+image: https://raw.githubusercontent.com/Elragency/astro-construction/1cfcfcdf6beeffc077a59396911c085bfad7278e/src/assets/images/BLOG/entretien-toiture.avif
 category: Services
 tags:
   - couvreur
