@@ -48,10 +48,10 @@ export const headerData = {
           text: 'Rénovations Extérieures',
           href: getPermalink('/services/renos-ext'),
         },
-        // {
-        //   text: 'Product Details (or Services)',
-        //   href: getPermalink('/legal/privacy'),
-        // },
+        {
+          text: 'Services Pour Condos',
+          href: getPermalink('/condos'),
+        },
         // {
         //   text: 'Coming Soon or Pre-Launch',
         //   href: getPermalink('/services/pre-launch'),
@@ -118,9 +118,9 @@ export const footerData = {
     {
       title: 'Services',
       links: [
-        { text: 'Intérieur', href: 'services/renos-int' },
-        { text: 'Extérieur', href: 'services/renos-ext' },
-        { text: 'Services', href: 'services/services' },
+        { text: 'Intérieur', href: '/services/renos-int' },
+        { text: 'Extérieur', href: '/services/renos-ext' },
+        { text: 'Services', href: '/services/services' },
         // { text: 'Electron', href: '#' },
         // { text: 'AstroWind Desktop', href: '#' },
       ],
@@ -128,17 +128,17 @@ export const footerData = {
     {
       title: 'RÉGIONS',
       links: [
-        { text: 'Montréal', href: '#' },
-        { text: 'Rive-sud', href: '#' },
-        { text: 'Rive-Nord', href: '#' },
-        { text: 'Montérégie', href: '#' }
+        { text: 'Montréal', href: '/regions/montreal' },
+        { text: 'Rive-sud', href: '/regions/rive-sud' },
+        { text: 'Rive-Nord', href: '/regions/rive-nord' },
+        { text: 'Montérégie', href: '/regions/monteregie' }
         // { text: 'Status', href: '#' },
       ],
     },
     {
       title: 'EXPERTISE',
       links: [
-        { text: 'Condos', href: '#' },
+        { text: 'Condos', href: '/condos' },
         { text: 'Résidentielle', href: '#' },
         { text: 'Commerciale', href: '#' }
         // { text: 'Press', href: '#' },
@@ -151,6 +151,7 @@ export const footerData = {
   secondaryLinks: [
     { text: 'Termes', href: getPermalink('/terms') },
     { text: 'Politique de confidentialité', href: getPermalink('legal/privacy') },
+    { text: 'RBQ: 5758-9996-01'}
   ],
   socialLinks: [
     // { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
