@@ -98,7 +98,7 @@ export const headerData = {
       href: getPermalink('/en/home'),
     },
   ],
-  actions: [{ text: 'Faisons Affaire!', href: 'contact', target: '' }],
+  actions: [{ text: 'Faisons Affaire!', href: '/contact', target: '' }],
 };
 
 export const footerData = {
