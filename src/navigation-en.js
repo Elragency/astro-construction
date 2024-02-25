@@ -98,7 +98,7 @@ export const headerData = {
       href: getPermalink('/'),
     },
   ],
-  actions: [{ text: 'Faisons Affaire!', href: 'contact', target: '' }],
+  actions: [{ text: "Let's do business!", href: '/en/contact', target: '' }],
 };
 
 export const footerData = {
@@ -118,9 +118,9 @@ export const footerData = {
     {
       title: 'Services',
       links: [
-        { text: 'Interior', href: 'services/renos-int' },
-        { text: 'Exterior', href: 'services/renos-ext' },
-        { text: 'Services', href: 'services/services' },
+        { text: 'Interior', href: '/services/renos-int' },
+        { text: 'Exterior', href: '/services/renos-ext' },
+        { text: 'Services', href: '/services/services' },
         // { text: 'Electron', href: '#' },
         // { text: 'AstroWind Desktop', href: '#' },
       ],
@@ -151,6 +151,7 @@ export const footerData = {
   secondaryLinks: [
     { text: 'Terms', href: getPermalink('#') },
     { text: 'Privacy', href: getPermalink('#') },
+    { text: 'RBQ: 5758-9996-01'}
   ],
   socialLinks: [
     // { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
