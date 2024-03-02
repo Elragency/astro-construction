@@ -106,9 +106,9 @@ export const footerData = {
     {
       title: 'About',
       links: [
-        { text: 'K-CONSTRUCTIONS', href: 'propos' },
-        { text: 'Mission', href: '#' },
-        { text: 'Team', href: '#' },
+        { text: 'K-CONSTRUCTIONS', href: '/en/about' },
+        { text: 'Mission', href: '/en/about' },
+        { text: 'Team', href: '/en/about' },
         // { text: 'Enterprise', href: '#' },
         // { text: 'Customer stories', href: '#' },
         // { text: 'Pricing', href: '#' },
@@ -118,9 +118,9 @@ export const footerData = {
     {
       title: 'Services',
       links: [
-        { text: 'Interior', href: '/services/renos-int' },
-        { text: 'Exterior', href: '/services/renos-ext' },
-        { text: 'Services', href: '/services/services' },
+        { text: 'Interior', href: '/en/services/renos-int' },
+        { text: 'Exterior', href: '/en/services/renos-ext' },
+        { text: 'Services', href: '/en/services/services' },
         // { text: 'Electron', href: '#' },
         // { text: 'AstroWind Desktop', href: '#' },
       ],
@@ -128,17 +128,16 @@ export const footerData = {
     {
       title: 'RÉGIONS',
       links: [
-        { text: 'Montreal', href: '#' },
-        { text: 'Rive-sud', href: '#' },
-        { text: 'Rive-Nord', href: '#' },
-        { text: 'Monteregie', href: '#' }
-        // { text: 'Status', href: '#' },
+        { text: 'Montréal', href: '/regions/montreal' },
+        { text: 'Rive-sud', href: '/regions/rive-sud' },
+        { text: 'Rive-Nord', href: '/regions/rive-nord' },
+        { text: 'Montérégie', href: '/regions/monteregie' }
       ],
     },
     {
       title: 'EXPERTISE',
       links: [
-        { text: 'Condos', href: '#' },
+        { text: 'Condos', href: '/condos' },
         { text: 'Residential', href: '#' },
         { text: 'Commercial', href: '#' }
         // { text: 'Press', href: '#' },
@@ -149,8 +148,8 @@ export const footerData = {
     },
   ],
   secondaryLinks: [
-    { text: 'Terms', href: getPermalink('#') },
-    { text: 'Privacy', href: getPermalink('#') },
+    { text: 'Terms', href: getPermalink('/legal/terms') },
+    { text: 'Privacy', href: getPermalink('/legal/privacy') },
     { text: 'RBQ: 5758-9996-01'}
   ],
   socialLinks: [

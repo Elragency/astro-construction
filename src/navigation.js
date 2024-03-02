@@ -106,9 +106,9 @@ export const footerData = {
     {
       title: 'À Propos',
       links: [
-        { text: 'K-CONSTRUCTIONS', href: 'propos' },
-        { text: 'Mission', href: '#' },
-        { text: 'Team', href: '#' },
+        { text: 'K-CONSTRUCTIONS', href: '/propos' },
+        { text: 'Mission', href: '/propos' },
+        { text: 'Team', href: '/propos' },
         // { text: 'Enterprise', href: '#' },
         // { text: 'Customer stories', href: '#' },
         // { text: 'Pricing', href: '#' },
@@ -149,8 +149,8 @@ export const footerData = {
     },
   ],
   secondaryLinks: [
-    { text: 'Termes', href: getPermalink('/terms') },
-    { text: 'Politique de confidentialité', href: getPermalink('legal/privacy') },
+    { text: 'Termes', href: getPermalink('/legal/terms') },
+    { text: 'Politique de confidentialité', href: getPermalink('/legal/privacy') },
     { text: 'RBQ: 5758-9996-01'}
   ],
   socialLinks: [
