@@ -151,7 +151,7 @@ export const footerData = {
   secondaryLinks: [
     { text: 'Termes', href: getPermalink('/legal/terms') },
     { text: 'Politique de confidentialité', href: getPermalink('/legal/privacy') },
-    { text: 'RBQ: 5758-9996-01'}
+    { text: 'RBQ: 5812-0130-01'}
   ],
   socialLinks: [
     // { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
