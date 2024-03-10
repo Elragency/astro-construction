@@ -95,7 +95,7 @@ const metadata = {
               COUVREUR PROFESSIONELS À MONTRÉAL ET EN MONTÉRÉGIE
             </p>
             <h1 class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200" data-aos="fade-up" data-aos-duration="2500">
-              RÉPARATIONS DE TOITURE RAPIDES ET FIABLES
+              RÉPARATIONS DE TOITURE <br>RAPIDES ET FIABLES
             </h1>
             <a href="#soumission">
               <button type="button" class="btn btn-outline-orange inline-block text-white py-3 px-4 rounded mt-1 ml-0 md:ml-6 mb-2"data-aos="fade-up" data-aos-duration="2600">
@@ -235,7 +235,47 @@ const metadata = {
     </Fragment>
   </Content>
 
+ <!-- Steps Widget ****************** -->
 
+ <Steps
+ title="Les étapes lors d'un remplacement de toiture"
+ tagline="Nous sommes là pour vous"
+ isReversed={true}
+ items={[
+   {
+     title: 'Prise de Contact',
+     icon: 'tabler:number-1',
+   },
+   {
+     title: 'Évaluation et Devis',
+     icon: 'tabler:number-2',
+   },
+   {
+     title: 'Planification du Projet',
+     icon: 'tabler:number-3',
+   },
+   {
+     title: 'Préparation et Commande',
+     icon: 'tabler:number-4',
+   },
+   {
+     title: 'Exécution du Projet',
+     icon: 'tabler:number-5',
+   },
+   {
+     title: 'Nettoyage et Inspection Finale',
+     icon: 'tabler:number-6',
+   },
+   {
+     title: 'Suivi Post-Projet',
+     icon: 'tabler:number-7',
+   },
+ ]}
+ image={{
+   src: 'https://raw.githubusercontent.com/Elragency/astro-construction/main/src/assets/images/roof.webp',
+   alt: 'Steps image',
+ }}
+/>
     <!-- Stats Widget ****************** -->
 
     <Stats
