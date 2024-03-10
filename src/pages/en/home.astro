@@ -13,6 +13,7 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import PortfolioA from '~/components/widgets/En/En-PortfolioA.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/En/En-CallToAction.astro';
+import CookieBanner from '~/components/common/EnCookieBanner.astro';
 
 
 import { otherprojects } from '~/components/ui/otherprojects.json';
@@ -304,6 +305,37 @@ const metadata = {
     </Fragment>
   </CallToAction>
 
+  <CookieBanner />
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var consentBanner = document.getElementById('cookieConsentBanner');
+    
+      // Check if the user's consent has already been recorded
+      var userConsent = localStorage.getItem('cookieConsent');
+    
+      // Only proceed to bind events if no consent has been recorded
+      if (!userConsent) {
+        var acceptButton = document.querySelector('.cookie-consent-banner__cta');
+        var declineButton = document.querySelector('.cookie-consent-banner__cta--secondary');
+    
+        acceptButton.addEventListener('click', function(event) {
+          event.preventDefault(); // Prevent the default anchor action
+          consentBanner.style.display = 'none';
+          localStorage.setItem('cookieConsent', 'accept');
+        });
+    
+        declineButton.addEventListener('click', function(event) {
+          event.preventDefault(); // Prevent the default anchor action
+          consentBanner.style.display = 'none';
+          localStorage.setItem('cookieConsent', 'decline');
+        });
+      } else {
+        // Hide the banner if consent has already been given or declined
+        consentBanner.style.display = 'none';
+      }
+    });
+    </script>
   <!-- NEW SCRIPTS -->
     <!-- <script src="~/assets/js/plugins.js"></script> -->
   <!-- <script src="~/assets/js/script.js"></script> -->
