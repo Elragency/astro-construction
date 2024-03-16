@@ -1,6 +1,6 @@
 ---
 publishDate: 2024-03-14T00:00:00Z
-title: Le Guide Ultime pour une Rénovation de Salle de Bain Réussie
+title: Rénovation Salle de Bain= Guide Ultime
 excerpt: La rénovation de votre salle de bain est une opportunité excitante de transformer cet espace en un lieu de détente et de bien-être qui reflète votre style personnel. Avec le guide de K-Constructions, vous avez toutes les clés en main pour planifier et réaliser votre projet de rêve, de la conception à la réalisation.
 image: https://raw.githubusercontent.com/Elragency/astro-construction/main/src/assets/images/BLOG/bathroom%20blog.webp
 category: Services

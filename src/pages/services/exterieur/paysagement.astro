@@ -21,6 +21,7 @@ import About from '~/components/common/About.astro';
 import Contact from '~/components/widgets/elr-contact.astro';
 import Image from '~/components/common/Image.astro';
 import Adresse from '~/components/widgets/Adresse.astro';
+import Hero from '~/components/widgets/Hero.astro';
 
 const metadata = {
   title: "K-Constructions - Le meilleur service d'aménagement paysager Pour Vous",
@@ -201,135 +202,59 @@ const metadata = {
 </section>
 <br><br>
 
+  <!-- Content Widget **************** -->
 
-
-
-
-<!-- <Features2
-title="Ce Que Nos Plombiers Peuvent Faire"
-subtitle="De la simple réparation à la mise en place complète de nouveaux projets."
-columns={3}
-items={[
-  {
-    title: 'Travaux de plomberie',
-    description:
-      'By harmonizing instructional design and visual appeal, templates streamline content creation for varied materials, expediting development and cultivating engaging educational spaces.',
-    icon: 'tabler:school',
-  },
-  {
-    title: 'Projet de rénovations',
-    description:
-      'Crafting functional, visually appealing spaces for residential and commercial use. Templates emphasize layout, colors, and furniture setups, offering a versatile toolkit for your design vision.',
-    icon: 'tabler:home-star',
-  },
-  {
-    title: 'Remplacement de chauffe-eau',
-    description: `Empowering photographers, our templates facilitate captivating storytelling. With a keen focus on layout, galleries, and typography, they cater to both professionals and enthusiasts.`,
-    icon: 'tabler:photo',
-  },
-  {
-    title: 'Recherche de Cause',
-    description:
-      'Developing engaging online stores, our E-commerce templates ensure a dynamic presence to effectively showcase products. Ideal for startups or revamps.',
-    icon: 'tabler:shopping-cart',
-  },
-  {
-    title: 'Remplacement de Toilette',
-    description:
-      'With attention to typography, these templates empower effective content presentation for writers at any stage, ensuring visually engaging and user-friendly blogs.',
-    icon: 'tabler:article',
-  },
-  {
-    title: "Service d'urgence",
-    description:
-      'Providing polished options for effective visual communication, these templates empower both startups and established companies for a professional brand presence.',
-    icon: 'tabler:building-store',
-  }
-  // {
-  //   title: 'Branding',
-  //   description:
-  //     'Offering pre-designed elements for a consistent brand identity, including logos and marketing materials. Ideal for new ventures or revamps.',
-  //   icon: 'tabler:arrow-big-up-lines',
-  // },
-  // {
-  //   title: 'Medical',
-  //   description: `From presentations to patient forms, these tools enhance communication effectiveness for healthcare professionals. Ideal for medical practices and research pursuits.`,
-  //   icon: 'tabler:vaccine',
-  // },
-  // {
-  //   title: 'Fashion Design',
-  //   description:
-  //     'With attention to detail, customization, and contemporary design, they empower designers to showcase ideas cohesively. Ideal for all levels of designers.',
-  //   icon: 'tabler:tie',
-  // },
-]}
-/> -->
-
-
-
-    <!-- Stats Widget ****************** -->
-
-    <Stats
-    stats={[
-      { title: '+ Clients', amount: '1900' },
-      { title: '+ Projets', amount: '2100' },
-      { title: "Année d'expérience", amount: '25' },
-      { title: '+ Employés', amount: '15' },
-    ]}
-  />
-
-
-
-  <!-- HighlightedPosts Widget ******* -->
-
-  <!-- <BlogLatestPosts
-    title="Voir nos dernières publications"
-    information={`
-                `}
-  /> -->
-
-  <!-- FAQs Widget ******************* -->
-
-  <!-- <FAQs
-    title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
-    tagline="FAQs"
-    classes={{ container: 'max-w-6xl' }}
+  <Content
+    id="about"
+    columns={3}
     items={[
       {
-        title: 'Why AstroWind?',
-        description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
+        icon: 'tabler:tool',
+        callToAction: {
+          text: 'Les bons outils',
+          href: '#soumission',
+        },
       },
       {
-        title: 'What do I need to start?',
-        description:
-          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
+        icon: 'tabler:plant',
+        callToAction: {
+          text: 'Écologie',
+          href: '#soumission',
+        },
       },
       {
-        title: 'How to install the Astro + Tailwind CSS template?',
-        description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
-      },
-      {
-        title: "What's something that you don't understand?",
-        description:
-          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
-      },
-      {
-        title: 'What is something that you would like to try again?',
-        description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
-      },
-      {
-        title: 'If you could only ask one question to each person you meet, what would that question be?',
-        description:
-          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
+        icon: 'tabler:users',
+        callToAction: {
+          text: 'La bonne équipe',
+          href: '#soumission',
+        },
       },
     ]}
-  /> -->
+    image={{
+      src: 'https://raw.githubusercontent.com/Elragency/astro-construction/main/src/assets/images/gallery/landcaping-k.avif',
+      alt: 'service de paysagement k-constructions',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Obtenez une pelouse éclatante avec K-Constructions</h3>
+      <p>
+        L'aspect extérieur de votre espace commercial joue un rôle crucial dans l'accueil de vos clients. Avec le service professionnel de tonte de pelouse proposé par K-Constructions, 
+        libérez-vous de toute préoccupation liée à l'entretien de votre espace vert. Nos experts, dotés d'une expertise inégalée en entretien paysager, 
+        garantissent une qualité de tonte exceptionnelle qui rehaussera la beauté et la santé de votre pelouse, lui conférant une apparence soignée et accueillante à l'année longue.
+      </p>
+      <br />
+      <p>
+        Chez K-Constructions, nous adaptons nos services à vos exigences spécifiques. Nous proposons une maintenance régulière de votre espace vert, avec des interventions bimensuelles 
+        ou ajustées selon vos besoins. Cette approche personnalisée assure le maintien d'une pelouse dense, verte et en pleine santé, reflet de votre engagement 
+        envers un environnement extérieur attrayant et professionnel.
+      </p>
+      <br />
+    </Fragment>
 
-
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
 
   <Adresse />
 
@@ -351,6 +276,7 @@ items={[
       },
     ]}
   >
+
 
 
   

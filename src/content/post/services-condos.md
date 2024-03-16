@@ -1,6 +1,6 @@
 ---
 publishDate: 2024-02-26T00:00:00Z
-title: Pourquoi K-Constructions est le Partenaire Idéal des Syndicats de Copropriété au Québec
+title: Votre Allié en Copropriété au Québec - K-Constructions
 excerpt: K-Constructions peut devenir votre meilleur allié dans la gestion de votre syndicat de copropriété au québec, laissez nous vous expliquer pourquoi.
 image: https://raw.githubusercontent.com/Elragency/astro-construction/main/src/assets/images/BLOG/serv.webp
 category: Services
