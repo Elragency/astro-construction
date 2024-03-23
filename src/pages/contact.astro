@@ -4,6 +4,7 @@ import HeroText from '~/components/widgets/HeroText.astro';
 import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Contact from '~/components/widgets/elr-contact.astro';
+import Newsletter from '~/components/widgets/Newsletter.astro';
 
 const metadata = {
   title: 'Contact',
@@ -15,30 +16,6 @@ const metadata = {
 
   <HeroText tagline="Contact" title="Travaillons ensemble!!" />
 
-  <!-- <ContactUs
-    title="Drop us a message today!"
-    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
-    inputs={[
-      {
-        type: 'text',
-        name: 'name',
-        label: 'Name',
-      },
-      {
-        type: 'email',
-        name: 'email',
-        label: 'Email',
-      },
-    ]}
-    textarea={{
-      label: 'Message',
-    }}
-    disclaimer={{
-      label:
-        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
-    }}
-    description="Our support team typically responds within 24 business hours."
-  /> -->
 
   <Contact />
 
@@ -64,4 +41,7 @@ const metadata = {
       },
     ]}
   />
+  <Newsletter />
 </Layout>
+
+

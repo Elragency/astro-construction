@@ -20,6 +20,7 @@ import { otherprojects } from '~/components/ui/otherprojects.json';
 
 import Contact from '~/components/widgets/elr-contact.astro';
 import Adresse from '~/components/widgets/Adresse.astro';
+import Newsletter from '~/components/widgets/Newsletter.astro';
 
 const metadata = {
   title: 'K-Constructions - Votre Contracteur Général de Confiance',
@@ -296,6 +297,7 @@ const metadata = {
   >
 
 
+
   
     <Fragment slot="title">
       Vous avez des projets en tête?<br class="block sm:hidden" /><span class="sm:whitespace-nowrap"></span>
@@ -305,6 +307,8 @@ const metadata = {
       Contactez-nous immédiatement pour les rendre réalité!<br class="hidden md:inline" />
     </Fragment>
   </CallToAction>
+
+  <Newsletter />
 
   <CookieBanner />
 
