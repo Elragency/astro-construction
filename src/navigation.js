@@ -52,10 +52,10 @@ export const headerData = {
           text: 'Services Pour Condos',
           href: getPermalink('/condos'),
         },
-        // {
-        //   text: 'Coming Soon or Pre-Launch',
-        //   href: getPermalink('/services/pre-launch'),
-        // },
+        {
+          text: 'Service Commercial',
+          href: getPermalink('/commercial'),
+        },
         // {
         //   text: 'Subscription',
         //   href: getPermalink('/services/subscription'),
