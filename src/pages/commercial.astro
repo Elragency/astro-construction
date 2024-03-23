@@ -345,11 +345,27 @@ const metadata = {
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
   <script>
-    var divisor = document.getElementById("divisor"),
-    slider = document.getElementById("slider");
-    function moveDivisor() { 
-      divisor.style.width = slider.value+"%";
-    }
+    document.addEventListener('DOMContentLoaded', function() {
+      // Ensure elements are available
+      var divisor = document.getElementById("divisor"),
+          slider = document.getElementById("slider");
+  
+      // Define the function to adjust the divisor's width
+      function moveDivisor() { 
+        divisor.style.width = slider.value + "%";
+      }
+  
+      // Check if both elements are present
+      if(divisor && slider) {
+        // Attach the event listener to the slider
+        slider.addEventListener("input", moveDivisor);
+        
+        // Optional: Call moveDivisor initially if you want to set an initial value
+        moveDivisor();
+      } else {
+        console.error("Either divisor or slider element is not found.");
+      }
+    });
   </script>
 
   <!-- <script src="~/assets/js/shortcodes.js"></script> -->
