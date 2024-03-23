@@ -140,7 +140,7 @@ export const footerData = {
       links: [
         { text: 'Condos', href: '/condos' },
         { text: 'Résidentielle', href: '#' },
-        { text: 'Commerciale', href: '#' }
+        { text: 'Commerciale', href: '/commercial' }
         // { text: 'Press', href: '#' },
         // { text: 'Inclusion', href: '#' },
         // { text: 'Social Impact', href: '#' },
@@ -151,7 +151,6 @@ export const footerData = {
   secondaryLinks: [
     { text: 'Termes', href: getPermalink('/legal/terms') },
     { text: 'Politique de confidentialité', href: getPermalink('/legal/privacy') },
-    { text: 'RBQ: 5812-0130-01'}
   ],
   socialLinks: [
     // { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
@@ -163,5 +162,6 @@ export const footerData = {
   footNote: `
     <span class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 rtl:mr-0 rtl:ml-1.5 float-left rtl:float-right rounded-sm"></span>
     Réalisé par <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://elragency.com/"> Agence ELR</a> · Tous droits réservés.
+    <br> RBQ: 5812-0130-01
   `,
 };
