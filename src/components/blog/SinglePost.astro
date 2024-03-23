@@ -9,6 +9,9 @@ import { getPermalink } from '~/utils/permalinks';
 import { getFormattedDate } from '~/utils/utils';
 
 import type { Post } from '~/types';
+import Contact from '~/components/widgets/elr-contact.astro';
+import Newsletter from '~/components/widgets/Newsletter.astro';
+
 
 export interface Props {
   post: Post;
@@ -87,4 +90,7 @@ const { Content } = post;
       <SocialShare url={url} text={post.title} class="mt-5 sm:mt-1 align-middle text-gray-500 dark:text-slate-600" />
     </div>
   </article>
+  <Contact />
+
+  <Newsletter />
 </section>
