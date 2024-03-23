@@ -67,9 +67,7 @@ const metadata = {
   <!-- Hero Widget ******************* -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="~/assets/js/jquery-1.11.0.min.js"></script>
-  <script>
 
-  </script>
 
 
   <!-- <script src="~/assets/js/modernizr.js"></script> -->
@@ -346,6 +344,13 @@ const metadata = {
       crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+  <script>
+    var divisor = document.getElementById("divisor"),
+    slider = document.getElementById("slider");
+    function moveDivisor() { 
+      divisor.style.width = slider.value+"%";
+    }
+  </script>
 
   <!-- <script src="~/assets/js/shortcodes.js"></script> -->
 </Layout>
