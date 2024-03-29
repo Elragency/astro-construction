@@ -10,11 +10,9 @@ import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
-import Before from '~/components/widgets/Beforee.astro';
 import PortfolioA from '~/components/widgets/PortfolioA.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
-import Carrousel from '~/components/widgets/Carrousel.astro';
 
 import { otherprojects } from '~/components/ui/otherprojects.json';
 
@@ -22,13 +20,15 @@ import About from '~/components/common/About.astro';
 
 import Contact from '~/components/widgets/elr-contact.astro';
 import Image from '~/components/common/Image.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-
 import Adresse from '~/components/widgets/Adresse.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Content from '~/components/widgets/Content.astro';
+import Before from '~/components/widgets/Beforee.astro';
 
+import Carrousel from '~/components/widgets/Carrousel.astro';
 
 const metadata = {
-  title: "K-Constructions - Plus Qu'un Plancher, Une Déclaration avec Notre Epoxy",
+  title: 'Services De Construction Pour Commerces - K-Constructions',
   ignoreTitleTemplate: true,
 };
 ---
@@ -65,16 +65,7 @@ const metadata = {
       }
     });
   </script>
-    <!-- END SCRIPT NEEDED FOR ACCORDEON -->
-
-  <!-- Hero Widget ******************* -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="~/assets/js/jquery-1.11.0.min.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-  <link href="~/assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet1">
-<script>
+  <script>
     document.addEventListener('DOMContentLoaded', function() {
       // Ensure Swiper's JS and any dependencies are fully loaded
       // You may need to adjust this path based on where Swiper's JS is located
@@ -113,7 +104,10 @@ const metadata = {
       document.head.appendChild(script);
     });
   </script>
-  
+    <!-- END SCRIPT NEEDED FOR ACCORDEON -->
+  <!-- Hero Widget ******************* -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="~/assets/js/jquery-1.11.0.min.js"></script>
 
 
 
@@ -181,7 +175,6 @@ const metadata = {
       </div>
     </div>
   </section>
-  
 
   <section id="process" class="my-5" data-aos="fade-up" data-aos-duration="2000">
     <div class="overflow-hidden">
@@ -238,9 +231,7 @@ const metadata = {
       },
     ]}
   />
-
-<Before />
-<br><br>
+  
   <Content
   isAfterContent
   items={[
@@ -265,6 +256,8 @@ const metadata = {
     alt: "service d'epoxy de k-constructions",
   }}>
   </Content>
+
+
 
   <section id="offrea" class="my-5">
     <div class="container mx-auto ">
@@ -308,6 +301,21 @@ const metadata = {
         </div>
     </div>
   </section>
+
+  <section class="m-6">
+    <Before />
+  </section>
+
+  <Stats
+  stats={[
+    { title: '+ Clients', amount: '1900' },
+    { title: '+ Projets', amount: '2100' },
+    { title: "Année d'expérience", amount: '25' },
+    { title: '+ Employés', amount: '15' },
+  ]}
+/>
+
+  
   
   <Content
   isAfterContent
@@ -339,23 +347,30 @@ const metadata = {
 
   <Carrousel />
 
-
+    <!-- Stats Widget ****************** -->
 
 
 
 
   <Adresse />
 
-   <Contact />
+
+
+<!-- <Allservices
+ /> -->
+
+ <Contact />
+
+  <!-- CallToAction Widget *********** -->
 
   <CallToAction
     actions={[
       {
         variant: 'secondary',
-        text: 'Soumission!',
-        href: '#soumission',
+        text: 'APPELEZ-NOUS!',
+        href: 'tel:4388625985',
         // target: '_blank',
-        icon: 'tabler:download',
+        icon: 'tabler:phone',
       },
     ]}
   >
@@ -373,54 +388,34 @@ const metadata = {
 
   
 
-
+  <!-- <script src="~/assets/js/plugins.js"></script> -->
+  <!-- <script src="~/assets/js/script.js"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
-  <script src="~/assets/js/jquery-1.11.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-  <script src="~/assets/js/plugins.js"></script>
-  <script src="~/assets/js/script.js"></script>
-
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // Ensure Swiper's JS and any dependencies are fully loaded
-      // You may need to adjust this path based on where Swiper's JS is located
-      var script = document.createElement('script');
-      script.src = 'https://unpkg.com/swiper/swiper-bundle.min.js';
-      script.onload = function() {
-        // Initialize Swiper after the script is loaded
-        var swiper = new Swiper('.project-swiper', {
-          slidesPerView: 1,
-          spaceBetween: 30,
-          loop: true,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-          navigation: {
-            nextEl: '.icon-arrow-right',
-            prevEl: '.icon-arrow-left',
-          },
-          breakpoints: {
-            640: {
-              slidesPerView: 2,
-              spaceBetween: 20,
-            },
-            768: {
-              slidesPerView: 3,
-              spaceBetween: 30,
-            },
-            1024: {
-              slidesPerView: 4,
-              spaceBetween: 30,
-            },
-          }
-        });
-      };
-      document.head.appendChild(script);
+      // Ensure elements are available
+      var divisor = document.getElementById("divisor"),
+          slider = document.getElementById("slider");
+  
+      // Define the function to adjust the divisor's width
+      function moveDivisor() { 
+        divisor.style.width = slider.value + "%";
+      }
+  
+      // Check if both elements are present
+      if(divisor && slider) {
+        // Attach the event listener to the slider
+        slider.addEventListener("input", moveDivisor);
+        
+        // Optional: Call moveDivisor initially if you want to set an initial value
+        moveDivisor();
+      } else {
+        console.error("Either divisor or slider element is not found.");
+      }
     });
   </script>
 
@@ -500,7 +495,7 @@ const metadata = {
 }
 
 .services .title a {
-  color: #444444;
+  color: #ffffff;
   transition: 0.3s;
 }
 
@@ -521,7 +516,32 @@ const metadata = {
 
 .services .description {
   line-height: 24px;
-  font-size: 14px;
+  font-size: 18px;
 }
 
+.t-w {
+  color: white !important;
+}
+.text-m1 {
+  font-size: x-large ;
+}
+.services-components {
+  border: 1px solid var(--accent-color);
+  transition: all 0.5s ease-in;
+}
+
+iconify-icon.services-icon {
+  font-size: 80px;
+  color: var(--accent-color);
+  transition: all 0.5s ease-in;
+}
+
+.services-heading {
+  transition: all 0.5s ease-in;
+}
+
+.service-btn {
+  transition: all 0.5s ease-in;
+
+}
 </style>
