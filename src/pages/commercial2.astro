@@ -25,6 +25,8 @@ import Features3 from '~/components/widgets/Features3.astro';
 import Content from '~/components/widgets/Content.astro';
 import Before from '~/components/widgets/Beforee.astro';
 
+import Carrousel from '~/components/widgets/Carrousel.astro';
+
 const metadata = {
   title: 'Services De Construction Pour Commerces - K-Constructions',
   ignoreTitleTemplate: true,
@@ -61,6 +63,45 @@ const metadata = {
         default:
           break;
       }
+    });
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Ensure Swiper's JS and any dependencies are fully loaded
+      // You may need to adjust this path based on where Swiper's JS is located
+      var script = document.createElement('script');
+      script.src = 'https://unpkg.com/swiper/swiper-bundle.min.js';
+      script.onload = function() {
+        // Initialize Swiper after the script is loaded
+        var swiper = new Swiper('.project-swiper', {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          loop: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.icon-arrow-right',
+            prevEl: '.icon-arrow-left',
+          },
+          breakpoints: {
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 30,
+            },
+          }
+        });
+      };
+      document.head.appendChild(script);
     });
   </script>
     <!-- END SCRIPT NEEDED FOR ACCORDEON -->
@@ -304,6 +345,8 @@ const metadata = {
 
 
   <Adresse />
+
+  <Carrousel />
 
 <!-- <Allservices
  /> -->
