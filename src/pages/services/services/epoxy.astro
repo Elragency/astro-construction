@@ -384,7 +384,45 @@ const metadata = {
   <script src="~/assets/js/plugins.js"></script>
   <script src="~/assets/js/script.js"></script>
 
-
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Ensure Swiper's JS and any dependencies are fully loaded
+      // You may need to adjust this path based on where Swiper's JS is located
+      var script = document.createElement('script');
+      script.src = 'https://unpkg.com/swiper/swiper-bundle.min.js';
+      script.onload = function() {
+        // Initialize Swiper after the script is loaded
+        var swiper = new Swiper('.project-swiper', {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          loop: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.icon-arrow-right',
+            prevEl: '.icon-arrow-left',
+          },
+          breakpoints: {
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 30,
+            },
+          }
+        });
+      };
+      document.head.appendChild(script);
+    });
+  </script>
 
   <!-- <script src="~/assets/js/shortcodes.js"></script> -->
 </Layout>
