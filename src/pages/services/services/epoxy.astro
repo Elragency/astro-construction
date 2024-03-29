@@ -14,7 +14,7 @@ import Before from '~/components/widgets/Before-epoxy.astro';
 import PortfolioA from '~/components/widgets/PortfolioA.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
-
+import Carrousel from '~/components/widgets/Carrousel.astro';
 
 import { otherprojects } from '~/components/ui/otherprojects.json';
 
@@ -69,6 +69,42 @@ const metadata = {
   <!-- Hero Widget ******************* -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="~/assets/js/jquery-1.11.0.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper('.project-swiper', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.icon-arrow-right',
+        prevEl: '.icon-arrow-left',
+      },
+      breakpoints: {
+        // when window width is >= 640px
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        // when window width is >= 768px
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+        // when window width is >= 1024px
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 30,
+        },
+      }
+    });
+  </script>
+  
+
 
 
   <!-- <script src="~/assets/js/modernizr.js"></script> -->
@@ -87,8 +123,8 @@ const metadata = {
             <img
               class="w-full h-full object-cover"
               loading="eager"
-              src="https://raw.githubusercontent.com/Elragency/astro-construction/main/src/assets/images/banners/banner-epoxy.webp"
-              alt="Les meilleurs services d'epoxy:  k-constructions"
+              src="https://raw.githubusercontent.com/Elragency/astro-construction/main/src/assets/images/banners/banner-epoxyf.webp"
+              alt="Les meilleurs services d'epoxy: k-constructions"
             />
           </div>
       
@@ -194,14 +230,84 @@ const metadata = {
   />
 
 <Before />
-
+<br><br>
   <Content
   isAfterContent
   items={[
     {
-      title: 'Service rapide et au meilleur prix',
-      description: "Offres compétitives: Nous proposons les meilleurs tarifs du marché, sans compromettre la qualité de nos services.",
+      title: "Service rapide et au meilleur prix",
+      description: "Offres compétitives: K-Constructions propose des tarifs avantageux pour vos projets de planchers en Epoxy, garantissant un excellent rapport qualité-prix sans compromettre le résultat final.",
       icon: 'tabler:discount-check-filled',
+    },
+    {
+      title: "Une expertise reconnue en Epoxy",
+      description: "Expertise technique: Notre équipe d'experts en Epoxy est hautement qualifiée, assurant une application précise et durable de vos revêtements de sol, adaptée à chaque espace.",
+      icon: 'tabler:crane',
+    },
+    {
+      title: "Garantie Complète sur l'Epoxy",
+      description: "Garantie de satisfaction: K-Constructions s'engage à fournir une finition de haute qualité pour vos planchers en Epoxy, avec une garantie solide sur nos services pour assurer votre entière satisfaction.",
+      icon: 'tabler:refresh',
+    },
+  ]}
+  image={{
+    src: 'https://raw.githubusercontent.com/Elragency/astro-construction/main/src/assets/images/Pages/epoxy/expoxyapplication.webp',
+    alt: "service d'epoxy de k-constructions",
+  }}>
+  </Content>
+
+  <section id="offrea" class="my-5">
+    <div class="container mx-auto ">
+      <div class="flex justify-center ">
+        <h2 class="text-1xl font-bold mb-4 test">
+          Notre offre en Epoxy
+      </h2>
+        
+      </div>
+        <div class="flex justify-center">
+  
+        <div class="flex flex-wrap -mx-4">
+            <div class="mt-4 px-4 w-full md:w-1/2 lg:w-1/4">
+                <div class="text-center py-10 px-6 shadow-lg rounded-lg">
+                    <iconify-icon class="text-3xl my-2" icon="mdi:floor-plan"></iconify-icon>
+                    <h5 class="text-xl font-semibold mb-3">Revêtement Complet</h5>
+                    <p>Transformez votre espace avec des sols en Epoxy résistants et esthétiques.</p>
+                </div>
+            </div>
+            <div class="mt-4 px-4 w-full md:w-1/2 lg:w-1/4">
+                <div class="text-center py-10 px-6 shadow-lg rounded-lg">
+                    <iconify-icon class="text-3xl my-2" icon="mdi:format-color-fill"></iconify-icon>
+                    <h5 class="text-xl font-semibold mb-3">Personnalisation</h5>
+                    <p>Choisissez parmi une large gamme de couleurs et finitions pour un look unique.</p>
+                </div>
+            </div>
+            <div class="mt-4 px-4 w-full md:w-1/2 lg:w-1/4">
+                <div class="text-center py-10 px-6 shadow-lg rounded-lg">
+                    <iconify-icon class="text-3xl my-2" icon="mdi:toolbox-outline"></iconify-icon>
+                    <h5 class="text-xl font-semibold mb-3">Entretien & Réparation</h5>
+                    <p>Nos services d'entretien et de réparation assurent la longévité de votre sol en Epoxy.</p>
+                </div>
+            </div>
+            <div class="mt-4 px-4 w-full md:w-1/2 lg:w-1/4">
+                <div class="text-center py-10 px-6  shadow-lg rounded-lg">
+                    <iconify-icon class="text-3xl my-2" icon="mdi:shield-check"></iconify-icon>
+                    <h5 class="text-xl font-semibold mb-3">Durabilité Garantie</h5>
+                    <p>Investissez dans la durabilité avec nos solutions de plancher en Epoxy de haute qualité.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  
+  <Content
+  isAfterContent
+  title="Pour un plancher d'Epoxy réussi"
+  tagline="Les Étapes"
+  items={[
+    {
+      title: "Préparation de la surface",
+      description: "La première étape cruciale consiste à préparer la surface pour assurer une adhérence optimale de l'Epoxy. Cela inclut le nettoyage, le dégraissage et le ponçage du sol pour éliminer toute impureté qui pourrait empêcher la résine de se fixer correctement.",
+      icon: "tabler:brush",
     },
     {
       title: 'Une expertise dans notre domaine',
@@ -216,53 +322,17 @@ const metadata = {
     },
   ]}
   image={{
-    src: 'https://raw.githubusercontent.com/Elragency/astro-construction/main/src/assets/images/Pages/epoxy/expoxyapplication.webp',
+    src: 'https://raw.githubusercontent.com/Elragency/astro-construction/main/src/assets/images/Pages/epoxy/kepoxy-doing.webp',
     alt: "service d'epoxy de k-constructions",
-  }}></Content>
+  }}>
+  </Content>
 
-  <section id="offrea" class="my-5">
-    <div class="container mx-auto ">
-      <div class="flex justify-center pb-4">
-        <h2 class="text-1xl font-bold mb-4 test">
-          Notre offre
-      </h2>
-        
-      </div>
-        <div class="flex justify-center pb-4">
+  <Carrousel />
 
-        <div class="flex flex-wrap -mx-4">
-            <div class="mt-4 px-4 w-full md:w-1/2 lg:w-1/4">
-                <div class="text-center py-10 px-6 shadow-lg rounded-lg">
-                    <iconify-icon class="text-3xl my-2" icon="mdi:home-roof"></iconify-icon>
-                    <h5 class="text-xl font-semibold mb-3">Remplacement Complet</h5>
-                    <p>Renouvelez votre toit avec expertise et durabilité.</p>
-                </div>
-            </div>
-            <div class="mt-4 px-4 w-full md:w-1/2 lg:w-1/4">
-                <div class="text-center py-10 px-6 shadow-lg rounded-lg">
-                    <iconify-icon class="text-3xl my-2" icon="mdi:weather-lightning"></iconify-icon>
-                    <h5 class="text-xl font-semibold mb-3">Urgences</h5>
-                    <p>Intervention rapide et fiable pour vos urgences.</p>
-                </div>
-            </div>
-            <div class="mt-4 px-4 w-full md:w-1/2 lg:w-1/4">
-                <div class="text-center py-10 px-6 shadow-lg rounded-lg">
-                    <iconify-icon class="text-3xl my-2" icon="mdi:hammer"></iconify-icon>
-                    <h5 class="text-xl font-semibold mb-3">Réparations</h5>
-                    <p>Des réparations efficaces pour une toiture solide.</p>
-                </div>
-            </div>
-            <div class="mt-4 px-4 w-full md:w-1/2 lg:w-1/4">
-                <div class="text-center py-10 px-6  shadow-lg rounded-lg">
-                    <iconify-icon class="text-3xl my-2" icon="mdi:white-balance-sunny"></iconify-icon>
-                    <h5 class="text-xl font-semibold mb-3">Panneaux Solaires</h5>
-                    <p>Modernisez votre toit avec des solutions solaires.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-  </section>
-  
+
+
+
+
 
   <Adresse />
 
@@ -300,6 +370,12 @@ const metadata = {
       crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <script src="~/assets/js/jquery-1.11.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="~/assets/js/plugins.js"></script>
+  <script src="~/assets/js/script.js"></script>
 
   <!-- <script src="~/assets/js/shortcodes.js"></script> -->
 </Layout>
