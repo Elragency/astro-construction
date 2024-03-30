@@ -8,7 +8,7 @@ export const headerData = {
     },
     {
       text: 'À Propos',
-      href: getPermalink('/propos'),
+      href: getPermalink('/kconstructions'),
     },
     // {
     //   text: 'À Propos',
@@ -106,9 +106,9 @@ export const footerData = {
     {
       title: 'À Propos',
       links: [
-        { text: 'K-CONSTRUCTIONS', href: '/propos' },
-        { text: 'Mission', href: '/propos' },
-        { text: 'Team', href: '/propos' },
+        { text: 'K-CONSTRUCTIONS', href: '/kconstructions' },
+        { text: 'Mission', href: '/kconstructions' },
+        { text: 'Team', href: '/kconstructions' },
         // { text: 'Enterprise', href: '#' },
         // { text: 'Customer stories', href: '#' },
         // { text: 'Pricing', href: '#' },
