@@ -48,18 +48,14 @@ export const headerData = {
           text: 'Exterior Renovations',
           href: getPermalink('/en/services/renos-ext'),
         },
-        // {
-        //   text: 'Product Details (or Services)',
-        //   href: getPermalink('/services/product'),
-        // },
-        // {
-        //   text: 'Coming Soon or Pre-Launch',
-        //   href: getPermalink('/services/pre-launch'),
-        // },
-        // {
-        //   text: 'Subscription',
-        //   href: getPermalink('/services/subscription'),
-        // },
+        {
+          text: 'Services For Condos',
+          href: getPermalink('/en/condos'),
+        },
+        {
+          text: 'Commercial Service',
+          href: getPermalink('/en/commercial'),
+        },
       ],
     },
 
@@ -93,6 +89,7 @@ export const headerData = {
       text: 'Contact',
       href: getPermalink('/en/contact'),
     },
+    
     {
       text: 'FR',
       href: getPermalink('/'),
@@ -121,6 +118,8 @@ export const footerData = {
         { text: 'Interior', href: '/en/services/renos-int' },
         { text: 'Exterior', href: '/en/services/renos-ext' },
         { text: 'Services', href: '/en/services/services' },
+        { text: 'Condos', href: '/en/condos' },
+        { text: 'Commercial', href: '/en/commercial' },
         // { text: 'Electron', href: '#' },
         // { text: 'AstroWind Desktop', href: '#' },
       ],
