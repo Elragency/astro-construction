@@ -263,13 +263,20 @@ const {
         opacity: 1;
         visibility: visible;
     }
-    
-    
+
+    /* Mobile screens */
+    @media (max-width: 768px) {
     .img-fluid {
-        max-width: 100%;
-        height: 580px;
+        max-width: 10vw; /* Use a percentage of the viewport width */
+        height: 10vw; /* Keep the square aspect ratio */
     }
+}
     
+/* Big screens - No media query needed since these are the default styles */
+.img-fluid {
+    max-width: 80vh;
+    height: 80vh;
+}
     .text-white {
         --bs-text-opacity: 1;
         color: rgba(var(white), var(--bs-text-opacity)) !important;

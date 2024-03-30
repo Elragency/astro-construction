@@ -1,5 +1,5 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
+import Layout from '~/layouts/En-PageLayout.astro';
 
 import Hero3 from '~/components/widgets/Hero3.astro';
 import Allservices from '~/components/widgets/allservices.astro';
@@ -18,17 +18,18 @@ import { otherprojects } from '~/components/ui/otherprojects.json';
 
 import About from '~/components/common/About.astro';
 
-import Contact from '~/components/widgets/elr-contact.astro';
 import Image from '~/components/common/Image.astro';
-import Adresse from '~/components/widgets/Adresse.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import Content from '~/components/widgets/Content.astro';
+
+import Contact from '~/components/widgets/En/En-elr-contact.astro';
+import Adresse from '~/components/widgets/En/En-Adresse.astro';
 
 
 
 
 const metadata = {
-  title: "Services D'Entretien Menager - K-Constructions",
+  title: 'Best Cleaning Services For You Or Your Business - K-Constructions',
   ignoreTitleTemplate: true,
 };
 ---
@@ -128,21 +129,21 @@ const metadata = {
               class="w-full h-full object-cover"
               loading="eager"
               src="https://raw.githubusercontent.com/Elragency/astro-construction/main/src/assets/images/banners/banner-menage.webp"
-              alt="le service d'entretien menager Kleaning"
+              alt="the best cleaning services: Kleaning"
             />
           </div>
       
           <!-- Text content section -->
           <div class="relative z-10 text-center">
             <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase pb-1">
-              Notre Division de nettoyage
+              Our Cleaning Division
             </p>
-            <h1 class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200">
-              Kleaning: La propreté qu'il vous faut!
+            <h1 class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-white">
+              Kleaning: <br>The cleanliness you need!
             </h1>
             <a href="#soumission">
               <button type="button" class="btn btn-outline-orange inline-block text-white py-3 px-4 rounded mt-1 ml-0 md:ml-6 mb-2">
-                Soumission Gratuite!
+                Get Your Free Quote!
               </button>
             </a>
             <!-- Additional content can be added here -->
@@ -158,16 +159,16 @@ const metadata = {
       <div class="container mx-auto px-4 py-6 border-b">
         <div class="flex flex-wrap -mx-4">
           <div class="w-full md:w-1/2 px-4 py-6 mb-4 md:mb-0 border-r padding-body" data-aos="fade-left" data-aos-duration="2000">
-            <p class="text-xl mb-3" style="color:#ff3c00">POURQUOI NOUS?</p>
-            <h2 class="text-2xl font-bold mb-4 test">ENTRETIEN MÉNAGER ET CONCIERGERIE: L'EXCELLENCE AU QUOTIDIEN</h2>
+            <p class="text-xl mb-3" style="color:#ff3c00">WHY US?</p>
+            <h2 class="text-2xl font-bold mb-4 test">HOUSEKEEPING AND CONCIERGE: EXCELLENCE ON A DAILY BASIS</h2>
           </div>
           <div class="w-full md:w-1/2 px-4 pt-2 padding-body" data-aos="fade-right" data-aos-duration="2000">
             <p class="ml-0 md:ml-6 font-body pb-4">
-              K-Constructions est fier d'étendre son expertise au service d'entretien ménager et de conciergerie, offrant des solutions complètes pour maintenir votre espace de vie ou de travail dans un état impeccable. Notre équipe dédiée et professionnelle est engagée à fournir un niveau de propreté et d'organisation exceptionnel, adapté à vos besoins spécifiques. Que ce soit pour des espaces commerciaux, industriels ou résidentiels, nos services personnalisés sont conçus pour garantir votre satisfaction et votre tranquillité d'esprit. <br><br>
-              Nous nous engageons à utiliser des produits de nettoyage écologiques et des méthodes efficaces, assurant ainsi un environnement sain et propre. Découvrez comment K-Constructions peut transformer votre routine de nettoyage grâce à notre expertise en entretien ménager et conciergerie.
+              K-Constructions is proud to extend its expertise to housekeeping and concierge services, offering comprehensive solutions to keep your living or working space in impeccable condition. Our dedicated and professional team is committed to providing an exceptional level of cleanliness and organization, tailored to your specific needs. Whether for commercial, industrial, or residential spaces, our customized services are designed to ensure your satisfaction and peace of mind. <br><br>
+              We are committed to using eco-friendly cleaning products and effective methods, thereby ensuring a healthy and clean environment. Discover how K-Constructions can transform your cleaning routine with our expertise in housekeeping and concierge services.
             </p>
             <a href="#soumission" class="btn btn-outline-orange inline-block bg-primary text-white py-3 px-4 rounded mt-1 ml-0 md:ml-6 mb-2">
-              Contactez-nous
+              Contact Us
               <iconify-icon icon="tabler:arrow-right" class="inline-block ml-2"></iconify-icon>
             </a>
           </div>
@@ -176,157 +177,156 @@ const metadata = {
     </div>
   </section>
   
-
-
   <!-- FAQs Widget ******************* -->
-
+  
   <FAQs
-  title="Nos Services d'Entretien Ménager et de Conciergerie"
-  subtitle="Les services d'entretien ménager et de conciergerie de K-Constructions garantissent une propreté impeccable et une gestion efficace de vos espaces. Notre approche est conçue pour répondre aux besoins spécifiques de chaque client, offrant un environnement sain et accueillant pour les espaces commerciaux, industriels et résidentiels. En choisissant nos services, vous bénéficiez d'une expertise reconnue pour maintenir votre espace propre, organisé et fonctionnel."
-  tagline="Excellence et Fiabilité à Votre Service"
+  title="Our Housekeeping and Concierge Services"
+  subtitle="K-Constructions' housekeeping and concierge services ensure impeccable cleanliness and efficient management of your spaces. Our approach is designed to meet the specific needs of each client, offering a healthy and welcoming environment for commercial, industrial, and residential spaces. By choosing our services, you benefit from recognized expertise in maintaining your space clean, organized, and functional."
+  tagline="Excellence and Reliability at Your Service"
   columns={1}
   classes={{ container: 'max-w-6xl' }}
   items={[
     {
-      title: "Pourquoi choisir notre service d'entretien ménager?",
+      title: "Why choose our housekeeping service?",
       description:
-      "Opter pour le service d'entretien ménager de K-Constructions, c'est s'assurer d'une propreté sans compromis et d'un service fiable. Notre équipe d'experts utilise des techniques de nettoyage avancées et des produits écologiques pour offrir des résultats exceptionnels. Nous comprenons l'importance d'un environnement propre pour le bien-être des occupants et nous engageons à fournir un service de qualité supérieure, adapté aux horaires et aux exigences spécifiques de chaque client.",
+      "Opting for K-Constructions' housekeeping service ensures uncompromising cleanliness and reliable service. Our team of experts uses advanced cleaning techniques and eco-friendly products to deliver exceptional results. We understand the importance of a clean environment for the well-being of occupants and commit to providing a superior quality service, tailored to the schedules and specific requirements of each client.",
     },
     {
-      title: "Avantages de notre service de conciergerie",
+      title: "Benefits of our concierge service",
       description:
-      "Notre service de conciergerie va au-delà du simple nettoyage. Il englobe une gamme complète de tâches visant à faciliter la gestion quotidienne de vos espaces. De la maintenance préventive à la gestion des déchets, en passant par le contrôle des accès et l'assistance aux occupants, K-Constructions vous assure un service tout-en-un. Notre objectif est de vous libérer des contraintes liées à l'entretien et à la gestion de bâtiment, vous permettant ainsi de vous concentrer sur votre cœur de métier."
+      "Our concierge service goes beyond mere cleaning. It encompasses a comprehensive range of tasks aimed at easing the daily management of your spaces. From preventive maintenance to waste management, access control, and occupant assistance, K-Constructions provides you with an all-in-one service. Our goal is to free you from the burdens associated with maintenance and building management, allowing you to focus on your core business."
     },
   ]}
-/>
-
+  />
   
-<Content
-isAfterContent
-items={[
-  {
-    title: "Entretien et conciergerie : Qualité et prix compétitifs",
-    description: "K-Constructions offre des services d'entretien ménager et de conciergerie à des tarifs compétitifs, sans jamais compromettre la qualité. Nous veillons à fournir le meilleur rapport qualité-prix pour maintenir vos espaces propres et accueillants.",
-    icon: 'tabler:discount-check-filled',
-  },
-  {
-    title: "Expertise en entretien ménager et conciergerie",
-    description: "Notre équipe spécialisée dans l'entretien ménager et la conciergerie possède une expertise reconnue, garantissant un service impeccable adapté à vos besoins spécifiques, que ce soit pour des espaces commerciaux, résidentiels ou industriels.",
-    icon: 'tabler:crane',
-  },
-  {
-    title: "Engagement complet envers la satisfaction client",
-    description: "Nous nous engageons à assurer votre satisfaction totale à travers nos services d'entretien ménager et de conciergerie, appuyés par une garantie de service qui témoigne de notre dévouement à l'excellence.",
-    icon: 'tabler:refresh',
-  },
-]}
-image={{
-  src: 'https://raw.githubusercontent.com/Elragency/astro-construction/main/src/assets/images/Pages/Cleaning/cleaning2.webp',
-  alt: "service d'entretien ménager et de conciergerie de K-Constructions",
-}}>
-</Content>
-
-
-
-
-<section id="services" class="services m-4">
-  <div class="container mx-auto">
-
-    <div class="flex justify-center pb-4">
-      <h2 class="text-3xl font-bold mb-4 test">
-        Nos Services d'Entretien
-    </h2>
-      
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" >
-      <div class="col-span-1">
-        <div class="icon-box">
-          <div class="icon"><iconify-icon icon="ic:baseline-delete-sweep" width="48" height="48"></iconify-icon></div>
-          <h4 class="title"><a href="#">Nettoyage et Ramassage de Déchets</a></h4>
-          <p class="description">Des services de nettoyage et de ramassage de déchets complets pour maintenir vos espaces propres et ordonnés.</p>
-        </div>
-      </div>
-      <div class="col-span-1">
-        <div class="icon-box">
-          <div class="icon"><iconify-icon icon="healthicons:cleaning" width="48" height="48"></iconify-icon></div>
-          <h4 class="title"><a>Entretien Ménager</a></h4>
-          <p class="description">Un service d'entretien ménager complet pour assurer la propreté et l'hygiène de vos espaces de vie et de travail.</p>
-        </div>
-      </div>
-      <div class="col-span-1">
-        <div class="icon-box">
-          <div class="icon"><iconify-icon icon="bx:bxs-building-house" width="48" height="48"></iconify-icon></div>
-          <h4 class="title"><a>Conciergerie pour Condo</a></h4>
-          <p class="description">Des solutions de conciergerie personnalisées pour les condos, garantissant le confort et la sécurité des résidents.</p>
-        </div>
-      </div>
-      <div class="col-span-1">
-        <div class="icon-box">
-          <div class="icon"><iconify-icon icon="mdi:garage" width="48" height="48"></iconify-icon></div>
-          <h4 class="title"><a>Nettoyage de Garage</a></h4>
-          <p class="description">Services de nettoyage de garage pour éliminer saletés et débris, maintenant un espace ordonné et fonctionnel.</p>
-        </div>
-      </div>
-      <div class="col-span-1">
-        <div class="icon-box">
-          <div class="icon"><iconify-icon icon="healthicons:virus-outline" width="48" height="48"></iconify-icon></div>
-          <h4 class="title"><a>Désinfection et Assainissement</a></h4>
-          <p class="description">Un service de désinfection approfondie pour combattre virus et bactéries, assurant un environnement de travail et de vie sécurisé.</p>
-        </div>
-      </div>
-      <div class="col-span-1">
-        <div class="icon-box">
-          <div class="icon"><iconify-icon icon="bi:window" width="48" height="48"></iconify-icon></div>
-          <h4 class="title"><a>Nettoyage de Vitres</a></h4>
-          <p class="description">Services professionnels de nettoyage de vitres pour une clarté impeccable, améliorant l'esthétique et la luminosité de vos espaces.</p>
-        </div>
-      </div>
-  </div>
-  <div class="flex justify-center">
-    <a href="#soumission" class="btn px-3 py-2">Soumission Gratuite</a>
-  </div>
-</section>
-
-
-  <Stats
-  stats={[
-    { title: '+ Clients', amount: '1900' },
-    { title: '+ Projets', amount: '2100' },
-    { title: "Année d'expérience", amount: '25' },
-    { title: '+ Employés', amount: '15' },
+  <Content
+  isAfterContent
+  items={[
+    {
+      title: "Maintenance and Concierge: Quality and Competitive Pricing",
+      description: "K-Constructions offers housekeeping and concierge services at competitive rates, never compromising on quality. We strive to provide the best value for money to keep your spaces clean and welcoming.",
+      icon: 'tabler:discount-check-filled',
+    },
+    {
+      title: "Expertise in Housekeeping and Concierge Services",
+      description: "Our team specialized in housekeeping and concierge services possesses recognized expertise, guaranteeing impeccable service tailored to your specific needs, whether for commercial, residential, or industrial spaces.",
+      icon: 'tabler:crane',
+    },
+    {
+      title: "Full Commitment to Customer Satisfaction",
+      description: "We are committed to ensuring your total satisfaction through our housekeeping and concierge services, supported by a service guarantee that reflects our dedication to excellence.",
+      icon: 'tabler:refresh',
+    },
   ]}
-/>
+  image={{
+    src: 'https://raw.githubusercontent.com/Elragency/astro-construction/main/src/assets/images/Pages/Cleaning/cleaning2.webp',
+    alt: "K-Constructions' housekeeping and concierge service",
+  }}>
+  </Content>
+  
+
+  <section id="services" class="services m-4">
+    <div class="container mx-auto">
+  
+      <div class="flex justify-center pb-4">
+        <h2 class="text-3xl font-bold mb-4 test">
+          Our Maintenance Services
+      </h2>
+        
+      </div>
+  
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" >
+        <div class="col-span-1">
+          <div class="icon-box">
+            <div class="icon"><iconify-icon icon="ic:baseline-delete-sweep" width="48" height="48"></iconify-icon></div>
+            <h4 class="title"><a href="#">Cleaning and Waste Pickup</a></h4>
+            <p class="description">Comprehensive cleaning and waste pickup services to keep your spaces clean and organized.</p>
+          </div>
+        </div>
+        <div class="col-span-1">
+          <div class="icon-box">
+            <div class="icon"><iconify-icon icon="healthicons:cleaning" width="48" height="48"></iconify-icon></div>
+            <h4 class="title"><a>Housekeeping</a></h4>
+            <p class="description">A complete housekeeping service to ensure the cleanliness and hygiene of your living and working spaces.</p>
+          </div>
+        </div>
+        <div class="col-span-1">
+          <div class="icon-box">
+            <div class="icon"><iconify-icon icon="bx:bxs-building-house" width="48" height="48"></iconify-icon></div>
+            <h4 class="title"><a>Condo Concierge</a></h4>
+            <p class="description">Custom concierge solutions for condos, ensuring the comfort and safety of residents.</p>
+          </div>
+        </div>
+        <div class="col-span-1">
+          <div class="icon-box">
+            <div class="icon"><iconify-icon icon="mdi:garage" width="48" height="48"></iconify-icon></div>
+            <h4 class="title"><a>Garage Cleaning</a></h4>
+            <p class="description">Garage cleaning services to remove dirt and debris, keeping a tidy and functional space.</p>
+          </div>
+        </div>
+        <div class="col-span-1">
+          <div class="icon-box">
+            <div class="icon"><iconify-icon icon="healthicons:virus-outline" width="48" height="48"></iconify-icon></div>
+            <h4 class="title"><a>Disinfection and Sanitization</a></h4>
+            <p class="description">A thorough disinfection service to fight against viruses and bacteria, ensuring a safe working and living environment.</p>
+          </div>
+        </div>
+        <div class="col-span-1">
+          <div class="icon-box">
+            <div class="icon"><iconify-icon icon="bi:window" width="48" height="48"></iconify-icon></div>
+            <h4 class="title"><a>Window Cleaning</a></h4>
+            <p class="description">Professional window cleaning services for impeccable clarity, enhancing the aesthetics and brightness of your spaces.</p>
+          </div>
+        </div>
+    </div>
+    <div class="flex justify-center">
+      <a href="#soumission" class="btn px-3 py-2">Free Quote</a>
+    </div>
+  </section>
+  
+
+
+    <!-- Stats Widget ****************** -->
+
+    <Stats
+    stats={[
+      { title: '+ Clients', amount: '1900' },
+      { title: '+ Projects', amount: '2100' },
+      { title: "Years of Experience", amount: '25' },
+      { title: '+ Employees', amount: '15' },
+    ]}
+  />
 
   
   
-<Content
-isAfterContent
-title="Excellence en Entretien et Conciergerie"
-tagline="Nos Engagements"
-items={[
-  {
-    title: "Nettoyage et Ramassage de Déchets",
-    description: "Notre service commence par un nettoyage approfondi et le ramassage de tous types de déchets, assurant une propreté et une hygiène irréprochables de vos espaces. Nous utilisons des méthodes écologiques pour respecter l'environnement tout en garantissant un résultat impeccable.",
-    icon: "tabler:truck-loading",
-  },
-  {
-    title: 'Désinfection et Assainissement',
-    description:
-      "Nous offrons un service de désinfection et d'assainissement complet, utilisant des produits certifiés et écologiques pour éliminer les virus, bactéries et autres agents pathogènes. Notre équipe est formée aux meilleures pratiques pour assurer la sécurité et le bien-être de tous les occupants.",
-    icon: 'tabler:shield-check',
-  },
-  {
-    title: 'Service Personnalisé et Flexible',
-    description: "Chaque espace est unique, c'est pourquoi nous offrons un service entièrement personnalisable selon vos besoins spécifiques. Que ce soit pour des interventions ponctuelles ou un entretien régulier, notre flexibilité et notre attention aux détails garantissent votre satisfaction.",
-    icon: 'tabler:needle-thread',
-  },
-]}
-image={{
-  src: 'https://raw.githubusercontent.com/Elragency/astro-construction/main/src/assets/images/Pages/Cleaning/cleaning.webp',
-  alt: "services d'entretien de K-Constructions",
-}}>
-</Content>
+  <Content
+  isAfterContent
+  title="Excellence in Maintenance and Concierge Services"
+  tagline="Our Commitments"
+  items={[
+    {
+      title: "Cleaning and Waste Pickup",
+      description: "Our service begins with thorough cleaning and the collection of all types of waste, ensuring impeccable cleanliness and hygiene of your spaces. We use environmentally friendly methods to respect the environment while guaranteeing impeccable results.",
+      icon: "tabler:truck-loading",
+    },
+    {
+      title: 'Disinfection and Sanitization',
+      description:
+        "We offer a complete disinfection and sanitization service, using certified and eco-friendly products to eliminate viruses, bacteria, and other pathogens. Our team is trained in the best practices to ensure the safety and well-being of all occupants.",
+      icon: 'tabler:shield-check',
+    },
+    {
+      title: 'Customized and Flexible Service',
+      description: "Every space is unique, which is why we offer a fully customizable service according to your specific needs. Whether for one-time interventions or regular maintenance, our flexibility and attention to detail guarantee your satisfaction.",
+      icon: 'tabler:needle-thread',
+    },
+  ]}
+  image={{
+    src: 'https://raw.githubusercontent.com/Elragency/astro-construction/main/src/assets/images/Pages/Cleaning/cleaning.webp',
+    alt: "K-Constructions' maintenance services",
+  }}>
+  </Content>
+  
 
 
 
@@ -346,23 +346,21 @@ image={{
     actions={[
       {
         variant: 'secondary',
-        text: 'APPELEZ-NOUS!',
+        text: 'CALL US RIGHT NOW',
         href: 'tel:4388625985',
         // target: '_blank',
         icon: 'tabler:phone',
       },
     ]}
   >
-
-
   
-    <Fragment slot="title">
-      CONTACTEZ-NOUS <br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Immédiatement</span>
-    </Fragment>
+  <Fragment slot="title">
+    CONTACT US<br class="block sm:hidden" /><span class="sm:whitespace-nowrap"> immediately</span>
+  </Fragment>
 
-    <Fragment slot="subtitle">
-      Pour transformer vos rêves en réalités. 
-    </Fragment>
+  <Fragment slot="subtitle">
+    Transform your dreams into reality
+  </Fragment>
   </CallToAction>
 
   

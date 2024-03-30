@@ -223,7 +223,7 @@ const metadata = {
     },
     {
       title: 'Material Selection:',
-      description: "Satisfaction guarantee: We commit to delivering an exceptional level of finish, supported by a warranty on our roofing work.",
+      description: "Satisfaction guarantee: We commit to delivering an exceptional level of finish, supported by a warranty on our kitchen work.",
       icon: 'tabler:refresh',
     },
     {
@@ -233,14 +233,57 @@ const metadata = {
     },
   ]}
   image={{
-    src: 'https://images.unsplash.com/photo-1503594384566-461fe158e797?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    alt: 'Kitchen made by K-Constructions',
+    src: 'https://raw.githubusercontent.com/Elragency/astro-construction/main/src/assets/images/Pages/about/aboutmain.webp',
+    alt: 'Kitchen being designed by K-Constructions',
   }}
 >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">The PROCESS</h3>
     </Fragment>
   </Content>
+
+  <Features
+  id="features"
+  title="Features of Our Kitchen Renovations"
+  subtitle="Our kitchen renovation projects offer key features to meet our clients' needs."
+  columns={3}
+  items={[
+    {
+      title: 'Custom Design',
+      description:
+        'We create unique designs that reflect the latest trends and are tailored to your specific needs for a kitchen that is both functional and aesthetic.',
+      icon: 'tabler:layout-dashboard',
+    },
+    {
+      title: 'Optimal Use of Space',
+      description: 'Our designs maximize the available space, improving the functionality and comfort of your kitchen.',
+      icon: 'tabler:space',
+    },
+    {
+      title: 'High-Quality Materials',
+      description:
+        'We use only high-quality materials to ensure the durability of your kitchen and its resistance over time.',
+      icon: 'tabler:tools-kitchen-2',
+    },
+    {
+      title: 'Innovative Storage Solutions',
+      description: 'Our kitchens are equipped with smart storage solutions for an always organized and practical space.',
+      icon: 'tabler:layout-grid',
+    },
+    {
+      title: 'Customized Lighting',
+      description:
+        'The lighting is custom-designed to create a warm ambiance and highlight the design elements of your kitchen.',
+      icon: 'tabler:bulb',
+    },
+    {
+      title: 'Professional Installation',
+      description: 'Our team of experts takes care of the complete installation, ensuring a perfect finish and strict adherence to deadlines.',
+      icon: 'tabler:hammer',
+    },
+  ]}
+/>
+
 
   <Adresse />
 

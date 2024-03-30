@@ -1,0 +1,549 @@
+---
+import Layout from '~/layouts/En-PageLayout.astro';
+
+import Hero3 from '~/components/widgets/Hero3.astro';
+import Allservices from '~/components/widgets/allservices.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import PortfolioA from '~/components/widgets/PortfolioA.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+import { otherprojects } from '~/components/ui/otherprojects.json';
+
+import About from '~/components/common/About.astro';
+
+import Image from '~/components/common/Image.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Content from '~/components/widgets/Content.astro';
+import Before from '~/components/widgets/Beforee.astro';
+
+import Carrousel from '~/components/widgets/Carrousel.astro';
+
+import Contact from '~/components/widgets/En/En-elr-contact.astro';
+import Adresse from '~/components/widgets/En/En-Adresse.astro';
+
+const metadata = {
+  title: "Professional Residential or Commercial Epoxy Services at the best price - K-Constructions",
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  
+  <!-- BEGINNING SCRIPT NEEDED FOR ACCORDEON -->
+  <script>
+    const accordion = document.getElementById("acordeon");
+    if (!accordion) throw new ReferenceError();
+  
+    accordion.addEventListener("click", (e) => {
+      const target = e.target as HTMLElement;
+      const dataset = { ...target.dataset };
+  
+      const content = target.nextElementSibling as HTMLElement;
+      const arrow = target.querySelector("img") as HTMLElement;
+  
+      if (!arrow || !content) throw new ReferenceError();
+  
+      switch (dataset.status) {
+        case "disabled":
+          content.style.gridTemplateRows = "1fr";
+          target.dataset.status = "enabled";
+          arrow.style.rotate = "90deg";
+          break;
+        case "enabled":
+          content.style.gridTemplateRows = "0fr";
+          target.dataset.status = "disabled";
+          arrow.style.rotate = "0deg";
+          break;
+        default:
+          break;
+      }
+    });
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Ensure Swiper's JS and any dependencies are fully loaded
+      // You may need to adjust this path based on where Swiper's JS is located
+      var script = document.createElement('script');
+      script.src = 'https://unpkg.com/swiper/swiper-bundle.min.js';
+      script.onload = function() {
+        // Initialize Swiper after the script is loaded
+        var swiper = new Swiper('.project-swiper', {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          loop: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.icon-arrow-right',
+            prevEl: '.icon-arrow-left',
+          },
+          breakpoints: {
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 30,
+            },
+          }
+        });
+      };
+      document.head.appendChild(script);
+    });
+  </script>
+    <!-- END SCRIPT NEEDED FOR ACCORDEON -->
+  <!-- Hero Widget ******************* -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="~/assets/js/jquery-1.11.0.min.js"></script>
+
+
+
+  <!-- <script src="~/assets/js/modernizr.js"></script> -->
+
+
+
+
+      <!-- Link Swiper's CSS -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+      <link href="~/assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet1">
+
+      <section class="relative md:-mt-[100px]  not-prose">
+        <div class="flex items-center justify-center min-h-screen">
+          <!-- Image section -->
+          <div class="absolute inset-0 z-0">
+            <img
+              class="w-full h-full object-cover"
+              loading="eager"
+              src="https://raw.githubusercontent.com/Elragency/astro-construction/main/src/assets/images/banners/banner-epoxyf.webp"
+              alt="The best epoxy services: k-constructions"
+            />
+          </div>
+      
+          <!-- Text content section -->
+          <div class="relative z-10 text-center">
+            <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase pb-1">
+              More Than a Floor, a Statement
+            </p>
+            <h1 class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200">
+              Strong and Elegant: Epoxy
+            </h1>
+            <a href="#soumission">
+              <button type="button" class="btn btn-outline-orange inline-block text-white py-3 px-4 rounded mt-1 ml-0 md:ml-6 mb-2">
+                Get Your Free Quote!
+              </button>
+            </a>
+            <!-- Additional content can be added here -->
+          </div>
+        </div>
+      </section>
+      
+
+      <section id="propos" class="mx-6" >
+        <div class="overflow-hidden">
+          <div class="container mx-auto px-4 py-6 border-b" >
+            <div class="flex flex-wrap -mx-4">
+              <div class="w-full md:w-1/2 px-4 py-6 mb-4 md:mb-0 border-r padding-body" data-aos="fade-left" data-aos-duration="2000">
+                <p class="text-xl mb-3" style="color:#ff3c00" >WHY US?</p>
+                <h2 class="text-2xl font-bold mb-4 test">EPOXY: INNOVATION AT YOUR FLOOR'S SERVICE</h2>
+              </div>
+              <div class="w-full md:w-1/2 px-4 pt-2 padding-body" data-aos="fade-right" data-aos-duration="2000" >
+                <p class="ml-0 md:ml-6 font-body pb-4">
+                  At K-Constructions, we are proud to offer specialized Epoxy flooring services, tailored to your needs and style. Our team, composed of Epoxy experts, is dedicated to transforming your space with durable, resistant, and aesthetically superior floors. Whether for a commercial, industrial, or residential space, our customized solutions guarantee a flawless finish and lasting satisfaction. <br><br>
+                  We are committed to using high-quality materials, ensuring a smooth, shiny, and easy-to-maintain finish. Let K-Constructions revolutionize your space with the elegance and robustness of Epoxy.
+                </p>
+                <a href="#soumission" class="btn btn-outline-orange inline-block bg-primary text-white py-3 px-4 rounded mt-1 ml-0 md:ml-6 mb-2">
+                  Contact Us
+                  <iconify-icon icon="tabler:arrow-right" class="inline-block ml-2"></iconify-icon>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section id="process" class="my-5" data-aos="fade-up" data-aos-duration="2000">
+        <div class="overflow-hidden">
+            <div class="mx-auto container" >
+                <div class="flex flex-wrap -mx-4"> 
+                    <div class="w-full md:w-1/2 lg:w-1/4 px-6">
+                        <div class="py-3 md:py-5 px-3">
+                            <h4 class="mb-3 font-body1"> <span class="heading-color">01.</span> Contact</h4>
+                            <p class="font-body">Use the form below to contact us.</p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 lg:w-1/4 px-6">
+                        <div class="py-3 md:py-5 px-3">
+                            <h4 class="mb-3 font-body1"> <span class="heading-color">02.</span> Inspection</h4>
+                            <p class="font-body">We will visit the worksite address to get an idea.</p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 lg:w-1/4 px-6">
+                        <div class="py-3 md:py-5 px-3">
+                            <h4 class="mb-3 font-body1"> <span class="heading-color">03.</span> Quotation</h4>
+                            <p class="font-body">We will send you the quote within 24 hours.</p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 lg:w-1/4 px-6">
+                        <div class="py-3 md:py-5 px-3">
+                            <h4 class="mb-3 font-body1"> <span class="heading-color">04.</span> Execution</h4>
+                            <p class="font-body">We carry out the desired work.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+      
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+  title="Our Services"
+  subtitle="K-Constructions' Epoxy floors offer a perfect combination of durability, aesthetics, and ease of maintenance. This type of flooring is ideal for various applications, from garages and workshops to commercial and residential spaces, thanks to its resistance to stains, chemicals, and wear. By choosing Epoxy, you invest in a floor that not only beautifies your space but also protects it in the long term."
+  tagline="Expertise and Quality at Your Service"
+  columns={1}
+  classes={{ container: 'max-w-6xl' }}
+  items={[
+    {
+      title: "Why Epoxy with K-Constructions?",
+      description:
+      "Choosing K-Constructions for your Epoxy flooring project means trusting a team of experts dedicated to quality and customer satisfaction. We use premium materials, ensuring a uniform and durable application. Our Epoxy specialists are trained in the latest techniques to guarantee a smooth, resistant, and aesthetically pleasing finish. Moreover, we offer personalized advice to ensure the final result perfectly matches your expectations and the intended use of the space.",
+    },
+    {
+      title: "Benefits of Epoxy",
+      description:
+      "Epoxy flooring is known for its exceptional durability, versatile aesthetic appeal, and ease of maintenance. Suitable for both industrial environments and living spaces, it withstands impacts, scratches, water, and oils, making it ideal for virtually any type of space. Epoxy is also available in a wide range of colors and finishes, allowing for complete customization to fit your style or your company's visual identity. With K-Constructions, benefit from flooring that combines functionality and design.",
+    },
+  ]}
+/>
+
+<Content
+isAfterContent
+items={[
+  {
+    title: "Fast Service at the Best Price",
+    description: "Competitive Offers: K-Constructions offers advantageous rates for your Epoxy flooring projects, guaranteeing excellent value for money without compromising the final result.",
+    icon: 'tabler:discount-check-filled',
+  },
+  {
+    title: "Recognized Expertise in Epoxy",
+    description: "Technical Expertise: Our team of Epoxy experts is highly qualified, ensuring a precise and durable application of your floor coatings, adapted to each space.",
+    icon: 'tabler:crane',
+  },
+  {
+    title: "Complete Warranty on Epoxy",
+    description: "Satisfaction Guarantee: K-Constructions commits to providing a high-quality finish for your Epoxy floors, with a solid warranty on our services to ensure your complete satisfaction.",
+    icon: 'tabler:refresh',
+  },
+]}
+image={{
+  src: 'https://raw.githubusercontent.com/Elragency/astro-construction/main/src/assets/images/Pages/epoxy/expoxyapplication.webp',
+  alt: "K-Constructions' epoxy service",
+}}>
+</Content>
+
+
+
+
+<section id="offrea" class="my-5">
+  <div class="container mx-auto ">
+    <div class="flex justify-center ">
+      <h2 class="text-1xl font-bold mb-4 test">
+        Our Epoxy Offer
+      </h2>
+    </div>
+    <div class="flex justify-center">
+      <div class="flex flex-wrap -mx-4">
+          <div class="mt-4 px-4 w-full md:w-1/2 lg:w-1/4">
+              <div class="text-center py-10 px-6 shadow-lg rounded-lg">
+                  <iconify-icon class="text-3xl my-2" icon="mdi:floor-plan"></iconify-icon>
+                  <h5 class="text-xl font-semibold mb-3">Complete Coating</h5>
+                  <p>Transform your space with durable and aesthetic Epoxy floors.</p>
+              </div>
+          </div>
+          <div class="mt-4 px-4 w-full md:w-1/2 lg:w-1/4">
+              <div class="text-center py-10 px-6 shadow-lg rounded-lg">
+                  <iconify-icon class="text-3xl my-2" icon="mdi:format-color-fill"></iconify-icon>
+                  <h5 class="text-xl font-semibold mb-3">Customization</h5>
+                  <p>Choose from a wide range of colors and finishes for a unique look.</p>
+              </div>
+          </div>
+          <div class="mt-4 px-4 w-full md:w-1/2 lg:w-1/4">
+              <div class="text-center py-10 px-6 shadow-lg rounded-lg">
+                  <iconify-icon class="text-3xl my-2" icon="mdi:toolbox-outline"></iconify-icon>
+                  <h5 class="text-xl font-semibold mb-3">Maintenance & Repair</h5>
+                  <p>Our maintenance and repair services ensure the longevity of your Epoxy floor.</p>
+              </div>
+          </div>
+          <div class="mt-4 px-4 w-full md:w-1/2 lg:w-1/4">
+              <div class="text-center py-10 px-6 shadow-lg rounded-lg">
+                  <iconify-icon class="text-3xl my-2" icon="mdi:shield-check"></iconify-icon>
+                  <h5 class="text-xl font-semibold mb-3">Guaranteed Durability</h5>
+                  <p>Invest in durability with our high-quality Epoxy flooring solutions.</p>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <section class="m-6">
+    <Before />
+  </section>
+
+    <!-- Stats Widget ****************** -->
+
+    <Stats
+    stats={[
+      { title: '+ Clients', amount: '1900' },
+      { title: '+ Projects', amount: '2100' },
+      { title: "Years of Experience", amount: '25' },
+      { title: '+ Employees', amount: '15' },
+    ]}
+  />
+
+
+  
+  
+  <Content
+  isAfterContent
+  title="For a Successful Epoxy Floor"
+  tagline="The Steps"
+  items={[
+    {
+      title: "Surface Preparation",
+      description: "The first crucial step involves preparing the surface to ensure optimal adhesion of the Epoxy. This includes cleaning, degreasing, and sanding the floor to remove any impurities that could prevent the resin from properly adhering.",
+      icon: "tabler:brush",
+    },
+    {
+      title: 'Expertise in Our Field',
+      description:
+        "Technical expertise: Our team of experts has the necessary qualifications to ensure flawless installation and repair.",
+      icon: 'tabler:crane',
+    },
+    {
+      title: 'Complete Warranty',
+      description: "Satisfaction guarantee: We commit to delivering an exceptional level of finish, backed by a warranty on our roofing work.",
+      icon: 'tabler:refresh',
+    },
+  ]}
+  image={{
+    src: 'https://raw.githubusercontent.com/Elragency/astro-construction/main/src/assets/images/Pages/epoxy/kepoxy-doing.webp',
+    alt: "K-Constructions' epoxy service",
+  }}>
+ </Content>
+ 
+
+  <Carrousel />
+
+    <!-- Stats Widget ****************** -->
+
+
+
+
+  <Adresse />
+
+
+
+<!-- <Allservices
+ /> -->
+
+ <Contact />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'secondary',
+        text: 'CALL US RIGHT NOW',
+        href: 'tel:4388625985',
+        // target: '_blank',
+        icon: 'tabler:phone',
+      },
+    ]}
+  >
+  
+  <Fragment slot="title">
+    CONTACT US<br class="block sm:hidden" /><span class="sm:whitespace-nowrap"> immediately</span>
+  </Fragment>
+
+  <Fragment slot="subtitle">
+    Transform your dreams into reality
+  </Fragment>
+  </CallToAction>
+
+  
+
+  <!-- <script src="~/assets/js/plugins.js"></script> -->
+  <!-- <script src="~/assets/js/script.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Ensure elements are available
+      var divisor = document.getElementById("divisor"),
+          slider = document.getElementById("slider");
+  
+      // Define the function to adjust the divisor's width
+      function moveDivisor() { 
+        divisor.style.width = slider.value + "%";
+      }
+  
+      // Check if both elements are present
+      if(divisor && slider) {
+        // Attach the event listener to the slider
+        slider.addEventListener("input", moveDivisor);
+        
+        // Optional: Call moveDivisor initially if you want to set an initial value
+        moveDivisor();
+      } else {
+        console.error("Either divisor or slider element is not found.");
+      }
+    });
+  </script>
+
+  <!-- <script src="~/assets/js/shortcodes.js"></script> -->
+</Layout>
+
+<style>
+  .btn-outline-orange {
+    background: #ff3c00;
+    color: white;
+    /* color: #ff3c00; */
+  }
+
+  .font-body {
+    font-size: 1.2rem;
+    color: white;
+  }
+  .text-grey {
+    color: white !important;
+  }
+  .font-body1 {
+    font-size: 1.5rem;
+  }
+  @media (min-width: 768px) { /* Adjust the min-width value as needed for your definition of 'big screens' */
+  .padding-body {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+  .test {
+    font-size: calc(1.475rem + 2.7vw);
+    font-weight: 300;
+    line-height: 1.2;
+  }
+  .overflow-hidden {
+    overflow: hidden;
+  }
+
+/*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
+.services .icon-box {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.services .icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+  background: #fff;
+  border-radius: 50%;
+  transition: 0.5s;
+  color: #ff3c00;
+  overflow: hidden;
+  box-shadow: 0px 0 25px rgba(0, 0, 0, 0.15);
+}
+
+.services .icon i {
+  font-size: 36px;
+  line-height: 0;
+}
+
+.services:hover .icon {
+  box-shadow: 0px 0 25px rgba(92, 159, 36, 0.3);
+}
+
+.services .title {
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 18px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.services .title a {
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+.services .title a:hover {
+  color: #ff3c00;
+}
+
+.services .title::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: #ff3c00;
+  bottom: 0;
+  left: calc(50% - 25px);
+}
+
+.services .description {
+  line-height: 24px;
+  font-size: 18px;
+}
+
+.t-w {
+  color: white !important;
+}
+.text-m1 {
+  font-size: x-large ;
+}
+.services-components {
+  border: 1px solid var(--accent-color);
+  transition: all 0.5s ease-in;
+}
+
+iconify-icon.services-icon {
+  font-size: 80px;
+  color: var(--accent-color);
+  transition: all 0.5s ease-in;
+}
+
+.services-heading {
+  transition: all 0.5s ease-in;
+}
+
+.service-btn {
+  transition: all 0.5s ease-in;
+
+}
+</style>

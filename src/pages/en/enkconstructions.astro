@@ -1,0 +1,799 @@
+---
+import Layout from '~/layouts/En-PageLayout.astro';
+
+import Header from '~/components/widgets/Header.astro';
+
+import Content from '~/components/widgets/Content.astro';
+import Prices from '~/components/widgets/Pricing.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import { headerData } from '~/navigation';
+import { otherprojects } from '~/components/ui/otherprojects.json';
+
+import Steps2 from '~/components/widgets/Steps2.astro';
+
+import Brands from '~/components/widgets/Brands.astro';
+
+import Stats from '~/components/widgets/Stats.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Button from '~/components/ui/Button.astro';
+import Pricing from '~/components/widgets/Pricing.astro';
+import Image from '~/components/common/Image.astro';
+
+import appStoreImg from '~/assets/images/app-store.png';
+import googlePlayImg from '~/assets/images/google-play.png';
+
+import Contact from '~/components/widgets/En/En-elr-contact.astro';
+import Adresse from '~/components/widgets/En/En-Adresse.astro';
+
+const appStoreDownloadLink = 'https://github.com/onwidget/astrowind';
+const googlePlayDownloadLink = 'https://github.com/onwidget/astrowind';
+
+const metadata = {
+  title: "About Us - K-Constructions",
+};
+---
+
+<Layout metadata={metadata}>
+  <meta name="robots">
+
+
+  <section class="relative md:-mt-[100px]  not-prose">
+    <div class="flex items-center justify-center min-h-screen">
+      <!-- Image section -->
+      <div class="absolute inset-0 z-0">
+        <img
+          class="w-full h-full object-cover"
+          loading="eager"
+          src="https://raw.githubusercontent.com/Elragency/astro-construction/8b0df05e9c3187c1bd9e436446b3a2385fb53222/src/assets/images/banners/banner1-img1.webp"
+          alt="K-Constructions Team"
+        />
+      </div>
+  
+      <!-- Text content section -->
+      <div class="relative z-10 text-center">
+        <p class="text-base text-secondary text-white font-bold tracking-wide uppercase m-1"data-aos="fade-up" data-aos-duration="2000">
+          We are not just a construction company
+        </p>
+        <h1 class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200" data-aos="fade-up" data-aos-duration="2500">
+          K-Construction's family
+        </h1>
+        <a href="#about">
+          <button type="button" class="btn btn-outline-orange inline-block text-white py-3 px-4 rounded mt-1 ml-0 md:ml-6 mb-2"data-aos="fade-up" data-aos-duration="2600">
+            Learn More
+          </button>
+        </a>
+        <!-- Additional content can be added here -->
+      </div>
+    </div>
+  </section>
+  <!-- Content Widget **************** -->
+
+  <Content
+    id="about"
+    columns={3}
+    items={[
+      {
+        icon: 'tabler:brand-instagram',
+        callToAction: {
+          target: '_blank',
+          text: 'Instagram',
+          href: 'https://www.instagram.com/kconstructionsinfo',
+        },
+      },
+      {
+        icon: 'tabler:brand-facebook',
+        callToAction: {
+          target: '_blank',
+          text: 'Facebook',
+          href: 'https://www.facebook.com/kconstructionsinfo',
+        },
+      },
+      {
+        icon: 'tabler:brand-linkedin',
+        callToAction: {
+          target: '_blank',
+          text: 'Linkedin',
+          href: 'https://www.linkedin.com/company/kconstructions',
+        },
+      },
+    ]}
+    image={{
+      src: 'https://raw.githubusercontent.com/Elragency/astro-construction/main/src/assets/images/Pages/about/aboutmain.webp',
+      alt: "k-constructions team",
+    }}
+  >
+  <Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">About Us</h3>
+    <p>
+      Welcome to the story of K-Constructions. Our journey is the result of our commitment to transforming visions into tangible realities, with each project being a new page in our story of innovation and quality.
+    </p>
+    <br />
+    <p>
+      Inspired by the need to create spaces that blend functionality with aesthetics, we founded K-Constructions to meet the growing demands for superior construction and renovation.
+    </p>
+    <br />
+    <p>If you're curious to learn more about our achievements and our approach, feel free to follow us:</p>
+  </Fragment>
+  
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+  </Content>
+  
+
+
+  <Features3
+  title="Our Services and Specialties"
+  subtitle="Discover the expertise that allows us to realize your construction and renovation projects."
+  columns={3}
+  defaultIcon="tabler:tool"
+  items={[
+    {
+      title: 'General Construction',
+      description: "Complete expertise in carrying out new construction projects, from the initial idea to final delivery.",
+    },
+    {
+      title: 'Residential Renovation',
+      description: 'Specialized in renovating houses and apartments, including extensions, kitchen, and bathroom renovations.',
+    },
+    {
+      title: 'Project Management',
+      description: "Proven experience in managing all aspects of a construction or renovation project, ensuring adherence to timelines and budget.",
+    },
+    {
+      title: 'Painting and Finishing',
+      description: 'Professional interior and exterior painting services, high-quality finishes for an impeccable aesthetic look.',
+    },
+    {
+      title: 'Excavation Works',
+      description: "Ability to carry out excavation works for foundations, earthworks, and landscaping.",
+    },
+    {
+      title: 'Gypsum Installation and Plastering',
+      description: "Expertise in gypsum installation and plastering works, for smooth walls ready for painting.",
+    },
+    {
+      title: 'Flooring Installation',
+      description: 'A wide range of flooring solutions, including wood, tile, and floating floors.',
+    },
+    {
+      title: 'Insulation and Waterproofing',
+      description: "Thermal and sound insulation solutions, waterproofing works to ensure comfort and energy savings.",
+    },
+    {
+      title: 'Project Adaptability',
+      description: "Flexibility and adaptability to meet the specific needs of each client and project.",
+    },
+  ]}
+  />
+  
+
+  <section id="main-content" class="py-10 bg-black">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <p class="text-lg font-medium mb-5 text-white">Who is K-CONSTRUCTIONS</p>
+            <h2 class="text-4xl font-semibold text-white mb-4">What We Do</h2>
+            <div class="flex justify-center items-center">
+                <div class="w-32 h-0.5 bg-gray-300"></div>
+            </div>
+            <h4 class="mt-4 text-xl text-gray-300">K-CONSTRUCTIONS has completed over 359 projects - coupled with 25 years of experience, we are the best contractor to serve you.</h4>
+        </div>
+  
+        <div class="flex flex-wrap -mx-4">
+            <div class="w-full md:w-1/3 px-4 mb-8">
+                <div class="p-6 bg-white rounded-lg shadow-lg text-center">
+                    <h5 class="text-lg text-orange-600 font-semibold mb-3"><a href="#" class="hover:text-orange-600">QUALITY</a></h5>
+                    <p class="text-black">K-CONSTRUCTIONS stands out for unmatched quality, ensuring precision, durability, and excellence in every project.</p>
+                </div>
+            </div>
+            <div class="w-full md:w-1/3 px-4 mb-8" data-aos-delay="200">
+                <div class="p-6 bg-white rounded-lg shadow-lg text-center">
+                    <h5 class="text-lg text-orange-600 font-semibold mb-3"><a href="#" class="hover:text-orange-600">PROFESSIONALISM</a></h5>
+                    <p class="text-black">We embody professionalism, offering expertise, reliability, and unmatched customer service at every step.</p>
+                </div>
+            </div>
+            <div class="w-full md:w-1/3 px-4 mb-8" data-aos-delay="400">
+                <div class="p-6 bg-white rounded-lg shadow-lg text-center">
+                    <h5 class="text-lg text-orange-600 font-semibold mb-3"><a href="#" class="hover:text-orange-600">AFFORDABLE</a></h5>
+                    <p class="text-black">We offer quality solutions at the best price with the best quality, making construction excellence accessible and affordable.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  
+    <!-- Steps2 Widget ****************** -->
+    <section class="max-width : 99%" data-aos="fade-up">
+      <Steps2
+        title="OUR FOCUS"
+        subtitle="Our goal is to exceed your objectives, meet your deadlines, and successfully manage your budget. We provide our clients with top-notch general contracting, construction management, site survey, and design-build services."
+        items={[
+          {
+            title: "Experience",
+            description:
+              "We have successfully completed projects for a significant number of satisfied clients.",
+          },
+          {
+            title: 'Compliance',
+            description:
+              "We are licensed to perform general contracting work and have electricians, plumbers, and other tradespeople in compliance for all your needs.",
+          },
+          {
+            title: 'Open To Your Needs',
+            description:
+              "We are open to obtaining new licenses if an opportunity presents itself",
+          },
+        ]}
+      />
+    </section>
+    
+
+    <section data-aos="fade-up">
+      <Steps2
+        title="DEDICATED"
+        subtitle="At K-CONSTRUCTIONS, our commitment to our clients is our priority. We aim not only to meet your expectations but to exceed them, by strictly adhering to your timelines and budget. Our premium services include construction management, site survey, and design-build, all dedicated to realizing your vision."
+        isReversed={true}
+        callToAction={{
+          text: 'Do Business',
+          href: '#soumission',
+        }}
+        items={[
+          {
+            title: 'A Reputation',
+            description: 'We have built our reputation on satisfying our clients, successfully completing a multitude of projects that meet their specific needs.',
+            icon: 'tabler:globe',
+          },
+          {
+            title: 'A Team',
+            description:
+              'Our team is highly skilled and authorized to carry out complex works, ensuring professional results in all aspects of your project.',
+            icon: 'tabler:message-star',
+          },
+          {
+            title: 'Ready to Do More For You',
+            description:
+              "We are always ready to expand our skills and obtain new licenses to better meet your ambitious projects.",
+            icon: 'tabler:award',
+          },
+        ]}
+      />
+    </section>
+    
+    <section data-aos="fade-up">
+      <Steps2
+        title="COMMITTED"
+        subtitle="At K-CONSTRUCTIONS, we are dedicated to providing our clients with an exceptional experience. Our commitment is demonstrated by a client-centered approach, ensuring satisfaction and excellence at every stage of the project."
+        items={[
+          {
+            title: "Listening",
+            description:
+              "Active Listening to Clients: We take the time to understand your needs and aspirations to ensure that each project reflects your expectations.",
+          },
+          {
+            title: 'Total Transparency',
+            description:
+              "We maintain open and honest communication throughout the process, ensuring trust and clarity without fail.",
+          },
+          {
+            title: 'Post-Project Service',
+            description:
+              "Our dedication to our clients continues even after the work is completed, providing follow-up and support to ensure your complete satisfaction.",
+          },
+        ]}
+      />
+    </section>
+    
+
+
+
+  <!-- Pricing Widget **************** -->
+
+  <!-- <Prices
+  title="Our prices"
+  subtitle="Only pay for what you need"
+  prices={[
+    {
+      title: 'basic',
+      subtitle: 'Optimal choice for personal use',
+      price: 29,
+      period: 'per month',
+      items: [
+        {
+          description: 'Etiam in libero, et volutpat',
+        },
+        {
+          description: 'Aenean ac nunc dolor tristique',
+        },
+        {
+          description: 'Cras scelerisque accumsan lib',
+        },
+        {
+          description: 'In hac habitasse',
+        },
+      ],
+      callToAction: {
+        target: '_blank',
+        text: 'Get started',
+        href: '#',
+      },
+    },
+    {
+      title: 'standard',
+      subtitle: 'Optimal choice for small teams',
+      price: 69,
+      period: 'Per Month',
+      items: [
+        {
+          description: 'Proin vel laoreet',
+        },
+        {
+          description: 'Ut efficitur habitasse egestas',
+        },
+        {
+          description: 'Volutpat hac curabitur',
+        },
+        {
+          description: 'Pellentesque blandit ut nibh',
+        },
+        {
+          description: 'Donec fringilla sem',
+        },
+      ],
+      callToAction: {
+        target: '_blank',
+        text: 'Get started',
+        href: '#',
+      },
+      hasRibbon: true,
+      ribbonTitle: 'popular',
+    },
+    {
+      title: 'premium',
+      subtitle: 'Optimal choice for companies',
+      price: 199,
+      period: 'Per Month',
+      items: [
+        {
+          description: 'Curabitur suscipit risus',
+        },
+        {
+          description: 'Aliquam habitasse malesuada',
+        },
+        {
+          description: 'Suspendisse sit amet blandit',
+        },
+        {
+          description: 'Suspendisse auctor blandit dui',
+        },
+      ],
+      callToAction: {
+        target: '_blank',
+        text: 'Get started',
+        href: '#',
+      },
+    },
+  ]}
+/> -->
+
+
+
+  <!-- Content Widget **************** -->
+
+  <Content
+  id="porfolio"
+  title="Reinventing Outdoor Space"
+  subtitle="Discover our latest ambitious projects that redefine the concept of outdoor and indoor spaces. Explore our portfolio to see how passion and expertise come together to transform our clients' lives."
+  isReversed
+  items={[
+    {
+      title: 'Description:',
+      description:
+        "In 2023, K-Constructions successfully completed a major project replacing 10 balconies on a condo tower, redefining the outdoor living space for residents. The goal was to ensure safety and enhance the aesthetics of the balconies, while minimizing disruptions for the tower's inhabitants.",
+    },
+    {
+      title: 'Role:',
+      description:
+        "We led the entire process, from the initial assessment to the final execution. This project included custom design of the new balconies, safe demolition of existing structures, and installation of the new ones using high-quality materials for improved durability and aesthetics.",
+    },
+  ]}
+  image={{
+    src: 'https://raw.githubusercontent.com/Elragency/astro-construction/93cd7d2e84c0a8b09db4a31677ec6f2dc4a348af/src/assets/images/jobs/balcons/balcon1.webp',
+    alt: "K-Constructions' balcony replacement project",
+  }}
+    callToAction={{
+      target: '_blank',
+      text: 'Discover our services',
+      icon: 'tabler:chevron-right',
+      href: '/services/exterior/balconies',
+    }}
+>
+  <Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+      2023 Project: <br /><span class="text-2xl">Balcony Replacement in a Condo Tower</span>
+    </h3>
+  </Fragment>
+
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+</Content>
+
+
+
+  <!-- Content Widget **************** -->
+
+  <Content
+  isReversed
+  isAfterContent={true}
+  items={[
+    {
+      title: "Description:",
+      description:
+        "Completed a full renovation of a commercial space for the opening of a new restaurant, transforming an ordinary space into a welcoming and modern venue. This ambitious project included interior renovation, installation of new kitchens, dining area design, and the creation of an attractive bar.",
+    },
+    {
+      title: "Role:",
+      description: "Our mission was to conceptualize and execute the complete transformation of the space, in line with the restaurant owner's vision and the specific requirements of the foodservice industry. We oversaw all aspects of the project, from initial planning to finishing, focusing on functionality, aesthetics, and adherence to food safety standards.",
+    },
+  ]}
+  image={{
+    src: "https://raw.githubusercontent.com/Elragency/astro-construction/main/src/assets/images/commercial/v2.webp",
+    alt: "Renovation image for a restaurant",
+  }}
+    callToAction={{
+      target: '_blank',
+      text: 'Discover our services',
+      icon: 'tabler:chevron-right',
+      href: '/commercial',
+    }}
+>
+  <Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+      Project 2: <br /><span class="text-2xl">Complete Renovation for a Restaurant Opening</span>
+    </h3>
+  </Fragment>
+
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+</Content>
+
+
+
+  <!-- Content Widget **************** -->
+
+  <Content
+  isReversed
+  isAfterContent={true}
+  items={[
+    {
+      title: 'Description:',
+      description: `K-Constructions offers a range of services tailored to the needs of property managers, covering everything from emergencies to planned renovations. Whether it's roofing work, electrical, plumbing, or post-disaster interventions, our team is ready to respond quickly and efficiently.`,
+    },
+    {
+      title: 'Role:',
+      description: `We understand the importance of responsiveness and quality in property management. That's why we offer 24/7 emergency services to address critical needs, as well as meticulous planning and execution for all renovation or maintenance projects, ensuring resident satisfaction and property value preservation.`,
+    },
+  ]}
+  image={{
+    src: 'https://raw.githubusercontent.com/Elragency/astro-construction/16a12109d2a4cdcfcab24461ae936f71dfc9e631/src/assets/images/banners/banner-condos.webp',
+    alt: 'Services for property managers',
+  }}
+  callToAction={{
+    target: '_blank',
+    text: 'Discover our services',
+    icon: 'tabler:chevron-right',
+    href: '/services/services',
+  }}
+>
+  <Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+      Services for Property Managers
+    </h3>
+  </Fragment>
+
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+</Content>
+
+
+    <!-- Features3 Widget ************** -->
+
+    <Features3
+    title="Why Choose K-Constructions?"
+    subtitle="Discover the values that set us apart and the advantages of working with us."
+    columns={2}
+    items={[
+      {
+        title: 'Commitment to Quality',
+        description: 'We make no compromises on quality, ensuring total client satisfaction through the use of premium materials and meticulous execution.',
+        icon: 'tabler:award',
+      },
+      {
+        title: 'Total Transparency',
+        description: 'We believe in clear and honest communication, offering total transparency on costs and timelines from day one.',
+        icon: 'tabler:eye',
+      },
+      {
+        title: 'Safety and Compliance',
+        description: 'The safety of our sites and compliance with current standards are paramount for us, ensuring peace of mind for our clients and teams.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Customized Solutions',
+        description: 'Every project is unique. We offer customized solutions that precisely meet your needs and expectations.',
+        icon: 'tabler:writing',
+      },
+      {
+        title: 'Sustainability and Environmental Respect',
+        description: 'We integrate sustainable and environmentally friendly practices in all our projects, contributing to the protection of our planet.',
+        icon: 'tabler:leaf',
+      },
+      {
+        title: 'Support and Guidance',
+        description: 'Our team is here to guide you through every stage of your project, offering responsive support and expert advice.',
+        icon: 'tabler:messages',
+      },
+    ]}
+    classes={{ container: 'max-w-5xl' }}
+    />
+    
+
+
+  <!-- CallToAction Widget *********** -->
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'secondary',
+        text: 'CALL US NOW!',
+        href: 'tel:4388625985',
+        // target: '_blank',
+        icon: 'tabler:phone',
+      },
+    ]}
+  >
+
+    <Fragment slot="title">
+      CONTACT US <br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Immediately</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      To turn your dreams into realities.
+    </Fragment>
+  </CallToAction>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+  isReversed
+  items={[
+    {
+      title: 'All-in-One Services',
+      description:
+        'K-Constructions offers a complete range of services for all your construction and renovation needs. With experts in all necessary fields - plumbers, roofers, electricians, and more - we are your one-stop solution for successful projects.',
+      icon: 'tabler:tools',
+    },
+    {
+      title: 'Wide Area of Operation',
+      description:
+        'Operating on the South Shore of Montreal, in Montreal itself, on the North Shore of Montreal, and in the Montérégie, our extensive geographical coverage allows us to be quickly on-site, wherever you are in these regions.',
+      icon: 'tabler:map-pin',
+    },
+    {
+      title: 'Local Expertise',
+      description:
+        'Our in-depth knowledge of local specificities ensures that each project complies with regulations and is adapted to its environment. Enjoy our local expertise for a hassle-free project.',
+      icon: 'tabler:home-2',
+    },
+    {
+      title: 'Emergency Intervention',
+      description: 'Available 24/7 for emergency interventions, we are here for you in case of urgent need, no matter the service required.',
+      icon: 'tabler:alert-circle',
+    },
+  ]}
+  image={{
+    src: 'https://raw.githubusercontent.com/Elragency/astro-construction/main/src/assets/images/Pages/about/about1.webp',
+    alt: 'K-Constructions Services',
+  }}
+>
+  <Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Why Choose K-Constructions?</h3>
+  </Fragment>
+</Content>
+
+
+
+  <!-- Content Widget **************** -->
+
+  <Content
+  isAfterContent
+  items={[
+    {
+      title: 'Exceptional Responsiveness',
+      description: "Our team is available 24/7 to respond quickly to all your emergencies, thus ensuring unparalleled peace of mind for property managers.",
+      icon: 'tabler:bell',
+    },
+    {
+      title: 'Complete Documentation',
+      description:
+        'We provide all the necessary documentation for your projects, from design to realization, including insurances and warranties, easily accessible via our secure cloud storage.',
+      icon: 'tabler:files',
+    },
+    {
+      title: 'Updates and Maintenance',
+      description: 'We offer regular maintenance contracts to ensure the proper functioning and longevity of your installations, with updates on the latest standards and technologies.',
+      icon: 'tabler:tool',
+    },
+    {
+      title: 'Customized Advice',
+      description: `Benefit from personalized advice tailored to your specific needs, whether for an emergency or for long-term planning of your properties' maintenance.`,
+      icon: 'tabler:help',
+    },
+  ]}
+  image={{
+    src: 'https://raw.githubusercontent.com/Elragency/astro-construction/main/src/assets/images/Pages/about/about2.webp',
+    alt: 'K-Constructions Services',
+  }}
+>
+  <Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Additional Benefits</h3>
+  </Fragment>
+</Content>
+
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+  title="Let the Numbers Speak"
+  stats={[
+    { amount: '2.1K', icon: 'tabler:tool' },
+    { amount: '1.9K', icon: 'tabler:users' },
+    { amount: '25', icon: 'tabler:hourglass-high' },
+  ]}
+/>
+
+
+ <!-- Testimonials Widget *********** -->
+
+  <!-- <Testimonials
+    title="Client testimonials"
+    subtitle="Discover what clients have to say about their experiences working with me."
+    testimonials={[
+      {
+        testimonial: `She took our vague concept and turned it into a visual masterpiece that perfectly aligned with our goals. Her attention to detail and ability to translate ideas into compelling visuals exceeded our expectations.`,
+        name: 'Mark Thompson',
+        job: 'Creative director',
+        image: {
+          src: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: 'Mark Thompson Image',
+        },
+      },
+      {
+        testimonial: `She transformed our brand identity with her creative finesse, capturing our essence in every element. Her dedication and talent truly shine through her work.`,
+        name: 'Emily Martinez',
+        job: 'CEO',
+        image: {
+          src: 'https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=772&q=80',
+          alt: 'Emily Martinez Image',
+        },
+      },
+      {
+        testimonial: `She has an uncanny ability to communicate emotions and stories. She crafted a logo for our NGO that not only represents our cause but also evokes empathy. Her professionalism and commitment make her a designer of exceptional caliber.`,
+        name: 'Laura Simmons',
+        job: 'Founder of an NGO',
+        image: {
+          src: 'https://images.unsplash.com/photo-1554727242-741c14fa561c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: 'Laura Simmons Image',
+        },
+      },
+      {
+        testimonial: `We entrusted Sarah with revamping our website's user interface, and the results were astounding. Her intuitive design sense enhanced user experience, leading to a significant increase in engagement. She's a designer who truly understands the synergy of aesthetics and functionality.`,
+        name: 'Alex Foster',
+        job: 'Director of web services',
+        image: {
+          src: 'https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: 'Alex Foster Image',
+        },
+      },
+      {
+        testimonial: `She took our vision and elevated it beyond imagination. Her ability to capture brand essence and translate it into design is nothing short of remarkable. Working with her has been an inspiring journey.`,
+        name: 'Jessica Collins',
+        job: 'Product Manager',
+        image: {
+          src: 'https://images.unsplash.com/photo-1548142813-c348350df52b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=778&q=80',
+          alt: 'Jessica Collins Image',
+        },
+      },
+      {
+        testimonial: `Her ability to transform concepts into captivating visuals is nothing short of extraordinary. She took our event poster idea and turned it into a visual masterpiece that perfectly captured the essence of our festival. Sarah's dedication, creativity, and knack for delivering beyond expectations make her an invaluable asset to any project.`,
+        name: 'Michael Carter',
+        job: 'Event Coordinator',
+        image: {
+          src: 'https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: 'Michael Carter Image',
+        },
+      },
+    ]}
+  /> -->
+
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+  title="FREQUENTLY ASKED QUESTIONS"
+  subtitle="Some questions we regularly receive."
+  columns={3}
+  isBeforeContent={true}
+  items={[
+    {
+      title: 'ARE YOU LICENSED TO WORK ON CONDOS?',
+      description:
+        'Yes! We hold our RBQ license, and all our professionals are accredited by the necessary government bodies to carry out any type of required work.',
+      icon: 'tabler:template',
+    },
+    {
+      title: 'ARE YOU INSURED?',
+      description:
+        "Of course! The safety of our clients' investments is our priority. That's why we're insured up to 2 million dollars for any type of damage.",
+      icon: 'tabler:template',
+    },
+    {
+      title: 'WHAT ARE YOUR PAYMENT TERMS?',
+      description:
+        "While this depends on the size of your project and the timeline, we're quite flexible to ensure it suits you. We accept bank transfers, cash, Interac e-transfers, cheques, or credit cards.",
+      icon: 'tabler:template',
+    },
+  ]}
+/>
+
+
+
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'secondary',
+        text: 'CALL US NOW!',
+        href: 'tel:4388625985',
+        // target: '_blank',
+        icon: 'tabler:phone',
+      },
+    ]}
+  >
+
+    <Fragment slot="title">
+      CONTACT US <br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Immediately</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      To turn your dreams into realities.
+    </Fragment>
+  </CallToAction>
+
+
+
+  <!-- BlogLatestPost Widget **************** -->
+
+  <!-- <BlogLatestPosts
+    id="blog"
+    title="Explore my insightful articles on my blog"
+    information={`Dive into a realm of design wisdom and creative inspiration, where you'll find invaluable insights, practical tips, and captivating narratives that elevate and enrich your creative journey.`}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </BlogLatestPosts> -->
+
+  <Contact />
+
+</Layout>

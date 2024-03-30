@@ -8,7 +8,7 @@ export const headerData = {
     },
     {
       text: 'About',
-      href: getPermalink('/en/about'),
+      href: getPermalink('/en/enkconstructions'),
     },
     // {
     //   text: 'À Propos',
@@ -106,9 +106,9 @@ export const footerData = {
     {
       title: 'About',
       links: [
-        { text: 'K-CONSTRUCTIONS', href: '/en/about' },
-        { text: 'Mission', href: '/en/about' },
-        { text: 'Team', href: '/en/about' },
+        { text: 'K-CONSTRUCTIONS', href: '/en/enkconstructions' },
+        { text: 'Mission', href: '/en/enkconstructions' },
+        { text: 'Team', href: '/en/enkconstructions' },
         // { text: 'Enterprise', href: '#' },
         // { text: 'Customer stories', href: '#' },
         // { text: 'Pricing', href: '#' },
@@ -126,7 +126,7 @@ export const footerData = {
       ],
     },
     {
-      title: 'RÉGIONS',
+      title: 'REGIONS',
       links: [
         { text: 'Montréal', href: '/regions/montreal' },
         { text: 'Rive-sud', href: '/regions/rive-sud' },

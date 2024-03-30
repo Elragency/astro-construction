@@ -10,28 +10,7 @@ export const headerData = {
       text: 'À Propos',
       href: getPermalink('/kconstructions'),
     },
-    // {
-    //   text: 'À Propos',
-    //   links: [
-    //     {
-    //       text: 'Notre histoire',
-    //       href: getPermalink('/homes/propos'),
-    //     },
-    //     {
-    //       text: 'Startup',
-    //       href: getPermalink('/homes/startup'),
-    //     },
-    //     {
-    //       text: 'Mobile App',
-    //       href: getPermalink('/homes/mobile-app'),
-    //     },
-    //     {
-    //       text: 'Personal',
-    //       href: getPermalink('/homes/personal'),
-    //     },
-    //   ],
-    // },
-    // {
+    
     {
       text: 'Services',
       href: getPermalink('/services'),
