@@ -98,7 +98,7 @@ export const headerData = {
       href: getPermalink('/'),
     },
   ],
-  actions: [{ text: "Let's do business!", href: '/en/contact', target: '' }],
+  actions: [{ text: "Emergency Call!", href: 'tel:4388625985', target: '' }],
 };
 
 export const footerData = {

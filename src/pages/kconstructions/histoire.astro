@@ -2,21 +2,27 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 import Header from '~/components/widgets/Header.astro';
-import Hero from '~/components/widgets/Hero.astro';
+
 import Content from '~/components/widgets/Content.astro';
+import Prices from '~/components/widgets/Pricing.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import Testimonials from '~/components/widgets/Testimonials.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import { headerData } from '~/navigation';
+import { otherprojects } from '~/components/ui/otherprojects.json';
 
+import Steps2 from '~/components/widgets/Steps2.astro';
+
+import Brands from '~/components/widgets/Brands.astro';
 
 import Stats from '~/components/widgets/Stats.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Button from '~/components/ui/Button.astro';
 import Pricing from '~/components/widgets/Pricing.astro';
 import Image from '~/components/common/Image.astro';
+import Contact from '~/components/widgets/elr-contact.astro';
 
 import appStoreImg from '~/assets/images/app-store.png';
 import googlePlayImg from '~/assets/images/google-play.png';
@@ -33,21 +39,35 @@ const metadata = {
   <meta name="robots" content="noindex">
 
 
-  <!-- Hero2 Widget ******************* -->
-
-  <Hero
-    id="hero"
-    title="Sarah Johnson"
-    tagline="Personal Web Demo"
-    actions={[{ variant: "primary", target: '_blank', text: 'Hire me', href: '/' }]}
-  >
-    <Fragment slot="subtitle">
-      I'm a Graphic Designer passionate about crafting visual stories. <br /> With 5 years of experience and a degree
-      from New York University's School of Design. I infuse vitality into brands and designs, transforming concepts into
-      captivating realities.
-    </Fragment>
-  </Hero>
-
+  <section class="relative md:-mt-[100px]  not-prose">
+    <div class="flex items-center justify-center min-h-screen">
+      <!-- Image section -->
+      <div class="absolute inset-0 z-0">
+        <img
+          class="w-full h-full object-cover"
+          loading="eager"
+          src="https://raw.githubusercontent.com/Elragency/astro-construction/8b0df05e9c3187c1bd9e436446b3a2385fb53222/src/assets/images/banners/banner1-img1.webp"
+          alt="L'équipe de K-Constructions"
+        />
+      </div>
+  
+      <!-- Text content section -->
+      <div class="relative z-10 text-center">
+        <p class="text-base text-secondary text-white font-bold tracking-wide uppercase m-1"data-aos="fade-up" data-aos-duration="2000">
+          Nous ne sommes pas qu'une compagnie de constructions
+        </p>
+        <h1 class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200" data-aos="fade-up" data-aos-duration="2500">
+          La Famille K-Constructions
+        </h1>
+        <a href="#about">
+          <button type="button" class="btn btn-outline-orange inline-block text-white py-3 px-4 rounded mt-1 ml-0 md:ml-6 mb-2"data-aos="fade-up" data-aos-duration="2600">
+            En Savoir Plus
+          </button>
+        </a>
+        <!-- Additional content can be added here -->
+      </div>
+    </div>
+  </section>
   <!-- Content Widget **************** -->
 
   <Content
@@ -55,261 +75,629 @@ const metadata = {
     columns={3}
     items={[
       {
-        icon: 'tabler:brand-dribbble',
+        icon: 'tabler:brand-instagram',
         callToAction: {
           target: '_blank',
-          text: 'Dribbble',
-          href: '#',
+          text: 'Instagram',
+          href: 'https://www.instagram.com/kconstructionsinfo',
         },
       },
       {
-        icon: 'tabler:brand-behance',
+        icon: 'tabler:brand-facebook',
         callToAction: {
           target: '_blank',
-          text: 'Behance',
-          href: '#',
+          text: 'Facebook',
+          href: 'https://www.facebook.com/kconstructionsinfo',
         },
       },
       {
-        icon: 'tabler:brand-pinterest',
+        icon: 'tabler:brand-linkedin',
         callToAction: {
           target: '_blank',
-          text: 'Pinterest',
-          href: '#',
+          text: 'Linkedin',
+          href: 'https://www.linkedin.com/company/kconstructions',
         },
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-      alt: 'Colorful Image',
+      src: 'https://raw.githubusercontent.com/Elragency/astro-construction/main/src/assets/images/Pages/about/aboutmain.webp',
+      alt: "L'equipe de k-constructions",
     }}
   >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">About me</h3>
-      <p>
-        Welcome to my creative journey. My work is a testament to my commitment to bringing ideas to life, where each
-        pixel becomes a brushstroke in the canvas of imagination.
-      </p>
-      <br />
-      <p>
-        I find inspiration in the world around me, whether through the pages of a captivating novel, the intricate
-        details of typography, or the vibrant hues of nature during my outdoor escapades.
-      </p>
-      <br />
-      <p>If you're curious to dive deeper into my work, you can follow me:</p>
-    </Fragment>
+  <Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">À propos de nous</h3>
+    <p>
+      Bienvenue dans l'histoire de K-Constructions. Notre parcours est le fruit de notre engagement à transformer des visions en réalités tangibles, chaque projet étant une nouvelle page de notre histoire d'innovation et de qualité.
+    </p>
+    <br />
+    <p>
+      Inspirés par la nécessité de créer des espaces qui allient fonctionnalité et esthétique, nous avons fondé K-Constructions pour répondre aux besoins croissants en matière de construction et de rénovation de qualité supérieure.
+    </p>
+    <br />
+    <p>Si vous êtes curieux d'en savoir plus sur nos réalisations et notre approche, n'hésitez pas à nous suivre :</p>
+  </Fragment>
+  
 
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
 
-  <!-- Steps Widget ****************** -->
 
-  <Steps
-    id="resume"
-    title="Work experience"
+  <Features3
+  title="Nos Services et Spécialités"
+  subtitle="Découvrez l'expertise qui nous permet de réaliser vos projets de construction et de rénovation."
+  columns={3}
+  defaultIcon="tabler:tool"
+  items={[
+    {
+      title: 'Construction générale',
+      description: "Expertise complète dans la réalisation de projets de construction neuve, de l'idée initiale à la livraison finale.",
+    },
+    {
+      title: 'Rénovation résidentielle',
+      description: 'Spécialisés dans la rénovation de maisons et appartements, incluant agrandissements, rénovations de cuisines et de salles de bain.',
+    },
+    {
+      title: 'Gestion de projet',
+      description: "Expérience avérée dans la gestion de tous les aspects d'un projet de construction ou de rénovation, assurant respect des délais et du budget.",
+    },
+    {
+      title: 'Peinture et finition',
+      description: 'Services professionnels de peinture intérieure et extérieure, finitions de haute qualité pour un rendu esthétique impeccable.',
+    },
+    {
+      title: "Travaux d'excavation",
+      description: "Capacité à réaliser des travaux d'excavation pour fondations, terrassements et aménagements paysagers.",
+    },
+    {
+      title: 'Pose de gypse et plâtrage',
+      description: "Expertise dans l'installation de gypse et dans les travaux de plâtrage, pour des murs lisses et prêts à peindre.",
+    },
+    {
+      title: 'Installation de planchers',
+      description: 'Large gamme de solutions de revêtements de sol, incluant bois, carrelage, et planchers flottants.',
+    },
+    {
+      title: 'Isolation et étanchéité',
+      description: "Solutions d'isolation thermique et phonique, travaux d'étanchéité pour garantir confort et économies d'énergie.",
+    },
+    {
+      title: 'Adaptabilité aux projets',
+      description: "Flexibilité et capacité d'adaptation pour répondre aux besoins spécifiques de chaque client et projet.",
+    },
+  ]}
+/>
+
+<section id="main-content" class="py-10 bg-black">
+  <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+          <p class="text-lg font-medium mb-5 text-white">Qui est K-CONSTRUCTIONS</p>
+          <h2 class="text-4xl font-semibold text-white mb-4">Ce que nous faisons</h2>
+          <div class="flex justify-center items-center">
+              <div class="w-32 h-0.5 bg-gray-300"></div>
+          </div>
+          <h4 class="mt-4 text-xl text-gray-300">K-CONSTRUCTIONS a plus de 359 projets réalisés - jumelé avec 25 années d'expérience, nous sommes les meilleurs entrepreneur pour vous servir.</h4>
+      </div>
+
+      <div class="flex flex-wrap -mx-4">
+          <div class="w-full md:w-1/3 px-4 mb-8" >
+              <div class="p-6 bg-white rounded-lg shadow-lg text-center">
+                  <h5 class="text-lg text-orange-600 font-semibold mb-3"><a href="#" class="hover:text-orange-600">QUALITÉ</a></h5>
+                  <p class="text-black">K-CONSTRUCTIONS se distingue par une qualité inégalée, garantissant précision, durabilité et excellence dans chaque projet.</p>
+              </div>
+          </div>
+          <div class="w-full md:w-1/3 px-4 mb-8"  data-aos-delay="200">
+              <div class="p-6 bg-white rounded-lg shadow-lg text-center">
+                  <h5 class="text-lg text-orange-600 font-semibold mb-3"><a href="#" class="hover:text-orange-600">PROFESSIONALISME</a></h5>
+                  <p class="text-black">Nous incarnons le professionnalisme, offrant expertise, fiabilité et un service clientèle hors pair à chaque étape.</p>
+              </div>
+          </div>
+          <div class="w-full md:w-1/3 px-4 mb-8"  data-aos-delay="400">
+              <div class="p-6 bg-white rounded-lg shadow-lg text-center">
+                  <h5 class="text-lg text-orange-600 font-semibold mb-3"><a href="#" class="hover:text-orange-600">ABORDABLE</a></h5>
+                  <p class="text-black">Nous offrons des solutions de qualité au meilleur prix, rendant l'excellence en construction accessible et abordable.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+    <!-- Steps2 Widget ****************** -->
+    <section class="max-width : 99%" data-aos="fade-up" >
+      <Steps2
+      title="NOTRE FOCUS"
+      subtitle="Notre objectif est de dépasser vos objectifs, de respecter vos délais et de gérer avec succès votre budget. Nous fournissons à nos clients des services d’entreprise générale, de gestion de construction, d’étude de site et de conception-construction de premier ordre."
+      items={[
+        {
+          title: "De L'Expérience",
+          description:
+            "Nous avons réalisé avec succès des projets pour un nombre important de clients satisfaits.",
+        },
+        {
+          title: 'En Règle',
+          description:
+            "Nous sommes autorisés à effectuer des travaux d'entreprise générale et avons les électriciens, plombiers et autres quarts de métier en règle pour tous vos besoins.",
+        },
+        {
+          title: 'Ouverts À vos besoins',
+          description:
+            "Nous serons ouverts à l'obtention de nouvelles licences si une opportunité se présentes",
+        },
+      ]}
+    />
+    </section>
+
+    <section data-aos="fade-up" >
+      <Steps2
+      title="Dédiés"
+      subtitle="Chez K-CONSTRUCTIONS, notre engagement envers nos clients est notre priorité. Nous visons non seulement à rencontrer vos attentes, mais à les surpasser, en respectant scrupuleusement vos délais et votre budget. Nos services haut de gamme incluent la gestion de construction, l'étude de site, et la conception-construction, tous dédiés à réaliser votre vision."
+      isReversed={true}
+      callToAction={{
+        text: 'Faire Affaire',
+        href: '#soumission',
+      }}
+      items={[
+        {
+          title: 'Une Réputation',
+          description: 'Nous avons bâti notre réputation sur la satisfaction de nos clients, en réalisant avec succès une multitude de projets répondant à leurs besoins spécifiques.',
+          icon: 'tabler:globe',
+        },
+        {
+          title: 'Une Équipe',
+          description:
+            'Notre équipe est hautement qualifiée et autorisée à mener à bien des travaux complexes, garantissant des résultats professionnels dans tous les aspects de votre projet.',
+          icon: 'tabler:message-star',
+        },
+        {
+          title: 'Prêt à Faire Plus Pour Vous',
+          description:
+            "Nous sommes toujours prêts à élargir nos compétences et obtenir de nouvelles licences pour mieux répondre à vos projets ambitieux.",
+          icon: 'tabler:award',
+        },
+      ]}
+    />
+    
+    </section>
+
+    <section data-aos="fade-up" >
+      <Steps2
+title="ENGAGÉ"
+subtitle="Chez K-CONSTRUCTIONS, nous sommes dédiés à fournir à nos clients une expérience exceptionnelle. Notre engagement se traduit par une approche centrée sur le client, garantissant satisfaction et excellence à chaque étape du projet"
+items={[
+  {
+    title: "À L'écoute",
+    description:
+      "Écoute Active des Clients : Nous prenons le temps de comprendre vos besoins et vos aspirations pour garantir que chaque projet reflète vos attentes.",
+  },
+  {
+    title: 'Transparence Totale',
+    description:
+      "Nous maintenons une communication ouverte et honnête tout au long du processus, assurant une confiance et une clarté sans faille.",
+  },
+  {
+    title: 'Service Après-Projet',
+    description:
+      "Notre dévouement envers nos clients continue même après la fin des travaux, assurant un suivi et une assistance pour garantir votre entière satisfaction.",
+  },
+]}
+/>
+    </section>
+
+
+
+  <!-- Pricing Widget **************** -->
+
+  <!-- <Prices
+  title="Our prices"
+  subtitle="Only pay for what you need"
+  prices={[
+    {
+      title: 'basic',
+      subtitle: 'Optimal choice for personal use',
+      price: 29,
+      period: 'per month',
+      items: [
+        {
+          description: 'Etiam in libero, et volutpat',
+        },
+        {
+          description: 'Aenean ac nunc dolor tristique',
+        },
+        {
+          description: 'Cras scelerisque accumsan lib',
+        },
+        {
+          description: 'In hac habitasse',
+        },
+      ],
+      callToAction: {
+        target: '_blank',
+        text: 'Get started',
+        href: '#',
+      },
+    },
+    {
+      title: 'standard',
+      subtitle: 'Optimal choice for small teams',
+      price: 69,
+      period: 'Per Month',
+      items: [
+        {
+          description: 'Proin vel laoreet',
+        },
+        {
+          description: 'Ut efficitur habitasse egestas',
+        },
+        {
+          description: 'Volutpat hac curabitur',
+        },
+        {
+          description: 'Pellentesque blandit ut nibh',
+        },
+        {
+          description: 'Donec fringilla sem',
+        },
+      ],
+      callToAction: {
+        target: '_blank',
+        text: 'Get started',
+        href: '#',
+      },
+      hasRibbon: true,
+      ribbonTitle: 'popular',
+    },
+    {
+      title: 'premium',
+      subtitle: 'Optimal choice for companies',
+      price: 199,
+      period: 'Per Month',
+      items: [
+        {
+          description: 'Curabitur suscipit risus',
+        },
+        {
+          description: 'Aliquam habitasse malesuada',
+        },
+        {
+          description: 'Suspendisse sit amet blandit',
+        },
+        {
+          description: 'Suspendisse auctor blandit dui',
+        },
+      ],
+      callToAction: {
+        target: '_blank',
+        text: 'Get started',
+        href: '#',
+      },
+    },
+  ]}
+/> -->
+
+
+
+  <!-- Content Widget **************** -->
+
+  <Content
+  id="porfolio"
+  title="Réinventer l'espace extérieur"
+  subtitle="Découvrez nos derniers projets ambitieux qui redéfinissent le concept d'espaces extérieurs ou intérieurs. Explorez notre portfolio pour découvrir comment passion et expertise se rencontrent pour transformer la vie de nos clients."
+  isReversed
+  items={[
+    {
+      title: 'Description:',
+      description:
+        "En 2023, K-Constructions a mené à bien un projet majeur de remplacement de 10 balcons sur une tour à condos, redéfinissant ainsi l’espace de vie extérieur des résidents. L’objectif était d’assurer la sécurité et d'améliorer l'esthétique des balcons, tout en minimisant les perturbations pour les habitants de la tour.",
+    },
+    {
+      title: 'Rôle:',
+      description:
+        "Nous avons dirigé le processus complet, depuis l'évaluation initiale jusqu'à l'exécution finale. Ce projet comprenait la conception sur mesure des nouveaux balcons, la démolition sécurisée des structures existantes et l'installation des nouvelles, en utilisant des matériaux de haute qualité pour une durabilité et une esthétique améliorées.",
+    },
+  ]}
+  image={{
+    src: 'https://raw.githubusercontent.com/Elragency/astro-construction/93cd7d2e84c0a8b09db4a31677ec6f2dc4a348af/src/assets/images/jobs/balcons/balcon1.webp',
+    alt: 'Projet de remplacement de balcons K-Constructions',
+  }}
+    callToAction={{
+      target: '_blank',
+      text: 'Découvrez nos services',
+      icon: 'tabler:chevron-right',
+      href: '/services/exterieur/balcons',
+    }}
+
+>
+  <Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+      Projet 2023 : <br /><span class="text-2xl">Remplacement de balcons sur une tour à condos</span>
+    </h3>
+  </Fragment>
+
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+</Content>
+
+
+  <!-- Content Widget **************** -->
+
+  <Content
+  isReversed
+  isAfterContent={true}
+  items={[
+    {
+      title: "Description:",
+      description:
+        "Réalisé la rénovation complète d’un local commercial en vue de l’ouverture d’un nouveau restaurant, transformant ainsi un espace ordinaire en un lieu accueillant et moderne. Ce projet ambitieux a inclus la rénovation intérieure, l'installation de nouvelles cuisines, la conception d'un espace salle à manger et la création d'un bar attrayant.",
+    },
+    {
+      title: "Rôle:",
+      description: "Notre mission a été de conceptualiser et d’exécuter la transformation complète du local, en accord avec la vision du propriétaire du restaurant et les exigences spécifiques du secteur de la restauration. Nous avons supervisé tous les aspects du projet, de la planification initiale à la finition, en mettant l'accent sur la fonctionnalité, l'esthétique et le respect des normes de sécurité alimentaire.",
+    },
+  ]}
+  image={{
+    src: "https://raw.githubusercontent.com/Elragency/astro-construction/main/src/assets/images/commercial/v2.webp",
+    alt: "Image de la rénovation pour restaurant",
+  }}
+    callToAction={{
+      target: '_blank',
+      text: 'Découvrez nos services',
+      icon: 'tabler:chevron-right',
+      href: '/commercial',
+    }}
+
+>
+  <Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+      Projet 2: <br /><span class="text-2xl">Rénovation complète pour l'ouverture d'un restaurant</span>
+    </h3>
+  </Fragment>
+
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+</Content>
+
+
+  <!-- Content Widget **************** -->
+
+  <Content
+  isReversed
+  isAfterContent={true}
+  items={[
+    {
+      title: 'Description:',
+      description: `K-Constructions offre une gamme de services adaptés aux besoins des gestionnaires de copropriétés, couvrant tout, des urgences aux rénovations planifiées. Que ce soit pour des travaux de couverture, d'électricité, de plomberie ou des interventions après sinistres, notre équipe est prête à intervenir rapidement et efficacement.`,
+    },
+    {
+      title: 'Role:',
+      description: `Nous comprenons l'importance de la réactivité et de la qualité dans la gestion de copropriétés. C'est pourquoi nous proposons des services d'urgence disponibles 24/7 pour répondre aux besoins critiques, ainsi qu'une planification et exécution méticuleuse pour tous les projets de rénovation ou d'entretien, assurant la satisfaction des résidents et la préservation de la valeur des propriétés.`,
+    },
+  ]}
+  image={{
+    src: 'https://raw.githubusercontent.com/Elragency/astro-construction/16a12109d2a4cdcfcab24461ae936f71dfc9e631/src/assets/images/banners/banner-condos.webp',
+    alt: 'Services pour gestionnaires de copropriétés',
+  }}
+  callToAction={{
+    target: '_blank',
+    text: 'Découvrez nos services',
+    icon: 'tabler:chevron-right',
+    href: '/services/services',
+  }}
+>
+  <Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+      Services pour Gestionnaires de Copropriétés
+    </h3>
+  </Fragment>
+
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+</Content>
+
+    <!-- Features3 Widget ************** -->
+
+    <Features3
+    title="Pourquoi choisir K-Constructions ?"
+    subtitle="Découvrez les valeurs qui nous distinguent et les avantages de travailler avec nous."
+    columns={2}
     items={[
       {
-        title:
-          'Graphic Designer <br /> <span class="font-normal">ABC Design Studio, New York, NY</span> <br /> <span class="text-sm font-normal">2021 - Present</span>',
-        description: `Collaborate with clients to understand design requirements and objectives. <br /> Develop branding solutions, including logos, color palettes, and brand guidelines. <br /> Design marketing materials such as brochures, posters, and digital assets. <br /> Create visually appealing user interfaces for websites and applications.`,
-        icon: 'tabler:briefcase',
+        title: 'Engagement envers la qualité',
+        description: 'Nous ne faisons aucun compromis sur la qualité, assurant la satisfaction totale de nos clients grâce à des matériaux haut de gamme et une exécution soignée.',
+        icon: 'tabler:award',
       },
       {
-        title:
-          'Junior Graphic Designer <br /> <span class="font-normal">XYZ Creative Agency, Los Angeles, CA</span> <br /> <span class="text-sm font-normal">2018 - 2021</span>',
-        description: `Assisted senior designers in creating design concepts and visual assets. <br /> Contributed to the development of brand identities and marketing collateral. <br /> Collaborated with the marketing team to ensure consistent design across campaigns. <br /> Gained hands-on experience in various design software and tools.`,
-        icon: 'tabler:briefcase',
+        title: 'Transparence totale',
+        description: 'Nous croyons en une communication claire et honnête, offrant une transparence totale sur les coûts et les délais dès le premier jour.',
+        icon: 'tabler:eye',
+      },
+      {
+        title: 'Sécurité et Conformité',
+        description: 'La sécurité de nos chantiers et la conformité aux normes en vigueur sont primordiales pour nous, garantissant la sérénité de nos clients et de nos équipes.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Solutions personnalisées',
+        description: 'Chaque projet est unique. Nous offrons des solutions personnalisées qui répondent précisément à vos besoins et à vos attentes.',
+        icon: 'tabler:writing',
+      },
+      {
+        title: 'Durabilité et Respect de l’environnement',
+        description: 'Nous intégrons des pratiques durables et respectueuses de l’environnement dans tous nos projets, contribuant à la protection de notre planète.',
+        icon: 'tabler:leaf',
+      },
+      {
+        title: 'Accompagnement et Support',
+        description: 'Notre équipe est à votre écoute pour vous accompagner à chaque étape de votre projet, offrant un support réactif et des conseils d’experts.',
+        icon: 'tabler:messages',
       },
     ]}
-    classes={{ container: 'max-w-3xl' }}
+    classes={{ container: 'max-w-5xl' }}
   />
 
-  <!-- Steps Widget ****************** -->
 
-  <Steps
-    id="resume"
-    title="Education"
-    items={[
+  <!-- CallToAction Widget *********** -->
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
       {
-        title: `Master of Fine Arts in Graphic Design <br /> <span class="font-normal">New York University's School of Design</span> <br /> <span class="text-sm font-normal">2018 - 2020</span>`,
-        icon: 'tabler:school',
-      },
-      {
-        title: `Bachelor of Arts in Graphic Design <br /> <span class="font-normal">New York University's School of Design</span> <br /> <span class="text-sm font-normal">2014 - 2018</span>`,
-        icon: 'tabler:school',
+        variant: 'secondary',
+        text: 'APPELEZ-NOUS!',
+        href: 'tel:4388625985',
+        // target: '_blank',
+        icon: 'tabler:phone',
       },
     ]}
-    classes={{ container: 'max-w-3xl' }}
-  />
+  >
+    <Fragment slot="title">
+      CONTACTEZ-NOUS <br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Immédiatement</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Pour transformer vos rêves en réalités. 
+    </Fragment>
+  </CallToAction>
+
+
+
+
+
+
 
   <!-- Features3 Widget ************** -->
 
-  <Features3
-    title="Skills"
-    subtitle="Discover the proficiencies that allow me to bring imagination to life through design."
-    columns={3}
-    defaultIcon="tabler:point-filled"
+  <!-- <Features3
+    id="features"
+    title="How to use our app?"
+    subtitle="Tired of spending hours crafting documents from scratch? Our app offers an innovative solution. With a wide array of professionally designed templates, you can now create stunning documents in minutes. Explore our templates now and experience the difference."
+    tagline="Step-by-step guide"
+    columns={2}
     items={[
       {
-        title: 'Graphic design',
-        description: 'Proficient in crafting visually appealing designs that convey messages effectively.',
+        title: 'Download and install the app',
+        description: `Begin your journey by downloading our user-friendly app from your device's app store or our official website.`,
+        icon: 'tabler:square-number-1',
       },
       {
-        title: 'Branding and identity',
-        description: 'Skilled at developing cohesive brand identities, including logos and brand guidelines.',
+        title: 'Sign up',
+        description:
+          'Create your account by providing the necessary information, enabling you to access our full range of features.',
+        icon: 'tabler:square-number-2',
       },
       {
-        title: 'User-centered design',
-        description: 'Experienced in creating user-friendly interfaces and optimizing user experiences.',
+        title: 'Browse templates',
+        description: 'Explore our diverse collection of website templates, categorized for easy navigation.',
+        icon: 'tabler:square-number-3',
       },
       {
-        title: 'Adobe Creative Suite',
-        description: 'Skilled in using Photoshop, Illustrator, and InDesign to create and edit visual elements.',
+        title: 'Preview and select a template',
+        description: `Visualize the potential of each template through previews, then choose the one that aligns best with your project's needs.`,
+        icon: 'tabler:square-number-4',
       },
-      {
-        title: 'Typography',
-        description: 'Adept in selecting and manipulating typefaces to enhance design aesthetics.',
-      },
-      {
-        title: 'Color theory',
-        description: 'Proficient in using color to evoke emotions and enhance visual harmony.',
-      },
-      {
-        title: 'Print and digital design',
-        description: 'Knowledgeable in designing for both print materials and digital platforms.',
-      },
-      {
-        title: 'Attention to detail',
-        description: 'Diligent in maintaining precision and quality in all design work.',
-      },
-      {
-        title: 'Adaptability',
-        description: 'Quick to adapt to new design trends, technologies, and client preferences.',
-      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1521517407911-565264e7d82d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80',
+      alt: 'Colorful Image',
+    }}
+  /> -->
+
+  <!-- Content Widget **************** -->
+
+  <Content
+  isReversed
+  items={[
+    {
+      title: 'Services Tout-en-Un',
+      description:
+        'K-Constructions offre une gamme complète de services pour tous vos besoins en construction et rénovation. Avec des experts dans tous les domaines nécessaires - plombiers, couvreurs, électriciens, et plus - nous sommes votre solution unique pour des projets réussis.',
+      icon: 'tabler:tools',
+    },
+    {
+      title: 'Zone d’Action Étendue',
+      description:
+        'Intervenant sur la Rive-Sud de Montréal, à Montréal même, sur la Rive-Nord de Montréal et dans la Montérégie, notre couverture géographique étendue nous permet d’être rapidement sur place, où que vous soyez dans ces régions.',
+      icon: 'tabler:map-pin',
+    },
+    {
+      title: 'Expertise Locale',
+      description:
+        'Notre connaissance approfondie des spécificités locales garantit que chaque projet est conforme aux réglementations et adapté à son environnement. Profitez de notre expertise locale pour un projet sans tracas.',
+      icon: 'tabler:home-2',
+    },
+    {
+      title: 'Intervention d’Urgence',
+      description: 'Disponibles 24/7 pour des interventions d’urgence, nous sommes là pour vous en cas de besoin urgent, peu importe le service requis.',
+      icon: 'tabler:alert-circle',
+    },
+  ]}
+  image={{
+    src: 'https://raw.githubusercontent.com/Elragency/astro-construction/main/src/assets/images/Pages/about/about1.webp',
+    alt: 'K-Constructions Services',
+  }}
+>
+  <Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Pourquoi choisir K-Constructions ?</h3>
+  </Fragment>
+</Content>
+
+
+  <!-- Content Widget **************** -->
+
+  <Content
+  isAfterContent
+  items={[
+    {
+      title: 'Réactivité Exceptionnelle',
+      description: "Notre équipe est disponible 24/7 pour répondre rapidement à toutes vos urgences, assurant ainsi une tranquillité d'esprit inégalée pour les gestionnaires de copropriétés.",
+      icon: 'tabler:bell',
+    },
+    {
+      title: 'Documentation Complète',
+      description:
+        'Fournissons toute la documentation nécessaire pour vos projets, de la conception à la réalisation, en passant par les assurances et garanties, accessible facilement via notre stockage sécurisé en cloud.',
+      icon: 'tabler:files',
+    },
+    {
+      title: 'Mise à jour et Maintenance',
+      description: 'Nous offrons des contrats de maintenance régulière pour assurer le bon fonctionnement et la pérennité de vos installations, avec des mises à jour sur les dernières normes et technologies.',
+      icon: 'tabler:tool',
+    },
+    {
+      title: 'Conseils Personnalisés',
+      description: `Bénéficiez de conseils personnalisés adaptés à vos besoins spécifiques, que ce soit pour une urgence ou pour la planification à long terme de la maintenance de vos propriétés.`,
+      icon: 'tabler:help',
+    },
+  ]}
+  image={{
+    src: 'https://raw.githubusercontent.com/Elragency/astro-construction/main/src/assets/images/Pages/about/about2.webp',
+    alt: 'Services K-Constructions',
+  }}
+>
+  <Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Avantages supplémentaires</h3>
+  </Fragment>
+</Content>
+
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="Laissons parler les chiffres"
+    stats={[
+      { amount: '2.1K', icon: 'tabler:tool' },
+      { amount: '1.9K', icon: 'tabler:users' },
+      { amount: '25', icon: 'tabler:hourglass-high' },
     ]}
   />
 
-  <!-- Content Widget **************** -->
+ <!-- Testimonials Widget *********** -->
 
-  <Content
-    id="porfolio"
-    title="Elevating visual narratives"
-    subtitle="Embark on a design journey that surpasses pixels, entering a realm of imagination. Explore my portfolio, where passion and creativity converge to shape enthralling visual narratives."
-    isReversed
-    items={[
-      {
-        title: 'Description:',
-        description:
-          'Developed a comprehensive brand identity for a tech startup, Tech Innovators, specializing in disruptive innovations. The goal was to convey a modern yet approachable image that resonated with both corporate clients and tech enthusiasts.',
-      },
-      {
-        title: 'Role:',
-        description:
-          'Led the entire branding process from concept to execution. Created a dynamic logo that symbolized innovation, selected a vibrant color palette, and I designed corporate stationery, website graphics, and social media assets.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1658248165252-71e116af1b34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=928&q=80',
-      alt: 'Tech Design Image',
-    }}
-    callToAction={{
-      target: '_blank',
-      text: 'Go to the project',
-      icon: 'tabler:chevron-right',
-      href: '#',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Project 1: <br /><span class="text-2xl">Brand identity for tech innovators</span>
-      </h3>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
-    isAfterContent={true}
-    items={[
-      {
-        title: 'Description:',
-        description:
-          'Designed a captivating event poster for an art and music festival, "ArtWave Fusion," aiming to showcase the synergy between visual art and music genres.',
-      },
-      {
-        title: 'Role:',
-        description: `Translated the festival's creative theme into a visually striking poster. Used bold typography, vibrant colors, and abstract elements to depict the fusion of art and music. Ensured the design captured the festival's vibrant atmosphere.`,
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1619983081563-430f63602796?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-      alt: 'Art and Music Poster Image',
-    }}
-    callToAction={{
-      target: '_blank',
-      text: 'Go to the project',
-      icon: 'tabler:chevron-right',
-      href: '#',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Project 2: <br /><span class="text-2xl">Event poster for art & music festival</span>
-      </h3>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
-    isAfterContent={true}
-    items={[
-      {
-        title: 'Description:',
-        description: `Redesigned the e-commerce website for an eco-conscious fashion brand, GreenVogue. The objective was to align the brand's online presence with its sustainable ethos and improve user experience.`,
-      },
-      {
-        title: 'Role:',
-        description: `Conducted a thorough analysis of the brand's values and customer base to inform the design direction. Created a visually appealing interface with intuitive navigation, highlighting sustainable materials, and integrating a user-friendly shopping experience.`,
-      },
-    ]}
-    image={{
-      src: 'https://plus.unsplash.com/premium_photo-1683288295841-782fa47e4770?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
-      alt: 'Fashion e-commerce Image',
-    }}
-    callToAction={{
-      target: '_blank',
-      text: 'Go to the project',
-      icon: 'tabler:chevron-right',
-      href: '#',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Project 3: <br /><span class="text-2xl">E-commerce website redesign for fashion brand</span>
-      </h3>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Testimonials Widget *********** -->
-
-  <Testimonials
+  <!-- <Testimonials
     title="Client testimonials"
     subtitle="Discover what clients have to say about their experiences working with me."
     testimonials={[
@@ -368,23 +756,256 @@ const metadata = {
         },
       },
     ]}
+  /> -->
+
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="QUESTIONS FRÉQUENTES"
+    subtitle="Certaines questions que nous reçevons régulièrement."
+    columns={3}
+    isBeforeContent={true}
+    items={[
+      {
+        title: 'ÊTES-VOUS EN RÈGLE POUR FAIRE DES TRAVAUX DANS LES CONDOS?',
+        description:
+          'Oui! Nous possédons notre licence RBQ et tous nos professionnels sont accrédités par les instances gouvernementales nécessaires pour effectuer tout type de travaux nécessaires.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'ÊTES-VOUS ASSURÉ?',
+        description:
+          "Bien sûr! La sécurité des investissements de nos clients est notre priorité. C'est pourquoi nous sommes assurés jusqu'à 2 millions de dollars pour tout type de dommage.",
+        icon: 'tabler:template',
+      },
+      {
+        title: 'QUELLES SONT VOS MODALITÉS DE PAIEMENT?',
+        description:
+          "Bien que cela dépend de la grosseur de votre projet ainsi que de l'échéancier, nous sommes assez flexibles afin de nous assurer que le tout vous convienne. Nous acceptons les virements bancaire, le cash, les virements interac, les chèques ou les carte de crédit.",
+        icon: 'tabler:template',
+      },
+    ]}
   />
+
+
+  <!-- <section class="bg-primary">
+
+  
+    <div class="px-8 2xl:max-w-7xl mx-auto py-32">
+      <div class="space-y-2">
+        <div
+          class="h-0.5 bg-secondary"
+          data-aos="fade-up"
+          data-aos-duration="1000">
+        </div>
+        <h3
+          class="text-secondary text-base font-medium"
+          data-aos="fade-up"
+          data-aos-duration="1500">
+          <span>Main</span>
+          <span class="font-bold">projects</span>
+        </h3>
+      </div>
+      <ul
+        class="mx-auto grid grid-cols-1 sm:grid-cols-2 text-secondary md:grid-cols-3 lg:grid-cols-4 items-start gap-6 mt-32"
+        role="list">
+        <li class="flow-root h-full" data-aos="fade-up" data-aos-duration="1500">
+          <a href="https://www.lexingtonthemes.com/">
+            <div class="h-full flex flex-col justify-between">
+              <div>
+                <p
+                  class="group-hover:text-secondary/70 text-secondary text-9xl font-black lg:rotate-90 xl:-translate-x-28 lg:-translate-x-16 lg:mb-8 xl:mb-0">
+                  01.
+                </p>
+                <p class="italic shrink-0">Lexington Themes</p>
+                <p class="text-base mt-3 leading-relaxed">
+                  Premium themes and UI Kits For designers, developers,
+                  businesses, and personal use — Beautifully crafted with
+                  Astro.js, and Tailwind CSS — Simple & easy to customize.
+                </p>
+              </div>
+              <div>
+                <p class="mt-3 text-base font-semibold">
+                  Check out Lexington Themes &nbsp; ↗
+                </p>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="flow-root h-full" data-aos="fade-up" data-aos-duration="2000">
+          <a href="https://www.windstatic.com/">
+            <div class="h-full flex flex-col justify-between">
+              <div>
+                <p
+                  class="group-hover:text-secondary/70 text-secondary text-9xl font-black lg:rotate-90 xl:-translate-x-28 lg:-translate-x-16 lg:mb-8 xl:mb-0">
+                  02.
+                </p>
+                <p class="italic shrink-0">Windstatic</p>
+                <p class="text-base mt-3 leading-relaxed">
+                  A set of 161 elements & layouts made with Tailwind CSS and
+                  Alpine.js Skillfully designed with an eye for aesthetics,
+                  offering an excellent starting point for your upcoming project.
+                </p>
+              </div>
+              <div>
+                <p class="mt-3 text-base font-semibold">
+                  Have a look to Windstatic &nbsp; ↗
+                </p>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="flow-root h-full" data-aos="fade-up" data-aos-duration="2500">
+          <a href="https://www.colorsandfonts.com/">
+            <div class="h-full flex flex-col justify-between">
+              <div>
+                <p
+                  class="group-hover:text-secondary/70 text-secondary text-9xl font-black lg:rotate-90 xl:-translate-x-28 lg:-translate-x-16 lg:mb-8 xl:mb-0">
+                  03.
+                </p>
+                <p class="italic shrink-0">Colors & Fonts</p>
+                <p class="text-base mt-3 leading-relaxed">
+                  Color and typography resources and inspiration ━ for Web
+                  Developers and Digital Designers.
+                </p>
+              </div>
+              <div>
+                <p class="mt-3 text-base font-semibold">
+                  Grab some hues on Colors & fonts &nbsp; ↗
+                </p>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="flow-root h-full" data-aos="fade-up" data-aos-duration="3000">
+          <a href="https://www.svgdoodles.com/">
+            <div class="h-full flex flex-col justify-between">
+              <div>
+                <p
+                  class="group-hover:text-secondary/70 text-secondary text-9xl font-black lg:rotate-90 xl:-translate-x-28 lg:-translate-x-16 lg:mb-8 xl:mb-0">
+                  04.
+                </p>
+                <p class="italic shrink-0">SVG Doodles </p>
+                <p class="text-base mt-3 leading-relaxed">
+                 A free collection of 208 super duper.
+                </p>
+              </div>
+              <div>
+                <p class="mt-3 text-base font-semibold">
+                  Get some wallpapers &nbsp; ↗
+                </p>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+      <div class="mt-32 space-y-2">
+        <div class="h-0.5 bg-secondary"></div>
+        <h3 class="text-secondary text-base font-medium">
+          <span>Other</span>
+          <span class="font-bold">projects</span>
+        </h3>
+      </div>
+  
+      <ul
+        class="mx-auto grid grid-cols-1 sm:grid-cols-2 text-left divide-y-2 divide-primary lg:grid-cols-4 items-start text-primary mt-3">
+        {
+          otherprojects.map((template) => (
+            <>
+              <li class="flow-root col-span-full h-full hover:bg-transparent hover:text-secondary bg-secondary duration-200">
+                <a
+                  href={template.url}
+                  class="flex flex-col sm:flex-row justify-between gap-6 h-full ">
+                  <div class="p-3">
+                    <p class="italic shrink-0">{template.title}</p>
+                  </div>
+                  <div class="p-3 ">
+                    <p class="text-base leading-relaxed">{template.description}</p>
+                  </div>
+                </a>
+              </li>
+            </>
+          ))
+        }
+      </ul>
+    </div>
+  </section> -->
+
+    <!-- Brands Widget ****************** -->
+
+    <!-- <Brands
+    title="Partnerships & Collaborations"
+    subtitle="At Astrowind, we believe in the power of collaboration to drive innovation and create exceptional experiences."
+    icons={[]}
+    images={[
+      {
+        src: 'https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png',
+        alt: 'Paypal',
+      },
+      {
+        src: 'https://cdn.pixabay.com/photo/2021/12/06/13/48/visa-6850402_1280.png',
+        alt: 'Visa',
+      },
+      {
+        src: 'https://cdn.pixabay.com/photo/2013/10/01/10/29/ebay-189064_1280.png',
+        alt: 'Ebay',
+      },
+
+      {
+        src: 'https://cdn.pixabay.com/photo/2015/04/13/17/45/icon-720944_1280.png',
+        alt: 'Youtube',
+      },
+      {
+        src: 'https://cdn.pixabay.com/photo/2013/02/12/09/07/microsoft-80658_1280.png',
+        alt: 'Microsoft',
+      },
+      {
+        src: 'https://cdn.pixabay.com/photo/2015/04/23/17/41/node-js-736399_1280.png',
+        alt: 'Node JS',
+      },
+      {
+        src: 'https://cdn.pixabay.com/photo/2015/10/31/12/54/google-1015751_1280.png',
+        alt: 'Google',
+      },
+      {
+        src: 'https://cdn.pixabay.com/photo/2021/12/06/13/45/meta-6850393_1280.png',
+        alt: 'Meta',
+      },
+      {
+        src: 'https://cdn.pixabay.com/photo/2013/01/29/22/53/yahoo-76684_1280.png',
+        alt: 'Yahoo',
+      },
+    ]}
+  /> -->
+
 
   <!-- CallToAction Widget *********** -->
 
   <CallToAction
-    title="Let's create together"
-    subtitle="Ready to transform your vision into captivating designs?"
-    actions={[{
-      variant:"primary",
-      text: 'Hire me',
-      href: '/',
-    }]}
-  />
+    actions={[
+      {
+        variant: 'secondary',
+        text: 'APPELEZ-NOUS!',
+        href: 'tel:4388625985',
+        // target: '_blank',
+        icon: 'tabler:phone',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      CONTACTEZ-NOUS <br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Immédiatement</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Pour transformer vos rêves en réalités. 
+    </Fragment>
+  </CallToAction>
+
 
   <!-- BlogLatestPost Widget **************** -->
 
-  <BlogLatestPosts
+  <!-- <BlogLatestPosts
     id="blog"
     title="Explore my insightful articles on my blog"
     information={`Dive into a realm of design wisdom and creative inspiration, where you'll find invaluable insights, practical tips, and captivating narratives that elevate and enrich your creative journey.`}
@@ -392,286 +1013,8 @@ const metadata = {
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </BlogLatestPosts>
+  </BlogLatestPosts> -->
 
+  <Contact />
 
-  <Fragment slot="announcement"></Fragment>
-  <Fragment slot="header">
-    <Header
-      position="left"
-      links={[
-        { text: 'Services', href: '#' },
-        { text: 'Features', href: '#' },
-        { text: 'About', href: '#' },
-      ]}
-      actions={[
-        {
-          text: 'Download',
-          href: '#download',
-        },
-      ]}
-      isSticky
-      showToggleTheme
-    />
-  </Fragment>
-
-
-  <!-- Features3 Widget ************** -->
-
-  <Features3
-    id="features"
-    title="How to use our app?"
-    subtitle="Tired of spending hours crafting documents from scratch? Our app offers an innovative solution. With a wide array of professionally designed templates, you can now create stunning documents in minutes. Explore our templates now and experience the difference."
-    tagline="Step-by-step guide"
-    columns={2}
-    items={[
-      {
-        title: 'Download and install the app',
-        description: `Begin your journey by downloading our user-friendly app from your device's app store or our official website.`,
-        icon: 'tabler:square-number-1',
-      },
-      {
-        title: 'Sign up',
-        description:
-          'Create your account by providing the necessary information, enabling you to access our full range of features.',
-        icon: 'tabler:square-number-2',
-      },
-      {
-        title: 'Browse templates',
-        description: 'Explore our diverse collection of website templates, categorized for easy navigation.',
-        icon: 'tabler:square-number-3',
-      },
-      {
-        title: 'Preview and select a template',
-        description: `Visualize the potential of each template through previews, then choose the one that aligns best with your project's needs.`,
-        icon: 'tabler:square-number-4',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1521517407911-565264e7d82d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80',
-      alt: 'Colorful Image',
-    }}
-  />
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
-    items={[
-      {
-        title: 'User-friendly interface',
-        description:
-          'An intuitive and easy-to-navigate interface that allows users to quickly browse and find the templates they need.',
-        icon: 'tabler:wand',
-      },
-      {
-        title: 'Personalization options',
-        description:
-          'Include basic customization tools that let users modify text, colors, images, and other elements within the templates.',
-        icon: 'tabler:settings',
-      },
-      {
-        title: 'Ready-to-use components',
-        description:
-          'Enhance your designs with ready-to-use elements like graphics, icons, and layouts, saving you time and boosting visual appeal.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Preview Mode',
-        description: 'Provide a preview of each template, allowing users to see how it looks before making a purchase.',
-        icon: 'tabler:carousel-horizontal',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1576153192621-7a3be10b356e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80',
-      alt: 'Colorful Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Main Features</h3>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isAfterContent
-    items={[
-      {
-        title: 'Offline Access',
-        description: 'Offer the option for users to download purchased templates for offline use.',
-        icon: 'tabler:wifi-off',
-      },
-      {
-        title: 'Secure Cloud Storage',
-        description:
-          'Provide cloud storage for purchased templates, ensuring users can access and back up their templates from anywhere securely.',
-        icon: 'tabler:file-download',
-      },
-      {
-        title: 'Regular Updates',
-        description: 'Continuously add new templates and features to keep the app fresh and engaging for users.',
-        icon: 'tabler:refresh',
-      },
-      {
-        title: 'Wishlist',
-        description: `Allow users to create a wishlist of templates they're interested in, making it easier for them to revisit and potentially purchase later.`,
-        icon: 'tabler:heart',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1453738773917-9c3eff1db985?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Vintage Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Other features</h3>
-    </Fragment>
-  </Content>
-
-  <!-- Stats Widget ****************** -->
-
-  <Stats
-    title="Statistics of our app"
-    stats={[
-      { amount: '20K', icon: 'tabler:download' },
-      { amount: '18.5K', icon: 'tabler:users' },
-      { amount: '4.7', icon: 'tabler:user-star' },
-    ]}
-  />
-
-  <!-- Testimonials Widget *********** -->
-
-  <Testimonials
-    title="What our users say?"
-    testimonials={[
-      {
-        testimonial: `It's made exploring and downloading website templates a breeze. The interface is intuitive, and I had no trouble finding the perfect template for my project. It's an app that truly empowers users.`,
-        name: 'Cary Kennedy',
-        job: 'Film director',
-        image: {
-          src: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-          alt: 'Cary Kennedy Image',
-        },
-      },
-      {
-        testimonial: `The app's seamless download process and intuitive layout have made selecting templates an enjoyable experience. Being able to preview and experiment with different designs before committing has saved me time and ensured I get the perfect look for my website.`,
-        name: 'Josh Wilkinson',
-        job: 'Product Manager',
-        image: {
-          src: 'https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-          alt: 'Josh Wilkinson Image',
-        },
-      },
-      {
-        testimonial:
-          'I was able to download and use a professional website template within minutes. The step-by-step process and user-friendly interface made it easy for me to create a website that looks as if it was designed by a pro.',
-        name: 'Sidney Hansen',
-        job: 'Decorator',
-        image: {
-          src: 'https://images.unsplash.com/photo-1512361436605-a484bdb34b5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-          alt: 'Sidney Hansen Image',
-        },
-      },
-    ]}
-    callToAction={{
-      target: '_blank',
-      text: 'Read more testimonials',
-      href: 'https://github.com/onwidget/astrowind',
-      icon: 'tabler:chevron-right',
-    }}
-  />
-
-  <!-- FAQs Widget ******************* -->
-
-  <FAQs
-    title="Still have some doubts?"
-    items={[
-      {
-        title: 'What does this app do?',
-        description:
-          'This app provides a platform for you to easily browse, purchase, download, and use a wide range of website templates for your projects.',
-      },
-      {
-        title: 'How can this app solve my problem?',
-        description:
-          'This app streamlines the process of finding and implementing professional website designs, saving you time and effort in creating visually appealing and functional websites.',
-      },
-      {
-        title: 'Is it available for my device?',
-        description: `Our app is designed for compatibility across various devices and platforms, ensuring accessibility whether you're using a smartphone, tablet, or computer.`,
-      },
-      {
-        title: 'What makes this app different from others?',
-        description:
-          'Our app stands out for its user-friendly interface, extensive template collection, and seamless integration of the purchasing and downloading process, making it highly efficient.',
-      },
-      {
-        title: 'Are there any costs involved?',
-        description:
-          'While the app itself may be free to download, there may be costs associated with purchasing specific templates based on your preferences and project requirements.',
-      },
-    ]}
-  />
-
-  <!-- CallToAction Widget *********** -->
-
-  <CallToAction
-    id="download"
-    title="Download our app now!"
-    subtitle="Access a variety of stunning templates, simplify your creative process, and elevate your online presence."
-  >
-    <div slot="actions" class="flex max-w-sm gap-4">
-      <Button variant="link" href={appStoreDownloadLink}>
-        <Image src={appStoreImg} alt="App Store Image" width={200} />
-      </Button>
-
-      <Button variant="link" href={googlePlayDownloadLink}>
-        <Image src={googlePlayImg} alt="Google Play Image" width={200} />
-      </Button>
-    </div>
-  </CallToAction>
-
-    <!-- Pricing Widget ******************* -->
-
-    <Pricing
-    title="Flexible pricing plans"
-    prices={[
-      {
-        title: 'free',
-        subtitle: 'Access to core features and a wide range of templates',
-        price: '0',
-        period: '/ month',
-        callToAction: {
-          target: '_blank',
-          text: 'Get Started for Free',
-          href: '#',
-        },
-      },
-      {
-        title: 'pro',
-        subtitle: 'Premium templates and advanced customization',
-        price: 15,
-        period: '/ Month',
-        callToAction: {
-          target: '_blank',
-          text: 'Upgrade to Pro',
-          href: '#',
-        },
-        hasRibbon: true,
-        ribbonTitle: 'popular',
-      },
-      {
-        title: 'Enterprise',
-        subtitle: 'Tailored solutions for large-scale projects',
-        price: 45,
-        period: '/ Month',
-        callToAction: {
-          target: '_blank',
-          text: 'Unlock Enterprise Features',
-          href: '#',
-        },
-      },
-    ]}
-  />
 </Layout>
