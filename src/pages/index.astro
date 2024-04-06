@@ -14,6 +14,7 @@ import PortfolioA from '~/components/widgets/PortfolioA.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import CookieBanner from '../components/common/CookieBanner.astro';
+import Popbanner from '../components/common/Popbanner.astro';
 
 
 import { otherprojects } from '~/components/ui/otherprojects.json';
@@ -23,9 +24,11 @@ import Adresse from '~/components/widgets/Adresse.astro';
 import Newsletter from '~/components/widgets/Newsletter.astro';
 
 const metadata = {
-  title: 'K-Constructions - Votre Contracteur Général de Confiance, Un arrêt pour tous vos besoins',
+  title: 'K-Constructions - Votre Contracteur Général de Confiance pour tous vos Projets',
+  description: 'K-Constructions, votre contracteur général pour une prise en charge complète de tous vos projets de construction et rénovation. Fiabilité et excellence garanties.',
   ignoreTitleTemplate: true,
 };
+
 ---
 
 <Layout metadata={metadata}>
@@ -85,7 +88,7 @@ const metadata = {
               qualifiés, K-Constructions offre une gamme complète de services, allant de la conception 
               architecturale à la réalisation de projets clés en main.
             </p>
-            <a href="/propos" class="btn btn-outline-orange inline-block bg-primary text-white py-3 px-4 rounded mt-1 ml-0 md:ml-6 mb-2">
+            <a href="/kconstructions" class="btn btn-outline-orange inline-block bg-primary text-white py-3 px-4 rounded mt-1 ml-0 md:ml-6 mb-2">
               À Propos
               <iconify-icon icon="tabler:arrow-right" class="inline-block ml-2"></iconify-icon>
             </a>
@@ -297,7 +300,7 @@ const metadata = {
   </CallToAction>
 
   <Newsletter />
-
+  <!-- <Popbanner /> -->
   <CookieBanner />
 
   <script>
@@ -342,6 +345,21 @@ const metadata = {
   <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
 
   <!-- <script src="~/assets/js/shortcodes.js"></script> -->
+
+  <!-- <script>
+    // Pop-Up Card JavaScript
+    const modal = document.getElementById("specialOfferModal");
+    const closeButton = document.querySelector(".close-button");
+    closeButton.addEventListener("click", function() {
+      modal.style.display = "none";
+    });
+    // Example trigger for the modal - after 5 seconds
+    window.onload = function() {
+      setTimeout(function() {
+        modal.style.display = "block";
+      }, 5000); // Adjust time as needed
+    };
+    </script> -->
 
 
   <!-- INITIAL SCRIPTS -->

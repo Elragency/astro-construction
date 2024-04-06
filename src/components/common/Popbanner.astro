@@ -1,0 +1,71 @@
+---
+// Initial script setup removed since we're not using Preact hooks here.
+---
+
+<section>
+  <div id="specialOfferModal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">×</span>
+      <h2>Offre Spéciale Limitée : K-Constructions s'engage à vos côtés !</h2>
+      <p>Chez K-Constructions, nous comprenons que la période actuelle est marquée par des défis économiques croissants, impactant directement 
+        le coût de la vie et les dépenses quotidiennes de chacun. Nous sommes plus que jamais déterminés à soutenir nos clients dans cette 
+        épreuve et à offrir des solutions adaptées à leurs besoins.</p>
+        <p>
+          Mais ce n'est pas tout : Pour rendre cette offre encore plus exceptionnelle, nous nous engageons à vous offrir une réduction additionnelle 
+          de 5% sur notre tarif déjà ajusté, en échange d'un avis 5 étoiles sur notre page Google Business. Votre satisfaction est notre priorité, 
+          et votre soutien à travers ces avis nous aide à continuer à offrir le meilleur service possible.
+          
+          <b>Comment en profiter ?</b> Rien de plus simple ! Contactez-nous dès aujourd'hui avec votre facture de l'année dernière en main, et discutons 
+          ensemble de la manière dont K-Constructions peut contribuer à alléger votre fardeau financier tout en répondant à vos besoins d'entretien 
+          avec le plus grand soin et professionnalisme.
+        </p>
+        <p>
+          Cette offre est valide pour une période limitée. Ne manquez pas cette occasion unique de bénéficier de services d'entretien de qualité supérieure 
+          à un prix défiant toute concurrence, le tout en soutien à votre pouvoir d'achat.
+        </p>
+        
+      <a href="#soumission">
+        <button>Faisons affaires!</button>
+      </a>
+    </div>
+  </div>
+</section>
+  
+  <style>
+/* Pop-Up Card CSS */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: black;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid white;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: #ff3c00;
+  text-decoration: none;
+  cursor: pointer;
+}
+  </style>
+  
