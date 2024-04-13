@@ -7,6 +7,7 @@ category: Services
 tags:
   - services
   - K-constructions
+  - condos
 
 ---
 
